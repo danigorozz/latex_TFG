@@ -1,0 +1,38 @@
+\documentclass[a4paper, 12pt]{book}
+
+\usepackage{amsmath, amssymb}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+
+\title{Título del proyecto}
+\author{Daniel Gómez}
+
+\usepackage[a4paper]{geometry}
+\geometry{left=3cm, right=3cm}
+
+\usepackage{emptypage}
+
+\usepackage{graphicx}
+\graphicspath{{figures/}}
+
+\usepackage{fancyhdr}
+
+\fancyhf{}
+
+\lhead[\leftmark]{Nombre autor}
+\rhead[Nombre autor]{\rightmark}
+\cfoot[\thepage]{\thepage}
+
+
+\renewcommand{\headrulewidth}{0.4pt}
+
+\newcommand{\addimage}[4]{
+\begin{figure}[h]
+\begin{center} \label{fig:#2}
+\includegraphics[width=#4\textwidth]{#1}
+\end{center}
+\caption{#3}
+\end{figure}
+}
+

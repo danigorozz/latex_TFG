@@ -1,0 +1,20 @@
+\babel@toc {spanish}{}
+\contentsline {part}{I\hspace {1em}Introducción}{5}%
+\contentsline {chapter}{\numberline {1}Introducción y visión general}{7}%
+\contentsline {section}{\numberline {1.1}Motivación y justificación}{7}%
+\contentsline {section}{\numberline {1.2}Objetivo}{9}%
+\contentsline {part}{II\hspace {1em}Desarrollo}{11}%
+\contentsline {chapter}{\numberline {2}Herramientas utilizadas}{13}%
+\contentsline {section}{\numberline {2.1}Robotic Operating System}{13}%
+\contentsline {subsection}{\numberline {2.1.1}Arquitectura de la comunicación mediante ROS}{14}%
+\contentsline {subsection}{\numberline {2.1.2}¿Por qué ROS?}{15}%
+\contentsline {section}{\numberline {2.2}Mapas de ocupación}{15}%
+\contentsline {section}{\numberline {2.3}Sensores RGBD}{16}%
+\contentsline {subsection}{\numberline {2.3.1}Imagen de profundidad}{17}%
+\contentsline {section}{\numberline {2.4}Nubes de puntos}{17}%
+\contentsline {chapter}{\numberline {3}Diseño e implementación}{19}%
+\contentsline {section}{\numberline {3.1}Vista general del sistema}{19}%
+\contentsline {section}{\numberline {3.2}Fuente de datos}{19}%
+\contentsline {subsection}{\numberline {3.2.1}Adaptación del rosbag}{20}%
+\contentsline {subsection}{\numberline {3.2.2}Otras fuentes tomadas en cuenta}{22}%
+\contentsline {section}{\numberline {3.3}De imagen de profundidad a barrido láser}{22}%
