@@ -217,7 +217,29 @@ Un mensaje de tipo LaserScan se forma a partir de las siguientes característica
 
 \end{itemize}
 
-El algoritmo se encarga de analizar tantas filas como se establezcan en el parámetro scan\_height del nodo depthimage\_to\_laserscan y transformar la distancia dada por la imagen de profundidad en una distancia real al sensor. Una vez transformada, comparar con la distancia de las otras filas medidas en la misma columna y si la distancia es mayor, se añade al vector ranges. Una vez completado el análisis de todas las filas de la imagen, se crea el mensaje con el vector ranges y los otros parámetros y se publica.\\
+El algoritmo se encarga de analizar tantas filas como se establezcan en el parámetro scan\_height del nodo depthimage\_to\_laserscan y transformar la distancia dada por la imagen de profundidad en una distancia real al sensor. Una vez transformada, se compara con la distancia de las otras filas medidas en la misma columna y, si la distancia es mayor, se añade al vector ranges. Una vez completado el análisis de todas las filas de la imagen, se publica el mensaje generado de tipo \texttt{sensor\_msgs/LaserScan} en el topic \texttt{/new\_scan}.\\
+
+\section{Generación del mapa de ocupación}
+
+Una vez obtenido el láser artificial a partir de la imagen de profundidad, es momento de generar el mapa o rejilla de ocupación. Para este procedimiento se utilizará el paquete \texttt{gmapping}.\\
+
+Este paquete ofrece un sistema de Localización y Mapeado Simultáneo o SLAM (del inglés, \textit{Simultaneous Location and Mapping}) a través de un nodo llamado \texttt{slam\_gmapping}. Este nodo recibe el láser artificial (por el topic \texttt{/new\_scan}) y el árbol de transformadas (por el topic \texttt{/tf}). Además tiene varios parámetros.\\
+
+Al lanzar este nodo, es posible establecer multitud de parámetros que determinan el modo de operación. Entre otros, los parámetros que se tendrán en cuenta son:
+
+\begin{itemize}
+
+	\item \texttt{linearUpdate}. El nodo procesará un escaneo cada vez que se alcance la distancia lineal determinada por este parámetro. Su valor por defecto es $1.0$. El valor óptimo encontrado tras múltiples pruebas es $0.3$.
+	\item \texttt{angularUpdate}. Determina el incremento de ángulo por el cuál el robot procesará otro escaneo. Su valor por defecto es $0.5$. El valor óptimo es $0.7$.
+	\item \texttt{temporalUpdate}. Establece cada cuánto se procesa un nuevo escaneo. Su valor por defecto y óptimo es $3.0$.
+
+\end{itemize}
+
+Como se comenta en el listado de parámetros, tienen unos valores por defecto que se han ido modificando para obtener un mapa con más fiable. Esto se comentará más en profundidad en la sección de resultados.\\
+
+\section{Detección de objetos}
+
+
 
 
 

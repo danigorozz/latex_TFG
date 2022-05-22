@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2022.5.17)  22 MAY 2022 15:41
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2022.5.17)  22 MAY 2022 22:00
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -460,7 +460,7 @@ Underfull \vbox (badness 1033) has occurred while \output is active []
  [7
 
 ]
-<figures/IlustracionErroresMapa.png, id=147, 289.08pt x 257.2812pt>
+<figures/IlustracionErroresMapa.png, id=152, 289.08pt x 257.2812pt>
 File: figures/IlustracionErroresMapa.png Graphic file (type png)
 <use figures/IlustracionErroresMapa.png>
 Package pdftex.def Info: figures/IlustracionErroresMapa.png  used on input line
@@ -520,7 +520,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 20--21
 
  []
 
-<figures/ros_img.png, id=175, 947.54pt x 165.61874pt>
+<figures/ros_img.png, id=180, 947.54pt x 165.61874pt>
 File: figures/ros_img.png Graphic file (type png)
 <use figures/ros_img.png>
 Package pdftex.def Info: figures/ros_img.png  used on input line 22.
@@ -584,7 +584,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 50--51
 
  []
 
-<figures/occ_map_img.jpg, id=194, 253.94875pt x 503.8825pt>
+<figures/occ_map_img.jpg, id=199, 253.94875pt x 503.8825pt>
 File: figures/occ_map_img.jpg Graphic file (type jpg)
 <use figures/occ_map_img.jpg>
 Package pdftex.def Info: figures/occ_map_img.jpg  used on input line 54.
@@ -596,7 +596,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 61--62
 
  []
 
-<figures/kinect_img.png, id=199, 3834.325pt x 1324.95pt>
+<figures/kinect_img.png, id=204, 3834.325pt x 1324.95pt>
 File: figures/kinect_img.png Graphic file (type png)
 <use figures/kinect_img.png>
 Package pdftex.def Info: figures/kinect_img.png  used on input line 63.
@@ -614,7 +614,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 69--70
 LaTeX Info: Redefining \. on input line 70.
 LaTeX Info: Redefining \% on input line 70.
 [16 <./figures/occ_map_img.jpg> <./figures/kinect_img.png>]
-<figures/depth_img.png, id=207, 770.88pt x 583.17876pt>
+<figures/depth_img.png, id=212, 770.88pt x 583.17876pt>
 File: figures/depth_img.png Graphic file (type png)
 <use figures/depth_img.png>
 Package pdftex.def Info: figures/depth_img.png  used on input line 71.
@@ -636,7 +636,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 79--80
 
  []
 
-<figures/pointcloud-img.png, id=213, 1027.84pt x 563.10374pt>
+<figures/pointcloud-img.png, id=218, 1027.84pt x 563.10374pt>
 File: figures/pointcloud-img.png Graphic file (type png)
 <use figures/pointcloud-img.png>
 Package pdftex.def Info: figures/pointcloud-img.png  used on input line 81.
@@ -708,7 +708,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 123--124
 
  []
 
-<figures/esquema_general.png, id=232, 1070.3187pt x 297.0297pt>
+<figures/esquema_general.png, id=237, 1070.3187pt x 297.0297pt>
 File: figures/esquema_general.png Graphic file (type png)
 <use figures/esquema_general.png>
 Package pdftex.def Info: figures/esquema_general.png  used on input line 125.
@@ -758,7 +758,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 165--166
 
  []
 
-<figures/cam_info-diag.png, id=248, 323.40825pt x 109.66972pt>
+<figures/cam_info-diag.png, id=253, 323.40825pt x 109.66972pt>
 File: figures/cam_info-diag.png Graphic file (type png)
 <use figures/cam_info-diag.png>
 Package pdftex.def Info: figures/cam_info-diag.png  used on input line 167.
@@ -773,7 +773,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 171--172
 
  []
 
-<figures/sync_info-diag.png, id=249, 360.44662pt x 140.02313pt>
+<figures/sync_info-diag.png, id=254, 360.44662pt x 140.02313pt>
 File: figures/sync_info-diag.png Graphic file (type png)
 <use figures/sync_info-diag.png>
 Package pdftex.def Info: figures/sync_info-diag.png  used on input line 173.
@@ -823,43 +823,71 @@ Underfull \hbox (badness 10000) in paragraph at lines 220--221
 
  []
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 224.
-LaTeX Info: Redefining \. on input line 224.
-LaTeX Info: Redefining \% on input line 224.
+
+Underfull \hbox (badness 10000) in paragraph at lines 224--225
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 226--227
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 238--239
+
+ []
+
+LaTeX Info: Redefining \. on input line 239.
+LaTeX Info: Redefining \% on input line 239.
 [27]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 224.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 246.
+LaTeX Info: Redefining \. on input line 246.
+LaTeX Info: Redefining \% on input line 246.
+ [28]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 246.
  (./memoria_tfg.aux
 LaTeX Info: Redefining \. on input line 24.
 LaTeX Info: Redefining \% on input line 24.
 )
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 224.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 224.
-Package rerunfilecheck Info: File `memoria_tfg.out' has not changed.
-(rerunfilecheck)             Checksum: 6AC51E7ABAE040E3C4219964922F6CD2;1487.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 224.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 246.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 246.
+
+
+Package rerunfilecheck Warning: File `memoria_tfg.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `memoria_tfg.out':
+(rerunfilecheck)             Before: 4902EAE55AFBF0733E226B880A6FA2A5;1572
+(rerunfilecheck)             After:  04869E014285727559A143210E6FCBC9;1642.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 246.
  ) 
 Here is how much of TeX's memory you used:
- 8292 strings out of 481239
- 119632 string characters out of 5920377
+ 8301 strings out of 481239
+ 119732 string characters out of 5920377
  397228 words of memory out of 5000000
- 23320 multiletter control sequences out of 15000+600000
- 550118 words of font info for 70 fonts, out of 8000000 for 9000
+ 23325 multiletter control sequences out of 15000+600000
+ 550802 words of font info for 71 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  37i,11n,47p,1475b,517s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-t1.enc}{/usr/share/texmf/
-fonts/enc/dvips/cm-super/cm-super-ts1.enc}</usr/share/texmf/fonts/type1/public/
-cm-super/sfbx1200.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbx1440.pf
-b></usr/share/texmf/fonts/type1/public/cm-super/sfbx1728.pfb></usr/share/texmf/
-fonts/type1/public/cm-super/sfbx2488.pfb></usr/share/texmf/fonts/type1/public/c
-m-super/sfrm0700.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm0800.pfb
-></usr/share/texmf/fonts/type1/public/cm-super/sfrm1000.pfb></usr/share/texmf/f
-onts/type1/public/cm-super/sfrm1200.pfb></usr/share/texmf/fonts/type1/public/cm
--super/sfrm1440.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm2074.pfb>
-</usr/share/texmf/fonts/type1/public/cm-super/sftt1200.pfb>
-Output written on memoria_tfg.pdf (27 pages, 5059305 bytes).
+fonts/enc/dvips/cm-super/cm-super-ts1.enc}</usr/share/texlive/texmf-dist/fonts/
+type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/
+public/amsfonts/cm/cmr12.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbx
+1200.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbx1440.pfb></usr/share
+/texmf/fonts/type1/public/cm-super/sfbx1728.pfb></usr/share/texmf/fonts/type1/p
+ublic/cm-super/sfbx2488.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm0
+700.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm0800.pfb></usr/share/
+texmf/fonts/type1/public/cm-super/sfrm1000.pfb></usr/share/texmf/fonts/type1/pu
+blic/cm-super/sfrm1200.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm14
+40.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm2074.pfb></usr/share/t
+exmf/fonts/type1/public/cm-super/sfti1200.pfb></usr/share/texmf/fonts/type1/pub
+lic/cm-super/sftt1200.pfb>
+Output written on memoria_tfg.pdf (28 pages, 5097299 bytes).
 PDF statistics:
- 326 PDF objects out of 1000 (max. 8388607)
- 268 compressed objects within 3 object streams
- 62 named destinations out of 1000 (max. 500000)
- 214 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 348 PDF objects out of 1000 (max. 8388607)
+ 286 compressed objects within 3 object streams
+ 65 named destinations out of 1000 (max. 500000)
+ 222 words of extra memory for PDF output out of 10000 (max. 10000000)
 
