@@ -1,32 +1,40 @@
 \documentclass[a4paper, 12pt]{book}
 
+% Paquetes básicos de LATEX
 \usepackage{amsmath, amssymb}
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
 \usepackage[spanish]{babel}
 
+% Título y autor
 \title{Título del proyecto}
 \author{Daniel Gómez}
 
+% Para cambiar márgenes
 \usepackage[a4paper]{geometry}
 \geometry{left=3cm, right=3cm}
 
+% Para quitar encabezado, pie de página y numeración en páginas vacías
 \usepackage{emptypage}
 
+% Para añadir figuras y su path
 \usepackage{graphicx}
 \graphicspath{{figures/}}
 
+% Para modificar encabezados y pie de página
 \usepackage{fancyhdr}
-
-\fancyhf{}
-
-\lhead[\leftmark]{Nombre autor}
-\rhead[Nombre autor]{\rightmark}
+\fancyhf{} % Limpia los encabezados y pie de página
+\lhead[\leftmark]{Daniel G. R.}
+\rhead[Daniel G. R.]{\rightmark}
 \cfoot[\thepage]{\thepage}
 
-
+% Añadir línea separatoria en el encabezado
 \renewcommand{\headrulewidth}{0.4pt}
 
+% Paquete para añadir enlaces entre referencias
+\usepackage[hidelinks]{hyperref}
+
+% Comando creado para añadir figuras más rápido y más limpio
 \newcommand{\addimage}[4]{
 \begin{figure}[h]
 \begin{center} \label{fig:#2}

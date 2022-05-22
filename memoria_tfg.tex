@@ -74,11 +74,41 @@ El valor de distancia para cada píxel establece un nivel de gris. Generalmente,
 
 \section{Nubes de puntos}
 
-Una nube de puntos o pointcloud es un conjunto de vértice en un sistema de coordenadas tridimensional. Estos vértices se identifican habitualmente como coordenadas X, Y y Z y son representaciones de la superficie externa de un objeto. Se crean a partir de escáneres láser tridimensionales o imágenes de profundidad.\\
+Una nube de puntos o pointcloud es un conjunto de vértices en un sistema de coordenadas tridimensional. Estos vértices se identifican habitualmente como coordenadas X, Y y Z y son representaciones de la superficie externa de un objeto. Se crean a partir de escáneres láser tridimensionales o imágenes de profundidad.\\
 
 Las nubes de puntos tienen infinidad de aplicaciones como la elaboración de modelos 3D en CAD de piezas fabricadas, la inspección de calidad en metrología y muchas otras en el ámbito de la visualización, animación, texturización y aplicaciones de personalización masiva.\\
 
 \addimage{pointcloud-img.png}{pc}{Ejemplo de nube de puntos}{0.7}
+
+\section{You only look once}
+
+You only look once (YOLO) es un sistema en tiempo real de detección de objetos basado en rede neuronales. Sus características le hacen ser uno de los sistemas más rápidos y eficientes de todos los que buscan resolver el problema de la detección de objetos en imágenes.\\
+
+YOLO es un modelo ya entrenado que aplica una única red neuronal convolucional a toda la imagen. Esta red divide la imagen en regiones y predice los límites del elemento (bounding boxes) y su probabilidad.\\
+
+Este modelo tiene multitud de ventajas con respecto a  otros sistemas de clasificación. YOLO observa toda la imagen, por lo que las predicciones dependen del contexto global en la imagen. Además, hace las predicciones con una sola red, al contrario que otros sistemas como R-CNN que requieren miles de redes para una única imagen. Esto convierte a YOLO en un sistema extremadamente rápido (1000 veces más rapido que R-CNN y 100 veces más rápido que Fast R-CNN).\\
+
+YOLO es fácilmente implementable en ROS gracias al paquete darknet\_ros, que permite utilizarlo tanto en GPU como en CPU. La ventaja de usar la GPU para lanzar el modelo es que es 500 veces más rápido que utilizando la CPU. Para utilizar la GPU es necesario instalar el software CUDA de Nvidia.\\
+
+(Fuente: \url{https://pjreddie.com/darknet/yolo/} además tiene un PAPER)\\
+
+\subsection{Compute Unified Device Architecture}
+
+CUDA es un conjunto de herramientas de desarrollo creadas por Nvidia que permiten a los programadores usar una variación del lenguaje de programación C (CUDA C) para coificar algoritmos GPU de Nvidia. Tiene como objetivo explitar las ventajas de las GPU frente a las CPU de propósito general utilizando el paralelismo que ofreccen sus múltiples núcleos, que permiten lanzar un altísimo número de procesos simultáneos.\\
+
+Las principales ventajas de este sistema de computación son:
+
+\begin{itemize}
+
+	\item Lecturas dispersas. Se puede consultar cualquier posición en memoria.
+	\item Memoria compartida. CUDA pone a disposición un área de memoria de entre 16KB y 48KB que se compartirá entre hilos del mismo bloque, pudiéndose utilizar como memoria caché.
+	\item Lecturas más rápidas de y hacia la GPU.
+	\item Soporte para enteros y operadores a nivel de bit.
+
+\end{itemize}
+
+Fuente: \url{https://es.wikipedia.org/wiki/CUDA}\\
+
 
 \chapter{Diseño e implementación}
 
@@ -90,7 +120,27 @@ Sobre los paquetes de terceros, se hará una breve explicación sobre la funció
 
 \section{Vista general del sistema}
 
-\section{Fuente de datos}
+Como se ha comentado, el objetivo es transformar la imagen de profundidad que se obtiene de un sensor RGBD en un láser artificial para generar un mapa de ocupación. En otro proceso, simultáneamente o de forma asíncrona, se generará un archivo TXT con los elementos detectado por YOLO de la imagen de color para tener un registro y poder analizarlo. En la figura X se muestra el árbol de nodos y topics de todo el sistema. Los nodos que han sido creados se muestran en color azul. Los nodos que han sido obtenidos de otras fuentes pero han necesitado de alguna modificación en su código se muestran en color naranja. Los nodos que hno se han modificado se muestran en blanco Los topics se representan con una caja de color blanco.\\
+
+\addimage{esquema_general.png}{esq_general}{Árbol de nodos y topics}{1}
+
+Primeramente, se obtiene la información del robot mediante la reproducción de un rosbag (más información en la sección \ref{sec:datos}). De este rosbag se obtienen mensajes en cuatro topics (entre otros): 
+
+\begin{itemize}
+
+	\item \texttt{/camera\_down/depth/image}. Imagen de profundidad de la cámara.
+	\item \texttt{/tf}. Árbol de transformadas.
+	\item \texttt{/amcl\_pose}. Pose del robot.
+	\item \texttt{/camera\_down/rgb/image\_raw/compressed}. Imagen de color comprimida de la cámara.
+
+\end{itemize}
+
+El primero de los topics contiene mensajes de tipo \texttt{sensor\_msgs/Image} con información de la imagen de profundidad captada por la cámara. A partir de este mensaje generamos el mensaje de tipo \texttt{sensor\_msgs/CameraInfo} con información de la cámara mediante el nodo \texttt{cam\_info}. Luego se sincronizan estos dos mensajes con el nodo \texttt{sync\_info} y se envían por los topics \texttt{/sync/depth\_image} y \texttt{/sync/camera\_info}. Estos mensajes los recibe el nodo \texttt{depthimage\_to\_laserscan} y los procesa para generar el mensaje de tipo \texttt{sensor\_msgs/LaserScan} y enviarlos por el topic \texttt{/new\_scan}. Estos mensajes, juntos con los de tipo \texttt{tf2\_msgs/TFMessage} del topic \texttt{/tf}, los recibe el nodo \texttt{slam\_gmapping} y los transforma en un mapa o rejilla de ocupación que envía por el topic \texttt{/map} con el formato \texttt{nav\_msgs/OccupancyGrid}. \\
+
+Con el topic \texttt{/camera\_down/rgb/image\_raw/compressed} se obtienen mensajes de tipo \texttt{sensor\_msgs/CompresedImage}. Con el nodo \texttt{republish} se descomprimen y se envían por el topic \texttt{/camera\_down/rgb/image\_raw/decompressed}. Estos mensajes los recibe la red neuronal mediante el nodo \texttt{darknet\_ros} y envía mensajes de tipo \texttt{darknet\_ros\_msgs/BoundingBoxes} por el topic \texttt{/darknet\_ros/bounding\_boxes}. El nodo \texttt{write\_objects} procesa estos mensajes y los de la pose del robot de tipo \texttt{sensor\_msgs/PoseWithCovarianceStamped} del topic \texttt{/amcl\_pose} y les da formato de tabla para pasarlos a un archivo TXT.\\
+
+
+\section{Fuente de datos} \label{sec:datos}
 
 La mejor manera de comprobar el correcto funcionamiento de todo el conjunto de nodos sería hacerlo directamente sobre el robot, con información real de sensores y del entorno. Sin embargo, debido a la dificultad que supondría utilizar este sistema sobre el robot, se decidió optar por otras vías.\\
 

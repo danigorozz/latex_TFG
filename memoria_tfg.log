@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2022.5.17)  17 MAY 2022 21:02
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2022.5.17)  22 MAY 2022 15:41
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -188,15 +188,136 @@ s
 \f@nch@O@erf=\skip58
 \f@nch@O@olf=\skip59
 \f@nch@O@orf=\skip60
+)
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/hyperref.sty
+Package: hyperref 2020/01/14 v7.00d Hypertext links for LaTeX
+
+(/usr/share/texlive/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty
+Package: ltxcmds 2019/12/15 v1.24 LaTeX kernel commands for general use (HO)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/pdftexcmds/pdftexcmds.sty
+Package: pdftexcmds 2019/11/24 v0.31 Utility functions of pdfTeX for LuaTeX (HO
+)
+
+(/usr/share/texlive/texmf-dist/tex/generic/infwarerr/infwarerr.sty
+Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
+)
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+)
+(/usr/share/texlive/texmf-dist/tex/generic/kvsetkeys/kvsetkeys.sty
+Package: kvsetkeys 2019/12/15 v1.18 Key value parser (HO)
+)
+(/usr/share/texlive/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty
+Package: kvdefinekeys 2019-12-19 v1.6 Define keys (HO)
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pdfescape/pdfescape.sty
+Package: pdfescape 2019/12/09 v1.15 Implements pdfTeX's escape features (HO)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/hycolor/hycolor.sty
+Package: hycolor 2020-01-27 v1.10 Color options for hyperref/bookmark (HO)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/letltxmacro/letltxmacro.sty
+Package: letltxmacro 2019/12/03 v1.6 Let assignment for LaTeX macros (HO)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/auxhook/auxhook.sty
+Package: auxhook 2019-12-17 v1.6 Hooks for auxiliary files (HO)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/kvoptions/kvoptions.sty
+Package: kvoptions 2019/11/29 v3.13 Key value format for package options (HO)
+)
+\@linkdim=\dimen155
+\Hy@linkcounter=\count194
+\Hy@pagecounter=\count195
+
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/pd1enc.def
+File: pd1enc.def 2020/01/14 v7.00d Hyperref: PDFDocEncoding definition (HO)
+Now handling font encoding PD1 ...
+... no UTF-8 mapping file for font encoding PD1
+)
+(/usr/share/texlive/texmf-dist/tex/generic/intcalc/intcalc.sty
+Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
+)
+(/usr/share/texlive/texmf-dist/tex/generic/etexcmds/etexcmds.sty
+Package: etexcmds 2019/12/15 v1.7 Avoid name clashes with e-TeX commands (HO)
+)
+\Hy@SavedSpaceFactor=\count196
+\pdfmajorversion=\count197
+Package hyperref Info: Hyper figures OFF on input line 4547.
+Package hyperref Info: Link nesting OFF on input line 4552.
+Package hyperref Info: Hyper index ON on input line 4555.
+Package hyperref Info: Plain pages OFF on input line 4562.
+Package hyperref Info: Backreferencing OFF on input line 4567.
+Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
+Package hyperref Info: Bookmarks ON on input line 4800.
+\c@Hy@tempcnt=\count198
+
+(/usr/share/texlive/texmf-dist/tex/latex/url/url.sty
+\Urlmuskip=\muskip17
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+)
+LaTeX Info: Redefining \url on input line 5159.
+\XeTeXLinkMargin=\dimen156
+
+(/usr/share/texlive/texmf-dist/tex/generic/bitset/bitset.sty
+Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
+
+(/usr/share/texlive/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty
+Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO
+)
+))
+\Fld@menulength=\count199
+\Field@Width=\dimen157
+\Fld@charsize=\dimen158
+Package hyperref Info: Hyper figures OFF on input line 6430.
+Package hyperref Info: Link nesting OFF on input line 6435.
+Package hyperref Info: Hyper index ON on input line 6438.
+Package hyperref Info: backreferencing OFF on input line 6445.
+Package hyperref Info: Link coloring OFF on input line 6450.
+Package hyperref Info: Link coloring with OCG OFF on input line 6455.
+Package hyperref Info: PDF/A mode OFF on input line 6460.
+LaTeX Info: Redefining \ref on input line 6500.
+LaTeX Info: Redefining \pageref on input line 6504.
+
+(/usr/share/texlive/texmf-dist/tex/generic/atbegshi/atbegshi.sty
+Package: atbegshi 2019/12/05 v1.19 At begin shipout hook (HO)
+)
+\Hy@abspage=\count266
+\c@Item=\count267
+\c@Hfootnote=\count268
+)
+Package hyperref Info: Driver (autodetected): hpdftex.
+
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/hpdftex.def
+File: hpdftex.def 2020/01/14 v7.00d Hyperref driver for pdfTeX
+
+(/usr/share/texlive/texmf-dist/tex/latex/atveryend/atveryend.sty
+Package: atveryend 2019-12-11 v1.11 Hooks at the very end of document (HO)
+Package atveryend Info: \enddocument detected (standard20110627).
+)
+\Fld@listcount=\count269
+\c@bookmark@seq@number=\count270
+
+(/usr/share/texlive/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
+Package: rerunfilecheck 2019/12/05 v1.9 Rerun checks for auxiliary files (HO)
+
+(/usr/share/texlive/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty
+Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
+)
+Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
+86.
+)
+\Hy@SectionHShift=\skip61
 ))
 (/usr/share/texlive/texmf-dist/tex/latex/l3backend/l3backend-pdfmode.def
 File: l3backend-pdfmode.def 2020-02-03 L3 backend support: PDF mode
-\l__kernel_color_stack_int=\count194
+\l__kernel_color_stack_int=\count271
 \l__pdf_internal_box=\box47
 )
 (./memoria_tfg.aux
-LaTeX Info: Redefining \. on input line 7.
-LaTeX Info: Redefining \% on input line 7.
+LaTeX Info: Redefining \. on input line 24.
+LaTeX Info: Redefining \% on input line 24.
 )
 \openout1 = `memoria_tfg.aux'.
 
@@ -213,6 +334,8 @@ LaTeX Font Info:    ... okay on input line 4.
 LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 4.
 LaTeX Font Info:    ... okay on input line 4.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 4.
+LaTeX Font Info:    ... okay on input line 4.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 4.
 LaTeX Font Info:    ... okay on input line 4.
 LaTeX Info: Redefining \. on input line 4.
 LaTeX Info: Redefining \% on input line 4.
@@ -253,16 +376,16 @@ LaTeX Info: Redefining \% on input line 4.
 
 (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count195
-\scratchdimen=\dimen155
+\scratchcounter=\count272
+\scratchdimen=\dimen159
 \scratchbox=\box48
-\nofMPsegments=\count196
-\nofMParguments=\count197
+\nofMPsegments=\count273
+\nofMParguments=\count274
 \everyMPshowfont=\toks24
-\MPscratchCnt=\count198
-\MPscratchDim=\dimen156
-\MPnumerator=\count199
-\makeMPintoPDFobject=\count266
+\MPscratchCnt=\count275
+\MPscratchDim=\dimen160
+\MPnumerator=\count276
+\makeMPintoPDFobject=\count277
 \everyMPtoPDFconversion=\toks25
 ) (/usr/share/texlive/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
@@ -273,12 +396,34 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-LaTeX Font Info:    Trying to load font information for U+msa on input line 8.
+\AtBeginShipoutBox=\box49
+Package hyperref Info: Link coloring OFF on input line 4.
+
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
+Package: nameref 2019/09/16 v2.46 Cross-referencing by name of section
+
+(/usr/share/texlive/texmf-dist/tex/latex/refcount/refcount.sty
+Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
+)
+(/usr/share/texlive/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
+Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
+)
+\c@section@level=\count278
+)
+LaTeX Info: Redefining \ref on input line 4.
+LaTeX Info: Redefining \pageref on input line 4.
+LaTeX Info: Redefining \nameref on input line 4.
+
+(./memoria_tfg.out) (./memoria_tfg.out)
+\@outlinefile=\write3
+\openout3 = `memoria_tfg.out'.
+
+LaTeX Font Info:    Trying to load font information for U+msa on input line 9.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 8.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 9.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
@@ -291,8 +436,8 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 LaTeX Info: Redefining \. on input line 1.
 LaTeX Info: Redefining \% on input line 1.
 )
-\tf@toc=\write3
-\openout3 = `memoria_tfg.toc'.
+\tf@toc=\write4
+\openout4 = `memoria_tfg.toc'.
 
  (./parte1.tex
 [3] [4
@@ -315,7 +460,7 @@ Underfull \vbox (badness 1033) has occurred while \output is active []
  [7
 
 ]
-<figures/IlustracionErroresMapa.png, id=32, 289.08pt x 257.2812pt>
+<figures/IlustracionErroresMapa.png, id=147, 289.08pt x 257.2812pt>
 File: figures/IlustracionErroresMapa.png Graphic file (type png)
 <use figures/IlustracionErroresMapa.png>
 Package pdftex.def Info: figures/IlustracionErroresMapa.png  used on input line
@@ -354,8 +499,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 23--24
 
  []
 
+
+Underfull \hbox (badness 10000) in paragraph at lines 25--26
+
+ []
+
 )
-Underfull \hbox (badness 10000) in paragraph at lines 25--13
+Underfull \hbox (badness 10000) in paragraph at lines 27--13
 
  []
 
@@ -370,7 +520,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 20--21
 
  []
 
-<figures/ros_img.png, id=51, 947.54pt x 165.61874pt>
+<figures/ros_img.png, id=175, 947.54pt x 165.61874pt>
 File: figures/ros_img.png Graphic file (type png)
 <use figures/ros_img.png>
 Package pdftex.def Info: figures/ros_img.png  used on input line 22.
@@ -434,7 +584,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 50--51
 
  []
 
-<figures/occ_map_img.jpg, id=63, 253.94875pt x 503.8825pt>
+<figures/occ_map_img.jpg, id=194, 253.94875pt x 503.8825pt>
 File: figures/occ_map_img.jpg Graphic file (type jpg)
 <use figures/occ_map_img.jpg>
 Package pdftex.def Info: figures/occ_map_img.jpg  used on input line 54.
@@ -446,7 +596,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 61--62
 
  []
 
-<figures/kinect_img.png, id=67, 3834.325pt x 1324.95pt>
+<figures/kinect_img.png, id=199, 3834.325pt x 1324.95pt>
 File: figures/kinect_img.png Graphic file (type png)
 <use figures/kinect_img.png>
 Package pdftex.def Info: figures/kinect_img.png  used on input line 63.
@@ -464,7 +614,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 69--70
 LaTeX Info: Redefining \. on input line 70.
 LaTeX Info: Redefining \% on input line 70.
 [16 <./figures/occ_map_img.jpg> <./figures/kinect_img.png>]
-<figures/depth_img.png, id=72, 770.88pt x 583.17876pt>
+<figures/depth_img.png, id=207, 770.88pt x 583.17876pt>
 File: figures/depth_img.png Graphic file (type png)
 <use figures/depth_img.png>
 Package pdftex.def Info: figures/depth_img.png  used on input line 71.
@@ -486,15 +636,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 79--80
 
  []
 
-<figures/pointcloud-img.png, id=76, 1027.84pt x 563.10374pt>
+<figures/pointcloud-img.png, id=213, 1027.84pt x 563.10374pt>
 File: figures/pointcloud-img.png Graphic file (type png)
 <use figures/pointcloud-img.png>
 Package pdftex.def Info: figures/pointcloud-img.png  used on input line 81.
 (pdftex.def)             Requested size: 298.75264pt x 163.67397pt.
-LaTeX Info: Redefining \. on input line 83.
-LaTeX Info: Redefining \% on input line 83.
-[18 <./figures/pointcloud-img.png>]
-Cap\'{\i }tulo 3.
 
 Underfull \hbox (badness 10000) in paragraph at lines 85--86
 
@@ -510,8 +656,19 @@ Underfull \hbox (badness 10000) in paragraph at lines 89--90
 
  []
 
+LaTeX Info: Redefining \. on input line 91.
+LaTeX Info: Redefining \% on input line 91.
+[18 <./figures/pointcloud-img.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 91--92
 
-Underfull \hbox (badness 10000) in paragraph at lines 95--96
+ []
+
+LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 9
+3.
+(/usr/share/texlive/texmf-dist/tex/latex/base/t1cmtt.fd
+File: t1cmtt.fd 2019/12/16 v2.5j Standard LaTeX font definitions
+)
+Underfull \hbox (badness 10000) in paragraph at lines 93--94
 
  []
 
@@ -520,122 +677,189 @@ Underfull \hbox (badness 10000) in paragraph at lines 97--98
 
  []
 
-[19
+
+Underfull \hbox (badness 10000) in paragraph at lines 110--111
+
+ []
+
+LaTeX Info: Redefining \. on input line 113.
+LaTeX Info: Redefining \% on input line 113.
+[19] [20
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 99--100
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 103--104
-
- []
-
+Cap\'{\i }tulo 3.
 
 Underfull \hbox (badness 10000) in paragraph at lines 115--116
 
  []
 
-<figures/cam_info-diag.png, id=85, 323.40825pt x 109.66972pt>
-File: figures/cam_info-diag.png Graphic file (type png)
-<use figures/cam_info-diag.png>
-Package pdftex.def Info: figures/cam_info-diag.png  used on input line 117.
-(pdftex.def)             Requested size: 426.79135pt x 144.72763pt.
 
-LaTeX Warning: `h' float specifier changed to `ht'.
+Underfull \hbox (badness 10000) in paragraph at lines 117--118
+
+ []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 119--120
 
  []
 
-LaTeX Info: Redefining \. on input line 120.
-LaTeX Info: Redefining \% on input line 120.
+
+Underfull \hbox (badness 10000) in paragraph at lines 123--124
+
+ []
+
+<figures/esquema_general.png, id=232, 1070.3187pt x 297.0297pt>
+File: figures/esquema_general.png Graphic file (type png)
+<use figures/esquema_general.png>
+Package pdftex.def Info: figures/esquema_general.png  used on input line 125.
+(pdftex.def)             Requested size: 426.79135pt x 118.43811pt.
+[21]
+Underfull \hbox (badness 10000) in paragraph at lines 138--139
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 140--141
+
+ []
+
+LaTeX Info: Redefining \. on input line 141.
+LaTeX Info: Redefining \% on input line 141.
 
 Package Fancyhdr Warning: \headheight is too small (14.61858pt): 
 Make it at least 15.04742pt.
 We now make it that large for the rest of the document.
 This may cause the page layout to be inconsistent, however.
 
-[20]
-Underfull \hbox (badness 10000) in paragraph at lines 121--122
+[22 <./figures/esquema_general.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 145--146
 
  []
 
-<figures/sync_info-diag.png, id=89, 360.44662pt x 140.02313pt>
+
+Underfull \hbox (badness 10000) in paragraph at lines 147--148
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 149--150
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 153--154
+
+ []
+
+LaTeX Info: Redefining \. on input line 161.
+LaTeX Info: Redefining \% on input line 161.
+[23]
+Underfull \hbox (badness 10000) in paragraph at lines 165--166
+
+ []
+
+<figures/cam_info-diag.png, id=248, 323.40825pt x 109.66972pt>
+File: figures/cam_info-diag.png Graphic file (type png)
+<use figures/cam_info-diag.png>
+Package pdftex.def Info: figures/cam_info-diag.png  used on input line 167.
+(pdftex.def)             Requested size: 426.79135pt x 144.72763pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 169--170
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 171--172
+
+ []
+
+<figures/sync_info-diag.png, id=249, 360.44662pt x 140.02313pt>
 File: figures/sync_info-diag.png Graphic file (type png)
 <use figures/sync_info-diag.png>
-Package pdftex.def Info: figures/sync_info-diag.png  used on input line 123.
+Package pdftex.def Info: figures/sync_info-diag.png  used on input line 173.
 (pdftex.def)             Requested size: 426.79135pt x 165.79845pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 125--126
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 175--176
 
  []
 
-LaTeX Info: Redefining \. on input line 127.
-LaTeX Info: Redefining \% on input line 127.
-[21 <./figures/cam_info-diag.png> <./figures/sync_info-diag.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 129--130
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 131--132
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 135--136
+LaTeX Info: Redefining \. on input line 177.
+LaTeX Info: Redefining \% on input line 177.
+[24 <./figures/cam_info-diag.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 179--180
 
  []
 
 
-Overfull \hbox (10.39635pt too wide) in paragraph at lines 137--138
+Underfull \hbox (badness 10000) in paragraph at lines 181--182
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 185--186
+
+ []
+
+LaTeX Info: Redefining \. on input line 186.
+LaTeX Info: Redefining \% on input line 186.
+[25 <./figures/sync_info-diag.png>]
+Overfull \hbox (10.39635pt too wide) in paragraph at lines 187--188
 []\T1/cmr/m/n/12 El al-go-rit-mo uti-li-za-do es-tá ba-sa-do en el pa-que-te de
  ROS dept-hi-ma-ge_to_laserscan.
  []
 
-LaTeX Info: Redefining \. on input line 145.
-LaTeX Info: Redefining \% on input line 145.
-[22]
-Underfull \hbox (badness 10000) in paragraph at lines 151--152
+
+Underfull \hbox (badness 10000) in paragraph at lines 201--202
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 170--171
+LaTeX Info: Redefining \. on input line 214.
+LaTeX Info: Redefining \% on input line 214.
+[26]
+Underfull \hbox (badness 10000) in paragraph at lines 220--221
 
  []
 
-LaTeX Info: Redefining \. on input line 174.
-LaTeX Info: Redefining \% on input line 174.
-[23] (./memoria_tfg.aux
-LaTeX Info: Redefining \. on input line 7.
-LaTeX Info: Redefining \% on input line 7.
-) ) 
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 224.
+LaTeX Info: Redefining \. on input line 224.
+LaTeX Info: Redefining \% on input line 224.
+[27]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 224.
+ (./memoria_tfg.aux
+LaTeX Info: Redefining \. on input line 24.
+LaTeX Info: Redefining \% on input line 24.
+)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 224.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 224.
+Package rerunfilecheck Info: File `memoria_tfg.out' has not changed.
+(rerunfilecheck)             Checksum: 6AC51E7ABAE040E3C4219964922F6CD2;1487.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 224.
+ ) 
 Here is how much of TeX's memory you used:
- 4281 strings out of 481239
- 55996 string characters out of 5920377
- 307971 words of memory out of 5000000
- 19477 multiletter control sequences out of 15000+600000
- 549805 words of font info for 69 fonts, out of 8000000 for 9000
+ 8292 strings out of 481239
+ 119632 string characters out of 5920377
+ 397228 words of memory out of 5000000
+ 23320 multiletter control sequences out of 15000+600000
+ 550118 words of font info for 70 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 33i,10n,47p,1475b,471s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-t1.enc}{/usr/share/texmf
-/fonts/enc/dvips/cm-super/cm-super-ts1.enc}</usr/share/texmf/fonts/type1/public
-/cm-super/sfbx1200.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbx1440.p
-fb></usr/share/texmf/fonts/type1/public/cm-super/sfbx1728.pfb></usr/share/texmf
-/fonts/type1/public/cm-super/sfbx2488.pfb></usr/share/texmf/fonts/type1/public/
-cm-super/sfrm0700.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm0800.pf
-b></usr/share/texmf/fonts/type1/public/cm-super/sfrm1000.pfb></usr/share/texmf/
-fonts/type1/public/cm-super/sfrm1200.pfb></usr/share/texmf/fonts/type1/public/c
-m-super/sfrm1440.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm2074.pfb
->
-Output written on memoria_tfg.pdf (23 pages, 4766629 bytes).
+ 37i,11n,47p,1475b,517s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-t1.enc}{/usr/share/texmf/
+fonts/enc/dvips/cm-super/cm-super-ts1.enc}</usr/share/texmf/fonts/type1/public/
+cm-super/sfbx1200.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbx1440.pf
+b></usr/share/texmf/fonts/type1/public/cm-super/sfbx1728.pfb></usr/share/texmf/
+fonts/type1/public/cm-super/sfbx2488.pfb></usr/share/texmf/fonts/type1/public/c
+m-super/sfrm0700.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm0800.pfb
+></usr/share/texmf/fonts/type1/public/cm-super/sfrm1000.pfb></usr/share/texmf/f
+onts/type1/public/cm-super/sfrm1200.pfb></usr/share/texmf/fonts/type1/public/cm
+-super/sfrm1440.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm2074.pfb>
+</usr/share/texmf/fonts/type1/public/cm-super/sftt1200.pfb>
+Output written on memoria_tfg.pdf (27 pages, 5059305 bytes).
 PDF statistics:
- 136 PDF objects out of 1000 (max. 8388607)
- 87 compressed objects within 1 object stream
- 0 named destinations out of 1000 (max. 500000)
- 41 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 326 PDF objects out of 1000 (max. 8388607)
+ 268 compressed objects within 3 object streams
+ 62 named destinations out of 1000 (max. 500000)
+ 214 words of extra memory for PDF output out of 10000 (max. 10000000)
 
