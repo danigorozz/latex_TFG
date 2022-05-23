@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2022.5.17)  23 MAY 2022 12:56
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2022.5.17)  23 MAY 2022 16:29
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -654,60 +654,74 @@ Underfull \hbox (badness 10000) in paragraph at lines 85--86
 
  []
 
+<figures/grafica_rendimiento_yolov3.png, id=239, 715.67375pt x 445.665pt>
+File: figures/grafica_rendimiento_yolov3.png Graphic file (type png)
+<use figures/grafica_rendimiento_yolov3.png>
+Package pdftex.def Info: figures/grafica_rendimiento_yolov3.png  used on input 
+line 87.
+(pdftex.def)             Requested size: 341.43437pt x 212.6179pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 87--88
-
- []
+LaTeX Warning: `h' float specifier changed to `ht'.
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 89--90
 
  []
 
-LaTeX Info: Redefining \. on input line 91.
-LaTeX Info: Redefining \% on input line 91.
-[18 <./figures/pointcloud-img.png>]
+
 Underfull \hbox (badness 10000) in paragraph at lines 91--92
 
  []
 
-LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 9
-3.
-(/usr/share/texlive/texmf-dist/tex/latex/base/t1cmtt.fd
-File: t1cmtt.fd 2019/12/16 v2.5j Standard LaTeX font definitions
-)
-Underfull \hbox (badness 10000) in paragraph at lines 93--94
+LaTeX Info: Redefining \. on input line 92.
+LaTeX Info: Redefining \% on input line 92.
+[18 <./figures/pointcloud-img.png>]
+<figures/yolo_proced.png, id=249, 659.46375pt x 438.63875pt>
+File: figures/yolo_proced.png Graphic file (type png)
+<use figures/yolo_proced.png>
+Package pdftex.def Info: figures/yolo_proced.png  used on input line 93.
+(pdftex.def)             Requested size: 341.43437pt x 227.10957pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 95--96
 
  []
 
-
+LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 9
+7.
+(/usr/share/texlive/texmf-dist/tex/latex/base/t1cmtt.fd
+File: t1cmtt.fd 2019/12/16 v2.5j Standard LaTeX font definitions
+)
 Underfull \hbox (badness 10000) in paragraph at lines 97--98
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 110--111
+Underfull \hbox (badness 10000) in paragraph at lines 101--102
 
  []
 
-LaTeX Info: Redefining \. on input line 113.
-LaTeX Info: Redefining \% on input line 113.
-[19] [20
+LaTeX Info: Redefining \. on input line 107.
+LaTeX Info: Redefining \% on input line 107.
+[19 <./figures/grafica_rendimiento_yolov3.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 114--115
 
-]
+ []
+
+LaTeX Info: Redefining \. on input line 117.
+LaTeX Info: Redefining \% on input line 117.
+[20 <./figures/yolo_proced.png>]
 Cap\'{\i }tulo 3.
 
-Underfull \hbox (badness 10000) in paragraph at lines 115--116
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 117--118
-
- []
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 119--120
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 121--122
 
  []
 
@@ -716,23 +730,30 @@ Underfull \hbox (badness 10000) in paragraph at lines 123--124
 
  []
 
-<figures/esquema_general.png, id=257, 1070.3187pt x 297.0297pt>
+
+Underfull \hbox (badness 10000) in paragraph at lines 127--128
+
+ []
+
+<figures/esquema_general.png, id=266, 1070.3187pt x 297.0297pt>
 File: figures/esquema_general.png Graphic file (type png)
 <use figures/esquema_general.png>
-Package pdftex.def Info: figures/esquema_general.png  used on input line 125.
+Package pdftex.def Info: figures/esquema_general.png  used on input line 129.
 (pdftex.def)             Requested size: 426.79135pt x 118.43811pt.
-[21]
-Underfull \hbox (badness 10000) in paragraph at lines 138--139
+[21
+
+]
+Underfull \hbox (badness 10000) in paragraph at lines 142--143
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 140--141
+Underfull \hbox (badness 10000) in paragraph at lines 144--145
 
  []
 
-LaTeX Info: Redefining \. on input line 141.
-LaTeX Info: Redefining \% on input line 141.
+LaTeX Info: Redefining \. on input line 145.
+LaTeX Info: Redefining \% on input line 145.
 
 Package Fancyhdr Warning: \headheight is too small (14.61858pt): 
 Make it at least 15.04742pt.
@@ -740,17 +761,12 @@ We now make it that large for the rest of the document.
 This may cause the page layout to be inconsistent, however.
 
 [22 <./figures/esquema_general.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 145--146
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 147--148
-
- []
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 149--150
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 151--152
 
  []
 
@@ -759,50 +775,50 @@ Underfull \hbox (badness 10000) in paragraph at lines 153--154
 
  []
 
-LaTeX Info: Redefining \. on input line 161.
-LaTeX Info: Redefining \% on input line 161.
-[23]
-Underfull \hbox (badness 10000) in paragraph at lines 165--166
+
+Underfull \hbox (badness 10000) in paragraph at lines 157--158
 
  []
 
-<figures/cam_info-diag.png, id=273, 323.40825pt x 109.66972pt>
-File: figures/cam_info-diag.png Graphic file (type png)
-<use figures/cam_info-diag.png>
-Package pdftex.def Info: figures/cam_info-diag.png  used on input line 167.
-(pdftex.def)             Requested size: 426.79135pt x 144.72763pt.
-
+LaTeX Info: Redefining \. on input line 165.
+LaTeX Info: Redefining \% on input line 165.
+[23]
 Underfull \hbox (badness 10000) in paragraph at lines 169--170
 
  []
 
+<figures/cam_info-diag.png, id=282, 323.40825pt x 109.66972pt>
+File: figures/cam_info-diag.png Graphic file (type png)
+<use figures/cam_info-diag.png>
+Package pdftex.def Info: figures/cam_info-diag.png  used on input line 171.
+(pdftex.def)             Requested size: 426.79135pt x 144.72763pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 171--172
+Underfull \hbox (badness 10000) in paragraph at lines 173--174
 
  []
-
-<figures/sync_info-diag.png, id=274, 360.44662pt x 140.02313pt>
-File: figures/sync_info-diag.png Graphic file (type png)
-<use figures/sync_info-diag.png>
-Package pdftex.def Info: figures/sync_info-diag.png  used on input line 173.
-(pdftex.def)             Requested size: 426.79135pt x 165.79845pt.
-
-LaTeX Warning: `h' float specifier changed to `ht'.
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 175--176
 
  []
 
-LaTeX Info: Redefining \. on input line 177.
-LaTeX Info: Redefining \% on input line 177.
-[24 <./figures/cam_info-diag.png>]
+<figures/sync_info-diag.png, id=283, 360.44662pt x 140.02313pt>
+File: figures/sync_info-diag.png Graphic file (type png)
+<use figures/sync_info-diag.png>
+Package pdftex.def Info: figures/sync_info-diag.png  used on input line 177.
+(pdftex.def)             Requested size: 426.79135pt x 165.79845pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 179--180
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 181--182
+LaTeX Info: Redefining \. on input line 181.
+LaTeX Info: Redefining \% on input line 181.
+[24 <./figures/cam_info-diag.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 183--184
 
  []
 
@@ -811,72 +827,72 @@ Underfull \hbox (badness 10000) in paragraph at lines 185--186
 
  []
 
-LaTeX Info: Redefining \. on input line 186.
-LaTeX Info: Redefining \% on input line 186.
+
+Underfull \hbox (badness 10000) in paragraph at lines 189--190
+
+ []
+
+LaTeX Info: Redefining \. on input line 190.
+LaTeX Info: Redefining \% on input line 190.
 [25 <./figures/sync_info-diag.png>]
-Overfull \hbox (10.39635pt too wide) in paragraph at lines 187--188
+Overfull \hbox (10.39635pt too wide) in paragraph at lines 191--192
 []\T1/cmr/m/n/12 El al-go-rit-mo uti-li-za-do es-tá ba-sa-do en el pa-que-te de
  ROS dept-hi-ma-ge_to_laserscan.
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 201--202
+Underfull \hbox (badness 10000) in paragraph at lines 205--206
 
  []
 
-LaTeX Info: Redefining \. on input line 214.
-LaTeX Info: Redefining \% on input line 214.
+LaTeX Info: Redefining \. on input line 218.
+LaTeX Info: Redefining \% on input line 218.
 [26]
-Underfull \hbox (badness 10000) in paragraph at lines 220--221
-
- []
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 224--225
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 226--227
+Underfull \hbox (badness 10000) in paragraph at lines 228--229
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 238--239
+Underfull \hbox (badness 10000) in paragraph at lines 230--231
 
  []
 
-LaTeX Info: Redefining \. on input line 239.
-LaTeX Info: Redefining \% on input line 239.
-[27]
+
 Underfull \hbox (badness 10000) in paragraph at lines 242--243
 
  []
 
-
+LaTeX Info: Redefining \. on input line 243.
+LaTeX Info: Redefining \% on input line 243.
+[27]
 Underfull \hbox (badness 10000) in paragraph at lines 246--247
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 248--249
+Underfull \hbox (badness 10000) in paragraph at lines 250--251
 
  []
 
-LaTeX Info: Redefining \. on input line 259.
-LaTeX Info: Redefining \% on input line 259.
+
+Underfull \hbox (badness 10000) in paragraph at lines 252--253
+
+ []
+
+LaTeX Info: Redefining \. on input line 263.
+LaTeX Info: Redefining \% on input line 263.
 [28]
-Underfull \hbox (badness 10000) in paragraph at lines 262--263
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 264--265
-
- []
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 266--267
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 268--269
 
  []
 
@@ -886,41 +902,46 @@ Underfull \hbox (badness 10000) in paragraph at lines 270--271
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 272--273
+Underfull \hbox (badness 10000) in paragraph at lines 274--275
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 287--288
+Underfull \hbox (badness 10000) in paragraph at lines 276--277
 
  []
 
-LaTeX Info: Redefining \. on input line 293.
-LaTeX Info: Redefining \% on input line 293.
+
+Underfull \hbox (badness 10000) in paragraph at lines 291--292
+
+ []
+
+LaTeX Info: Redefining \. on input line 297.
+LaTeX Info: Redefining \% on input line 297.
 [29]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 305.
-LaTeX Info: Redefining \. on input line 305.
-LaTeX Info: Redefining \% on input line 305.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 310.
+LaTeX Info: Redefining \. on input line 310.
+LaTeX Info: Redefining \% on input line 310.
  [30]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 305.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 310.
  (./memoria_tfg.aux
 LaTeX Info: Redefining \. on input line 24.
 LaTeX Info: Redefining \% on input line 24.
 )
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 305.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 305.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 310.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 310.
 Package rerunfilecheck Info: File `memoria_tfg.out' has not changed.
-(rerunfilecheck)             Checksum: 54929102EC2F4B1FBD4736A69D4E3DCA;1894.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 305.
+(rerunfilecheck)             Checksum: 6996489FF7E779CD0B63B7D71706033E;1900.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 310.
  ) 
 Here is how much of TeX's memory you used:
- 8370 strings out of 481239
- 120625 string characters out of 5920377
- 398663 words of memory out of 5000000
- 23384 multiletter control sequences out of 15000+600000
+ 8386 strings out of 481239
+ 121039 string characters out of 5920377
+ 398766 words of memory out of 5000000
+ 23396 multiletter control sequences out of 15000+600000
  550802 words of font info for 71 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 37i,11n,47p,1475b,517s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 37i,10n,47p,1475b,517s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-t1.enc}{/usr/share/texmf/
 fonts/enc/dvips/cm-super/cm-super-ts1.enc}</usr/share/texlive/texmf-dist/fonts/
 type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/
@@ -934,10 +955,10 @@ blic/cm-super/sfrm1200.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm14
 40.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm2074.pfb></usr/share/t
 exmf/fonts/type1/public/cm-super/sfti1200.pfb></usr/share/texmf/fonts/type1/pub
 lic/cm-super/sftt1200.pfb>
-Output written on memoria_tfg.pdf (30 pages, 5105115 bytes).
+Output written on memoria_tfg.pdf (30 pages, 5437247 bytes).
 PDF statistics:
- 379 PDF objects out of 1000 (max. 8388607)
- 314 compressed objects within 4 object streams
- 71 named destinations out of 1000 (max. 500000)
- 254 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 389 PDF objects out of 1000 (max. 8388607)
+ 320 compressed objects within 4 object streams
+ 73 named destinations out of 1000 (max. 500000)
+ 264 words of extra memory for PDF output out of 10000 (max. 10000000)
 

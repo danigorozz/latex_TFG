@@ -80,13 +80,17 @@ Las nubes de puntos tienen infinidad de aplicaciones como la elaboración de mod
 
 \addimage{pointcloud-img.png}{pc}{Ejemplo de nube de puntos}{0.7}
 
-\section{You only look once}
+\section{YOLO: You only look once}
 
-You only look once (YOLO) es un sistema en tiempo real de detección de objetos basado en rede neuronales. Sus características le hacen ser uno de los sistemas más rápidos y eficientes de todos los que buscan resolver el problema de la detección de objetos en imágenes.\\
+You only look once (YOLO) es un sistema en tiempo real de detección de objetos basado en rede neuronales convolucionales y deep learning. Su principal característica y la que le distingue de otros modelos para la detección de objetos es que solo requiere visualizar una única vez la imagen (haciendo honores a su acrónimo). Esta propiedad le permite ser más rápido que los modelos competidores permitiendo la detección en tiempo real en vídeos de hasta 30 FPS. Según comentan sus creadores, es 1000 veces más rápido que R-CNN y 100 veces más rápido que Fast R-CNN. \\
 
-YOLO es un modelo ya entrenado que aplica una única red neuronal convolucional a toda la imagen. Esta red divide la imagen en regiones y predice los límites del elemento (bounding boxes) y su probabilidad.\\
+\addimage{grafica_rendimiento_yolov3.png}{rend}{Comparación con otros modelos}{0.8}
 
-Este modelo tiene multitud de ventajas con respecto a  otros sistemas de clasificación. YOLO observa toda la imagen, por lo que las predicciones dependen del contexto global en la imagen. Además, hace las predicciones con una sola red, al contrario que otros sistemas como R-CNN que requieren miles de redes para una única imagen. Esto convierte a YOLO en un sistema extremadamente rápido (1000 veces más rapido que R-CNN y 100 veces más rápido que Fast R-CNN).\\
+En la figura \ref{fig:rend} se muestra una gŕafica de la comparación de YOLOv3 con respecto a otros modelos. El tiempo de inferencia es mucho menor que el de los otros modelos y la métrica COCO mAP-50 es bastante decente, sobre todo teniendo en cuenta el bajo tiempo de inferencia.\\
+
+El procedimiento de YOLO es sencillo. Primero divide la imagen en una cuadrícula de $SxS$ y en cada una de estas celdas precide N posibles bounding boxes y calcula su probabilidad. Tras el cálculo, se eliminan aquellas que no superen un umbral de probabilidad. A las bounding boxes restantes, se les somete a un proceso de supresión de no máximos con el objetivo de eliminar los objetos que fueron detectados por duplicado, obteniéndose el resultado de la figura \ref{fig:proced}.\\
+
+\addimage{yolo_proced.png}{proced}{Procedimiento de YOLO}{0.8}
 
 YOLO es fácilmente implementable en ROS gracias al paquete darknet\_ros, que permite utilizarlo tanto en GPU como en CPU. La ventaja de usar la GPU para lanzar el modelo es que es 500 veces más rápido que utilizando la CPU. Para utilizar la GPU es necesario instalar el software CUDA de Nvidia.\\
 

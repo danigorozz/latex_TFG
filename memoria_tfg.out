@@ -11,7 +11,7 @@
 \BOOKMARK [1][-]{section.2.3}{Sensores RGBD}{chapter.2}% 11
 \BOOKMARK [2][-]{subsection.2.3.1}{Imagen de profundidad}{section.2.3}% 12
 \BOOKMARK [1][-]{section.2.4}{Nubes de puntos}{chapter.2}% 13
-\BOOKMARK [1][-]{section.2.5}{You only look once}{chapter.2}% 14
+\BOOKMARK [1][-]{section.2.5}{YOLO: You only look once}{chapter.2}% 14
 \BOOKMARK [2][-]{subsection.2.5.1}{Compute Unified Device Architecture}{section.2.5}% 15
 \BOOKMARK [0][-]{chapter.3}{Dise\361o e implementaci\363n}{part.2}% 16
 \BOOKMARK [1][-]{section.3.1}{Vista general del sistema}{chapter.3}% 17

@@ -12,7 +12,7 @@
 \contentsline {section}{\numberline {2.3}Sensores RGBD}{16}{section.2.3}%
 \contentsline {subsection}{\numberline {2.3.1}Imagen de profundidad}{17}{subsection.2.3.1}%
 \contentsline {section}{\numberline {2.4}Nubes de puntos}{17}{section.2.4}%
-\contentsline {section}{\numberline {2.5}You only look once}{18}{section.2.5}%
+\contentsline {section}{\numberline {2.5}YOLO: You only look once}{18}{section.2.5}%
 \contentsline {subsection}{\numberline {2.5.1}Compute Unified Device Architecture}{19}{subsection.2.5.1}%
 \contentsline {chapter}{\numberline {3}Diseño e implementación}{21}{chapter.3}%
 \contentsline {section}{\numberline {3.1}Vista general del sistema}{21}{section.3.1}%
