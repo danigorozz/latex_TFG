@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2022.5.17)  22 MAY 2022 22:00
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2022.5.17)  23 MAY 2022 12:56
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -156,6 +156,14 @@ Package: iftex 2019/11/07 v1.0c TeX engine tests
 Package: emptypage 2010/05/30 v1.2 Suppress page numbers and headings on empty 
 pages
 )
+(/usr/share/texlive/texmf-dist/tex/latex/float/float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count194
+\float@exts=\toks24
+\float@box=\box47
+\@float@everytoks=\toks25
+\@floatcapt=\box48
+)
 (/usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
 Package: graphicx 2019/11/30 v1.2a Enhanced LaTeX Graphics (DPC,SPQR)
 
@@ -228,8 +236,8 @@ Package: auxhook 2019-12-17 v1.6 Hooks for auxiliary files (HO)
 Package: kvoptions 2019/11/29 v3.13 Key value format for package options (HO)
 )
 \@linkdim=\dimen155
-\Hy@linkcounter=\count194
-\Hy@pagecounter=\count195
+\Hy@linkcounter=\count195
+\Hy@pagecounter=\count196
 
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/pd1enc.def
 File: pd1enc.def 2020/01/14 v7.00d Hyperref: PDFDocEncoding definition (HO)
@@ -242,8 +250,8 @@ Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
 (/usr/share/texlive/texmf-dist/tex/generic/etexcmds/etexcmds.sty
 Package: etexcmds 2019/12/15 v1.7 Avoid name clashes with e-TeX commands (HO)
 )
-\Hy@SavedSpaceFactor=\count196
-\pdfmajorversion=\count197
+\Hy@SavedSpaceFactor=\count197
+\pdfmajorversion=\count198
 Package hyperref Info: Hyper figures OFF on input line 4547.
 Package hyperref Info: Link nesting OFF on input line 4552.
 Package hyperref Info: Hyper index ON on input line 4555.
@@ -251,7 +259,7 @@ Package hyperref Info: Plain pages OFF on input line 4562.
 Package hyperref Info: Backreferencing OFF on input line 4567.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
 Package hyperref Info: Bookmarks ON on input line 4800.
-\c@Hy@tempcnt=\count198
+\c@Hy@tempcnt=\count199
 
 (/usr/share/texlive/texmf-dist/tex/latex/url/url.sty
 \Urlmuskip=\muskip17
@@ -267,7 +275,7 @@ Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
 Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO
 )
 ))
-\Fld@menulength=\count199
+\Fld@menulength=\count266
 \Field@Width=\dimen157
 \Fld@charsize=\dimen158
 Package hyperref Info: Hyper figures OFF on input line 6430.
@@ -283,9 +291,9 @@ LaTeX Info: Redefining \pageref on input line 6504.
 (/usr/share/texlive/texmf-dist/tex/generic/atbegshi/atbegshi.sty
 Package: atbegshi 2019/12/05 v1.19 At begin shipout hook (HO)
 )
-\Hy@abspage=\count266
-\c@Item=\count267
-\c@Hfootnote=\count268
+\Hy@abspage=\count267
+\c@Item=\count268
+\c@Hfootnote=\count269
 )
 Package hyperref Info: Driver (autodetected): hpdftex.
 
@@ -296,8 +304,8 @@ File: hpdftex.def 2020/01/14 v7.00d Hyperref driver for pdfTeX
 Package: atveryend 2019-12-11 v1.11 Hooks at the very end of document (HO)
 Package atveryend Info: \enddocument detected (standard20110627).
 )
-\Fld@listcount=\count269
-\c@bookmark@seq@number=\count270
+\Fld@listcount=\count270
+\c@bookmark@seq@number=\count271
 
 (/usr/share/texlive/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
 Package: rerunfilecheck 2019/12/05 v1.9 Rerun checks for auxiliary files (HO)
@@ -312,8 +320,8 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 ))
 (/usr/share/texlive/texmf-dist/tex/latex/l3backend/l3backend-pdfmode.def
 File: l3backend-pdfmode.def 2020-02-03 L3 backend support: PDF mode
-\l__kernel_color_stack_int=\count271
-\l__pdf_internal_box=\box47
+\l__kernel_color_stack_int=\count272
+\l__pdf_internal_box=\box49
 )
 (./memoria_tfg.aux
 LaTeX Info: Redefining \. on input line 24.
@@ -376,17 +384,17 @@ LaTeX Info: Redefining \% on input line 4.
 
 (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count272
+\scratchcounter=\count273
 \scratchdimen=\dimen159
-\scratchbox=\box48
-\nofMPsegments=\count273
-\nofMParguments=\count274
-\everyMPshowfont=\toks24
-\MPscratchCnt=\count275
+\scratchbox=\box50
+\nofMPsegments=\count274
+\nofMParguments=\count275
+\everyMPshowfont=\toks26
+\MPscratchCnt=\count276
 \MPscratchDim=\dimen160
-\MPnumerator=\count276
-\makeMPintoPDFobject=\count277
-\everyMPtoPDFconversion=\toks25
+\MPnumerator=\count277
+\makeMPintoPDFobject=\count278
+\everyMPtoPDFconversion=\toks27
 ) (/usr/share/texlive/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
@@ -396,7 +404,7 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-\AtBeginShipoutBox=\box49
+\AtBeginShipoutBox=\box51
 Package hyperref Info: Link coloring OFF on input line 4.
 
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
@@ -408,7 +416,7 @@ Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 (/usr/share/texlive/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
-\c@section@level=\count278
+\c@section@level=\count279
 )
 LaTeX Info: Redefining \ref on input line 4.
 LaTeX Info: Redefining \pageref on input line 4.
@@ -460,7 +468,7 @@ Underfull \vbox (badness 1033) has occurred while \output is active []
  [7
 
 ]
-<figures/IlustracionErroresMapa.png, id=152, 289.08pt x 257.2812pt>
+<figures/IlustracionErroresMapa.png, id=173, 289.08pt x 257.2812pt>
 File: figures/IlustracionErroresMapa.png Graphic file (type png)
 <use figures/IlustracionErroresMapa.png>
 Package pdftex.def Info: figures/IlustracionErroresMapa.png  used on input line
@@ -520,7 +528,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 20--21
 
  []
 
-<figures/ros_img.png, id=180, 947.54pt x 165.61874pt>
+<figures/ros_img.png, id=200, 947.54pt x 165.61874pt>
 File: figures/ros_img.png Graphic file (type png)
 <use figures/ros_img.png>
 Package pdftex.def Info: figures/ros_img.png  used on input line 22.
@@ -584,7 +592,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 50--51
 
  []
 
-<figures/occ_map_img.jpg, id=199, 253.94875pt x 503.8825pt>
+<figures/occ_map_img.jpg, id=219, 253.94875pt x 503.8825pt>
 File: figures/occ_map_img.jpg Graphic file (type jpg)
 <use figures/occ_map_img.jpg>
 Package pdftex.def Info: figures/occ_map_img.jpg  used on input line 54.
@@ -596,7 +604,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 61--62
 
  []
 
-<figures/kinect_img.png, id=204, 3834.325pt x 1324.95pt>
+<figures/kinect_img.png, id=224, 3834.325pt x 1324.95pt>
 File: figures/kinect_img.png Graphic file (type png)
 <use figures/kinect_img.png>
 Package pdftex.def Info: figures/kinect_img.png  used on input line 63.
@@ -614,7 +622,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 69--70
 LaTeX Info: Redefining \. on input line 70.
 LaTeX Info: Redefining \% on input line 70.
 [16 <./figures/occ_map_img.jpg> <./figures/kinect_img.png>]
-<figures/depth_img.png, id=212, 770.88pt x 583.17876pt>
+<figures/depth_img.png, id=232, 770.88pt x 583.17876pt>
 File: figures/depth_img.png Graphic file (type png)
 <use figures/depth_img.png>
 Package pdftex.def Info: figures/depth_img.png  used on input line 71.
@@ -636,7 +644,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 79--80
 
  []
 
-<figures/pointcloud-img.png, id=218, 1027.84pt x 563.10374pt>
+<figures/pointcloud-img.png, id=238, 1027.84pt x 563.10374pt>
 File: figures/pointcloud-img.png Graphic file (type png)
 <use figures/pointcloud-img.png>
 Package pdftex.def Info: figures/pointcloud-img.png  used on input line 81.
@@ -708,7 +716,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 123--124
 
  []
 
-<figures/esquema_general.png, id=237, 1070.3187pt x 297.0297pt>
+<figures/esquema_general.png, id=257, 1070.3187pt x 297.0297pt>
 File: figures/esquema_general.png Graphic file (type png)
 <use figures/esquema_general.png>
 Package pdftex.def Info: figures/esquema_general.png  used on input line 125.
@@ -758,7 +766,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 165--166
 
  []
 
-<figures/cam_info-diag.png, id=253, 323.40825pt x 109.66972pt>
+<figures/cam_info-diag.png, id=273, 323.40825pt x 109.66972pt>
 File: figures/cam_info-diag.png Graphic file (type png)
 <use figures/cam_info-diag.png>
 Package pdftex.def Info: figures/cam_info-diag.png  used on input line 167.
@@ -773,7 +781,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 171--172
 
  []
 
-<figures/sync_info-diag.png, id=254, 360.44662pt x 140.02313pt>
+<figures/sync_info-diag.png, id=274, 360.44662pt x 140.02313pt>
 File: figures/sync_info-diag.png Graphic file (type png)
 <use figures/sync_info-diag.png>
 Package pdftex.def Info: figures/sync_info-diag.png  used on input line 173.
@@ -841,33 +849,75 @@ Underfull \hbox (badness 10000) in paragraph at lines 238--239
 LaTeX Info: Redefining \. on input line 239.
 LaTeX Info: Redefining \% on input line 239.
 [27]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 246.
-LaTeX Info: Redefining \. on input line 246.
-LaTeX Info: Redefining \% on input line 246.
- [28]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 246.
+Underfull \hbox (badness 10000) in paragraph at lines 242--243
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 246--247
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 248--249
+
+ []
+
+LaTeX Info: Redefining \. on input line 259.
+LaTeX Info: Redefining \% on input line 259.
+[28]
+Underfull \hbox (badness 10000) in paragraph at lines 262--263
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 264--265
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 266--267
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 270--271
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 272--273
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 287--288
+
+ []
+
+LaTeX Info: Redefining \. on input line 293.
+LaTeX Info: Redefining \% on input line 293.
+[29]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 305.
+LaTeX Info: Redefining \. on input line 305.
+LaTeX Info: Redefining \% on input line 305.
+ [30]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 305.
  (./memoria_tfg.aux
 LaTeX Info: Redefining \. on input line 24.
 LaTeX Info: Redefining \% on input line 24.
 )
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 246.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 246.
-
-
-Package rerunfilecheck Warning: File `memoria_tfg.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `memoria_tfg.out':
-(rerunfilecheck)             Before: 4902EAE55AFBF0733E226B880A6FA2A5;1572
-(rerunfilecheck)             After:  04869E014285727559A143210E6FCBC9;1642.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 246.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 305.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 305.
+Package rerunfilecheck Info: File `memoria_tfg.out' has not changed.
+(rerunfilecheck)             Checksum: 54929102EC2F4B1FBD4736A69D4E3DCA;1894.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 305.
  ) 
 Here is how much of TeX's memory you used:
- 8301 strings out of 481239
- 119732 string characters out of 5920377
- 397228 words of memory out of 5000000
- 23325 multiletter control sequences out of 15000+600000
+ 8370 strings out of 481239
+ 120625 string characters out of 5920377
+ 398663 words of memory out of 5000000
+ 23384 multiletter control sequences out of 15000+600000
  550802 words of font info for 71 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  37i,11n,47p,1475b,517s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -884,10 +934,10 @@ blic/cm-super/sfrm1200.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm14
 40.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm2074.pfb></usr/share/t
 exmf/fonts/type1/public/cm-super/sfti1200.pfb></usr/share/texmf/fonts/type1/pub
 lic/cm-super/sftt1200.pfb>
-Output written on memoria_tfg.pdf (28 pages, 5097299 bytes).
+Output written on memoria_tfg.pdf (30 pages, 5105115 bytes).
 PDF statistics:
- 348 PDF objects out of 1000 (max. 8388607)
- 286 compressed objects within 3 object streams
- 65 named destinations out of 1000 (max. 500000)
- 222 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 379 PDF objects out of 1000 (max. 8388607)
+ 314 compressed objects within 4 object streams
+ 71 named destinations out of 1000 (max. 500000)
+ 254 words of extra memory for PDF output out of 10000 (max. 10000000)
 

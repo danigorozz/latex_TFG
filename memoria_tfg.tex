@@ -239,8 +239,68 @@ Como se comenta en el listado de parámetros, tienen unos valores por defecto qu
 
 \section{Detección de objetos}
 
+Paralelamente, se ha diseñado un sistema capaz de interpretar la imagen a color proporcionada por el sensor RGBD para detectar los objetos y tener un registro de los mismos. Este sistema, en principio, se puede lanzar simultáneamente junto con el sistema de generación de mapas de ocupación, sin embargo, debido a la potencia necesaria para ejecutar la red neuronal por GPU, resulta tedioso e incluso problemático con algunos ordenadores. Es por ello que se ha diseñado para que pueda ser lanzado de forma asíncrona con respecto al otro sistema.\\
 
+\subsection{Descompresión de la imagen de color}
 
+En muchas ocasiones, los paquetes de ROS que sirven para utilizar determinadas marcas de sensores RGBD proporcionan las imágenes en un formato comprimido para ahorrar espacio. Con el rosbag que se ha utilizado como fuente de datos ocurre lo mismo, por lo que es necesario un proceso de descompresión.\\
+
+Para este procedimiento, se ha utilizado un nodo llamado \texttt{republish} del paquete \texttt{image\_transport}. Este nodo se recibe un mensaje en formato \texttt{sensor\_msgs/\-Compressed\-Image} y lo convierte en un mensaje de tipo \texttt{sensor\_msgs/Image} para publicarlo.\\
+
+\subsection{Ejecución de YOLO}
+
+Una vez la imagen está descomprimida, ya puede ser recibida por la red neuronal. Este nodo recibe la imagen de color en formato \texttt{sensor\_msgs/Image} y publica en tres topics:
+
+\begin{itemize}
+
+	\item \texttt{object\_detector}. Mensaje de tipo \texttt{std\_msgs/Int8} que indica el número de objetos detectados.
+	\item \texttt{bounding\_boxes}. Mensaje de tipo \texttt{darknet\_ros\_msgs/BoundingBoxes} que representa un array que proprociona información sobre la posición y el tamaño de los bounding boxes en píxeles.
+	\item \texttt{detection\_image}. Mensaje de tipo \texttt{sensor\_msgs/Image} que ofrece las bounding boxes detectadas sobre la imagen a color que ha sido procesada.
+	
+\end{itemize}
+
+Las bounding boxes son unas ``cajas'' que señalizan al elemento detectado. Un mensaje de tipo \texttt{darknet\_ros\_msgs/BoundingBoxes} es un array de elementos con formato \texttt{darknet\_ros\_msgs/BoundingBox}.\\
+
+Además, este nodo ofrece una salida en la terminal indicando los frames por segundo (FPS) a los que se está ejecutando y un listado de los objetos encontrados junto con sus probabilidades. YOLO tiene un umbral de probabilidad establecido por defecto en $0.7$ para aceptar una detección como válida o no. \\
+
+Cabe mencionar que para utilizar YOLO con CUDA correctamente ha sido necesario un largo y tedioso proceso de configuración que se explicará en el Anexo X.\\
+
+\section{Procesamiento de los objetos detectados}
+
+Como se ha comentado, de YOLO obtenemos un array de bounding boxes con información sobre la posición y el tamaño en píxeles. Para el desarrollo de este proyecto se ha visto conveniente procesar esa información para realizar un posterior estudio de los objetos que han sido detectados y analizar de la fiabilidad de la red neuronal así como la calidad de los datos proporcionado por el rosbag.\\
+
+Para este procesamiento se ha diseñado un nodo llamado \texttt{write\_objects} que se encarga de recibir los mensajes que se publican en \texttt{/darknet\_ros/bounding\_boxes} y en \texttt{/amcl\_pose} para generar un archivo CSV donde cada fila representa la información con el formato mostrado en el cuadro \ref{tab:formato}. Cada columna utilizará el delimitador de punto y coma (`` ; '').\\
+
+\begin{table}[H]
+\begin{center}
+\begin{tabular}{| c | c | c | c | c |}
+	\hline
+	Objetos & Probs & Posición & Orientación & Tiempo \\ \hline
+	obj1:obj2:...:objN & prob1:prob2:...:probN & pX:pY:pZ & oW:oX:oY:oZ & (seg) \\ \hline
+
+\end{tabular}
+\caption{Formato del archivo CSV generado}
+\label{tab:formato}
+\end{center}
+\end{table} 
+
+Toda esta información es obtenida a partir del formato de los mensajes de las bounding boxes y de la pose. Para las bounding boxes es necesario acceder a cada una de ellas y obtener sus propiedades \texttt{Class} y \texttt{probability}. Para la pose es necesario acceder a su propiedades \texttt{pose.pose.position} y \texttt{pose.pose.orientation}.\\
+
+El formato del mensaje de una bounding box tiene las siguientes propiedades:
+
+\begin{itemize}
+
+	\item \texttt{probability}. Probabilidad de que el elemento detectado sea realmente de la clase que se le atribuye.
+	\item \texttt{xmin}. Coordenada X mínima de la bounding box en píxeles.
+	\item \texttt{ymin}. Coordenada Y mínima de la bounding box en píxeles.
+	\item \texttt{xmax}. Coordenada X máxima de la bounding box en píxeles.
+	\item \texttt{ymax}. Coordenada Y máxima de la bounding box en píxeles.
+	\item \texttt{id}. Identificador único para cada bounding box.
+	\item \texttt{Class}. Clase o etiqueta del elemento detectado.
+
+\end{itemize}
+
+Para la generación del archivo CSV se ha hecho uso de la librería 
 
 
 \end{document}
