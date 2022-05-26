@@ -48,34 +48,6 @@
       \verb https://www.elmundo.es/elmundo/2011/11/07/ciencia/1320663197.html
       \endverb
     \endentry
-    \entry{espato}{online}{}
-      \name{author}{1}{}{%
-        {{hash=9c677286866aad38f8e9b660f5411814}{%
-           family={Wikipedia},
-           familyi={W\bibinitperiod}}}%
-      }
-      \strng{namehash}{9c677286866aad38f8e9b660f5411814}
-      \strng{fullhash}{9c677286866aad38f8e9b660f5411814}
-      \strng{bibnamehash}{9c677286866aad38f8e9b660f5411814}
-      \strng{authorbibnamehash}{9c677286866aad38f8e9b660f5411814}
-      \strng{authornamehash}{9c677286866aad38f8e9b660f5411814}
-      \strng{authorfullhash}{9c677286866aad38f8e9b660f5411814}
-      \field{extraname}{1}
-      \field{sortinit}{2}
-      \field{sortinithash}{ed39bb39cf854d5250e95b1c1f94f4ed}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{addendum}{(acc: 25.05.2022)}
-      \field{month}{3}
-      \field{title}{Espato de Islandia}
-      \field{year}{2022}
-      \verb{urlraw}
-      \verb https://es.wikipedia.org/wiki/Espato_de_Islandia
-      \endverb
-      \verb{url}
-      \verb https://es.wikipedia.org/wiki/Espato_de_Islandia
-      \endverb
-    \endentry
     \entry{metro_madrid}{misc}{}
       \name{author}{1}{}{%
         {{hash=dd20b5fb6c11aa0b483e9cb71930efe3}{%
@@ -88,8 +60,8 @@
       \strng{authorbibnamehash}{dd20b5fb6c11aa0b483e9cb71930efe3}
       \strng{authornamehash}{dd20b5fb6c11aa0b483e9cb71930efe3}
       \strng{authorfullhash}{dd20b5fb6c11aa0b483e9cb71930efe3}
-      \field{sortinit}{4}
-      \field{sortinithash}{e071e0bcb44634fab398d68ad04e69f4}
+      \field{sortinit}{2}
+      \field{sortinithash}{ed39bb39cf854d5250e95b1c1f94f4ed}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{addendum}{(acc: 25.05.2022)}
@@ -115,8 +87,8 @@
       \strng{authorbibnamehash}{9e1a2ed2c32ed38e6538b751157e6b43}
       \strng{authornamehash}{9e1a2ed2c32ed38e6538b751157e6b43}
       \strng{authorfullhash}{9e1a2ed2c32ed38e6538b751157e6b43}
-      \field{sortinit}{6}
-      \field{sortinithash}{7851c86048328b027313775d8fbd2131}
+      \field{sortinit}{4}
+      \field{sortinithash}{e071e0bcb44634fab398d68ad04e69f4}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{addendum}{(acc: 25.05.2022)}
@@ -145,8 +117,8 @@
       \strng{authorbibnamehash}{9025c003e2b2dc05fa9648f172e55f44}
       \strng{authornamehash}{9025c003e2b2dc05fa9648f172e55f44}
       \strng{authorfullhash}{9025c003e2b2dc05fa9648f172e55f44}
-      \field{sortinit}{7}
-      \field{sortinithash}{f615fb9c6fba11c6f962fb3fd599810e}
+      \field{sortinit}{5}
+      \field{sortinithash}{5dd416adbafacc8226114bc0202d5fdd}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{addendum}{(acc: 25.05.2022)}
@@ -173,9 +145,9 @@
       \strng{authorbibnamehash}{9c677286866aad38f8e9b660f5411814}
       \strng{authornamehash}{9c677286866aad38f8e9b660f5411814}
       \strng{authorfullhash}{9c677286866aad38f8e9b660f5411814}
-      \field{extraname}{2}
-      \field{sortinit}{9}
-      \field{sortinithash}{54047ffb55bdefa0694bbd554c1b11a0}
+      \field{extraname}{1}
+      \field{sortinit}{7}
+      \field{sortinithash}{f615fb9c6fba11c6f962fb3fd599810e}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{addendum}{(acc: 25.05.2022)}
@@ -203,8 +175,8 @@
       \strng{authorbibnamehash}{a0280d6115433205972c08f6423df6f3}
       \strng{authornamehash}{a0280d6115433205972c08f6423df6f3}
       \strng{authorfullhash}{a0280d6115433205972c08f6423df6f3}
-      \field{sortinit}{1}
-      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
+      \field{sortinit}{9}
+      \field{sortinithash}{54047ffb55bdefa0694bbd554c1b11a0}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{addendum}{(acc: 25.05.2022)}
@@ -215,6 +187,38 @@
       \verb{url}
       \verb http://stair.stanford.edu/index.php
       \endverb
+    \endentry
+    \entry{stair_paper}{article}{}
+      \name{author}{3}{}{%
+        {{hash=9404eebbe5c52f5580a6f6515ebcbb80}{%
+           family={Quigley},
+           familyi={Q\bibinitperiod},
+           given={Morgan},
+           giveni={M\bibinitperiod}}}%
+        {{hash=05ef16e9b1890a54a9c97ac2b1be9f80}{%
+           family={Berger},
+           familyi={B\bibinitperiod},
+           given={Eric},
+           giveni={E\bibinitperiod}}}%
+        {{hash=49e889356ff39df159461bc2895c7e16}{%
+           family={Ng},
+           familyi={N\bibinitperiod},
+           given={Andrew\bibnamedelima Y.},
+           giveni={A\bibinitperiod\bibinitdelim Y\bibinitperiod}}}%
+      }
+      \strng{namehash}{a42decef415cb906e179b0ba30252598}
+      \strng{fullhash}{a42decef415cb906e179b0ba30252598}
+      \strng{bibnamehash}{a42decef415cb906e179b0ba30252598}
+      \strng{authorbibnamehash}{a42decef415cb906e179b0ba30252598}
+      \strng{authornamehash}{a42decef415cb906e179b0ba30252598}
+      \strng{authorfullhash}{a42decef415cb906e179b0ba30252598}
+      \field{sortinit}{1}
+      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{In AAAI 2007 Robotics Workshop}
+      \field{title}{STAIR: hardware and software architecture}
+      \field{year}{2007}
     \endentry
     \entry{licencia}{online}{}
       \name{author}{1}{}{%
@@ -228,7 +232,7 @@
       \strng{authorbibnamehash}{9c677286866aad38f8e9b660f5411814}
       \strng{authornamehash}{9c677286866aad38f8e9b660f5411814}
       \strng{authorfullhash}{9c677286866aad38f8e9b660f5411814}
-      \field{extraname}{3}
+      \field{extraname}{2}
       \field{sortinit}{1}
       \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
       \field{labelnamesource}{author}
@@ -267,6 +271,241 @@
       \endverb
       \verb{url}
       \verb https://github.com/ros2/rmw%5C_fastrtps/issues/249
+      \endverb
+    \endentry
+    \entry{occupancy_grid}{inproceedings}{}
+      \name{author}{3}{}{%
+        {{hash=96f6547ccf075e8095d0d3ca04015f8e}{%
+           family={Fulgenzi},
+           familyi={F\bibinitperiod},
+           given={Chiara},
+           giveni={C\bibinitperiod}}}%
+        {{hash=c0da267a6d19a04c1d9fc8d13febe6cf}{%
+           family={Spalanzani},
+           familyi={S\bibinitperiod},
+           given={Anne},
+           giveni={A\bibinitperiod}}}%
+        {{hash=0bf5ccc440e4e111121482bd8caf8827}{%
+           family={Laugier},
+           familyi={L\bibinitperiod},
+           given={Christian},
+           giveni={C\bibinitperiod}}}%
+      }
+      \strng{namehash}{8d36340fd26b4bf172702ed9ddb168a1}
+      \strng{fullhash}{8d36340fd26b4bf172702ed9ddb168a1}
+      \strng{bibnamehash}{8d36340fd26b4bf172702ed9ddb168a1}
+      \strng{authorbibnamehash}{8d36340fd26b4bf172702ed9ddb168a1}
+      \strng{authornamehash}{8d36340fd26b4bf172702ed9ddb168a1}
+      \strng{authorfullhash}{8d36340fd26b4bf172702ed9ddb168a1}
+      \field{sortinit}{1}
+      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Proceedings 2007 IEEE International Conference on Robotics and Automation}
+      \field{title}{Dynamic Obstacle Avoidance in uncertain environment combining PVOs and Occupancy Grid}
+      \field{year}{2007}
+      \field{pages}{1610\bibrangedash 1616}
+      \range{pages}{7}
+      \verb{doi}
+      \verb 10.1109/ROBOT.2007.363554
+      \endverb
+    \endentry
+    \entry{yolo}{misc}{}
+      \name{author}{4}{}{%
+        {{hash=99bced2e56a5253f3fe98a5f04e6d9b2}{%
+           family={Redmon},
+           familyi={R\bibinitperiod},
+           given={Joseph},
+           giveni={J\bibinitperiod}}}%
+        {{hash=05ca9f19da9ecbd2def4e5514f8043c8}{%
+           family={Divvala},
+           familyi={D\bibinitperiod},
+           given={Santosh},
+           giveni={S\bibinitperiod}}}%
+        {{hash=bd5dadbe57bedc5957c19a3154c4d424}{%
+           family={Girshick},
+           familyi={G\bibinitperiod},
+           given={Ross},
+           giveni={R\bibinitperiod}}}%
+        {{hash=396c6ddedb6f986906fc3e4994d19974}{%
+           family={Farhadi},
+           familyi={F\bibinitperiod},
+           given={Ali},
+           giveni={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{e1203a0044715040adeb8c5079ee645a}
+      \strng{fullhash}{b5530443e433a4da53dbe3cf155225b4}
+      \strng{bibnamehash}{e1203a0044715040adeb8c5079ee645a}
+      \strng{authorbibnamehash}{e1203a0044715040adeb8c5079ee645a}
+      \strng{authornamehash}{e1203a0044715040adeb8c5079ee645a}
+      \strng{authorfullhash}{b5530443e433a4da53dbe3cf155225b4}
+      \field{sortinit}{1}
+      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{You Only Look Once: Unified, Real-Time Object Detection}
+      \field{year}{2015}
+      \verb{eprint}
+      \verb arXiv:1506.02640
+      \endverb
+    \endentry
+    \entry{cuda}{online}{}
+      \name{author}{1}{}{%
+        {{hash=9c677286866aad38f8e9b660f5411814}{%
+           family={Wikipedia},
+           familyi={W\bibinitperiod}}}%
+      }
+      \strng{namehash}{9c677286866aad38f8e9b660f5411814}
+      \strng{fullhash}{9c677286866aad38f8e9b660f5411814}
+      \strng{bibnamehash}{9c677286866aad38f8e9b660f5411814}
+      \strng{authorbibnamehash}{9c677286866aad38f8e9b660f5411814}
+      \strng{authornamehash}{9c677286866aad38f8e9b660f5411814}
+      \strng{authorfullhash}{9c677286866aad38f8e9b660f5411814}
+      \field{extraname}{3}
+      \field{sortinit}{1}
+      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{addendum}{(acc: 26.05.2022)}
+      \field{title}{Compute Unified Device Architecture}
+      \verb{urlraw}
+      \verb https://es.wikipedia.org/wiki/CUDA
+      \endverb
+      \verb{url}
+      \verb https://es.wikipedia.org/wiki/CUDA
+      \endverb
+    \endentry
+    \entry{di2ls}{online}{}
+      \name{author}{1}{}{%
+        {{hash=97db925153d58d6a997176246fa6d827}{%
+           family={Rockey},
+           familyi={R\bibinitperiod},
+           given={Chad},
+           giveni={C\bibinitperiod}}}%
+      }
+      \strng{namehash}{97db925153d58d6a997176246fa6d827}
+      \strng{fullhash}{97db925153d58d6a997176246fa6d827}
+      \strng{bibnamehash}{97db925153d58d6a997176246fa6d827}
+      \strng{authorbibnamehash}{97db925153d58d6a997176246fa6d827}
+      \strng{authornamehash}{97db925153d58d6a997176246fa6d827}
+      \strng{authorfullhash}{97db925153d58d6a997176246fa6d827}
+      \field{sortinit}{1}
+      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{addendum}{(acc: 26.05.2022)}
+      \field{title}{ROS WIKI: depthimage to laserscan}
+      \verb{urlraw}
+      \verb http://wiki.ros.org/depthimage_to_laserscan
+      \endverb
+      \verb{url}
+      \verb http://wiki.ros.org/depthimage_to_laserscan
+      \endverb
+    \endentry
+    \entry{gmapping}{online}{}
+      \name{author}{1}{}{%
+        {{hash=a8ad4a5f43253f69552460c946e34e49}{%
+           family={Gerkey},
+           familyi={G\bibinitperiod},
+           given={Brian},
+           giveni={B\bibinitperiod}}}%
+      }
+      \strng{namehash}{a8ad4a5f43253f69552460c946e34e49}
+      \strng{fullhash}{a8ad4a5f43253f69552460c946e34e49}
+      \strng{bibnamehash}{a8ad4a5f43253f69552460c946e34e49}
+      \strng{authorbibnamehash}{a8ad4a5f43253f69552460c946e34e49}
+      \strng{authornamehash}{a8ad4a5f43253f69552460c946e34e49}
+      \strng{authorfullhash}{a8ad4a5f43253f69552460c946e34e49}
+      \field{sortinit}{1}
+      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{addendum}{(acc: 26.05.2022)}
+      \field{title}{ROS WIKI: gmapping}
+      \verb{urlraw}
+      \verb http://wiki.ros.org/gmapping?distro=noetic
+      \endverb
+      \verb{url}
+      \verb http://wiki.ros.org/gmapping?distro=noetic
+      \endverb
+    \endentry
+    \entry{republish}{online}{}
+      \name{author}{1}{}{%
+        {{hash=b4f4d0b82b7f7686e3d9ee1d7f29e99e}{%
+           family={Mihelich},
+           familyi={M\bibinitperiod},
+           given={Patrick},
+           giveni={P\bibinitperiod}}}%
+      }
+      \strng{namehash}{b4f4d0b82b7f7686e3d9ee1d7f29e99e}
+      \strng{fullhash}{b4f4d0b82b7f7686e3d9ee1d7f29e99e}
+      \strng{bibnamehash}{b4f4d0b82b7f7686e3d9ee1d7f29e99e}
+      \strng{authorbibnamehash}{b4f4d0b82b7f7686e3d9ee1d7f29e99e}
+      \strng{authornamehash}{b4f4d0b82b7f7686e3d9ee1d7f29e99e}
+      \strng{authorfullhash}{b4f4d0b82b7f7686e3d9ee1d7f29e99e}
+      \field{sortinit}{1}
+      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{addendum}{(acc: 26.05.2022)}
+      \field{title}{ROS WIKI: image transport}
+      \verb{urlraw}
+      \verb http://wiki.ros.org/image_transport
+      \endverb
+      \verb{url}
+      \verb http://wiki.ros.org/image_transport
+      \endverb
+    \endentry
+    \entry{darknet}{online}{}
+      \name{author}{1}{}{%
+        {{hash=53f42f424532d55e35ab63be96aba40f}{%
+           family={Bjelonic},
+           familyi={B\bibinitperiod},
+           given={Marko},
+           giveni={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{53f42f424532d55e35ab63be96aba40f}
+      \strng{fullhash}{53f42f424532d55e35ab63be96aba40f}
+      \strng{bibnamehash}{53f42f424532d55e35ab63be96aba40f}
+      \strng{authorbibnamehash}{53f42f424532d55e35ab63be96aba40f}
+      \strng{authornamehash}{53f42f424532d55e35ab63be96aba40f}
+      \strng{authorfullhash}{53f42f424532d55e35ab63be96aba40f}
+      \field{sortinit}{1}
+      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{addendum}{(acc: 26.05.2022)}
+      \field{title}{ROS WIKI: darknet ros}
+      \verb{urlraw}
+      \verb http://wiki.ros.org/darknet_ros
+      \endverb
+      \verb{url}
+      \verb http://wiki.ros.org/darknet_ros
+      \endverb
+    \endentry
+    \entry{enc}{online}{}
+      \name{author}{1}{}{%
+        {{hash=05665b7826ff460887094429e8a32116}{%
+           family={ROS},
+           familyi={R\bibinitperiod}}}%
+      }
+      \strng{namehash}{05665b7826ff460887094429e8a32116}
+      \strng{fullhash}{05665b7826ff460887094429e8a32116}
+      \strng{bibnamehash}{05665b7826ff460887094429e8a32116}
+      \strng{authorbibnamehash}{05665b7826ff460887094429e8a32116}
+      \strng{authornamehash}{05665b7826ff460887094429e8a32116}
+      \strng{authorfullhash}{05665b7826ff460887094429e8a32116}
+      \field{sortinit}{2}
+      \field{sortinithash}{ed39bb39cf854d5250e95b1c1f94f4ed}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{addendum}{(acc: 26.05.2022)}
+      \field{title}{image-encodings.h File Reference}
+      \verb{urlraw}
+      \verb http://docs.ros.org/en/jade/api/sensor_msgs/html/image__encodings_8h.html
+      \endverb
+      \verb{url}
+      \verb http://docs.ros.org/en/jade/api/sensor_msgs/html/image__encodings_8h.html
       \endverb
     \endentry
   \enddatalist

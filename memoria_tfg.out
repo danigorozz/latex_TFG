@@ -13,15 +13,13 @@
 \BOOKMARK [2][-]{subsection.2.3.1}{Imagen de profundidad}{section.2.3}% 13
 \BOOKMARK [1][-]{section.2.4}{Nubes de puntos}{chapter.2}% 14
 \BOOKMARK [1][-]{section.2.5}{YOLO: You only look once}{chapter.2}% 15
-\BOOKMARK [2][-]{subsection.2.5.1}{Compute Unified Device Architecture}{section.2.5}% 16
+\BOOKMARK [2][-]{subsection.2.5.1}{CUDA: Compute Unified Device Architecture}{section.2.5}% 16
 \BOOKMARK [0][-]{chapter.3}{Dise\361o e implementaci\363n}{part.2}% 17
 \BOOKMARK [1][-]{section.3.1}{Vista general del sistema}{chapter.3}% 18
 \BOOKMARK [1][-]{section.3.2}{Fuente de datos}{chapter.3}% 19
-\BOOKMARK [2][-]{subsection.3.2.1}{Adaptaci\363n del rosbag}{section.3.2}% 20
-\BOOKMARK [2][-]{subsection.3.2.2}{Otras fuentes tomadas en cuenta}{section.3.2}% 21
-\BOOKMARK [1][-]{section.3.3}{De imagen de profundidad a barrido l\341ser}{chapter.3}% 22
-\BOOKMARK [1][-]{section.3.4}{Generaci\363n del mapa de ocupaci\363n}{chapter.3}% 23
-\BOOKMARK [1][-]{section.3.5}{Detecci\363n de objetos}{chapter.3}% 24
-\BOOKMARK [2][-]{subsection.3.5.1}{Descompresi\363n de la imagen de color}{section.3.5}% 25
-\BOOKMARK [2][-]{subsection.3.5.2}{Ejecuci\363n de YOLO}{section.3.5}% 26
-\BOOKMARK [1][-]{section.3.6}{Procesamiento de los objetos detectados}{chapter.3}% 27
+\BOOKMARK [1][-]{section.3.3}{De imagen de profundidad a barrido l\341ser}{chapter.3}% 20
+\BOOKMARK [1][-]{section.3.4}{Generaci\363n del mapa de ocupaci\363n}{chapter.3}% 21
+\BOOKMARK [1][-]{section.3.5}{Detecci\363n de objetos}{chapter.3}% 22
+\BOOKMARK [2][-]{subsection.3.5.1}{Descompresi\363n de la imagen de color}{section.3.5}% 23
+\BOOKMARK [2][-]{subsection.3.5.2}{Ejecuci\363n de YOLO}{section.3.5}% 24
+\BOOKMARK [1][-]{section.3.6}{Procesamiento de los objetos detectados}{chapter.3}% 25

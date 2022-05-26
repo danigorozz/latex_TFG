@@ -42,7 +42,7 @@ La robótica móvil ha ido evolucionando a un ritmo vertiginoso desde que comenz
 
 \begin{figure}[h]
 	\begin{center} 
-	\includegraphics[width=0.4\textwidth]{shakey.jpg}
+	\includegraphics[width=0.8\textwidth]{shakey.jpg}
 	\end{center}
 	\caption{Robot SHAKEY, 1968 \cite{shakey2}}
 	\label{fig:shakey}
@@ -64,15 +64,21 @@ Un robot autónomo móvil (ARM) es un robot capaz de navegar a través de un ent
 
 Los mapas métricos más utilizados en la robótica móvil son los mapas de ocupación o \textit{floorplans}. Son generados en una primera fase de inspección del entorno, empleando los mismos sensores que luego servirán para la navegación autónoma. Tradicionalmente, estos mapas de ocupación son generados empleando un láser 2D o LIDAR (dado su gran alcance y amplio campo de visión), generando por tanto mapas bidimensionales que especifican aquellas zonas del entorno que están libres de obstáculos y por tanto susceptibles de navegación, y aquellas que no lo están. No obstante, dado que un láser 2D no puede distinguir entre los objetos detectados, los mapas de ocupación bidimensionales generados con este sensor contienen, no sólo los elementos estructurales del entorno como paredes, puertas, columnas, etc., si no que incluyen multitud de objetos como mesas y sillas, camas, cajas e incluso personas si estaban presentes en el momento de generar el mapa.\\
 
-La inclusión de estos elementos no estructurales en el mapa de ocupación puede ocasionar problemas si se pretende utilizar ese mapa durante un largo período de tiempo. El mapa generado no estaría preparado si el entorno que representa sufre algún tipo de modificación de mobiliario, por lo que sería necesario volver a generar un nuevo mapa, con todo lo que eso conlleva. Sin ir más lejos, en la Escuela de Ingenierías Industriales hay muchos elementos que no pertenecen a la estructura del edificio que, si hoy mismo se utilizara un robot equipado con un láser 2D para generar un mapa, ocasionarían los problemas ya comentados. Estos elementos son, por ejemplo, las impresoras que hay en algunas zonas, las máquinas de refrescos y snacks, papeleras, carteles publicitarios, las nuevas mesas instaladas en la zona central, etc.\\
+La inclusión de estos elementos no estructurales en el mapa de ocupación puede ocasionar problemas si se pretende utilizar ese mapa durante un largo período de tiempo. El mapa generado no estaría preparado si el entorno que representa sufre algún tipo de modificación de mobiliario, por lo que sería necesario volver a generar un nuevo mapa, con todo lo que eso conlleva. Sin ir más lejos, en la Escuela de Ingenierías Industriales hay muchos elementos que no pertenecen a la estructura del edificio que, si hoy mismo se utilizara un robot equipado con un láser 2D para generar un mapa, ocasionarían los problemas ya comentados. Estos elementos son, por ejemplo, las impresoras que hay en algunas zonas, las máquinas de refrescos y snacks, papeleras, carteles publicitarios, las nuevas mesas instaladas en la zona central, etc (figura \ref{fig:eii}.\\
 
-[Pegar imagen hecha de la EII]\\
+\begin{figure}[h]
+	\begin{center} 
+	\includegraphics[width=0.7\textwidth]{eii.jpg}
+	\end{center}
+	\caption{Máquinas de refrescos de la Escuela de Ingenierías Industriales}
+	\label{fig:eii}
+\end{figure}
 
 En la figura \ref{fig:errores_laser} se muestra un ejemplo de un mapa generado de un entorno virtual a través de un láser 2D de 360º. Como se puede observar hay zonas, marcadas con numeración, en las que el mapa no representa fielmente las dimensiones reales de la vivienda. De modo que, si los objetos que no forman parte de la estructura modifican su posición después de la primera fase de análisis, el mapa de ocupación generado no podría ser utilizado por el robot para la navegación. \\
 
 \begin{figure}[h]
 	\begin{center} 
-	\includegraphics[width=0.7\textwidth]{IlustracionErroresMapa.png}
+	\includegraphics[width=0.55\textwidth]{IlustracionErroresMapa.png}
 	\end{center}
 	\caption{Mapa generado con el barrido de un láser 2D}
 	\label{fig:errores_laser}

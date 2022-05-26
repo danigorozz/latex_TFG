@@ -11,6 +11,9 @@ citestyle=numeric
 
 \addbibresource{bibliografia.bib}
 
+\widowpenalty=10000
+\clubpenalty=10000
+
 \begin{document}
 
 \pagestyle{fancy}
@@ -27,23 +30,37 @@ citestyle=numeric
 
 \section{Robotic Operating System}
 
-Robot Operating System (ROS) es una colección de frameworks para el desarrollo de software de robots. Se desarrolló originariamente en 2007 por el Laboratorio de Inteligencia Artificial de Stanford para dar soporte a su proyecto STAIR2\footnote{STAIR (Stanford Artificial Intelligence Robot) es un proyecto llevado a cabo por la Universidad de Stanford para desarrollar robots capaces de navegar en entornos indoor e interactuar con objetos y personas mediante inteligencia artificial. Para su versión 2.0 desarrollaron el framework de ROS \cite{stair}}. Es software libre bajo términos de licencia BSD\footnote{La licencia BSD es la licencia de software libre otorgada principalmente para los sistemas BSD (Berkeley Software Distribution). Es una licencia permisiva que permite la redistribución libre o privativa \cite{licencia}} que, pese a no ser un sistema operativo, provee los servicios estándar de éstos entre los que se incluyen la abstracción del hardware, el control de dispositivos de bajo nivel, la implementación de funcionalidad de uso común, el paso de mensajes entre procesos y el mantenimiento de paquetes. Está basado en una arquitectura de grafos donde el procesamiento toma lugar en los nodos que pueden recibir, mandar y multiplexar mensajes de sensores, control, estados, planificaciones y actuadores, entre otros.\\
+Robot Operating System (ROS) es un framework para el desarrollo de software de robots. Se desarrolló originariamente en 2007 por el Laboratorio de Inteligencia Artificial de Stanford para dar soporte a su proyecto STAIR2\footnote{STAIR (Stanford Artificial Intelligence Robot) es un proyecto llevado a cabo por la Universidad de Stanford para desarrollar robots capaces de navegar en entornos indoor e interactuar con objetos y personas mediante inteligencia artificial. Para su versión 2.0 desarrollaron el framework de ROS \cite{stair}} \cite{stair_paper}. Es software libre bajo términos de licencia BSD\footnote{La licencia BSD es la licencia de software libre otorgada principalmente para los sistemas BSD (Berkeley Software Distribution). Es una licencia permisiva que permite la redistribución libre o privativa \cite{licencia}} que, pese a no ser un sistema operativo, provee los servicios estándar de éstos entre los que se incluyen la abstracción del hardware, el control de dispositivos de bajo nivel, la implementación de funcionalidad de uso común, el paso de mensajes entre procesos y el mantenimiento de paquetes. Está basado en una arquitectura de grafos donde el procesamiento toma lugar en los nodos que pueden recibir, mandar y multiplexar mensajes de sensores, control, estados, planificaciones y actuadores, entre otros.\\
 
-\addimage{ros_img.png}{ros_img}{Propiedades}{0.7}
 
 \subsection{Arquitectura de la comunicación mediante ROS}
 
-La unidad básica de una comunicación en ROS es el nodo. Un nodo es un programa escrito en Python o C++ que se enlaza con otros nodos mediante topics, formando una red de nodos. Cuando varios nodos se complementan para cumplir una determinada función, se suelen agrupar en paquetes. Un paquete contiene, entre otras cosas, el nodo o los nodos que lo conforman, las dependencias necesarias para la ejecución de alguno de sus nodos, información acerca del propio paquete, etc. ROS tiene sus propios paquetes incluidos ya con la instalación pero además se pueden instalar paquetes desarrollados por otros usuarios.\\
+La unidad básica de una comunicación en ROS es el \textit{nodo}. Un nodo es un programa diseñado en Python o C++ que se comunica con otros nodos principalmente mediante \textit{topics}. Cuando varios nodos se complementan para cumplir una determinada función, se suelen agrupar en paquetes. Un paquete contiene, entre otras cosas, el nodo o los nodos que lo conforman, las dependencias necesarias para la ejecución de alguno de sus nodos, información acerca del propio paquete, etc. ROS tiene sus propios paquetes incluidos de forma estándar con la instalación pero además se pueden instalar paquetes de terceros, desarrollados por otros usuarios.\\
 
-Existe un nodo especial, llamado nodo master, que es el encargado de dibujar todo el árbol de nodos. Es decir, es el encargado de registrar los nodos, realizar las conexiones entre los publicadores y suscriptores y asignarle el canal de comunicación a través de los topics y de marcar el tipo de mensaje dictaminado por el publicador. Además, se encarga de establecer el servidor de parámetros, accesibles y modificables en cualquier momento. Es necesario lanzar este nodo previamente al lanzamiento de cualquier otro. \\
+Existe un nodo especial, llamado nodo \textit{master}, que se encarga de registrar las direcciones de cada nodo y qué y dónde publica o se suscribe. Además, se encarga de alojar el servidor de parámetros, accesibles y modificables en cualquier momento. Es necesario lanzar este nodo previamente al lanzamiento de cualquier otro. \\
 
 Los topics son el método más común de comunicación entre nodos. Está basado en el modelo de publicador/suscriptor. Los nodos pueden publicar (Publisher) o recibir (Subscriber) mensajes de un único tipo, establecidos por el nodo publicador. En un mismo topic pueden publicar y suscribirse tantos nodos se necesiten\footnote{Realmente, ROS especifica que no existe límite de nodos suscritos a un mismo topic. Sin embargo, se ha demostrado que a partir de 10 nodos, la fiabilidad se ve reducida y la latencia aumentada de forma significativa, pudiendo incluso ocasionar que algunos mensajes no sean recibidos por algunos suscriptores \cite{issue}}. \\
 
-Otro método de comunicación son los servicios o services. Permiten la comunicación entre nodos mediante el modelo de cliente/servidor. Permiten la inclusión de parámetros tanto en la solicitud como en la respuesta al servicio. Este método es bloqueante, es decir, el nodo solicitante queda bloqueado al momento de enviar la solicitud hasta que reciba una respuesta.\\
+Otro método de comunicación son los servicios o \textit{services}. Están basados en un modelo de llamada/respuesta. Mientras que los topics permiten a los nodos obtener continuas actualizaciones de datos, los servicios solo ofrecen respuesta tras ser llamados. Permiten la inclusión de parámetros tanto en la solicitud como en la respuesta al servicio. Este método es bloqueante, es decir, el nodo solicitante queda bloqueado al momento de enviar la solicitud hasta que reciba una respuesta, por lo que están pensados para ser utilizados en tareas que no ocupen mucho tiempo.\\
 
-El otro método de comunicación que existe en ROS son las acciones o actions. Las acciones funcionan de la misma manera que los servicios, solo que en este caso este modelo no bloquea al nodo que solicita información.\\
+El otro método de comunicación que existe en ROS son las acciones o actions, pensadas para tareas que necesiten una gran cantidad de tiempo para poder ser realizadas. Las acciones funcionan con un modelo cliente/servidor. A diferencia que los servicios, las acciones no son bloqueantes y permiten ser canceladas mientras se están ejecutando.\\
 
 Como se ha comentado, el método más usual de comunicación es a través de topics, donde los nodos envían y reciben información continuamente, sin peticiones ni esperas. Los servicios y acciones se utilizan en función de los requerimientos del software a desarrollar.\\
+
+\begin{figure}[H]
+ \centering
+  \subfloat[Topics]{
+    \includegraphics[width=0.5\textwidth]{exp_topics.png}}
+  \hspace{0.5cm}
+  \subfloat[Services]{
+    \includegraphics[width=0.5\textwidth]{exp_services.png}}
+  \subfloat[Actions]{
+    \includegraphics[width=0.5\textwidth]{exp_actions.png}}
+ \caption{Mecanismos de comunicación en ROS}
+ \label{fig:comm}
+\end{figure}
+
+ROS también implementa una herramienta muy útil a la hora de probar los programas que se desarrollan. Un \textit{rosbag} de ROS es una herramienta que permite capturar todos los mensajes que se publican por determinados topics para luego reproducirlos. Esto permite ejecutar el robot una única vez capturando todos los topics y luego reproducir los mensajes de estos topics cuantas veces queramos, permitiendo probar los nodos que se estén desarrollando sin tener que hacerlo directamente sobre el robot. Toda esta información se guarda en un archivo .bag.\\
 
 \subsection{¿Por qué ROS?}
 
@@ -57,7 +74,7 @@ Pero la que es quizá la mayor ventaja de ROS frente a otros frameworks y softwa
 
 Un mapa o rejilla de ocupación es una representación bidimensional del entorno que se almacena en el robot para realizar tareas de navegación. Está formado por celdas que discretizan el entorno y determinan si una porción del espacio está ocupado o no. Generalmente, las celdas ocupadas se representan con el color negro, y las celdas libres con el blanco.\\
 
-Para generar estos mapas, se utiliza la información obtenida de los diferentes sensores que conforman el robot, como pueden ser infrarrojos, cámaras RGBD, sónares o, los más utilizados, láseres 2D. Independientemente de la fiabilidad del sensor, no es posible establecer con certeza si una celda está ocupada o no. En la generación de estos mapas, típicamente se establecen tres suposiciones: una celda puede estar libre u ocupada, cada celda es independiente a las demás y el entorno es estático. Para estimar las distribuciones de probabilidad de cada celda se utiliza generalmente un filtro binario de estados estáticos de Bayes, basados en probabilidad condicionada.\\
+Para generar estos mapas, se utiliza la información obtenida de los diferentes sensores que conforman el robot, como pueden ser infrarrojos, cámaras RGBD, sónares o, los más utilizados, láseres 2D. Independientemente de la fiabilidad del sensor, no es posible establecer con certeza si una celda está ocupada o no. En la generación de estos mapas, típicamente se establecen tres suposiciones: una celda puede estar libre u ocupada, cada celda es independiente a las demás y el entorno es estático. Para estimar las distribuciones de probabilidad de cada celda se utiliza generalmente un Filtro de Ocupación Bayesiano (BOF) \cite{occupancy_grid}.\\
 
 \begin{figure}[h]
 \begin{center} \label{fig:occ_map}
@@ -70,7 +87,13 @@ Para generar estos mapas, se utiliza la información obtenida de los diferentes 
 
 Las cámaras RGBD son sensores visuales que, además de ofrecer información de color del entorno, proporcionan la distancia a la que se encuentra cada píxel de la imagen. Son cámaras a color comunes a las que se le añade un sensor de profundidad (normalmente, sensores infrarrojos) junto con un procesamiento que les permite percibir e interpretar la distancia a la que se sitúan los diferentes elementos del entorno que estén dentro de su campo de visión.\\
 
-\addimage{kinect_img.png}{kinect}{Kinect V1}{0.5}
+\begin{figure}[h]
+	\begin{center} 
+		\includegraphics[width=0.5\textwidth]{kinect_img.png}
+	\end{center}
+	\caption{Kinect V1}
+	\label{fig:kinect}
+\end{figure}
 
 Algunos de los fabricantes más importantes de este tipo de sensores son Microsoft, con la conocida Kinect; ASUS, IFM, StereoLabs, Intel, Orbbec, etc.\\
 
@@ -78,7 +101,14 @@ Algunos de los fabricantes más importantes de este tipo de sensores son Microso
 
 La imagen de profundidad, al igual que cada uno de los canales de color RGB, es una matriz donde cada valor representa un nivel de gris asociado a una distancia y está referido a cada uno de los píxeles que componen la imagen. Las dimensiones de esta imagen vendrán determinadas por la resolución de la cámara, es decir, si por ejemplo la resolución de la cámara es de 640x480 píxeles, la matriz tendrá 480 filas y 640 columnas. \\
 
-\addimage{depth_img.png}{depth}{Ejemplo de imagen de profundidad}{0.7}
+\begin{figure}[h]
+	\begin{center} 
+		\includegraphics[width=0.7\textwidth]{depth_img.png}
+	\end{center}
+	\caption{Ejemplo de imagen de profundidad}
+	\label{fig:depth}
+\end{figure}
+
 
 El valor de distancia para cada píxel establece un nivel de gris. Generalmente, los objetos situados más alejados del sensor tendrán valores más claros, mientras que a los más cercanos se le asignan valores más oscuros. Esta información se decodifica para obtener así la información absoluta en distancia, típicamente en metros o milímetros, dependerá de la codificación con la que la cámara envía la información.\\
 
@@ -88,27 +118,43 @@ Una nube de puntos o pointcloud es un conjunto de vértices en un sistema de coo
 
 Las nubes de puntos tienen infinidad de aplicaciones como la elaboración de modelos 3D en CAD de piezas fabricadas, la inspección de calidad en metrología y muchas otras en el ámbito de la visualización, animación, texturización y aplicaciones de personalización masiva.\\
 
-\addimage{pointcloud-img.png}{pc}{Ejemplo de nube de puntos}{0.7}
+\begin{figure}[h]
+	\begin{center} 
+		\includegraphics[width=0.7\textwidth]{pointcloud-img.png}
+	\end{center}
+	\caption{Ejemplo de nube de puntos}
+	\label{fig:pc}
+\end{figure}
 
 \section{YOLO: You only look once}
 
 You only look once (YOLO) es un sistema en tiempo real de detección de objetos basado en rede neuronales convolucionales y deep learning. Su principal característica y la que le distingue de otros modelos para la detección de objetos es que solo requiere visualizar una única vez la imagen (haciendo honores a su acrónimo). Esta propiedad le permite ser más rápido que los modelos competidores permitiendo la detección en tiempo real en vídeos de hasta 30 FPS. Según comentan sus creadores, es 1000 veces más rápido que R-CNN y 100 veces más rápido que Fast R-CNN. \\
 
-\addimage{grafica_rendimiento_yolov3.png}{rend}{Comparación con otros modelos}{0.8}
+\begin{figure}[h]
+	\begin{center} 
+		\includegraphics[width=0.8\textwidth]{grafica_rendimiento_yolov3.png}
+	\end{center}
+	\caption{Comparación con otros modelos}
+	\label{fig:rend}
+\end{figure}
 
-En la figura \ref{fig:rend} se muestra una gŕafica de la comparación de YOLOv3 con respecto a otros modelos. El tiempo de inferencia es mucho menor que el de los otros modelos y la métrica COCO mAP-50 es bastante decente, sobre todo teniendo en cuenta el bajo tiempo de inferencia.\\
+%En la figura \ref{fig:rend} se muestra una gŕafica de la comparación de YOLOv3 con respecto a otros modelos. El tiempo de inferencia es mucho menor que el de los otros modelos y la métrica COCO mAP-50 es bastante decente, sobre todo teniendo en cuenta el bajo tiempo de inferencia.\\
 
-El procedimiento de YOLO es sencillo. Primero divide la imagen en una cuadrícula de $SxS$ y en cada una de estas celdas precide N posibles bounding boxes y calcula su probabilidad. Tras el cálculo, se eliminan aquellas que no superen un umbral de probabilidad. A las bounding boxes restantes, se les somete a un proceso de supresión de no máximos con el objetivo de eliminar los objetos que fueron detectados por duplicado, obteniéndose el resultado de la figura \ref{fig:proced}.\\
+El procedimiento llevado a cabo por YOLO es sencillo. Primero divide la imagen en una cuadrícula de $SxS$ y en cada una de estas celdas precide N posibles bounding boxes y calcula su probabilidad. Tras el cálculo, se eliminan aquellas que no superen un umbral de probabilidad. A las bounding boxes restantes, se les somete a un proceso de supresión de no máximos con el objetivo de eliminar los objetos que fueron detectados por duplicado, obteniéndose el resultado de la figura \ref{fig:proced}.\\
 
-\addimage{yolo_proced.png}{proced}{Procedimiento de YOLO}{0.8}
+\begin{figure}[h]
+	\begin{center} 
+		\includegraphics[width=0.8\textwidth]{yolo_proced.png}
+	\end{center}
+	\caption{Procedimiento de YOLO}
+	\label{fig:proced}
+\end{figure}
 
-YOLO es fácilmente implementable en ROS gracias al paquete darknet\_ros, que permite utilizarlo tanto en GPU como en CPU. La ventaja de usar la GPU para lanzar el modelo es que es 500 veces más rápido que utilizando la CPU. Para utilizar la GPU es necesario instalar el software CUDA de Nvidia.\\
+YOLO es fácilmente implementable en ROS gracias al paquete darknet\_ros, que permite utilizarlo tanto en GPU como en CPU. La ventaja de usar la GPU para lanzar el modelo es que es 500 veces más rápido que utilizando la CPU. Para utilizar la GPU es necesario instalar el software CUDA de Nvidia \cite{yolo}.\\
 
-(Fuente: \url{https://pjreddie.com/darknet/yolo/} además tiene un PAPER)\\
+\subsection{CUDA: Compute Unified Device Architecture}
 
-\subsection{Compute Unified Device Architecture}
-
-CUDA es un conjunto de herramientas de desarrollo creadas por Nvidia que permiten a los programadores usar una variación del lenguaje de programación C (CUDA C) para coificar algoritmos GPU de Nvidia. Tiene como objetivo explitar las ventajas de las GPU frente a las CPU de propósito general utilizando el paralelismo que ofreccen sus múltiples núcleos, que permiten lanzar un altísimo número de procesos simultáneos.\\
+CUDA es un conjunto de herramientas de desarrollo creadas por Nvidia que permiten a los programadores usar una variación del lenguaje de programación C (CUDA C) para coificar algoritmos GPU de Nvidia. Tiene como objetivo explitar las ventajas de las GPU frente a las CPU de propósito general utilizando el paralelismo que ofreccen sus múltiples núcleos, que permiten lanzar un altísimo número de procesos simultáneos \cite{cuda}.\\
 
 Las principales ventajas de este sistema de computación son:
 
@@ -121,7 +167,6 @@ Las principales ventajas de este sistema de computación son:
 
 \end{itemize}
 
-Fuente: \url{https://es.wikipedia.org/wiki/CUDA}\\
 
 
 \chapter{Diseño e implementación}
@@ -134,39 +179,41 @@ Sobre los paquetes de terceros, se hará una breve explicación sobre la funció
 
 \section{Vista general del sistema}
 
-Como se ha comentado, el objetivo es transformar la imagen de profundidad que se obtiene de un sensor RGBD en un láser artificial para generar un mapa de ocupación. En otro proceso, simultáneamente o de forma asíncrona, se generará un archivo TXT con los elementos detectado por YOLO de la imagen de color para tener un registro y poder analizarlo. En la figura X se muestra el árbol de nodos y topics de todo el sistema. Los nodos que han sido creados se muestran en color azul. Los nodos que han sido obtenidos de otras fuentes pero han necesitado de alguna modificación en su código se muestran en color naranja. Los nodos que hno se han modificado se muestran en blanco Los topics se representan con una caja de color blanco.\\
+Como se ha comentado, el objetivo es transformar la imagen de profundidad que se obtiene de un sensor RGBD en un láser artificial para generar un mapa de ocupación. En otro proceso, simultáneamente o de forma asíncrona, se generará un archivo de texto o CVS con los elementos detectado por YOLO de la imagen de color para tener un registro y poder analizarlo. En la figura \ref{fig:esq_general} se muestra el árbol de nodos y topics de todo el sistema. Los nodos que han sido diseñados para este proyecto se muestran en color azul. Los nodos que han sido obtenidos de otras fuentes pero han necesitado de alguna modificación en su código se muestran en color naranja. Los nodos que no se han modificado se muestran en blanco. Los topics se representan con una caja de color blanco.\\
 
-\addimage{esquema_general.png}{esq_general}{Árbol de nodos y topics}{1}
+\begin{figure}[h]
+	\begin{center} 
+		\includegraphics[width=\textwidth]{esquema_general.png}
+	\end{center}
+	\caption{Árbol de nodos y topics. Los nodos diseñados para este trabajo son de color azul. Los nodos de terceros cuyo código ha sido modificado son de color naranja. Los nodos descargados que no se han modificado son de color blanco}
+	\label{fig:esq_general}
+\end{figure}
 
-Primeramente, se obtiene la información del robot mediante la reproducción de un rosbag (más información en la sección \ref{sec:datos}). De este rosbag se obtienen mensajes en cuatro topics (entre otros): 
+A continuación se enumeran todos los nodos que se van a utilizar en este proyecto:
 
 \begin{itemize}
 
-	\item \texttt{/camera\_down/depth/image}. Imagen de profundidad de la cámara.
-	\item \texttt{/tf}. Árbol de transformadas.
-	\item \texttt{/amcl\_pose}. Pose del robot.
-	\item \texttt{/camera\_down/rgb/image\_raw/compressed}. Imagen de color comprimida de la cámara.
+	\item El nodo \texttt{cam\_info} es un nodo diseñado expresamente para este trabajo. Se encarga de recibir la cabecera de la imagen de profundidad para generar un mensaje con información de la cámara y publicarlo.
+	\item El nodo \texttt{sync\_info} es otro de los que han sido diseñados para el proyecto. Su función es sincronizar los mensajes de la imagen de profundidad y de la información de la cámara.
+	\item \texttt{depthimage\_to\_laserscan} es un nodo de un paquete homónimo diseñado por Chad Rocke \cite{di2ls} que se encarga, principalmente, de transformar una imagen de profundidad en un barrido láser en función de unos parámetros. Para implementar el nodo en este trabajo modificaremos algunos fragmentos de su código.
+	\item El nodo \texttt{slam\_gmapping} es un nodo del paquete \texttt{gmapping} diseñado por Brian Gerkey \cite{gmapping}. Su función es la de obtener la localización del robot generando el mapa de ocupación.
+	\item \texttt{republish} es un nodo que pertenece al paquete \texttt{image\_transport} diseñado por Patrick Mihelich \cite{republish}. Se encarga de descomprimir las imágenes de entrada y publicarlas en formato descomprimido.
+	\item El nodo \texttt{darknet\_ros} es un nodo de un paquete con el mismo nombre diseñado por Marko Bjelonic \cite{darknet}. Implementa YOLO en ROS.
+	\item El nodo \texttt{write\_objects} es un nodo diseñado para este proyecto con el fin de procesar los objetos detectados y escribirlos en un archivo de texto para su posterior análisis.
+	
 
 \end{itemize}
-
-El primero de los topics contiene mensajes de tipo \texttt{sensor\_msgs/Image} con información de la imagen de profundidad captada por la cámara. A partir de este mensaje generamos el mensaje de tipo \texttt{sensor\_msgs/CameraInfo} con información de la cámara mediante el nodo \texttt{cam\_info}. Luego se sincronizan estos dos mensajes con el nodo \texttt{sync\_info} y se envían por los topics \texttt{/sync/depth\_image} y \texttt{/sync/camera\_info}. Estos mensajes los recibe el nodo \texttt{depthimage\_to\_laserscan} y los procesa para generar el mensaje de tipo \texttt{sensor\_msgs/LaserScan} y enviarlos por el topic \texttt{/new\_scan}. Estos mensajes, juntos con los de tipo \texttt{tf2\_msgs/TFMessage} del topic \texttt{/tf}, los recibe el nodo \texttt{slam\_gmapping} y los transforma en un mapa o rejilla de ocupación que envía por el topic \texttt{/map} con el formato \texttt{nav\_msgs/OccupancyGrid}. \\
-
-Con el topic \texttt{/camera\_down/rgb/image\_raw/compressed} se obtienen mensajes de tipo \texttt{sensor\_msgs/CompresedImage}. Con el nodo \texttt{republish} se descomprimen y se envían por el topic \texttt{/camera\_down/rgb/image\_raw/decompressed}. Estos mensajes los recibe la red neuronal mediante el nodo \texttt{darknet\_ros} y envía mensajes de tipo \texttt{darknet\_ros\_msgs/BoundingBoxes} por el topic \texttt{/darknet\_ros/bounding\_boxes}. El nodo \texttt{write\_objects} procesa estos mensajes y los de la pose del robot de tipo \texttt{sensor\_msgs/PoseWithCovarianceStamped} del topic \texttt{/amcl\_pose} y les da formato de tabla para pasarlos a un archivo TXT.\\
 
 
 \section{Fuente de datos} \label{sec:datos}
 
-La mejor manera de comprobar el correcto funcionamiento de todo el conjunto de nodos sería hacerlo directamente sobre el robot, con información real de sensores y del entorno. Sin embargo, debido a la dificultad que supondría utilizar este sistema sobre el robot, se decidió optar por otras vías.\\
-
-Un  rosbag de ROS es una herramienta que permite capturar todos los mensajes que se publican por determinados topics para luego reproducirlos. Esto permite ejecutar el robot una única vez capturando todos los topics y luego reproducir los mensajes de estos topics cuantas veces queramos, permitiendo probar los nodos que se estén desarrollando sin tener que hacerlo directamente sobre el robot. Toda esta información se guarda en un archivo .bag.\\
+La mejor manera de comprobar el correcto funcionamiento de todo el conjunto de nodos sería hacerlo directamente sobre el robot, con información real de sensores y del entorno. Sin embargo, debido a la dificultad que supondría utilizar este sistema sobre el robot, se decidió utilizar la herramienta que ROS pone a disposición precisamente para lidiar con este inconveniente: los rosbags.\\
 
 Para este proyecto se va a utilizar un rosbag generado por uno de los robots del laboratorio de Automática de la Escuela Técnica Superior de Informática. Esta grabación recoge la información de la pose del robot (posición X e Y y el ángulo de orientación), los datos recogidos por una cámara RGB-D (color y profundidad), el barrido de un láser y otra información que típicamente se utiliza en los robots como el árbol de transformadas.\\
 
-\subsection{Adaptación del rosbag}
-
 Sin embargo, pese a que este rosbag ha sido el utilizado para comprobar el funcionamiento del algoritmo diseñado, ha sido necesario hacer algunas modificaciones para que se pueda procesar la información correctamente.\\
 
-Normalmente, cuando se utiliza una cámara RGB-D en ROS, el paquete encargado de controlar la cámara envía tres tipos de mensajes pertenecientes al paquete sensor\_msgs. Estos mensajes son:
+Normalmente, cuando se utiliza una cámara RGBD en ROS, el paquete encargado de controlar la cámara envía tres tipos de mensajes pertenecientes al paquete sensor\_msgs. Estos mensajes son:
 
 \begin{itemize}
 
@@ -176,23 +223,27 @@ Normalmente, cuando se utiliza una cámara RGB-D en ROS, el paquete encargado de
 
 \end{itemize}
 
-Debido a algunos problemas que se tuvieron durante la captura de los datos, este último topic no se ofrece en el rosbag, por lo que es necesario generarlo externo al rosbag. Para ello, se ha diseñado un nodo llamado cam\_info que se encarga de generar este mensaje que más tarde será utilizado por otros nodos.\\
+Debido a algunos problemas que se tuvieron durante la captura de los datos, este último topic no se ofrece en el rosbag, por lo que es necesario generarlo externo al rosbag. Para ello, se ha diseñado un nodo llamado \texttt{cam\_info} que se encarga de generar este mensaje que más tarde será utilizado por otros nodos.\\
 
-\addimage{cam_info-diag.png}{cam_info}{Diagrama del nodo cam\_info}{1}
+\begin{figure}[h]
+	\begin{center} 
+		\includegraphics[width=\textwidth]{cam_info-diag.png}
+	\end{center}
+	\caption{Diagrama del nodo cam\_info}
+	\label{fig:cam_info}
+\end{figure}
 
-Este nodo, programado en C++, recibe el mensaje de la imagen de profundidad ofrecido por el rosbag, copia su encabezado, crea el mensaje de tipo CameraInfo con los parámetros de la cámara y lo envía por el topic /camera\_info. Estos parámetros han sido dados por la persona que generó el rosbag.[*Indicar los parámetros utilizados].\\
+Este nodo, programado en C++, recibe el mensaje de la imagen de profundidad ofrecido por el rosbag, copia su encabezado, crea el mensaje de tipo \texttt{sensor\_msgs/CameraInfo} con los parámetros de la cámara y lo envía por el topic \texttt{/camera\_info}.\\
 
-Finalmente, una vez generado el mensaje con la información de los parámetros de la cámara, es necesario sincronizar estos topics para que puedan ser utilizados por otros nodos. Para ello se ha diseñado un nodo en Python llamado sync\_info que se sirve del paquete message\_filter para realizar este proceso. Se ha programado en Python porque resulta más fácil utilizar esta librería en este lenguaje que en C++.\\
+Finalmente, una vez generado el mensaje con la información de los parámetros de la cámara, es necesario sincronizar estos topics para que puedan ser utilizados por otros nodos. Para ello se ha diseñado un nodo en Python llamado \texttt{sync\_info} que se sirve del paquete \texttt{message\_filter} para realizar este proceso. Se ha programado en Python porque resulta más fácil utilizar esta librería en este lenguaje que en C++.\\
 
-\addimage{sync_info-diag.png}{sync_info}{Diagrama del nodo sync\_info}{1}
-
-Con la adición de estos nodos ya se tendría la información correcta para utilizar los otros paquetes sin ningún problema.\\
-
-\subsection{Otras fuentes tomadas en cuenta}
-
-Inicialmente, se propuso trabajar con un rosbag obtenido a partir de la ejecución de un robot virtual en un entorno simulado en Unity. Este entorno estaba ambientado en una vivienda común, con mobiliario típico y sin demasiados objetos en escena. Esto probablemente hubiera dado un mejor resultado que el rosbag que finalmente se utilizó ya que este último fue ejecutado en un laboratorio con muchos elementos que dificultan la labor del algoritmo (ventanas, entrantes y salientes, gran cantidad de objetos).\\
-
-Sin embargo, la decodificación de la imagen de profundidad ocasionó muchos problemas que se escapaban del ámbito de este proyecto por lo que se decidió tomar otra vía.\\
+\begin{figure}[h]
+	\begin{center} 
+		\includegraphics[width=\textwidth]{sync_info-diag.png}
+	\end{center}
+	\caption{Diagrama del nodo sync\_info}
+	\label{fig:sync_info}
+\end{figure}
 
 \section{De imagen de profundidad a barrido láser}
 
@@ -202,44 +253,42 @@ El algoritmo utilizado está basado en el paquete de ROS depthimage\_to\_lasersc
 
 \begin{itemize}
 
-	\item scan\_height. Establece la cantidad de filas que se quieren procesar para generar el láser. 
-	\item scan\_time. Establece el tiempo de actualización entre escaneos. Por defecto está a 0.033 (30 FPS).
-	\item range\_min. Rango de distancia mínima. Valores medidos menores que este valor se tomarán como -Inf. Por defecto está a 0.45 (metros).
-	\item range\_max. Rango de distancia máxima. Valores medidos mayores que este valor se tomarán como +Inf. Por defecto está a 10 (metros).
-	\item output\_frame\_id. Establece el id del eje de coordenadas (frame) de salida. Se indica el id del frame del láser.
+	\item \texttt{scan\_height}. Establece la cantidad de filas que se quieren procesar para generar el láser. 
+	\item \texttt{scan\_time}. Establece el tiempo de actualización entre escaneos. Por defecto está a 0.033 (30 FPS).
+	\item \texttt{range\_min}. Rango de distancia mínima. Valores medidos menores que este valor se tomarán como -Inf. Por defecto está a 0.45 (metros).
+	\item \texttt{range\_max}. Rango de distancia máxima. Valores medidos mayores que este valor se tomarán como +Inf. Por defecto está a 10 (metros).
+	\item \texttt{output\_frame\_id}. Establece el id del eje de coordenadas (frame) de salida. Se indica el id del frame del láser.
 
 \end{itemize}
 
-[Añadir imagen de comparación del laser]
-
-Este nodo primeramente recibe la imagen de profundidad y la información de la cámara. Se recuerda que estos mensajes los debe recibir a la vez y por eso requería de la sincronización. Una vez recibidos estos mensajes, evalúa la codificación de la imagen. Si la codificación es correcta (admite codificación 16UC1 o 32FC1[*Explicar los de los encodings]), procede a convertir la imagen de profundidad a un mensaje de tipo LaserScan.\\
+Este nodo primeramente recibe la imagen de profundidad y la información de la cámara. Se recuerda que estos mensajes los debe recibir a la vez y por eso requería de la sincronización. Una vez recibidos estos mensajes, evalúa la codificación de la imagen. Si la codificación es correcta (admite codificación 16UC1 o 32FC1)\footnote{El paquete \texttt{sensor\_msgs} prove de multitud de codificaciones para las imaǵenes. Este es un parámetro de la imagen y viene dado por una cadena de caracteres \cite{enc}. El paquete \texttt{depthimage\_to\_laserscan} solo admite las dos codificaciones comentadas}, procede a convertir la imagen de profundidad a un mensaje de tipo LaserScan.\\
 
 Un mensaje de tipo LaserScan se forma a partir de las siguientes características:
 
 \begin{itemize}
 
-	\item header. Encabezado del mensaje. Propiedad que tienen todos los mensajes.
-	\item angle\_min. Ángulo mínimo que abarca el láser en radianes.
-	\item angle\_max. Ángulo máximo en radianes.
-	\item angle\_increment. Ángulo entre medidas en radianes.
-	\item time\_increment. Tiempo entre medidas en segundos.
-	\item scan\_time. Tiempo entre escaneos en segundos.
-	\item range\_min. Rango mínimo del sensor en metros.
-	\item range\_max. rango máximo del sensor en metros.
-	\item ranges. Vector con las medidas tomadas en metros.
-	\item intensities. Vector con las intensidades de las medidas. Lo tomaremos como un array vacío porque no es necesario.
+	\item \texttt{header}. Encabezado del mensaje. Propiedad que tienen todos los mensajes.
+	\item \texttt{angle\_min}. Ángulo mínimo que abarca el láser en radianes.
+	\item \texttt{angle\_max}. Ángulo máximo en radianes.
+	\item \texttt{angle\_increment}. Ángulo entre medidas en radianes.
+	\item \texttt{time\_increment}. Tiempo entre medidas en segundos.
+	\item \texttt{scan\_time}. Tiempo entre escaneos en segundos.
+	\item \texttt{range\_min}. Rango mínimo del sensor en metros.
+	\item \texttt{range\_max}. rango máximo del sensor en metros.
+	\item \texttt{ranges}. Vector con las medidas tomadas en metros.
+	\item \texttt{intensities}. Vector con las intensidades de las medidas. Lo tomaremos como un array vacío porque no es necesario.
 
 \end{itemize}
 
-El algoritmo se encarga de analizar tantas filas como se establezcan en el parámetro scan\_height del nodo depthimage\_to\_laserscan y transformar la distancia dada por la imagen de profundidad en una distancia real al sensor. Una vez transformada, se compara con la distancia de las otras filas medidas en la misma columna y, si la distancia es mayor, se añade al vector ranges. Una vez completado el análisis de todas las filas de la imagen, se publica el mensaje generado de tipo \texttt{sensor\_msgs/LaserScan} en el topic \texttt{/new\_scan}.\\
+El algoritmo se encarga de analizar tantas filas como se establezcan en el parámetro \texttt{scan\_height} del nodo \texttt{depthimage\_to\_laserscan} y transformar la distancia dada por la imagen de profundidad en una distancia real al sensor. Una vez transformada, se compara con la distancia de las otras filas medidas en la misma columna y, si la distancia es mayor, se añade al vector ranges. Una vez completado el análisis de todas las filas de la imagen, se publica el mensaje generado de tipo \texttt{sensor\_msgs/LaserScan} en el topic \texttt{/new\_scan}.\\
 
 \section{Generación del mapa de ocupación}
 
 Una vez obtenido el láser artificial a partir de la imagen de profundidad, es momento de generar el mapa o rejilla de ocupación. Para este procedimiento se utilizará el paquete \texttt{gmapping}.\\
 
-Este paquete ofrece un sistema de Localización y Mapeado Simultáneo o SLAM (del inglés, \textit{Simultaneous Location and Mapping}) a través de un nodo llamado \texttt{slam\_gmapping}. Este nodo recibe el láser artificial (por el topic \texttt{/new\_scan}) y el árbol de transformadas (por el topic \texttt{/tf}). Además tiene varios parámetros.\\
+Este paquete ofrece un sistema de Localización y Mapeado Simultáneo o SLAM (del inglés, \textit{Simultaneous Location and Mapping}) a través de un nodo llamado \texttt{slam\_gmapping}. Este nodo recibe el láser artificial (por el topic \texttt{/new\_scan}) y el árbol de transformadas (por el topic \texttt{/tf}).\\
 
-Al lanzar este nodo, es posible establecer multitud de parámetros que determinan el modo de operación. Entre otros, los parámetros que se tendrán en cuenta son:
+Al lanzar este nodo, es posible establecer multitud de parámetros que determinan el modo de operación. Entre otros, los parámetros que se tendrán en cuenta para ajustar el resultado acorde al objetivo son:
 
 \begin{itemize}
 
@@ -275,13 +324,21 @@ Una vez la imagen está descomprimida, ya puede ser recibida por la red neuronal
 
 Las bounding boxes son unas ``cajas'' que señalizan al elemento detectado. Un mensaje de tipo \texttt{darknet\_ros\_msgs/BoundingBoxes} es un array de elementos con formato \texttt{darknet\_ros\_msgs/BoundingBox}.\\
 
-Además, este nodo ofrece una salida en la terminal indicando los frames por segundo (FPS) a los que se está ejecutando y un listado de los objetos encontrados junto con sus probabilidades. YOLO tiene un umbral de probabilidad establecido por defecto en $0.7$ para aceptar una detección como válida o no. \\
+Además, este nodo ofrece una salida en la terminal indicando los frames por segundo (FPS) a los que se está ejecutando y un listado de los objetos encontrados junto con sus probabilidades, como se muestra en la figura \ref{fig:yolo_funcionando}. YOLO tiene un umbral de probabilidad establecido por defecto en $0.7$ para aceptar una detección como válida o no. \\
 
-Cabe mencionar que para utilizar YOLO con CUDA correctamente ha sido necesario un largo y tedioso proceso de configuración que se explicará en el Anexo X.\\
+\begin{figure}[h]
+	\begin{center} 
+		\includegraphics[width=\textwidth]{yolo_funcionando.png}
+	\end{center}
+	\caption{Salida en la terminal del nodo \texttt{darknet\_ros}}
+	\label{fig:yolo_funcionando}
+\end{figure}
+
+[Cabe mencionar que para utilizar YOLO con CUDA correctamente ha sido necesario un largo y tedioso proceso de configuración que se explicará en el Anexo X.]\\
 
 \section{Procesamiento de los objetos detectados}
 
-Como se ha comentado, de YOLO obtenemos un array de bounding boxes con información sobre la posición y el tamaño en píxeles. Para el desarrollo de este proyecto se ha visto conveniente procesar esa información para realizar un posterior estudio de los objetos que han sido detectados y analizar de la fiabilidad de la red neuronal así como la calidad de los datos proporcionado por el rosbag.\\
+Como se ha comentado, a partir del nodo que implementa YOLO obtenemos un array de bounding boxes con información sobre la posición y el tamaño en píxeles. Para el desarrollo de este proyecto se ha visto conveniente procesar esa información para realizar un posterior estudio de los objetos que han sido detectados y analizar la fiabilidad de la red neuronal así como la calidad de los datos proporcionado por el rosbag.\\
 
 Para este procesamiento se ha diseñado un nodo llamado \texttt{write\_objects} que se encarga de recibir los mensajes que se publican en \texttt{/darknet\_ros/bounding\_boxes} y en \texttt{/amcl\_pose} para generar un archivo CSV donde cada fila representa la información con el formato mostrado en el cuadro \ref{tab:formato}. Cada columna utilizará el delimitador de punto y coma (`` ; '').\\
 

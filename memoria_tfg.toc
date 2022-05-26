@@ -17,40 +17,36 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {2.1}Robotic Operating System}{17}{section.2.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.1.1}Arquitectura de la comunicación mediante ROS}{18}{subsection.2.1.1}%
+\contentsline {subsection}{\numberline {2.1.1}Arquitectura de la comunicación mediante ROS}{17}{subsection.2.1.1}%
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {2.1.2}¿Por qué ROS?}{19}{subsection.2.1.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.2}Mapas de ocupación}{19}{section.2.2}%
+\contentsline {section}{\numberline {2.2}Mapas de ocupación}{20}{section.2.2}%
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {2.3}Sensores RGBD}{20}{section.2.3}%
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {2.3.1}Imagen de profundidad}{21}{subsection.2.3.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.4}Nubes de puntos}{21}{section.2.4}%
+\contentsline {section}{\numberline {2.4}Nubes de puntos}{22}{section.2.4}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.5}YOLO: You only look once}{22}{section.2.5}%
+\contentsline {section}{\numberline {2.5}YOLO: You only look once}{23}{section.2.5}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.5.1}Compute Unified Device Architecture}{23}{subsection.2.5.1}%
+\contentsline {subsection}{\numberline {2.5.1}CUDA: Compute Unified Device Architecture}{24}{subsection.2.5.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {3}Diseño e implementación}{25}{chapter.3}%
+\contentsline {chapter}{\numberline {3}Diseño e implementación}{27}{chapter.3}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.1}Vista general del sistema}{25}{section.3.1}%
+\contentsline {section}{\numberline {3.1}Vista general del sistema}{27}{section.3.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.2}Fuente de datos}{27}{section.3.2}%
+\contentsline {section}{\numberline {3.2}Fuente de datos}{29}{section.3.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.2.1}Adaptación del rosbag}{27}{subsection.3.2.1}%
+\contentsline {section}{\numberline {3.3}De imagen de profundidad a barrido láser}{30}{section.3.3}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.2.2}Otras fuentes tomadas en cuenta}{29}{subsection.3.2.2}%
+\contentsline {section}{\numberline {3.4}Generación del mapa de ocupación}{32}{section.3.4}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.3}De imagen de profundidad a barrido láser}{29}{section.3.3}%
+\contentsline {section}{\numberline {3.5}Detección de objetos}{33}{section.3.5}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.4}Generación del mapa de ocupación}{31}{section.3.4}%
+\contentsline {subsection}{\numberline {3.5.1}Descompresión de la imagen de color}{33}{subsection.3.5.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.5}Detección de objetos}{32}{section.3.5}%
+\contentsline {subsection}{\numberline {3.5.2}Ejecución de YOLO}{34}{subsection.3.5.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.5.1}Descompresión de la imagen de color}{32}{subsection.3.5.1}%
-\defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.5.2}Ejecución de YOLO}{32}{subsection.3.5.2}%
-\defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.6}Procesamiento de los objetos detectados}{33}{section.3.6}%
+\contentsline {section}{\numberline {3.6}Procesamiento de los objetos detectados}{34}{section.3.6}%

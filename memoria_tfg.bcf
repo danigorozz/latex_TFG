@@ -2191,8 +2191,17 @@
     <bcf:citekey order="7">metro_malaga</bcf:citekey>
     <bcf:citekey order="8">metro_malaga</bcf:citekey>
     <bcf:citekey order="9">stair</bcf:citekey>
-    <bcf:citekey order="10">licencia</bcf:citekey>
-    <bcf:citekey order="11">issue</bcf:citekey>
+    <bcf:citekey order="10">stair_paper</bcf:citekey>
+    <bcf:citekey order="11">licencia</bcf:citekey>
+    <bcf:citekey order="12">issue</bcf:citekey>
+    <bcf:citekey order="13">occupancy_grid</bcf:citekey>
+    <bcf:citekey order="14">yolo</bcf:citekey>
+    <bcf:citekey order="15">cuda</bcf:citekey>
+    <bcf:citekey order="16">di2ls</bcf:citekey>
+    <bcf:citekey order="17">gmapping</bcf:citekey>
+    <bcf:citekey order="18">republish</bcf:citekey>
+    <bcf:citekey order="19">darknet</bcf:citekey>
+    <bcf:citekey order="20">enc</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="none">
