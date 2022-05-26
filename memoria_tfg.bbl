@@ -1,0 +1,275 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.1 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{none/global//global/global}
+    \entry{vikingos}{online}{}
+      \name{author}{1}{}{%
+        {{hash=3808e11c61724796f75b221aa39d0ed1}{%
+           family={Guerrero},
+           familyi={G\bibinitperiod},
+           given={Teresa},
+           giveni={T\bibinitperiod}}}%
+      }
+      \strng{namehash}{3808e11c61724796f75b221aa39d0ed1}
+      \strng{fullhash}{3808e11c61724796f75b221aa39d0ed1}
+      \strng{bibnamehash}{3808e11c61724796f75b221aa39d0ed1}
+      \strng{authorbibnamehash}{3808e11c61724796f75b221aa39d0ed1}
+      \strng{authornamehash}{3808e11c61724796f75b221aa39d0ed1}
+      \strng{authorfullhash}{3808e11c61724796f75b221aa39d0ed1}
+      \field{sortinit}{1}
+      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{addendum}{(acc: 25.05.2022)}
+      \field{month}{11}
+      \field{title}{El 'GPS' de los vikingos}
+      \field{year}{2011}
+      \verb{urlraw}
+      \verb https://www.elmundo.es/elmundo/2011/11/07/ciencia/1320663197.html
+      \endverb
+      \verb{url}
+      \verb https://www.elmundo.es/elmundo/2011/11/07/ciencia/1320663197.html
+      \endverb
+    \endentry
+    \entry{espato}{online}{}
+      \name{author}{1}{}{%
+        {{hash=9c677286866aad38f8e9b660f5411814}{%
+           family={Wikipedia},
+           familyi={W\bibinitperiod}}}%
+      }
+      \strng{namehash}{9c677286866aad38f8e9b660f5411814}
+      \strng{fullhash}{9c677286866aad38f8e9b660f5411814}
+      \strng{bibnamehash}{9c677286866aad38f8e9b660f5411814}
+      \strng{authorbibnamehash}{9c677286866aad38f8e9b660f5411814}
+      \strng{authornamehash}{9c677286866aad38f8e9b660f5411814}
+      \strng{authorfullhash}{9c677286866aad38f8e9b660f5411814}
+      \field{extraname}{1}
+      \field{sortinit}{2}
+      \field{sortinithash}{ed39bb39cf854d5250e95b1c1f94f4ed}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{addendum}{(acc: 25.05.2022)}
+      \field{month}{3}
+      \field{title}{Espato de Islandia}
+      \field{year}{2022}
+      \verb{urlraw}
+      \verb https://es.wikipedia.org/wiki/Espato_de_Islandia
+      \endverb
+      \verb{url}
+      \verb https://es.wikipedia.org/wiki/Espato_de_Islandia
+      \endverb
+    \endentry
+    \entry{metro_madrid}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=dd20b5fb6c11aa0b483e9cb71930efe3}{%
+           family={MetroMadrid},
+           familyi={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{dd20b5fb6c11aa0b483e9cb71930efe3}
+      \strng{fullhash}{dd20b5fb6c11aa0b483e9cb71930efe3}
+      \strng{bibnamehash}{dd20b5fb6c11aa0b483e9cb71930efe3}
+      \strng{authorbibnamehash}{dd20b5fb6c11aa0b483e9cb71930efe3}
+      \strng{authornamehash}{dd20b5fb6c11aa0b483e9cb71930efe3}
+      \strng{authorfullhash}{dd20b5fb6c11aa0b483e9cb71930efe3}
+      \field{sortinit}{4}
+      \field{sortinithash}{e071e0bcb44634fab398d68ad04e69f4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{addendum}{(acc: 25.05.2022)}
+      \field{title}{Metro de Madrid}
+      \verb{urlraw}
+      \verb ttps://www.metromadrid.es/es/viaja-en-metro/plano-de-metro-de-madrid
+      \endverb
+      \verb{url}
+      \verb ttps://www.metromadrid.es/es/viaja-en-metro/plano-de-metro-de-madrid
+      \endverb
+    \endentry
+    \entry{shakey1}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=9e1a2ed2c32ed38e6538b751157e6b43}{%
+           family={Sánchez},
+           familyi={S\bibinitperiod},
+           given={Cristina},
+           giveni={C\bibinitperiod}}}%
+      }
+      \strng{namehash}{9e1a2ed2c32ed38e6538b751157e6b43}
+      \strng{fullhash}{9e1a2ed2c32ed38e6538b751157e6b43}
+      \strng{bibnamehash}{9e1a2ed2c32ed38e6538b751157e6b43}
+      \strng{authorbibnamehash}{9e1a2ed2c32ed38e6538b751157e6b43}
+      \strng{authornamehash}{9e1a2ed2c32ed38e6538b751157e6b43}
+      \strng{authorfullhash}{9e1a2ed2c32ed38e6538b751157e6b43}
+      \field{sortinit}{6}
+      \field{sortinithash}{7851c86048328b027313775d8fbd2131}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{addendum}{(acc: 25.05.2022)}
+      \field{journaltitle}{ElDiario.es}
+      \field{month}{4}
+      \field{title}{Shakey, El Primer Robot Inteligente de la Historia y el abuelo del Coche Autónomo}
+      \field{year}{2017}
+      \verb{urlraw}
+      \verb https://www.eldiario.es/hojaderouter/tecnologia/shakey-robot-inteligencia-artificial-coche-autonomo_1_3466717.html
+      \endverb
+      \verb{url}
+      \verb https://www.eldiario.es/hojaderouter/tecnologia/shakey-robot-inteligencia-artificial-coche-autonomo_1_3466717.html
+      \endverb
+    \endentry
+    \entry{shakey2}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=9025c003e2b2dc05fa9648f172e55f44}{%
+           family={Cassel},
+           familyi={C\bibinitperiod},
+           given={David},
+           giveni={D\bibinitperiod}}}%
+      }
+      \strng{namehash}{9025c003e2b2dc05fa9648f172e55f44}
+      \strng{fullhash}{9025c003e2b2dc05fa9648f172e55f44}
+      \strng{bibnamehash}{9025c003e2b2dc05fa9648f172e55f44}
+      \strng{authorbibnamehash}{9025c003e2b2dc05fa9648f172e55f44}
+      \strng{authornamehash}{9025c003e2b2dc05fa9648f172e55f44}
+      \strng{authorfullhash}{9025c003e2b2dc05fa9648f172e55f44}
+      \field{sortinit}{7}
+      \field{sortinithash}{f615fb9c6fba11c6f962fb3fd599810e}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{addendum}{(acc: 25.05.2022)}
+      \field{journaltitle}{The New Stack}
+      \field{month}{12}
+      \field{title}{Remembering shakey, the First Intelligent Robot}
+      \field{year}{2021}
+      \verb{urlraw}
+      \verb https://thenewstack.io/remembering-shakey-first-intelligent-robot/
+      \endverb
+      \verb{url}
+      \verb https://thenewstack.io/remembering-shakey-first-intelligent-robot/
+      \endverb
+    \endentry
+    \entry{metro_malaga}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=9c677286866aad38f8e9b660f5411814}{%
+           family={Wikipedia},
+           familyi={W\bibinitperiod}}}%
+      }
+      \strng{namehash}{9c677286866aad38f8e9b660f5411814}
+      \strng{fullhash}{9c677286866aad38f8e9b660f5411814}
+      \strng{bibnamehash}{9c677286866aad38f8e9b660f5411814}
+      \strng{authorbibnamehash}{9c677286866aad38f8e9b660f5411814}
+      \strng{authornamehash}{9c677286866aad38f8e9b660f5411814}
+      \strng{authorfullhash}{9c677286866aad38f8e9b660f5411814}
+      \field{extraname}{2}
+      \field{sortinit}{9}
+      \field{sortinithash}{54047ffb55bdefa0694bbd554c1b11a0}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{addendum}{(acc: 25.05.2022)}
+      \field{title}{Metro de Málaga}
+      \verb{urlraw}
+      \verb https://es.wikipedia.org/wiki/Metro_de_M%C3%A1laga
+      \endverb
+      \verb{url}
+      \verb https://es.wikipedia.org/wiki/Metro_de_M%C3%A1laga
+      \endverb
+    \endentry
+    \entry{stair}{online}{}
+      \name{author}{1}{}{%
+        {{hash=a0280d6115433205972c08f6423df6f3}{%
+           family={Stanford},
+           familyi={S\bibinitperiod},
+           given={Universidad},
+           giveni={U\bibinitperiod},
+           prefix={de},
+           prefixi={d\bibinitperiod}}}%
+      }
+      \strng{namehash}{a0280d6115433205972c08f6423df6f3}
+      \strng{fullhash}{a0280d6115433205972c08f6423df6f3}
+      \strng{bibnamehash}{a0280d6115433205972c08f6423df6f3}
+      \strng{authorbibnamehash}{a0280d6115433205972c08f6423df6f3}
+      \strng{authornamehash}{a0280d6115433205972c08f6423df6f3}
+      \strng{authorfullhash}{a0280d6115433205972c08f6423df6f3}
+      \field{sortinit}{1}
+      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{addendum}{(acc: 25.05.2022)}
+      \field{title}{STAIR}
+      \verb{urlraw}
+      \verb http://stair.stanford.edu/index.php
+      \endverb
+      \verb{url}
+      \verb http://stair.stanford.edu/index.php
+      \endverb
+    \endentry
+    \entry{licencia}{online}{}
+      \name{author}{1}{}{%
+        {{hash=9c677286866aad38f8e9b660f5411814}{%
+           family={Wikipedia},
+           familyi={W\bibinitperiod}}}%
+      }
+      \strng{namehash}{9c677286866aad38f8e9b660f5411814}
+      \strng{fullhash}{9c677286866aad38f8e9b660f5411814}
+      \strng{bibnamehash}{9c677286866aad38f8e9b660f5411814}
+      \strng{authorbibnamehash}{9c677286866aad38f8e9b660f5411814}
+      \strng{authornamehash}{9c677286866aad38f8e9b660f5411814}
+      \strng{authorfullhash}{9c677286866aad38f8e9b660f5411814}
+      \field{extraname}{3}
+      \field{sortinit}{1}
+      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{addendum}{(acc: 25.05.2022)}
+      \field{month}{3}
+      \field{title}{Licencia permisiva}
+      \field{year}{2022}
+      \verb{urlraw}
+      \verb https://es.wikipedia.org/wiki/Licencia_permisiva
+      \endverb
+      \verb{url}
+      \verb https://es.wikipedia.org/wiki/Licencia_permisiva
+      \endverb
+    \endentry
+    \entry{issue}{online}{}
+      \name{author}{1}{}{%
+        {{hash=e1adbcbb92c622d0b3e619f9d0730abf}{%
+           family={Github},
+           familyi={G\bibinitperiod}}}%
+      }
+      \strng{namehash}{e1adbcbb92c622d0b3e619f9d0730abf}
+      \strng{fullhash}{e1adbcbb92c622d0b3e619f9d0730abf}
+      \strng{bibnamehash}{e1adbcbb92c622d0b3e619f9d0730abf}
+      \strng{authorbibnamehash}{e1adbcbb92c622d0b3e619f9d0730abf}
+      \strng{authornamehash}{e1adbcbb92c622d0b3e619f9d0730abf}
+      \strng{authorfullhash}{e1adbcbb92c622d0b3e619f9d0730abf}
+      \field{sortinit}{1}
+      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{addendum}{(acc: 25.05.2022)}
+      \field{title}{Maximum subscribers of a topic}
+      \verb{urlraw}
+      \verb https://github.com/ros2/rmw\_fastrtps/issues/249
+      \endverb
+      \verb{url}
+      \verb https://github.com/ros2/rmw%5C_fastrtps/issues/249
+      \endverb
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+

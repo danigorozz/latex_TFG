@@ -1,0 +1,11 @@
+%Bilbiografías
+
+@online{vikingos,
+    author = "Teresa Guerrero",
+    title = "El 'GPS' de los vikingos",
+    url  = "https://www.elmundo.es/elmundo/2011/11/07/ciencia/1320663197.html",
+    addendum = "(acc: 01.09.2016)",
+    date = "2011",
+    month = "nov",
+    day = "8"
+}

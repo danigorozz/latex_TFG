@@ -1,5 +1,15 @@
 \input{preamble.tex}
 
+% Paquete para bibliografías
+\usepackage[
+backend=biber,
+style=numeric,
+sorting=none,
+dateabbrev=false,
+citestyle=numeric
+]{biblatex}
+
+\addbibresource{bibliografia.bib}
 
 \begin{document}
 
@@ -17,7 +27,7 @@
 
 \section{Robotic Operating System}
 
-Robot Operating System (ROS) es una colección de frameworks para el desarrollo de software de robots. Se desarrolló originariamente en 2007 por el Laboratorio de Inteligencia Artificial de Stanford para dar soporte a su proyecto STAIR2\footnote{STAIR (Stanford Artificial Intelligence Robot) es un proyecto llevado a cabo por la Universidad de Stanford para desarrollar robots capaces de navegar en entornos indoor e interactuar con objetos y personas mediante inteligencia artificial. Para su versión 2.0 desarrollaron el framework de ROS. Fuente: http://stair.stanford.edu/index.php}. Es software libre bajo términos de licencia BSD\footnote{La licencia BSD es la licencia de software libre otorgada principalmente para los sistemas BSD (Berkeley Software Distribution). Es una licencia permisiva que permite la redistribución libre o privativa. Fuente: https://es.wikipedia.org/wiki/Licencia\_permisiva} que, pese a no ser un sistema operativo, provee los servicios estándar de éstos entre los que se incluyen la abstracción del hardware, el control de dispositivos de bajo nivel, la implementación de funcionalidad de uso común, el paso de mensajes entre procesos y el mantenimiento de paquetes. Está basado en una arquitectura de grafos donde el procesamiento toma lugar en los nodos que pueden recibir, mandar y multiplexar mensajes de sensores, control, estados, planificaciones y actuadores, entre otros.\\
+Robot Operating System (ROS) es una colección de frameworks para el desarrollo de software de robots. Se desarrolló originariamente en 2007 por el Laboratorio de Inteligencia Artificial de Stanford para dar soporte a su proyecto STAIR2\footnote{STAIR (Stanford Artificial Intelligence Robot) es un proyecto llevado a cabo por la Universidad de Stanford para desarrollar robots capaces de navegar en entornos indoor e interactuar con objetos y personas mediante inteligencia artificial. Para su versión 2.0 desarrollaron el framework de ROS \cite{stair}}. Es software libre bajo términos de licencia BSD\footnote{La licencia BSD es la licencia de software libre otorgada principalmente para los sistemas BSD (Berkeley Software Distribution). Es una licencia permisiva que permite la redistribución libre o privativa \cite{licencia}} que, pese a no ser un sistema operativo, provee los servicios estándar de éstos entre los que se incluyen la abstracción del hardware, el control de dispositivos de bajo nivel, la implementación de funcionalidad de uso común, el paso de mensajes entre procesos y el mantenimiento de paquetes. Está basado en una arquitectura de grafos donde el procesamiento toma lugar en los nodos que pueden recibir, mandar y multiplexar mensajes de sensores, control, estados, planificaciones y actuadores, entre otros.\\
 
 \addimage{ros_img.png}{ros_img}{Propiedades}{0.7}
 
@@ -27,7 +37,7 @@ La unidad básica de una comunicación en ROS es el nodo. Un nodo es un programa
 
 Existe un nodo especial, llamado nodo master, que es el encargado de dibujar todo el árbol de nodos. Es decir, es el encargado de registrar los nodos, realizar las conexiones entre los publicadores y suscriptores y asignarle el canal de comunicación a través de los topics y de marcar el tipo de mensaje dictaminado por el publicador. Además, se encarga de establecer el servidor de parámetros, accesibles y modificables en cualquier momento. Es necesario lanzar este nodo previamente al lanzamiento de cualquier otro. \\
 
-Los topics son el método más común de comunicación entre nodos. Está basado en el modelo de publicador/suscriptor. Los nodos pueden publicar (Publisher) o recibir (Subscriber) mensajes de un único tipo, establecidos por el nodo publicador. En un mismo topic pueden publicar y suscribirse tantos nodos se necesiten\footnote{Realmente, ROS especifica que no existe límite de nodos suscritos a un mismo topic. Sin embargo, se ha demostrado que a partir de 10 nodos, la fiabilidad se ve reducida y la latencia aumentada de forma significativa, pudiendo incluso ocasionar que algunos mensajes no sean recibidos por algunos suscriptores. Fuente: https://github.com/ros2/rmw\_fastrtps/issues/249}. \\
+Los topics son el método más común de comunicación entre nodos. Está basado en el modelo de publicador/suscriptor. Los nodos pueden publicar (Publisher) o recibir (Subscriber) mensajes de un único tipo, establecidos por el nodo publicador. En un mismo topic pueden publicar y suscribirse tantos nodos se necesiten\footnote{Realmente, ROS especifica que no existe límite de nodos suscritos a un mismo topic. Sin embargo, se ha demostrado que a partir de 10 nodos, la fiabilidad se ve reducida y la latencia aumentada de forma significativa, pudiendo incluso ocasionar que algunos mensajes no sean recibidos por algunos suscriptores \cite{issue}}. \\
 
 Otro método de comunicación son los servicios o services. Permiten la comunicación entre nodos mediante el modelo de cliente/servidor. Permiten la inclusión de parámetros tanto en la solicitud como en la respuesta al servicio. Este método es bloqueante, es decir, el nodo solicitante queda bloqueado al momento de enviar la solicitud hasta que reciba una respuesta.\\
 
@@ -306,5 +316,7 @@ El formato del mensaje de una bounding box tiene las siguientes propiedades:
 
 Para la generación del archivo CSV se ha hecho uso de la librería 
 
+
+\printbibliography
 
 \end{document}

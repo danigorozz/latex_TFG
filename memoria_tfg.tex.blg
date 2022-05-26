@@ -1,0 +1,5 @@
+[0] Config.pm:304> INFO - This is Biber 2.14 (beta)
+[0] Config.pm:307> INFO - Logfile is 'memoria_tfg.tex.blg'
+[61] biber:322> INFO - === mié may 25, 2022, 11:41:20
+[163] Utils.pm:309> ERROR - Cannot find 'memoria_tfg.tex.bcf'!
+[163] Biber.pm:132> INFO - ERRORS: 1

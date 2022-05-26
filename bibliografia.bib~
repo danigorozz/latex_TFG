@@ -1,0 +1,20 @@
+%Bilbiograf\'{\i}as
+
+@online{vikingos,
+	addendum = "(acc: 25.05.2022)",
+	author = "Teresa Guerrero",
+	day = "8",
+	month = "nov",
+	title = "El 'GPS' de los vikingos",
+	url = "https://www.elmundo.es/elmundo/2011/11/07/ciencia/1320663197.html",
+	year = "2011"
+}
+
+@online{espato,
+	author = "Wikipedia",
+	month = "3",
+	title = "Espato de Islandia",
+	url = "https://es.wikipedia.org/wiki/Espato_de_Islandia",
+	year = "2022"
+}
+
