@@ -23,3 +23,9 @@
 \BOOKMARK [2][-]{subsection.3.5.1}{Descompresi\363n de la imagen de color}{section.3.5}% 23
 \BOOKMARK [2][-]{subsection.3.5.2}{Ejecuci\363n de YOLO}{section.3.5}% 24
 \BOOKMARK [1][-]{section.3.6}{Procesamiento de los objetos detectados}{chapter.3}% 25
+\BOOKMARK [1][-]{section.3.7}{An\341lisis de los objetos detectados}{chapter.3}% 26
+\BOOKMARK [0][-]{chapter.4}{Resultados obtenidos}{part.2}% 27
+\BOOKMARK [1][-]{section.4.1}{Mapa generado a partir de la imagen de profundidad}{chapter.4}% 28
+\BOOKMARK [2][-]{subsection.4.1.1}{Generaci\363n del l\341ser artificial}{section.4.1}% 29
+\BOOKMARK [2][-]{subsection.4.1.2}{Modificaci\363n de par\341metros por defecto}{section.4.1}% 30
+\BOOKMARK [1][-]{section.4.2}{An\341lisis de la fiabilidad de YOLO}{chapter.4}% 31

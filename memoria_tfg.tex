@@ -14,6 +14,10 @@ citestyle=numeric
 \widowpenalty=10000
 \clubpenalty=10000
 
+\usepackage[font=footnotesize, skip=4pt, justification=centering]{caption}
+
+\raggedbottom
+
 \begin{document}
 
 \pagestyle{fancy}
@@ -245,7 +249,7 @@ Finalmente, una vez generado el mensaje con la información de los parámetros d
 	\label{fig:sync_info}
 \end{figure}
 
-\section{De imagen de profundidad a barrido láser}
+\section{De imagen de profundidad a barrido láser} \label{depthimage_section}
 
 Una vez se tiene toda la información ofrecida por el robot y la cámara correctamente sincronizada y configurada, es momento de realizar el procedimiento principal de este proyecto: transformar la imagen de profundidad obtenida mediante la cámara RGB-D en un barrido láser equivalente, cogiendo la distancias más alejadas captadas en la imagen. De esta forma, si tenemos varios objetos delante de una pared, con el algoritmo diseñado no se tendrán en cuenta estos objetos y se seleccionarán siempre las distancias menos restrictivas para generar el láser. Es necesario generar un láser artificial porque los algoritmos que se utilizan para generar el mapa de ocupación utilizan este tipo de datos.\\
 
@@ -282,7 +286,7 @@ Un mensaje de tipo LaserScan se forma a partir de las siguientes característica
 
 El algoritmo se encarga de analizar tantas filas como se establezcan en el parámetro \texttt{scan\_height} del nodo \texttt{depthimage\_to\_laserscan} y transformar la distancia dada por la imagen de profundidad en una distancia real al sensor. Una vez transformada, se compara con la distancia de las otras filas medidas en la misma columna y, si la distancia es mayor, se añade al vector ranges. Una vez completado el análisis de todas las filas de la imagen, se publica el mensaje generado de tipo \texttt{sensor\_msgs/LaserScan} en el topic \texttt{/new\_scan}.\\
 
-\section{Generación del mapa de ocupación}
+\section{Generación del mapa de ocupación} \label{mapa_ocup}
 
 Una vez obtenido el láser artificial a partir de la imagen de profundidad, es momento de generar el mapa o rejilla de ocupación. Para este procedimiento se utilizará el paquete \texttt{gmapping}.\\
 
@@ -300,13 +304,15 @@ Al lanzar este nodo, es posible establecer multitud de parámetros que determina
 
 Como se comenta en el listado de parámetros, tienen unos valores por defecto que se han ido modificando para obtener un mapa con más fiable. Esto se comentará más en profundidad en la sección de resultados.\\
 
+El nodo \texttt{slam\_gmapping} envía por el topic \texttt{/map} mensajes de tipo \texttt{nav\_msgs\-/OccupancyGrid} con información sobre el mapa de forma que, tras finalizar la reproducción del rosbag, el último mensaje enviado por este topic contendrá el mapa completo que se ha generado. Para guardarlo en un formato con el que poder trabajar, se utiliza el nodo \texttt{map\_saver} del paquete \texttt{map\_server}, diseñado por Brian Gerkey y Tony Pratkanis. Simplemente se lanza el nodo dándole como parámetro el nombre con el que se va a guardar el mapa. Finalmente se obtienen dos archivos: un \texttt{.yaml}, para la configuración, y otro en formato \texttt{.pgm} para la imagen.\\
+
 \section{Detección de objetos}
 
 Paralelamente, se ha diseñado un sistema capaz de interpretar la imagen a color proporcionada por el sensor RGBD para detectar los objetos y tener un registro de los mismos. Este sistema, en principio, se puede lanzar simultáneamente junto con el sistema de generación de mapas de ocupación, sin embargo, debido a la potencia necesaria para ejecutar la red neuronal por GPU, resulta tedioso e incluso problemático con algunos ordenadores. Es por ello que se ha diseñado para que pueda ser lanzado de forma asíncrona con respecto al otro sistema.\\
 
 \subsection{Descompresión de la imagen de color}
 
-En muchas ocasiones, los paquetes de ROS que sirven para utilizar determinadas marcas de sensores RGBD proporcionan las imágenes en un formato comprimido para ahorrar espacio. Con el rosbag que se ha utilizado como fuente de datos ocurre lo mismo, por lo que es necesario un proceso de descompresión.\\
+En muchas ocasiones, los paquetes de ROS que sirven para utilizar determinadas marcas de sensores RGBD proporcionan las imágenes en un formato comprimido para ahorrar potencia. Con el rosbag que se ha utilizado como fuente de datos ocurre lo mismo, por lo que es necesario un proceso de descompresión.\\
 
 Para este procedimiento, se ha utilizado un nodo llamado \texttt{republish} del paquete \texttt{image\_transport}. Este nodo se recibe un mensaje en formato \texttt{sensor\_msgs/\-Compressed\-Image} y lo convierte en un mensaje de tipo \texttt{sensor\_msgs/Image} para publicarlo.\\
 
@@ -371,9 +377,123 @@ El formato del mensaje de una bounding box tiene las siguientes propiedades:
 
 \end{itemize}
 
-Para la generación del archivo CSV se ha hecho uso de la librería 
+\section{Análisis de los objetos detectados}
+
+Una vez obtenido el registro de los objetos en formato CSV es posible procesar esta información para realizar un análisis de la red y del entorno. Para ello se utilizará el entorno de programación en Python de \textit{Google Colab}, junto con las librerías \textit{Pandas} y \textit{Matplotlib}.La información sobre las gráficas y los resultados obtenidos se exponen en el capítulo siguiente.\\
+
+\chapter{Resultados obtenidos}
+
+En este capítulo se mostrarán los resultados que se han obtenido tras implementar el sistema. Primeramente se expondrá el mapa generado con la imagen de profundidad y los mapas obtenidos utilizando diferentes parámetros. Luego se hará una comparativa con el resultado obtenido a partir del láser 2D incorporado en el robot. En una segunda parte se mostrarán algunas gráficas realizadas con el registro de objetos detectados y se expondrán los posibles errores de la red neuronal en el proceso de la detección.\\
+
+\section{Mapa generado a partir de la imagen de profundidad}
+
+En la figura \ref{fig:res_mapas} se muestra el resultado de generar el mapa a partir del láser 2D (izquierda) y a partir de la imagen de profundidad captada por el sensor RGBD (derecha).\\
+
+\begin{figure}[h]
+ \centering
+  \subfloat[Generado con láser 2D]{
+    \includegraphics[width=0.4\textwidth]{mapa_laser.png}}
+  \subfloat[Generado con sensor RGBD]{
+    \includegraphics[width=0.4\textwidth]{mapa_corregido_bien.png}}
+ \caption{Mapas generados con láser 2D (a) y con sensor RGBD (b)}
+ \label{fig:res_mapas}
+\end{figure}
+
+En el mapa generado con el láser se pueden ver los entrantes y salientes se forman debido a la presencia de mobiliario delante de las paredes que impide obtener una medida real de la estructura. Además, en zonas interiores existen muchos grupos pequeños de celdas ocupadas causadas por la presencia de patas de mesas, sillas y otros elementos de menor tamaño. Sin olvidar que la grabación cuenta con la presencia de personas que modifican su posición, complicando aún más la generación del mapa.\\
+
+Con el mapa obtenido gracias al procesamiento de la imagen de profundidad, se puede comprobar como los elementos situdos entre el sensor y las paredes no se tienen en cuenta, quedando el interior del mapa totalmente ``limpio''. Además, las zonas donde se sitúa el mobiliario quedan mucho más suavizadas, mostrándose únicamente la pared stuada tras el mismo. En la figura \ref{fig:comp} se muestran los dos mapas superpuestos para poder ver mejor la diferencia entre sendos mapas.\\
+
+Pese a que mejora al láser en muchos aspectos, el mapa generado con la cámara tiene numerosos problemas. Como se puede observar, las paredes no son totalmente rectas sino que tienen curvatura, lo que provoca que las esquinas no formen 90º. Incluso hay paredes, como la que está situada más a la izquierda, que parecen desviarse con respecto al mapa global.\\
+
+\begin{figure}[h]
+	\begin{center} 
+		\includegraphics[width=0.5\textwidth]{comp.png}
+	\end{center}
+	\caption{Superposición de los dos mapas}
+	\label{fig:comp}
+\end{figure}
+
+Estas curvaturas obtenidas en la medición puede ser causada por la calibración intrínseca de la cámara. Es posible que algunos parámetros de la cámara no estén correctamente determinados o incluso que la transformada entre la base del robot y la cámara no esté correctamente establecida. Por la curvatura en las esquinas se intuye que la causa más probable sea una mala calibración de los parámetros de distorsión de la cámara.\\
+
+Este resultado ya se podía percibir observando el láser generado a partir del sensor RGBD en comparación con el del láser 2D durante el proceso de construcción del mapa.\\
+
+\subsection{Generación del láser artificial}
+
+Como se ha comentado previamente, el láser que se genera a partir de la imagen de profundidad tiene unas curvaturas que ya se podían percibir claramente durante el proceso de generación del mapa. En muchas ocasiones, el láser artifical generado no se superpone con el láser real en las situaciones en las que debería hacerlo, como las de las figuras \ref{fig:m1} y \ref{fig:m2}.\\
+
+En otras muchas ocasiones, como en las de las figuras \ref{fig:m3} e \ref{fig:m4}, se puede ver como el procesamiento realiza correctamente su función, cumpliendo el objetivo inicialmente establecido de ``eliminar'' los objetos frente a las paredes.\\
+
+\begin{figure}[H]
+	\begin{center} 
+		\includegraphics[width=\textwidth]{m1.png}
+	\end{center}
+	\caption{Muestra de medida 1: diferencia entre las medidas del láser real (blancas) y del láser artificial (rojas)}
+	\label{fig:m1}
+\end{figure}
+
+\begin{figure}[H]
+	\begin{center} 
+		\includegraphics[width=\textwidth]{m2.png}
+	\end{center}
+	\caption{Muestra de medida 2: diferencia entre las medidas del láser real (blancas) y del láser artificial (rojas)}
+	\label{fig:m2}
+\end{figure}
+
+\begin{figure}[H]
+	\begin{center} 
+		\includegraphics[width=\textwidth]{m3.png}
+	\end{center}
+	\caption{Muestra de medida 3: diferencia entre las medidas del láser real (blancas) y del láser artificial (rojas)}
+	\label{fig:m3}
+\end{figure}
+
+\begin{figure}[H]
+	\begin{center} 
+		\includegraphics[width=\textwidth]{m4.png}
+	\end{center}
+	\caption{Muestra de medida 4: diferencia entre las medidas del láser real (blancas) y del láser artificial (rojas)}
+	\label{fig:m4}
+\end{figure}
+
+\subsection{Modificación de parámetros por defecto}
+
+Como se comentó en la sección \ref{mapa_ocup}, el nodo \texttt{slam\_gmapping} tiene una serie de parámetros que permiten ajustar cada cuántos metros, ángulos o segundos se procesa la información del láser.\\
+
+Tras una primera ejecución del procedimiento diseñado, el resultado obtenido no fue el esperado. Es por ello que se decidió variar estos parámetros hasta obtener un resultado satisfactorio. Los mapas generados para diferentes valores de estos tres parámetros se muestran en la figura \ref{fig:scans_params}.\\
+
+\begin{figure}[H]
+ \centering
+  \subfloat[$1.0; 0.5; 3.0$]{
+    \includegraphics[width=0.3\textwidth]{scan1.png}}
+  \subfloat[$0.3; 0.2; 3.0$]{
+    \includegraphics[width=0.3\textwidth]{scan2.png}}
+  \subfloat[$0.5; 0.2; 3.0$]{
+    \includegraphics[width=0.3\textwidth]{scan3.png}}
+ \caption{Resultados para diferentes parámetros de \texttt{linearUpdate}, \texttt{angularUpdate} y \texttt{temporalUpdate}, respectivamente}
+ \label{fig:scans_params}
+\end{figure}
+
+Otro parámetro que se ha cambiado para obtener mejores resultados es la distancia máxima de profundidad, \texttt{range\_max}, del nodo \texttt{depthimage\_to\_laserscan} comentada en el apartado \ref{depthimage_section}. Este valor está por defecto a 10 metros. Sin embargo, debido a la existencia de amplias ventanas y puertas, el resultado se veía muy influenciado por las distancias alejadas captadas a través de estas. El valor que ha originado mejores resultados es 7 metros.\\
+
+\begin{figure}[h]
+ \centering
+  \subfloat[\texttt{range\_max} a 7 metros]{
+    \includegraphics[width=0.4\textwidth]{scan1.png}}
+  \subfloat[\texttt{range\_max} a 8 metros]{
+    \includegraphics[width=0.4\textwidth]{scan4.png}}
+ \caption{Resultados para distintos valores de distancias máxima}
+ \label{fig:scans_range}
+\end{figure}
+
+
+\section{Análisis de la fiabilidad de YOLO}
+
+YOLO es una de las redes neuronales más rápidas en el ámbito de la detección y localización de objetos en una imagen. Sin embargo, esta velocidad tan característica le hace sacrificar algo de exactitud en sus medidas, convirtiéndola en una red no del todo fiable. Aún así, continúa siendo de las mejores en este aspecto.\\
+
+Con el nodo \texttt{write\_objects} obteníamos un archivo de 
 
 
 \printbibliography
+
 
 \end{document}

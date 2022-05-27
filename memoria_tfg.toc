@@ -29,7 +29,7 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {2.4}Nubes de puntos}{22}{section.2.4}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.5}YOLO: You only look once}{23}{section.2.5}%
+\contentsline {section}{\numberline {2.5}YOLO: You only look once}{22}{section.2.5}%
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {2.5.1}CUDA: Compute Unified Device Architecture}{24}{subsection.2.5.1}%
 \defcounter {refsection}{0}\relax 
@@ -45,8 +45,20 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {3.5}Detección de objetos}{33}{section.3.5}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.5.1}Descompresión de la imagen de color}{33}{subsection.3.5.1}%
+\contentsline {subsection}{\numberline {3.5.1}Descompresión de la imagen de color}{34}{subsection.3.5.1}%
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {3.5.2}Ejecución de YOLO}{34}{subsection.3.5.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.6}Procesamiento de los objetos detectados}{34}{section.3.6}%
+\contentsline {section}{\numberline {3.6}Procesamiento de los objetos detectados}{35}{section.3.6}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {3.7}Análisis de los objetos detectados}{36}{section.3.7}%
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {4}Resultados obtenidos}{37}{chapter.4}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {4.1}Mapa generado a partir de la imagen de profundidad}{37}{section.4.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {4.1.1}Generación del láser artificial}{39}{subsection.4.1.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {4.1.2}Modificación de parámetros por defecto}{42}{subsection.4.1.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {4.2}Análisis de la fiabilidad de YOLO}{42}{section.4.2}%
