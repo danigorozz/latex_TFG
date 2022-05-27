@@ -1,0 +1,106 @@
+\boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
+\babel@toc {spanish}{}
+\defcounter {refsection}{0}\relax 
+\addvspace {10\p@ }
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {1.1}{\ignorespaces Porción del plano del metro de Madrid \cite {metro_madrid}\relax }}{2}{figure.caption.7}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {1.2}{\ignorespaces Robot SHAKEY, 1968 \cite {shakey2}\relax }}{3}{figure.caption.8}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {1.3}{\ignorespaces Ejemplos de tipos de mapas\relax }}{4}{figure.caption.9}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Ejemplo de mapa métrico: mapa de ocupación}}}{4}{subfigure.3.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Mapa topológico: líneas del metro de Málaga \cite {metro_malaga}}}}{4}{subfigure.3.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {1.4}{\ignorespaces Mapa generado con el barrido de un láser 2D\relax }}{5}{figure.caption.10}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {1.5}{\ignorespaces Comparación del resultado de un láser 2D y un sensor RGBD\relax }}{6}{figure.caption.11}%
+\defcounter {refsection}{0}\relax 
+\addvspace {10\p@ }
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Mecanismos de comunicación en ROS\relax }}{13}{figure.caption.12}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Topics}}}{13}{subfigure.1.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Services}}}{13}{subfigure.1.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Actions}}}{13}{subfigure.1.3}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Ejemplo de mapa de ocupación\relax }}{14}{figure.caption.13}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {2.3}{\ignorespaces Kinect V1\relax }}{15}{figure.caption.14}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {2.4}{\ignorespaces Ejemplo de imagen de profundidad\relax }}{16}{figure.caption.15}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {2.5}{\ignorespaces Ejemplo de nube de puntos\relax }}{16}{figure.caption.16}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {2.6}{\ignorespaces Comparación con otros modelos\relax }}{17}{figure.caption.17}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {2.7}{\ignorespaces Procedimiento de YOLO\relax }}{18}{figure.caption.18}%
+\defcounter {refsection}{0}\relax 
+\addvspace {10\p@ }
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Árbol de nodos y topics. Los nodos diseñados para este trabajo son de color azul. Los nodos de terceros cuyo código ha sido modificado son de color naranja. Los nodos descargados que no se han modificado son de color blanco\relax }}{20}{figure.caption.19}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Diagrama del nodo cam\_info\relax }}{22}{figure.caption.20}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Diagrama del nodo sync\_info\relax }}{22}{figure.caption.21}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {3.4}{\ignorespaces Salida en la terminal del nodo \texttt {darknet\_ros}\relax }}{26}{figure.caption.22}%
+\defcounter {refsection}{0}\relax 
+\addvspace {10\p@ }
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Mapas generados con láser 2D (a) y con sensor RGBD (b)\relax }}{30}{figure.caption.24}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Generado con láser 2D}}}{30}{subfigure.1.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Generado con sensor RGBD}}}{30}{subfigure.1.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Superposición de los dos mapas\relax }}{31}{figure.caption.25}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Muestra de medida 1: diferencia entre las medidas del láser real (blancas) y del láser artificial (rojas)\relax }}{32}{figure.caption.26}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Muestra de medida 2: diferencia entre las medidas del láser real (blancas) y del láser artificial (rojas)\relax }}{32}{figure.caption.27}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {4.5}{\ignorespaces Muestra de medida 3: diferencia entre las medidas del láser real (blancas) y del láser artificial (rojas)\relax }}{33}{figure.caption.28}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {4.6}{\ignorespaces Muestra de medida 4: diferencia entre las medidas del láser real (blancas) y del láser artificial (rojas)\relax }}{33}{figure.caption.29}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {4.7}{\ignorespaces Resultados para diferentes parámetros de \texttt {linearUpdate}, \texttt {angularUpdate} y \texttt {temporalUpdate}, respectivamente\relax }}{34}{figure.caption.30}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {$1.0; 0.5; 3.0$}}}{34}{subfigure.7.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {$0.3; 0.2; 3.0$}}}{34}{subfigure.7.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {$0.5; 0.2; 3.0$}}}{34}{subfigure.7.3}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {4.8}{\ignorespaces Resultados para distintos valores de distancia máxima\relax }}{35}{figure.caption.31}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {\texttt {range\_max} a 7 metros}}}{35}{subfigure.8.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {\texttt {range\_max} a 8 metros}}}{35}{subfigure.8.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {4.9}{\ignorespaces Trayectoria seguida por el robot. El punto rojo indica el inicio de la trayectoria. El punto verde indica el final\relax }}{36}{figure.caption.32}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {4.10}{\ignorespaces Gráfica de objetos detectados. Muestra el número de veces que fue detectado cada uno de los objetos\relax }}{36}{figure.caption.33}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {4.11}{\ignorespaces Momentos en los que se ha detectado la clase `oven'. Los puntos azules representan la trayectoria del robot, los rojos las veces que se detectó la clase\relax }}{37}{figure.caption.34}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {4.12}{\ignorespaces Detección de la clase `oven' en la imagen\relax }}{37}{figure.caption.35}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {4.13}{\ignorespaces Momentos en los que se ha detectado la clase `refrigerator'. Los puntos azules representan la trayectoria del robot, los rojos las veces que se detectó la clase\relax }}{38}{figure.caption.36}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {4.14}{\ignorespaces Detecciones de la clase `refrigerator' en la imagen\relax }}{38}{figure.caption.37}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Detección errónea 1}}}{38}{subfigure.14.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Detección errónea 2}}}{38}{subfigure.14.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Detección correcta}}}{38}{subfigure.14.3}%
+\defcounter {refsection}{0}\relax 
+\addvspace {10\p@ }
+\defcounter {refsection}{0}\relax 
+\addvspace {10\p@ }
+\defcounter {refsection}{0}\relax 
+\addvspace {10\p@ }

@@ -20,11 +20,36 @@ citestyle=numeric
 
 \begin{document}
 
+
 \pagestyle{fancy}
 
 \maketitle
 
+\chapter*{Resumen}
+\addcontentsline{toc}{chapter}{Resumen}
+\pagenumbering{Roman}
+\setcounter{page}{3} % Habrá que modirficarlo cuando se añadan el resto de páginas
+
+
+
+
+
+\chapter*{Abstract}
+\addcontentsline{toc}{chapter}{Abstract}
+
+\chapter*{Agradecimientos}
+\addcontentsline{toc}{chapter}{Agradecimientos}
+
+
 \tableofcontents
+
+\cleardoublepage
+\addcontentsline{toc}{chapter}{Lista de figuras} % para que aparezca en el indice de contenidos
+\listoffigures % indice de figuras
+
+\cleardoublepage
+\addcontentsline{toc}{chapter}{Lista de tablas} % para que aparezca en el indice de contenidos
+\listoftables % indice de tablas
 
 \input{parte1.tex}
 
@@ -381,7 +406,7 @@ El formato del mensaje de una bounding box tiene las siguientes propiedades:
 
 Una vez obtenido el registro de los objetos en formato CSV es posible procesar esta información para realizar un análisis de la red y del entorno. Para ello se utilizará el entorno de programación en Python de \textit{Google Colab}, junto con las librerías \textit{Pandas} y \textit{Matplotlib}.La información sobre las gráficas y los resultados obtenidos se exponen en el capítulo siguiente.\\
 
-\chapter{Resultados obtenidos}
+\chapter{Resultados obtenidos} \label{chapter.resultados}
 
 En este capítulo se mostrarán los resultados que se han obtenido tras implementar el sistema. Primeramente se expondrá el mapa generado con la imagen de profundidad y los mapas obtenidos utilizando diferentes parámetros. Luego se hará una comparativa con el resultado obtenido a partir del láser 2D incorporado en el robot. En una segunda parte se mostrarán algunas gráficas realizadas con el registro de objetos detectados y se expondrán los posibles errores de la red neuronal en el proceso de la detección.\\
 
@@ -475,23 +500,219 @@ Tras una primera ejecución del procedimiento diseñado, el resultado obtenido n
 
 Otro parámetro que se ha cambiado para obtener mejores resultados es la distancia máxima de profundidad, \texttt{range\_max}, del nodo \texttt{depthimage\_to\_laserscan} comentada en el apartado \ref{depthimage_section}. Este valor está por defecto a 10 metros. Sin embargo, debido a la existencia de amplias ventanas y puertas, el resultado se veía muy influenciado por las distancias alejadas captadas a través de estas. El valor que ha originado mejores resultados es 7 metros.\\
 
-\begin{figure}[h]
+\begin{figure}[H]
  \centering
   \subfloat[\texttt{range\_max} a 7 metros]{
     \includegraphics[width=0.4\textwidth]{scan1.png}}
   \subfloat[\texttt{range\_max} a 8 metros]{
     \includegraphics[width=0.4\textwidth]{scan4.png}}
- \caption{Resultados para distintos valores de distancias máxima}
+ \caption{Resultados para distintos valores de distancia máxima}
  \label{fig:scans_range}
 \end{figure}
 
 
-\section{Análisis de la fiabilidad de YOLO}
+\section{Análisis de la fiabilidad de las detecciones}
 
 YOLO es una de las redes neuronales más rápidas en el ámbito de la detección y localización de objetos en una imagen. Sin embargo, esta velocidad tan característica le hace sacrificar algo de exactitud en sus medidas, convirtiéndola en una red no del todo fiable. Aún así, continúa siendo de las mejores en este aspecto.\\
 
-Con el nodo \texttt{write\_objects} obteníamos un archivo de 
+Con el nodo \texttt{write\_objects} obteníamos un archivo de texto con los datos en formato CSV, un formato que permite procesar la información de manera sencilla. Este archivo contiene información sobre los objetos o clases detectadas, sus probabilidades, la pose del robot (posición y orientación) y el tiempo en el instante en que se detectaron dichos objetos. Para entender la trayectoria seguida por el robot, se propone la gráfica de la figura \ref{fig:graf_trayectoria}. Destacar que no comienza en el origen de coordenadas porque existre cierto desfase entre la ejecución de YOLO y los demás nodos, debido a la potencia necesaria para lanzarlo.\\
 
+\begin{figure}[h]
+	\begin{center} 
+		\includegraphics[width=0.6\textwidth]{graf_trayectoria.png}
+	\end{center}
+	\caption{Trayectoria seguida por el robot. El punto rojo indica el inicio de la trayectoria. El punto verde indica el final}
+	\label{fig:graf_trayectoria}
+\end{figure}
+
+En la figura \ref{fig:graf_objetos} se muestra una gráfica de barras con el número de ocasiones que fueron detectadas cada una de las clases. Las clases `tvmonitor' (monitor de TV) y `chair' (silla) son las que más han sido detectadas, algo coherente con la distribución del laboratorio. La tercera clase más detectada ,`person' (persona), tampoco se escapa de la normalidad ya que durante la grabación había personas en el laboratorio. Las clases `mouse' (ratón) y `keyboard' (teclado), en principio, deberían haber sido tan frecuentes como las otras. Sin embargo, la cámara está prácticamente al mismo nivel que las mesas, lo que dificulta en gran medida el reconocimiento de estos objetos.\\
+
+De todos los objetos que se han detectado, hay tres que no parecen pertenecer al entorno habitual de un laboratorio. Es el caso de `oven' (horno), `refrigerator' (frigorífico) y `microwave' (microondas). Este último es coherente ya que en el laboratorio hay uno y las detecciones las hace correctamente. Los otros son casos especiales que se explicarán a continuación.\\
+
+\begin{figure}[h]
+	\begin{center} 
+		\includegraphics[width=0.7\textwidth]{graf_objetos.png}
+	\end{center}
+	\caption{Gráfica de objetos detectados. Muestra el número de veces que fue detectado cada uno de los objetos}
+	\label{fig:graf_objetos}
+\end{figure}
+
+En este laboratorio no hay ningún horno, por lo que la detección de esta clase es errónea. Como se muestra en la figura \ref{fig:graf_oven}, `oven' solo se detecta en un momento durante la trayectoria. Revisando las imágenes del dataset, se puede ver lo que YOLO confunde con un horno, mostrado en la figura \ref{fig:det_oven}. Ciertamente, el objeto que detecta es muy parecido a los diales de control de un horno, por lo que es razonable la ocnfusión.\\
+
+\begin{figure}[h]
+	\begin{center} 
+		\includegraphics[width=0.6\textwidth]{graf_oven.png}
+	\end{center}
+	\caption{Momentos en los que se ha detectado la clase `oven'. Los puntos azules representan la trayectoria del robot, los rojos las veces que se detectó la clase}
+	\label{fig:graf_oven}
+\end{figure}
+
+\begin{figure}[h]
+	\begin{center} 
+		\includegraphics[width=0.8\textwidth]{oven.png}
+	\end{center}
+	\caption{Detección de la clase `oven' en la imagen}
+	\label{fig:det_oven}
+\end{figure}
+
+En cambio, en el laboratorio sí que hay un frigorífico. Concretamente, un frigorífico compacto de una puerta. Sin embargo, pese a solamente haber uno, aparece en muchas ocasiones. Si obtenemos las posiciones en las que se detecta (figura \ref{fig:graf_refrigerator}), se puede ver como lo hace en posiciones muy distintas. Analizando las imágenes del dataset, se puede ver como, efectivamente, YOLO hace detecciones erróneas de la clase `refrigerator'. En la figura \ref{fig:det_refrigerator} se muestran dos detecciones erróneas y una correcta. Se puede ver como, en las detecciones incorrectas, los objetos detectados son similares a un frigorífico convencional.\\
+
+\begin{figure}[h]
+	\begin{center} 
+		\includegraphics[width=0.6\textwidth]{graf_refrigerator.png}
+	\end{center}
+	\caption{Momentos en los que se ha detectado la clase `refrigerator'. Los puntos azules representan la trayectoria del robot, los rojos las veces que se detectó la clase}
+	\label{fig:graf_refrigerator}
+\end{figure}
+
+\begin{figure}[H]
+ \centering
+  \subfloat[Detección errónea 1]{
+    \includegraphics[width=0.45\textwidth]{refrigerator1.png}}
+  \subfloat[Detección errónea 2]{
+    \includegraphics[width=0.45\textwidth]{refrigerator3.png}}
+  \hspace{0.5cm}
+  \subfloat[Detección correcta]{
+    \includegraphics[width=0.6\textwidth]{refrigerator2.png}}
+ \caption{Detecciones de la clase `refrigerator' en la imagen}
+ \label{fig:det_refrigerator}
+\end{figure}
+
+\part{Conclusiones}
+
+\chapter{Conclusiones, propuestas y líneas futuras}
+
+En este capítulo se pretende, a partir de los resultados obtenidos y de todo el proceso llevado a cabo para conseguirlos, exponer las conclusiones a las que se han llegado. Además se expondrán algunas propuestas de cara a mejorar el procedimiento. Finalmente se trazarán posibles líneas de trabajo de cara al desarrollo futuro de este trabajo.\\
+
+\section{Conclusiones}
+
+Los láseres 2D son unos sensores que se caracterizan principalmente por su gran precisión y amplio campo de visión. Sin embargo, son elementos que encarecen en gran medida el presupuesto a dedicar para el diseño de un robot. Las cámaras RGBD, en cambio, son sensores muchos más asequibles, por lo que se deberían de tener en cuenta a la hora de generar \textit{floorplans} de la estructura del edificio o vivienda.\\
+
+Como se ha mostrado en el capítulo \ref{chapter.resultados}, el resultado obtenido queda lejos lo ideal. El mapa obtenido mejora al láser en cuanto a la eliminación de los elementos no estructurales pero perjudica seriamente la rectitud de las líneas, provocando que el mapa pierda fiabilidad. Esto es debido a que los sensores RGBD son mucho menos precisos a la hora de calcular distancias, de ahí su gran diferencia de precio. Además, el dataset utilizado para comprobar el funcionamiento (el laboratorio de automática) no es el más amigable para este procedimiento debido a la gran cantidad de elementos que perjudican la medición a través de la cámara. Aún así, el resultado deja entrever que, con una correcta configuración y unas mejores condiciones del entorno, sería posible obtener un correcto \texttt{floorplan} estructural.\\
+
+Por tanto, las conclusiones extraídas del desarrollo de este proyecto son las siguientes.
+
+\begin{itemize}
+
+	\item Las cámaras RGBD pueden llegar a ser un sustituto válido y asequible a la hora de generar \texttt{floorplans} que representen exclusivamente la estructura del edificio, sin elementos cambiantes como personas, muebles, etc.
+	\item El entorno es el factor más determinante de cara a la efectividad del método. Un entorno con muchos elementos transparentes o con entrantes y salientes perjudican en gran medida los resultados obtenidos.
+	\item La calibración de la cámara es muy importante si se quieren obtener resultados que puedan ser utilizados en la realidad.
+	\item La comunidad de ROS es una de las más activas que se pueden encontrar. Existen miles de usuarios que aportan paquetes con funciones que abarcan prácticamente todos los ámbitos de la robótica. Por lo tanto, antes de comenzar a desarrollar alguna función, mejor comprobar si alguien ya lo ha hecho, algo que, vista la inmensitud de su comunidad, será lo más probable. Además, ROS cuenta con su propio foro donde compartir problemas y sus soluciones, ayudando en gran medida a usuarios novatos.
+	\item Las redes neuronales como YOLO, entrenadas para la detección de objetos, pese a no ser del todo fiable, cumple con creces su función. Sin embargo, muchos de los elementos del dataset no ha sido capaz de detectarlos.
+	\item El manejo de datos con \textit{Python}, \textit{Pandas}
+ y \textit{Numpy} resulta realmente sencillo. Complementándolo con la librería \textit{Matplotlib} se convierte en una poderosa herramienta para el análisis y la representación de los datos.
+ 	\item \textit{Linux}, pese a resultar inicialmente más complicado de comprender que otros sistemas operativos como \textit{Windows} o \textit{MacOS}, tiene numerosas características que lo convierten en una herramienta muy potente para el desarrollo, como la instalación por paquetes o el debugging.
+
+\end{itemize}
+
+\section{Propuestas y líneas futuras}
+
+Hay aspectos de este trabajo que, una vez analizado de principio a fin, pudieran haberse hecho de otra forma y así, quizá, haber obtenido mejor resultado.\\
+
+El dataset de datos (rosbag del laboratorio) no es el idóneo para esta tarea. Debido a todos sus entrantes y salientes y a las ventanas en la pared divisoria entre las dos estancias, el resultado obtenido no es del todo correcto. Lo mejor hubiera sido grabar al robot en un ambiente de vivienda convencional, con habitaciones, baños y cocinas. Además, la posición y orientación de la cámara no es la idónea. Dado que los elementos se encuentran mayoritariamente en la parte inferior de las paredes, lo ideal sería situar la cámara en una posición más alta que la del dataset, con una orientación paralela al plano del suelo.\\
+
+YOLO utiliza una serie de pesos para detectar los objetos. Una interesante línea futura para este proyecto sería investigar los distintos datasets de pesos disponibles para YOLO y cuáles convendría utilizar en un entorno de laboratorio de ingenierías como con el que se ha trabajado.\\
+
+Dado que el principal problema de los resultados obtenidos es la curvatura acaecida en las paredes medidas, sería conveniente buscar los parámetros que se ajustan concretamente a la cámara utilizada para generar el dataset. Posiblemente, una correcta configuración de los parámetros intrínsecos de la cámara, generará una mejoría en los resultados.\\
+
+
+\part{Apéndices}
+
+\appendix
+
+\chapter{Otras herramientas utilizadas}
+
+En este apéndice se expondrán las herramientas que se han utilizado para desarrollar el trabajo que no se explican en los capítulos anteriores pero que han sido necesarias poder alcanzar el objetivo. Principalmente se explicarán brevemente las librerías que se han utilizado en C++ y Python.\\
+
+\section{Librerías y paquetes}
+
+\subsection{\textit{message\_filters}}
+
+Es un paquete de ROS que proporciona una serie de filtros capaces de recibir mensajes y enviarlos pasado un tiempo determinado en función de la necesidad dictaminada por el filtro. Está diseñado por Josh Faust, Vijay Pradeep y Dirk Thomas.\\
+
+Para este proyecto se ha utilizado el filtro de sincronización o \textit{time synchronizer}. Este filtro se encarga de recibir mensajes de distintos topics y enviarlos sólo cuando se haya recibido un mensaje de cada uno de los topics con la misma marca temporal (\textit{timestamp)}. Concretamente se utiliza en el nodo \texttt{sync\_info}, para sincronizar los mensajes de la imagen de profundidad y de los parámetros de la cámara. \\ 
+
+\subsection{\textit{fstream}}
+
+Es una librería de C++ que permite la escritura en archivos. Se ha utilizado en el nodo \texttt{write\_objects} para escribir la información recibida de la pose y de la detección de objetos.\\
+
+\subsection{\textit{libfreenect}}
+
+\textit{libfreenect} es una librería que permite el acceso USB a la cámara Kinect de Microsoft. Es parte del proyecto \textit{OpenKinect}, una comunidad abierta que trabaja para implementar la posibilidad de uso de este dispositivo en todos los ordeanadores. Concretamente, se ha utilizado el paquete \texttt{freenect\_launch} que permite lanzar la cámara desde ROS.\\
+
+Este paquete sirvió para tener una primera toma de contacto con los sensores RGBD, las imágenes de profundidad y las nubes de puntos.\\
+
+\section{RVIZ}
+
+RVIZ (ROS Visualization) es un visualizador 3D para ROS. Es un software que se instala junto con el framework. Su uso está prácticamente estandarizado en toda la comunidad de ROS.\\
+
+Se utiliza para visualizar los mensajes que llegan a los topics. Permite visualizar poses, imágenes (en diferentes condificaciones),  mapas de ocupación, orientaciones, etc. e incluso permite incluir modelos 3D personalizados.\\
+
+\section{Google Colab}
+
+Colab, también conocido como ``Colaboratory'', es una herramienta creada por Google que permite a los usuarios programar y ejecutar código Python en el navegador, utilizando servicios alojados en la nube. Esta herramienta se ha utilizado para el análisis de los objetos detectados con la red neuronal. Las ventajas de utilizar esta plataforma son:
+
+\begin{itemize}
+
+	\item No requiere configuración
+	\item Da acceso gratuito a GPUs
+	\item Permite compartir contenido fácilmente
+
+\end{itemize}
+
+
+\chapter{Código de los nodos diseñados}
+
+En este apéndice se expone el código de los nodos diseñados para este proyecto. Estos nodos son: \texttt{cam\_info}, \texttt{sync\_info} y \texttt{write\_objects}.\\
+
+\section{Nodo \texttt{cam\_info}}
+
+\subsection*{\texttt{cam\_info.hpp}}
+
+\lstset{style=cppstyle}
+\vspace{0.2cm}
+\lstinputlisting[language=C++, caption=Código del archivo \texttt{cam\_info.hpp}]{codes/cam_info.hpp}
+\vspace{0.4cm}
+
+\subsection*{\texttt{cam\_info.cpp}}
+
+\vspace{0.2cm}
+\lstinputlisting[language=C++, caption=Código del archivo \texttt{cam\_info.cpp}]{codes/cam_info.cpp}
+\vspace{0.4cm}
+
+\subsection*{\texttt{main\_cam\_info.cpp}}
+
+\vspace{0.2cm}
+\lstinputlisting[language=C++, caption=Código del archivo \texttt{main\_am\_info.cpp}]{codes/main_cam_info.cpp}
+\vspace{0.4cm}
+
+\section{Nodo \texttt{sync\_info}}
+
+\lstset{style=pythonstyle}
+\vspace{0.2cm}
+\lstinputlisting[language=Python2, caption=Código del archivo \texttt{sync\_info.py}]{codes/sync_info.py}
+\vspace{0.4cm}
+
+\section{Nodo \texttt{write\_objects}}
+
+\subsection*{\texttt{write\_objects.hpp}}
+
+\lstset{style=cppstyle}
+\vspace{0.2cm}
+\lstinputlisting[language=C++, caption=Código del archivo \texttt{write\_objects.hpp}]{codes/write_objects.hpp}
+\vspace{0.4cm}
+
+\subsection*{\texttt{write\_objects.cpp}}
+
+\vspace{0.2cm}
+\lstinputlisting[language=C++, caption=Código del archivo \texttt{write\_objects.cpp}]{codes/write_objects.cpp}
+\vspace{0.4cm}
+
+\subsection*{\texttt{main\_write\_objects.cpp}}
+
+\vspace{0.2cm}
+\lstinputlisting[language=C++, caption=Código del archivo \texttt{main\_write\_objects.hpp}]{codes/main_write_objects.cpp}
+\vspace{0.4cm}
 
 \printbibliography
 

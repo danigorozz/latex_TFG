@@ -12,7 +12,7 @@
 
 % Para cambiar márgenes
 \usepackage[a4paper]{geometry}
-\geometry{left=3cm, right=3cm}
+\geometry{left=3cm, right=3cm, bottom=4cm}
 
 % Para quitar encabezado, pie de página y numeración en páginas vacías
 \usepackage{emptypage}
@@ -30,8 +30,8 @@
 % Para modificar encabezados y pie de página
 \usepackage{fancyhdr}
 \fancyhf{} % Limpia los encabezados y pie de página
-\lhead[\leftmark]{Daniel G. R.}
-\rhead[Daniel G. R.]{\rightmark}
+\lhead[\leftmark]{}
+\rhead[]{\rightmark}
 \cfoot[\thepage]{\thepage}
 
 % Añadir línea separatoria en el encabezado
@@ -50,5 +50,67 @@
 \end{figure}
 }
 
+\usepackage{color}
+\usepackage{listings}
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codeyellow}{rgb}{0.6,0.6,0}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.97,0.97,0.95}
+\definecolor{deepblue}{rgb}{0,0,0.5}
+\definecolor{deepred}{rgb}{0.6,0,0}
+\definecolor{deepgreen}{rgb}{0,0.5,0}
+
+\lstdefinelanguage{Python2}{
+  language     = Python,
+  morekeywords = {self, True, False},
+}
+
+\lstdefinestyle{pythonstyle}{
+ backgroundcolor=\color{backcolour},   
+ commentstyle=\color{codegreen},
+ keywordstyle=\color{deepblue},
+ numberstyle=\tiny\color{codegray},
+ stringstyle=\color{codepurple},
+ basicstyle=\ttfamily\footnotesize,
+ breakatwhitespace=false,         
+ breaklines=true,                 
+ captionpos=b,                    
+ keepspaces=true,                 
+ numbers=left,                    
+ numbersep=5pt,                  
+ showspaces=false,                
+ showstringspaces=false,
+ showtabs=false,                  
+ tabsize=2,
+ keywords={self},
+ emph={__init__, __name__},          % Custom highlighting
+ emphstyle=\ttfamily\color{deepred},    % Custom highlighting style
+}
+
+\lstdefinestyle{cppstyle}{
+ backgroundcolor=\color{backcolour},   
+ commentstyle=\color{codegreen},
+ keywordstyle=\color{deepblue},
+ numberstyle=\tiny\color{codegray},
+ stringstyle=\color{codepurple},
+ basicstyle=\ttfamily\footnotesize,
+ breakatwhitespace=false,         
+ breaklines=true,                 
+ captionpos=b,                    
+ keepspaces=true,                 
+ numbers=left,                    
+ numbersep=5pt,                  
+ showspaces=false,                
+ showstringspaces=false,
+ showtabs=false,                  
+ tabsize=2,
+ keywords={self},
+ emph={__init__, __name__},          % Custom highlighting
+ emphstyle=\ttfamily\color{deepred},    % Custom highlighting style
+}
 
 
+\newcommand\pythonexternal[2][]{{
+\pythonstyle
+\lstinputlisting[#1]{codes/#2}}}
