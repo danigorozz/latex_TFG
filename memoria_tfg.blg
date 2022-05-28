@@ -1,20 +1,22 @@
 [0] Config.pm:304> INFO - This is Biber 2.14 (beta)
 [0] Config.pm:307> INFO - Logfile is 'memoria_tfg.blg'
-[60] biber:322> INFO - === jue may 26, 2022, 18:16:45
-[72] Biber.pm:415> INFO - Reading 'memoria_tfg.bcf'
-[124] Biber.pm:943> INFO - Found 17 citekeys in bib section 0
+[60] biber:322> INFO - === sáb may 28, 2022, 13:31:26
+[71] Biber.pm:415> INFO - Reading 'memoria_tfg.bcf'
+[124] Biber.pm:943> INFO - Found 26 citekeys in bib section 0
 [135] Biber.pm:4256> INFO - Processing section 0
 [135] Utils.pm:75> INFO - Globbing data source 'bibliografia.bib'
 [135] Utils.pm:91> INFO - Globbed data source 'bibliografia.bib' to bibliografia.bib
 [143] Biber.pm:4455> INFO - Looking for bibtex format file 'bibliografia.bib' for section 0
 [144] bibtex.pm:1653> INFO - LaTeX decoding ...
-[156] bibtex.pm:1471> INFO - Found BibTeX data source 'bibliografia.bib'
-[172] Utils.pm:293> WARN - month field 'nov' in entry 'vikingos' is not an integer - this will probably not sort properly.
-[178] Utils.pm:293> WARN - month field 'Apr' in entry 'shakey1' is not an integer - this will probably not sort properly.
-[180] Utils.pm:293> WARN - month field 'Dec' in entry 'shakey2' is not an integer - this will probably not sort properly.
-[232] UCollate.pm:68> INFO - Overriding locale 'es-ES' defaults 'variable = shifted' with 'variable = non-ignorable'
-[232] UCollate.pm:68> INFO - Overriding locale 'es-ES' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[232] Biber.pm:4084> INFO - Sorting list 'none/global//global/global' of type 'entry' with template 'none' and locale 'es-ES'
-[243] bbl.pm:652> INFO - Writing 'memoria_tfg.bbl' with encoding 'UTF-8'
-[248] bbl.pm:755> INFO - Output to memoria_tfg.bbl
-[248] Biber.pm:128> INFO - WARNINGS: 3
+[161] bibtex.pm:1471> INFO - Found BibTeX data source 'bibliografia.bib'
+[177] Utils.pm:293> WARN - month field 'nov' in entry 'vikingos' is not an integer - this will probably not sort properly.
+[183] Utils.pm:293> WARN - month field 'Apr' in entry 'shakey1' is not an integer - this will probably not sort properly.
+[185] Utils.pm:293> WARN - month field 'Dec' in entry 'shakey2' is not an integer - this will probably not sort properly.
+[212] Utils.pm:293> WARN - month field 'Aug' in entry 'nn' is not an integer - this will probably not sort properly.
+[219] Utils.pm:293> WARN - month field 'Jan' in entry 'cnn' is not an integer - this will probably not sort properly.
+[252] UCollate.pm:68> INFO - Overriding locale 'es-ES' defaults 'variable = shifted' with 'variable = non-ignorable'
+[252] UCollate.pm:68> INFO - Overriding locale 'es-ES' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[252] Biber.pm:4084> INFO - Sorting list 'none/global//global/global' of type 'entry' with template 'none' and locale 'es-ES'
+[266] bbl.pm:652> INFO - Writing 'memoria_tfg.bbl' with encoding 'UTF-8'
+[274] bbl.pm:755> INFO - Output to memoria_tfg.bbl
+[274] Biber.pm:128> INFO - WARNINGS: 5

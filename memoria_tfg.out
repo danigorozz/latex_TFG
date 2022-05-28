@@ -18,35 +18,39 @@
 \BOOKMARK [2][-]{subsection.2.3.1}{Imagen de profundidad}{section.2.3}% 18
 \BOOKMARK [1][-]{section.2.4}{Nubes de puntos}{chapter.2}% 19
 \BOOKMARK [1][-]{section.2.5}{YOLO: You only look once}{chapter.2}% 20
-\BOOKMARK [2][-]{subsection.2.5.1}{CUDA: Compute Unified Device Architecture}{section.2.5}% 21
-\BOOKMARK [0][-]{chapter.3}{Dise\361o e implementaci\363n}{part.2}% 22
-\BOOKMARK [1][-]{section.3.1}{Vista general del sistema}{chapter.3}% 23
-\BOOKMARK [1][-]{section.3.2}{Fuente de datos}{chapter.3}% 24
-\BOOKMARK [1][-]{section.3.3}{De imagen de profundidad a barrido l\341ser}{chapter.3}% 25
-\BOOKMARK [1][-]{section.3.4}{Generaci\363n del mapa de ocupaci\363n}{chapter.3}% 26
-\BOOKMARK [1][-]{section.3.5}{Detecci\363n de objetos}{chapter.3}% 27
-\BOOKMARK [2][-]{subsection.3.5.1}{Descompresi\363n de la imagen de color}{section.3.5}% 28
-\BOOKMARK [2][-]{subsection.3.5.2}{Ejecuci\363n de YOLO}{section.3.5}% 29
-\BOOKMARK [1][-]{section.3.6}{Procesamiento de los objetos detectados}{chapter.3}% 30
-\BOOKMARK [1][-]{section.3.7}{An\341lisis de los objetos detectados}{chapter.3}% 31
-\BOOKMARK [0][-]{chapter.4}{Resultados obtenidos}{part.2}% 32
-\BOOKMARK [1][-]{section.4.1}{Mapa generado a partir de la imagen de profundidad}{chapter.4}% 33
-\BOOKMARK [2][-]{subsection.4.1.1}{Generaci\363n del l\341ser artificial}{section.4.1}% 34
-\BOOKMARK [2][-]{subsection.4.1.2}{Modificaci\363n de par\341metros por defecto}{section.4.1}% 35
-\BOOKMARK [1][-]{section.4.2}{An\341lisis de la fiabilidad de las detecciones}{chapter.4}% 36
-\BOOKMARK [-1][-]{part.3}{III Conclusiones}{}% 37
-\BOOKMARK [0][-]{chapter.5}{Conclusiones, propuestas y l\355neas futuras}{part.3}% 38
-\BOOKMARK [1][-]{section.5.1}{Conclusiones}{chapter.5}% 39
-\BOOKMARK [1][-]{section.5.2}{Propuestas y l\355neas futuras}{chapter.5}% 40
-\BOOKMARK [-1][-]{part.4}{IV Ap\351ndices}{}% 41
-\BOOKMARK [0][-]{appendix.Alph1}{Otras herramientas utilizadas}{part.4}% 42
-\BOOKMARK [1][-]{section.Alph1.1}{Librer\355as y paquetes}{appendix.Alph1}% 43
-\BOOKMARK [2][-]{subsection.Alph1.1.1}{message\137filters}{section.Alph1.1}% 44
-\BOOKMARK [2][-]{subsection.Alph1.1.2}{fstream}{section.Alph1.1}% 45
-\BOOKMARK [2][-]{subsection.Alph1.1.3}{libfreenect}{section.Alph1.1}% 46
-\BOOKMARK [1][-]{section.Alph1.2}{RVIZ}{appendix.Alph1}% 47
-\BOOKMARK [1][-]{section.Alph1.3}{Google Colab}{appendix.Alph1}% 48
-\BOOKMARK [0][-]{appendix.Alph2}{C\363digo de los nodos dise\361ados}{part.4}% 49
-\BOOKMARK [1][-]{section.Alph2.1}{Nodo cam\137info}{appendix.Alph2}% 50
-\BOOKMARK [1][-]{section.Alph2.2}{Nodo sync\137info}{appendix.Alph2}% 51
-\BOOKMARK [1][-]{section.Alph2.3}{Nodo write\137objects}{appendix.Alph2}% 52
+\BOOKMARK [2][-]{subsection.2.5.1}{Redes neuronales convolucionales}{section.2.5}% 21
+\BOOKMARK [1][-]{section.2.6}{Pandas y Matplotlib}{chapter.2}% 22
+\BOOKMARK [0][-]{chapter.3}{Dise\361o e implementaci\363n}{part.2}% 23
+\BOOKMARK [1][-]{section.3.1}{Vista general del sistema}{chapter.3}% 24
+\BOOKMARK [1][-]{section.3.2}{Fuente de datos}{chapter.3}% 25
+\BOOKMARK [1][-]{section.3.3}{De imagen de profundidad a barrido l\341ser}{chapter.3}% 26
+\BOOKMARK [1][-]{section.3.4}{Generaci\363n del mapa de ocupaci\363n}{chapter.3}% 27
+\BOOKMARK [1][-]{section.3.5}{Detecci\363n de objetos}{chapter.3}% 28
+\BOOKMARK [2][-]{subsection.3.5.1}{Descompresi\363n de la imagen de color}{section.3.5}% 29
+\BOOKMARK [2][-]{subsection.3.5.2}{Ejecuci\363n de YOLO}{section.3.5}% 30
+\BOOKMARK [1][-]{section.3.6}{Procesamiento de los objetos detectados}{chapter.3}% 31
+\BOOKMARK [1][-]{section.3.7}{An\341lisis de los objetos detectados}{chapter.3}% 32
+\BOOKMARK [0][-]{chapter.4}{Resultados obtenidos}{part.2}% 33
+\BOOKMARK [1][-]{section.4.1}{Mapa generado a partir de la imagen de profundidad}{chapter.4}% 34
+\BOOKMARK [2][-]{subsection.4.1.1}{Generaci\363n del l\341ser artificial}{section.4.1}% 35
+\BOOKMARK [2][-]{subsection.4.1.2}{Modificaci\363n de par\341metros por defecto}{section.4.1}% 36
+\BOOKMARK [1][-]{section.4.2}{An\341lisis de la fiabilidad de las detecciones}{chapter.4}% 37
+\BOOKMARK [-1][-]{part.3}{III Conclusiones}{}% 38
+\BOOKMARK [0][-]{chapter.5}{Conclusiones, propuestas y l\355neas futuras}{part.3}% 39
+\BOOKMARK [1][-]{section.5.1}{Conclusiones}{chapter.5}% 40
+\BOOKMARK [1][-]{section.5.2}{Propuestas y l\355neas futuras}{chapter.5}% 41
+\BOOKMARK [-1][-]{part.4}{IV Ap\351ndices}{}% 42
+\BOOKMARK [0][-]{appendix.Alph1}{Otras herramientas utilizadas}{part.4}% 43
+\BOOKMARK [1][-]{section.Alph1.1}{Librer\355as y paquetes}{appendix.Alph1}% 44
+\BOOKMARK [2][-]{subsection.Alph1.1.1}{message\137filters}{section.Alph1.1}% 45
+\BOOKMARK [2][-]{subsection.Alph1.1.2}{fstream}{section.Alph1.1}% 46
+\BOOKMARK [2][-]{subsection.Alph1.1.3}{libfreenect}{section.Alph1.1}% 47
+\BOOKMARK [1][-]{section.Alph1.2}{RVIZ}{appendix.Alph1}% 48
+\BOOKMARK [1][-]{section.Alph1.3}{Google Colab}{appendix.Alph1}% 49
+\BOOKMARK [1][-]{section.Alph1.4}{CUDA: Compute Unified Device Architecture}{appendix.Alph1}% 50
+\BOOKMARK [1][-]{section.Alph1.5}{LaTex y TexMaker}{appendix.Alph1}% 51
+\BOOKMARK [1][-]{section.Alph1.6}{Draw.io}{appendix.Alph1}% 52
+\BOOKMARK [0][-]{appendix.Alph2}{C\363digo de los nodos dise\361ados}{part.4}% 53
+\BOOKMARK [1][-]{section.Alph2.1}{Nodo cam\137info}{appendix.Alph2}% 54
+\BOOKMARK [1][-]{section.Alph2.2}{Nodo sync\137info}{appendix.Alph2}% 55
+\BOOKMARK [1][-]{section.Alph2.3}{Nodo write\137objects}{appendix.Alph2}% 56

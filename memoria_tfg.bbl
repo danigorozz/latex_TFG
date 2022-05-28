@@ -33,8 +33,8 @@
       \strng{authorbibnamehash}{3808e11c61724796f75b221aa39d0ed1}
       \strng{authornamehash}{3808e11c61724796f75b221aa39d0ed1}
       \strng{authorfullhash}{3808e11c61724796f75b221aa39d0ed1}
-      \field{sortinit}{1}
-      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
+      \field{sortinit}{6}
+      \field{sortinithash}{7851c86048328b027313775d8fbd2131}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{addendum}{(acc: 25.05.2022)}
@@ -60,8 +60,8 @@
       \strng{authorbibnamehash}{dd20b5fb6c11aa0b483e9cb71930efe3}
       \strng{authornamehash}{dd20b5fb6c11aa0b483e9cb71930efe3}
       \strng{authorfullhash}{dd20b5fb6c11aa0b483e9cb71930efe3}
-      \field{sortinit}{2}
-      \field{sortinithash}{ed39bb39cf854d5250e95b1c1f94f4ed}
+      \field{sortinit}{7}
+      \field{sortinithash}{f615fb9c6fba11c6f962fb3fd599810e}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{addendum}{(acc: 25.05.2022)}
@@ -87,8 +87,8 @@
       \strng{authorbibnamehash}{9e1a2ed2c32ed38e6538b751157e6b43}
       \strng{authornamehash}{9e1a2ed2c32ed38e6538b751157e6b43}
       \strng{authorfullhash}{9e1a2ed2c32ed38e6538b751157e6b43}
-      \field{sortinit}{4}
-      \field{sortinithash}{e071e0bcb44634fab398d68ad04e69f4}
+      \field{sortinit}{9}
+      \field{sortinithash}{54047ffb55bdefa0694bbd554c1b11a0}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{addendum}{(acc: 25.05.2022)}
@@ -117,8 +117,8 @@
       \strng{authorbibnamehash}{9025c003e2b2dc05fa9648f172e55f44}
       \strng{authornamehash}{9025c003e2b2dc05fa9648f172e55f44}
       \strng{authorfullhash}{9025c003e2b2dc05fa9648f172e55f44}
-      \field{sortinit}{5}
-      \field{sortinithash}{5dd416adbafacc8226114bc0202d5fdd}
+      \field{sortinit}{1}
+      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{addendum}{(acc: 25.05.2022)}
@@ -146,8 +146,8 @@
       \strng{authornamehash}{9c677286866aad38f8e9b660f5411814}
       \strng{authorfullhash}{9c677286866aad38f8e9b660f5411814}
       \field{extraname}{1}
-      \field{sortinit}{7}
-      \field{sortinithash}{f615fb9c6fba11c6f962fb3fd599810e}
+      \field{sortinit}{1}
+      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{addendum}{(acc: 25.05.2022)}
@@ -175,8 +175,8 @@
       \strng{authorbibnamehash}{a0280d6115433205972c08f6423df6f3}
       \strng{authornamehash}{a0280d6115433205972c08f6423df6f3}
       \strng{authorfullhash}{a0280d6115433205972c08f6423df6f3}
-      \field{sortinit}{9}
-      \field{sortinithash}{54047ffb55bdefa0694bbd554c1b11a0}
+      \field{sortinit}{1}
+      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{addendum}{(acc: 25.05.2022)}
@@ -273,6 +273,19 @@
       \verb https://github.com/ros2/rmw%5C_fastrtps/issues/249
       \endverb
     \endentry
+    \entry{roswiki}{online}{}
+      \field{sortinit}{1}
+      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
+      \field{labeltitlesource}{title}
+      \field{addendum}{(acc: 28.05.2022)}
+      \field{title}{ROS WIKI}
+      \verb{urlraw}
+      \verb http://wiki.ros.org/
+      \endverb
+      \verb{url}
+      \verb http://wiki.ros.org/
+      \endverb
+    \endentry
     \entry{occupancy_grid}{inproceedings}{}
       \name{author}{3}{}{%
         {{hash=96f6547ccf075e8095d0d3ca04015f8e}{%
@@ -310,6 +323,47 @@
       \verb 10.1109/ROBOT.2007.363554
       \endverb
     \endentry
+    \entry{kinectv1}{online}{}
+      \name{author}{1}{}{%
+        {{hash=9c677286866aad38f8e9b660f5411814}{%
+           family={Wikipedia},
+           familyi={W\bibinitperiod}}}%
+      }
+      \strng{namehash}{9c677286866aad38f8e9b660f5411814}
+      \strng{fullhash}{9c677286866aad38f8e9b660f5411814}
+      \strng{bibnamehash}{9c677286866aad38f8e9b660f5411814}
+      \strng{authorbibnamehash}{9c677286866aad38f8e9b660f5411814}
+      \strng{authornamehash}{9c677286866aad38f8e9b660f5411814}
+      \strng{authorfullhash}{9c677286866aad38f8e9b660f5411814}
+      \field{extraname}{3}
+      \field{sortinit}{2}
+      \field{sortinithash}{ed39bb39cf854d5250e95b1c1f94f4ed}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{addendum}{(acc: 28.05.2022)}
+      \field{month}{2}
+      \field{title}{Kinect}
+      \field{year}{2022}
+      \verb{urlraw}
+      \verb https://es.wikipedia.org/wiki/Kinect
+      \endverb
+      \verb{url}
+      \verb https://es.wikipedia.org/wiki/Kinect
+      \endverb
+    \endentry
+    \entry{depthimage}{online}{}
+      \field{sortinit}{2}
+      \field{sortinithash}{ed39bb39cf854d5250e95b1c1f94f4ed}
+      \field{labeltitlesource}{title}
+      \field{addendum}{(acc: 28.05.2022)}
+      \field{title}{Asus Xtion depth image}
+      \verb{urlraw}
+      \verb https://answers.ros.org/question/212747/cvbridge-conversion-problem-asus-xtion-depth-image-to-opencv/
+      \endverb
+      \verb{url}
+      \verb https://answers.ros.org/question/212747/cvbridge-conversion-problem-asus-xtion-depth-image-to-opencv/
+      \endverb
+    \endentry
     \entry{yolo}{misc}{}
       \name{author}{4}{}{%
         {{hash=99bced2e56a5253f3fe98a5f04e6d9b2}{%
@@ -339,8 +393,8 @@
       \strng{authorbibnamehash}{e1203a0044715040adeb8c5079ee645a}
       \strng{authornamehash}{e1203a0044715040adeb8c5079ee645a}
       \strng{authorfullhash}{b5530443e433a4da53dbe3cf155225b4}
-      \field{sortinit}{1}
-      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
+      \field{sortinit}{2}
+      \field{sortinithash}{ed39bb39cf854d5250e95b1c1f94f4ed}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{You Only Look Once: Unified, Real-Time Object Detection}
@@ -349,7 +403,23 @@
       \verb arXiv:1506.02640
       \endverb
     \endentry
-    \entry{cuda}{online}{}
+    \entry{nn}{misc}{}
+      \field{sortinit}{2}
+      \field{sortinithash}{ed39bb39cf854d5250e95b1c1f94f4ed}
+      \field{labeltitlesource}{title}
+      \field{addendum}{(acc: 28.05.2022)}
+      \field{journaltitle}{IBM}
+      \field{month}{8}
+      \field{title}{El modelo de redes neuronales}
+      \field{year}{2021}
+      \verb{urlraw}
+      \verb https://www.ibm.com/docs/es/spss-modeler/SaaS?topic=networks-neural-model
+      \endverb
+      \verb{url}
+      \verb https://www.ibm.com/docs/es/spss-modeler/SaaS?topic=networks-neural-model
+      \endverb
+    \endentry
+    \entry{foto_nn}{online}{}
       \name{author}{1}{}{%
         {{hash=9c677286866aad38f8e9b660f5411814}{%
            family={Wikipedia},
@@ -361,18 +431,104 @@
       \strng{authorbibnamehash}{9c677286866aad38f8e9b660f5411814}
       \strng{authornamehash}{9c677286866aad38f8e9b660f5411814}
       \strng{authorfullhash}{9c677286866aad38f8e9b660f5411814}
-      \field{extraname}{3}
-      \field{sortinit}{1}
-      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
+      \field{extraname}{4}
+      \field{sortinit}{2}
+      \field{sortinithash}{ed39bb39cf854d5250e95b1c1f94f4ed}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{addendum}{(acc: 26.05.2022)}
-      \field{title}{Compute Unified Device Architecture}
+      \field{addendum}{(acc: 28.05.2022)}
+      \field{month}{12}
+      \field{title}{Red neuronal prealimentada}
+      \field{year}{2021}
       \verb{urlraw}
-      \verb https://es.wikipedia.org/wiki/CUDA
+      \verb https://es.wikipedia.org/wiki/Red_neuronal_prealimentada
       \endverb
       \verb{url}
-      \verb https://es.wikipedia.org/wiki/CUDA
+      \verb https://es.wikipedia.org/wiki/Red_neuronal_prealimentada
+      \endverb
+    \endentry
+    \entry{perceptron}{online}{}
+      \name{author}{1}{}{%
+        {{hash=9c677286866aad38f8e9b660f5411814}{%
+           family={Wikipedia},
+           familyi={W\bibinitperiod}}}%
+      }
+      \strng{namehash}{9c677286866aad38f8e9b660f5411814}
+      \strng{fullhash}{9c677286866aad38f8e9b660f5411814}
+      \strng{bibnamehash}{9c677286866aad38f8e9b660f5411814}
+      \strng{authorbibnamehash}{9c677286866aad38f8e9b660f5411814}
+      \strng{authornamehash}{9c677286866aad38f8e9b660f5411814}
+      \strng{authorfullhash}{9c677286866aad38f8e9b660f5411814}
+      \field{extraname}{5}
+      \field{sortinit}{2}
+      \field{sortinithash}{ed39bb39cf854d5250e95b1c1f94f4ed}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{addendum}{(acc: 28.05.2022)}
+      \field{month}{1}
+      \field{title}{Perceptrón multicapa}
+      \field{year}{2022}
+      \verb{urlraw}
+      \verb https://es.wikipedia.org/wiki/Perceptr%C3%B3n_multicapa
+      \endverb
+      \verb{url}
+      \verb https://es.wikipedia.org/wiki/Perceptr%C3%B3n_multicapa
+      \endverb
+    \endentry
+    \entry{cnn}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=812287b194eb129fa0c7cb2bd451c9c5}{%
+           family={Díaz-Pinto},
+           familyi={D\bibinithyphendelim P\bibinitperiod},
+           given={Andrés},
+           giveni={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{812287b194eb129fa0c7cb2bd451c9c5}
+      \strng{fullhash}{812287b194eb129fa0c7cb2bd451c9c5}
+      \strng{bibnamehash}{812287b194eb129fa0c7cb2bd451c9c5}
+      \strng{authorbibnamehash}{812287b194eb129fa0c7cb2bd451c9c5}
+      \strng{authornamehash}{812287b194eb129fa0c7cb2bd451c9c5}
+      \strng{authorfullhash}{812287b194eb129fa0c7cb2bd451c9c5}
+      \field{sortinit}{2}
+      \field{sortinithash}{ed39bb39cf854d5250e95b1c1f94f4ed}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{addendum}{(acc: 28.05.2022)}
+      \field{journaltitle}{KeepCoding}
+      \field{month}{1}
+      \field{title}{¿Qué son las Redes Neuronales Convolucionales?}
+      \field{year}{2022}
+      \verb{urlraw}
+      \verb https://keepcoding.io/blog/redes-neuronales-convolucionales/
+      \endverb
+      \verb{url}
+      \verb https://keepcoding.io/blog/redes-neuronales-convolucionales/
+      \endverb
+    \endentry
+    \entry{pandas}{online}{}
+      \field{sortinit}{3}
+      \field{sortinithash}{a37a8ef248a93c322189792c34fc68c9}
+      \field{labeltitlesource}{title}
+      \field{addendum}{(acc: 28.05.2022)}
+      \field{title}{Pandas}
+      \verb{urlraw}
+      \verb https://pandas.pydata.org/
+      \endverb
+      \verb{url}
+      \verb https://pandas.pydata.org/
+      \endverb
+    \endentry
+    \entry{matplotlib}{online}{}
+      \field{sortinit}{3}
+      \field{sortinithash}{a37a8ef248a93c322189792c34fc68c9}
+      \field{labeltitlesource}{title}
+      \field{addendum}{(acc: 28.05.2022)}
+      \field{title}{Matplotlib}
+      \verb{urlraw}
+      \verb https://matplotlib.org/
+      \endverb
+      \verb{url}
+      \verb https://matplotlib.org/
       \endverb
     \endentry
     \entry{di2ls}{online}{}
@@ -389,8 +545,8 @@
       \strng{authorbibnamehash}{97db925153d58d6a997176246fa6d827}
       \strng{authornamehash}{97db925153d58d6a997176246fa6d827}
       \strng{authorfullhash}{97db925153d58d6a997176246fa6d827}
-      \field{sortinit}{1}
-      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
+      \field{sortinit}{3}
+      \field{sortinithash}{a37a8ef248a93c322189792c34fc68c9}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{addendum}{(acc: 26.05.2022)}
@@ -416,8 +572,8 @@
       \strng{authorbibnamehash}{a8ad4a5f43253f69552460c946e34e49}
       \strng{authornamehash}{a8ad4a5f43253f69552460c946e34e49}
       \strng{authorfullhash}{a8ad4a5f43253f69552460c946e34e49}
-      \field{sortinit}{1}
-      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
+      \field{sortinit}{3}
+      \field{sortinithash}{a37a8ef248a93c322189792c34fc68c9}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{addendum}{(acc: 26.05.2022)}
@@ -443,8 +599,8 @@
       \strng{authorbibnamehash}{b4f4d0b82b7f7686e3d9ee1d7f29e99e}
       \strng{authornamehash}{b4f4d0b82b7f7686e3d9ee1d7f29e99e}
       \strng{authorfullhash}{b4f4d0b82b7f7686e3d9ee1d7f29e99e}
-      \field{sortinit}{1}
-      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
+      \field{sortinit}{3}
+      \field{sortinithash}{a37a8ef248a93c322189792c34fc68c9}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{addendum}{(acc: 26.05.2022)}
@@ -470,8 +626,8 @@
       \strng{authorbibnamehash}{53f42f424532d55e35ab63be96aba40f}
       \strng{authornamehash}{53f42f424532d55e35ab63be96aba40f}
       \strng{authorfullhash}{53f42f424532d55e35ab63be96aba40f}
-      \field{sortinit}{1}
-      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
+      \field{sortinit}{3}
+      \field{sortinithash}{a37a8ef248a93c322189792c34fc68c9}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{addendum}{(acc: 26.05.2022)}
@@ -495,8 +651,8 @@
       \strng{authorbibnamehash}{05665b7826ff460887094429e8a32116}
       \strng{authornamehash}{05665b7826ff460887094429e8a32116}
       \strng{authorfullhash}{05665b7826ff460887094429e8a32116}
-      \field{sortinit}{2}
-      \field{sortinithash}{ed39bb39cf854d5250e95b1c1f94f4ed}
+      \field{sortinit}{3}
+      \field{sortinithash}{a37a8ef248a93c322189792c34fc68c9}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{addendum}{(acc: 26.05.2022)}
@@ -506,6 +662,32 @@
       \endverb
       \verb{url}
       \verb http://docs.ros.org/en/jade/api/sensor_msgs/html/image__encodings_8h.html
+      \endverb
+    \endentry
+    \entry{cuda}{online}{}
+      \name{author}{1}{}{%
+        {{hash=9c677286866aad38f8e9b660f5411814}{%
+           family={Wikipedia},
+           familyi={W\bibinitperiod}}}%
+      }
+      \strng{namehash}{9c677286866aad38f8e9b660f5411814}
+      \strng{fullhash}{9c677286866aad38f8e9b660f5411814}
+      \strng{bibnamehash}{9c677286866aad38f8e9b660f5411814}
+      \strng{authorbibnamehash}{9c677286866aad38f8e9b660f5411814}
+      \strng{authornamehash}{9c677286866aad38f8e9b660f5411814}
+      \strng{authorfullhash}{9c677286866aad38f8e9b660f5411814}
+      \field{extraname}{6}
+      \field{sortinit}{3}
+      \field{sortinithash}{a37a8ef248a93c322189792c34fc68c9}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{addendum}{(acc: 26.05.2022)}
+      \field{title}{Compute Unified Device Architecture}
+      \verb{urlraw}
+      \verb https://es.wikipedia.org/wiki/CUDA
+      \endverb
+      \verb{url}
+      \verb https://es.wikipedia.org/wiki/CUDA
       \endverb
     \endentry
   \enddatalist
