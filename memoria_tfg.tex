@@ -47,7 +47,7 @@ Quisiera transmitir mi más sincero agradecimiento a todos los que han ayudado a
 
 Gracias a mis tutores Javier González Monroy y Cipriano Galindo Andrades por brindarme la oportunidad de realizar este trabajo. Gracias por ayudarme en todas las etapas y por hacerlo siempre con tanta amabilidad.\\
 
-Gracias a mis padres, Manolo y Rosa, y a mi hermano Manuel por apoyarme en los momentos más difíles durante estos cuatro años.\\
+Gracias a mis padres, Manuel y Rosa, y a mi hermano Manuel por apoyarme en los momentos más difíles durante estos cuatro años.\\
 
 Gracias a mi pareja, Laura, por ese apoyo incondicional y por escuchar mis males y quejas sin poner ni tan siquiera alguna mala cara.\\
 
@@ -80,11 +80,11 @@ La unidad básica de una comunicación en ROS es el \textit{nodo}. Un nodo es un
 
 Existe un nodo especial, llamado nodo \textit{master}, que se encarga de registrar las direcciones de cada nodo y qué y dónde publica o se suscribe. Además, se encarga de alojar el servidor de parámetros, accesibles y modificables en cualquier momento. Es necesario lanzar este nodo previamente al lanzamiento de cualquier otro. \\
 
-Los topics son el método más común de comunicación entre nodos. Está basado en el modelo de publicador/suscriptor. Los nodos pueden publicar (Publisher) o recibir (Subscriber) mensajes de un único tipo, establecidos por el nodo publicador. En un mismo topic pueden publicar y suscribirse tantos nodos se necesiten\footnote{Realmente, ROS especifica que no existe límite de nodos suscritos a un mismo topic. Sin embargo, se ha demostrado que a partir de 10 nodos, la fiabilidad se ve reducida y la latencia aumentada de forma significativa, pudiendo incluso ocasionar que algunos mensajes no sean recibidos por algunos suscriptores. \cite{issue}}. \\
+Los topics son el método más común de comunicación entre nodos. Está basado en el modelo de publicador/suscriptor. Los nodos pueden publicar (\textit{Publisher}) o recibir (\textit{Subscriber}) mensajes de un único tipo, establecidos por el nodo publicador. En un mismo topic pueden publicar y suscribirse tantos nodos se necesiten\footnote{Realmente, ROS especifica que no existe límite de nodos suscritos a un mismo topic. Sin embargo, se ha demostrado que a partir de 10 nodos, la fiabilidad se ve reducida y la latencia aumentada de forma significativa, pudiendo incluso ocasionar que algunos mensajes no sean recibidos por algunos suscriptores. \cite{issue}}. \\
 
 Otro método de comunicación son los servicios o \textit{services}. Están basados en un modelo de llamada/respuesta. Mientras que los topics permiten a los nodos obtener continuas actualizaciones de datos, los servicios solo ofrecen respuesta tras ser llamados. Permiten la inclusión de parámetros tanto en la solicitud como en la respuesta al servicio. Este método es bloqueante, es decir, el nodo solicitante queda bloqueado al momento de enviar la solicitud hasta que reciba una respuesta, por lo que están pensados para ser utilizados en tareas que no ocupen mucho tiempo.\\
 
-El otro método de comunicación que existe en ROS son las acciones o actions, pensadas para tareas que necesiten una gran cantidad de tiempo para poder ser realizadas. Las acciones funcionan con un modelo cliente/servidor. A diferencia que los servicios, las acciones no son bloqueantes y permiten ser canceladas mientras se están ejecutando.\\
+El otro método de comunicación que existe en ROS son las acciones o \textit{actions}, pensadas para tareas que necesiten una gran cantidad de tiempo para poder ser realizadas. Las acciones funcionan con un modelo cliente/servidor. A diferencia que los servicios, las acciones no son bloqueantes y permiten ser canceladas mientras se están ejecutando.\\
 
 Como se ha comentado, el método más usual de comunicación es a través de topics, donde los nodos envían y reciben información continuamente, sin peticiones ni esperas. Los servicios y acciones se utilizan en función de los requerimientos del software a desarrollar.\\
 
@@ -97,11 +97,11 @@ Como se ha comentado, el método más usual de comunicación es a través de top
     \includegraphics[width=0.5\textwidth]{exp_services.png}}
   \subfloat[Actions]{
     \includegraphics[width=0.5\textwidth]{exp_actions.png}}
- \caption{Mecanismos de comunicación en ROS. (a) Topics, (b) Servicios y (c) Acciones}
+ \caption{Mecanismos de comunicación en ROS. (a) Topics, (b) Servicios y (c) Acciones.}
  \label{fig:comm}
 \end{figure}
 
-ROS también implementa una herramienta muy útil a la hora de probar los programas que se desarrollan. Un \textit{rosbag} de ROS es una herramienta que permite capturar todos los mensajes que se publican por determinados topics para luego reproducirlos. Esto permite ejecutar el robot una única vez capturando todos los topics y luego reproducir los mensajes de estos topics cuantas veces queramos, permitiendo probar los nodos que se estén desarrollando sin tener que hacerlo directamente sobre el robot. Toda esta información se guarda en un archivo .bag. \cite{roswiki}\\
+ROS también implementa un mecanismo muy útil a la hora de probar los programas que se desarrollan: el \textit{rosbag}. Un \textit{rosbag} de ROS es una herramienta que permite capturar todos los mensajes que se publican por determinados topics para luego reproducirlos. Esto permite ejecutar el robot una única vez capturando todos los topics y luego reproducir los mensajes de estos topics cuantas veces queramos, permitiendo probar los nodos que se estén desarrollando sin tener que hacerlo directamente sobre el robot. Toda esta información se guarda en un archivo \textit{.bag}. \cite{roswiki}\\
 
 \subsection{¿Por qué ROS?}
 
@@ -109,7 +109,7 @@ La comunidad robótica ha evolucionado considerablemente a lo largo de los años
 
 Muchos de los sistemas robóticos modernos necesitan de un sistema de comunicaciones que sirva de enlace entre los diferentes procesos. Estos procesos suelen dividirse en varias computadoras, lo que complica aún más la comunicación. Las diferentes vías de comunicación que ROS pone a disposición brindan a los desarrolladores infinidad de posibilidades.\\
 
-Pero la que es quizá la mayor ventaja de ROS frente a otros frameworks y software especializado en robótica es la gran comunidad que tiene detrás. Existen miles de usuarios que contribuyen continuamente con nuevos paquetes que implementan funcionalidades de todas las ramas de la robótica, lo que abre un abanico de opciones para el desarrollador, reduciendo en gran medida la curva de aprendizaje.\\
+Pero la que es quizás la mayor ventaja de ROS frente a otros frameworks y software especializado en robótica es la gran comunidad que tiene detrás. Existen miles de usuarios que contribuyen continuamente con nuevos paquetes que implementan funcionalidades de todas las ramas de la robótica, lo que abre un abanico de opciones para el desarrollador, reduciendo en gran medida la curva de aprendizaje.\\
 
 \section{Mapas de ocupación}
 
@@ -121,7 +121,7 @@ Para generar estos mapas, se utiliza la información obtenida de los diferentes 
 \begin{center} \label{fig:occ_map}
 \includegraphics[width=0.4\textwidth, angle=90]{occ_map_img.jpg}
 \end{center}
-\caption{Ejemplo de mapa de ocupación en formato \texttt{.pgm}}
+\caption{Ejemplo de mapa de ocupación en formato \texttt{.pgm}.}
 \end{figure}
 
 \section{Sensores RGBD}
@@ -132,21 +132,21 @@ Las cámaras RGBD son sensores visuales que, además de ofrecer información de 
 	\begin{center} 
 		\includegraphics[width=0.5\textwidth]{kinect_img.png}
 	\end{center}
-	\caption{Fotografía del sensor Microsoft Kinect V1, lanzado como complemento de la videoconsola Xbox360 en 2010 \cite{kinectv1}}
+	\caption{Fotografía del sensor Microsoft Kinect V1, lanzado como complemento de la videoconsola Xbox360 en 2010. \cite{kinectv1}}
 	\label{fig:kinect}
 \end{figure}
 
-Algunos de los fabricantes más importantes de este tipo de sensores son Microsoft, con la conocida Kinect; ASUS, IFM, StereoLabs, Intel, Orbbec, etc.\\
+Algunos de los fabricantes más importantes de este tipo de sensores son Microsoft, con la conocida Kinect; ASUS, con su gama Xtion; IFM, StereoLabs, Intel, Orbbec, etc.\\
 
 \subsection{Imagen de profundidad}
 
-La imagen de profundidad, al igual que cada uno de los canales de color RGB, es una matriz donde cada valor representa un nivel de gris asociado a una distancia y está referido a cada uno de los píxeles que componen la imagen. Las dimensiones de esta imagen vendrán determinadas por la resolución de la cámara, es decir, si por ejemplo la resolución de la cámara es de 640x480 píxeles, la matriz tendrá 480 filas y 640 columnas. \\
+La imagen de profundidad, al igual que cada uno de los canales de color RGB, es una matriz donde cada valor representa un nivel de gris asociado a una distancia y está referido a cada uno de los píxeles que componen la imagen. Las dimensiones de esta imagen vendrán determinadas por la resolución de la cámara, es decir, si por ejemplo la resolución de la cámara es de 640x480 píxeles, la matriz tendrá 480 filas y 640 columnas. En la figura \ref{fig:depth} se muestra un ejemplo de una imagen de profundidad. \\
 
 \begin{figure}[H]
 	\begin{center} 
 		\includegraphics[width=0.7\textwidth]{depth_img.png}
 	\end{center}
-	\caption{Ejemplo de imagen de profundidad \cite{depthimage}. Generalmente, los objetos más alejados se representan en tonos más claros, mientras que los tonos más oscuros representan las zonas más cercanas. Las zonas donde es un color negro puro son zonas de ``no información'' de las que el sensor no puede concretar ninguna distancia}
+	\caption{Ejemplo de imagen de profundidad \cite{depthimage}. Generalmente, los objetos más alejados se representan en tonos más claros, mientras que los tonos más oscuros representan las zonas más cercanas. Las zonas donde es un color negro puro son zonas de ``no información'' de las que el sensor no puede concretar ninguna distancia.}
 	\label{fig:depth}
 \end{figure}
 
@@ -155,7 +155,7 @@ El valor de distancia para cada píxel establece un nivel de gris. Generalmente,
 
 \section{Nubes de puntos}
 
-Una nube de puntos o pointcloud es un conjunto de vértices en un sistema de coordenadas tridimensional. Estos vértices se identifican habitualmente como coordenadas X, Y y Z y son representaciones de la superficie externa de un objeto. Se crean a partir de escáneres láser tridimensionales o imágenes de profundidad.\\
+Una nube de puntos o \textit{pointcloud} es un conjunto de vértices en un sistema de coordenadas tridimensional. Estos vértices se identifican habitualmente como coordenadas X, Y y Z y son representaciones de la superficie externa de un objeto. Se crean a partir de escáneres láser tridimensionales o imágenes de profundidad.\\
 
 Las nubes de puntos tienen infinidad de aplicaciones como la elaboración de modelos 3D en CAD de piezas fabricadas, la inspección de calidad en metrología y muchas otras en el ámbito de la visualización, animación, texturización y aplicaciones de personalización masiva.\\
 
@@ -163,29 +163,29 @@ Las nubes de puntos tienen infinidad de aplicaciones como la elaboración de mod
 	\begin{center} 
 		\includegraphics[width=0.7\textwidth]{pointcloud-img.png}
 	\end{center}
-	\caption{Ejemplo de una nube de puntos coloreada representando a una estructura}
+	\caption{Ejemplo de una nube de puntos coloreada representando a una estructura.}
 	\label{fig:pc}
 \end{figure}
 
 \section{YOLO: You only look once}
 
-You only look once (YOLO) es un sistema en tiempo real de detección de objetos basado en rede neuronales convolucionales y deep learning. Su principal característica y la que le distingue de otros modelos para la detección de objetos es que solo requiere visualizar una única vez la imagen (haciendo honores a su acrónimo). Esta propiedad le permite ser más rápido que los modelos competidores permitiendo la detección en tiempo real en vídeos de hasta 30 FPS. Según comentan sus creadores, es 1000 veces más rápido que R-CNN y 100 veces más rápido que Fast R-CNN.  \cite{yolo} \\
+You only look once (YOLO) es un sistema en tiempo real de detección de objetos basado en redes neuronales convolucionales y \textit{deep learning}. Su principal característica y la que le distingue de otros modelos para la detección de objetos es que solo requiere visualizar una única vez la imagen. Esta propiedad le permite ser más rápido que los modelos competidores permitiendo la detección en tiempo real en vídeos de hasta 30 FPS. Según comentan sus creadores, con respecto a otras redes, es 1000 veces más rápido que R-CNN y 100 veces más rápido que Fast R-CNN.  \cite{yolo} \\
 
 \begin{figure}[H]
 	\begin{center} 
 		\includegraphics[width=0.8\textwidth]{grafica_rendimiento_yolov3.png}
 	\end{center}
-	\caption{Comparación de YOLO con otros modelos mostrando el tiempo de inferencia (eje X) y la métrica COCO mAP-50 (eje Y). Se puede ver como YOLO tiene unos tiempos de inferencia muchos menores que la mayoria de algoritmos, mantieniendo una buena puntuación en la métrica}
+	\caption{Comparación de YOLO con otros modelos mostrando el tiempo de inferencia (eje X) y la métrica COCO mAP-50 (eje Y). Se puede ver como YOLO tiene unos tiempos de inferencia muchos menores que la mayoria de algoritmos, mantieniendo una buena puntuación en la métrica.}
 	\label{fig:rend}
 \end{figure}
 
-El procedimiento llevado a cabo por YOLO es sencillo. Primero divide la imagen en una cuadrícula de $S \times S$ y en cada una de estas celdas precide N posibles bounding boxes y calcula su probabilidad. Tras el cálculo, se eliminan aquellas que no superen un umbral de probabilidad. A las bounding boxes restantes, se les somete a un proceso de supresión de no máximos con el objetivo de eliminar los objetos que fueron detectados por duplicado, obteniéndose el resultado de la figura \ref{fig:proced}.\\
+El procedimiento llevado a cabo por YOLO es sencillo. Primero divide la imagen en una cuadrícula de $S \times S$ y en cada una de estas celdas precide N posibles cajas delimitadores o \textit{bounding boxes} y calcula su probabilidad. Tras el cálculo, se eliminan aquellas que no superen un umbral de probabilidad. A las \textit{bounding boxes} restantes, se les somete a un proceso de supresión de no máximos con el objetivo de eliminar los objetos que fueron detectados por duplicado, obteniéndose el resultado de la figura \ref{fig:proced}.\\
 
 \begin{figure}[h]
 	\begin{center} 
 		\includegraphics[width=0.8\textwidth]{yolo_proced.png}
 	\end{center}
-	\caption{Procedimiento llevado a cabo por YOLO. Divide la imaegn en una rejilla de $S \times S$ y predice las bounding boxes junto con sus probabilidades. Las bajas probabilidades se eliminan y, posteriormente las cajas duplicadas, obteniendo así la detección final}
+	\caption{Procedimiento llevado a cabo por YOLO. Divide la imaegn en una rejilla de $S \times S$ y predice las bounding boxes junto con sus probabilidades. Las bajas probabilidades se eliminan y, posteriormente las cajas duplicadas, obteniendo así la detección final.}
 	\label{fig:proced}
 \end{figure}
 
@@ -193,17 +193,17 @@ YOLO es fácilmente implementable en ROS gracias al paquete darknet\_ros, que pe
 
 \subsection{Redes neuronales convolucionales}
 
-Una red neuronal o NN (del inglés, \textit{Neural Network}) es un modelo simplificado que emula el modo en que el cerebro humano procesa la información, simultaneando multitud de unidades de procesamiento interconectads, emulando una versión artificial de las neuronas. Las neuronas se organizan en capas. En una red neuronal hay tres tipos de capas: la capa de entrada, unas o varias capas ocultas y la capa de salida. Las neuronas se conectan con las neuronas de la siguiente capa mediante ponderaciones, propagando los datos de entrada a la salida. La red aprende examinando los registros individuales, generando una predicción para cada registro y, en caso de realizad una predicción incorrecta, corriegiendo las ponderaciones. Este procedimiento, conocido como entrenamiento, se repite hasta alcanzar criterios de finalización.  Una vez la red es entrenada, puede aplicarse en casos en los que no conoce el resultado para obtener, en función del tipo y de la cantidad de entrenamiento, unos resultados satisfactorios o erróneos. \cite{nn}\\
+Una red neuronal o NN (del inglés, \textit{Neural Network}) es un modelo simplificado que emula el modo en que el cerebro humano procesa la información, simultaneando multitud de unidades de procesamiento interconectadas, emulando una versión artificial de las neuronas. Las neuronas se organizan en capas. En una red neuronal hay tres tipos de capas: la capa de entrada, unas o varias capas ocultas y la capa de salida. Las neuronas se conectan con las neuronas de la siguiente capa mediante ponderaciones, propagando los datos de entrada a la salida. La red aprende examinando los registros individuales, generando una predicción para cada registro y, en caso de haber realizado una predicción incorrecta, corrigiendo las ponderaciones. Este procedimiento, conocido como entrenamiento, se repite hasta alcanzar criterios de finalización.  Una vez la red ha sido entrenada, puede aplicarse en casos en los que no conoce el resultado para obtener, en función del tipo y de la cantidad de entrenamiento, unos resultados satisfactorios o erróneos. \cite{nn}\\
 
 \begin{figure}[h]
 	\begin{center} 
 		\includegraphics[width=0.6\textwidth]{nn.png}
 	\end{center}
-	\caption{Capas de una red neuronal artifical. Capa de entrada (izquierda), capas ocultas (centro) y capa de salida (derecha) \cite{foto_nn}}
+	\caption{Capas de una red neuronal artifical. Capa de entrada (izquierda), capas ocultas (centro) y capa de salida (derecha). \cite{foto_nn}}
 	\label{fig:nn}
 \end{figure}
 
-Una red neuronal convolucional o CNN (del inglés, \textit{Convolutional Neural Network}) son un tipo de NN donde las neuronas corresponden a campos receptivos de una manera muy similar a las neuronas de la corteza visual primaria de un cerebro humano. Es una variación del perceptrón multicapa\footnote{El perceptrón multicapa es una red neuronal artificial formada por múltiples capas, de tal forma que tienen capacidad para resolver problemas que nos son linealmente separables. \cite{perceptron}}, muy efectiva para tareas de visión artificial. Las capas ocultas de una CNN está nespecializadas en determinadas funciones de forma que las primeras capas pueden detectar líneas o curvas y se van especializando hasta llegar a capas más profundas que reconocen formas complejas como rostros o siluetas. \cite{cnn} \\
+Una red neuronal convolucional o CNN (del inglés, \textit{Convolutional Neural Network}) son un tipo de NN donde las neuronas corresponden a campos receptivos de una manera muy similar a las neuronas de la corteza visual primaria de un cerebro humano. Es una variación del perceptrón multicapa\footnote{El perceptrón multicapa es una red neuronal artificial formada por múltiples capas, de tal forma que tienen capacidad para resolver problemas que nos son linealmente separables. \cite{perceptron}}, muy efectiva para tareas de visión artificial. Las capas ocultas de una CNN están especializadas en determinadas funciones de forma que las primeras capas pueden detectar líneas o curvas y se van especializando hasta llegar a capas más profundas que reconocen formas complejas como rostros o siluetas. \cite{cnn} \\
 
 \section{Pandas y Matplotlib}
 
@@ -211,7 +211,7 @@ Una red neuronal convolucional o CNN (del inglés, \textit{Convolutional Neural 
 
 \textit{Matplotlib} es una librería de Python diseñada para la creación de visualizaciones estáticas, animadas e interactivas. Permite la creación y personalización de todo tipo de representaciones gráficas de datos, como gráficos de barras, sectores circulares, puntos, etc.\cite{matplotlib}\\
 
-Estas herramientas, en combinación con la librería \textit{Numpy} (diseñada para el manejo de arreglos con maytor rendimiento), son las herramientas más utilizadas en el ámbito de la ciencia de datos, ofreciendo multitud de herramientas y funcionalidades que simplifican el manejo de datos.\\
+Estas herramientas, en combinación con la librería \textit{Numpy} (diseñada para el manejo de arreglos con mayor rendimiento), son las herramientas más utilizadas en el ámbito de la ciencia de datos, ofreciendo multitud de herramientas y funcionalidades que simplifican el manejo de datos.\\
 
 
 
@@ -231,7 +231,7 @@ Como se ha comentado, el objetivo es transformar la imagen de profundidad que se
 	\begin{center} 
 		\includegraphics[width=\textwidth]{esquema_general.png}
 	\end{center}
-	\caption{Árbol de nodos y topics. Los nodos diseñados para este trabajo son de color azul. Los nodos de terceros cuyo código ha sido modificado son de color naranja. Los nodos descargados que no se han modificado son de color blanco}
+	\caption{Árbol de nodos y topics. Los nodos diseñados para este trabajo son de color azul. Los nodos de terceros cuyo código ha sido modificado son de color naranja. Los nodos descargados que no se han modificado son de color blanco.}
 	\label{fig:esq_general}
 \end{figure}
 
@@ -255,17 +255,17 @@ A continuación se enumeran todos los nodos que se van a utilizar en este proyec
 
 La mejor manera de comprobar el correcto funcionamiento de todo el conjunto de nodos sería hacerlo directamente sobre el robot, con información real de sensores y del entorno. Sin embargo, debido a la dificultad que supondría utilizar este sistema sobre el robot, se decidió utilizar la herramienta que ROS pone a disposición precisamente para lidiar con este inconveniente: los rosbags.\\
 
-Para este proyecto se va a utilizar un rosbag generado por uno de los robots del laboratorio de Automática de la Escuela Técnica Superior de Informática. Esta grabación recoge la información de la pose del robot (posición X e Y y el ángulo de orientación), los datos recogidos por una cámara RGB-D (color y profundidad), el barrido de un láser y otra información que típicamente se utiliza en los robots como el árbol de transformadas.\\
+Para este proyecto se va a utilizar un rosbag generado por uno de los robots del laboratorio de Automática de la Escuela Técnica Superior de Informática. Esta grabación recoge la información de la pose del robot (posición X e Y y el ángulo de orientación), los datos recogidos por una cámara RGBD (color y profundidad), el barrido de un láser y otra información que típicamente se utiliza en los robots como el árbol de transformadas.\\
 
 Sin embargo, pese a que este rosbag ha sido el utilizado para comprobar el funcionamiento del algoritmo diseñado, ha sido necesario hacer algunas modificaciones para que se pueda procesar la información correctamente.\\
 
-Normalmente, cuando se utiliza una cámara RGBD en ROS, el paquete encargado de controlar la cámara envía tres tipos de mensajes pertenecientes al paquete sensor\_msgs. Estos mensajes son:
+Normalmente, cuando se utiliza una cámara RGBD en ROS, el paquete encargado de controlar la cámara envía tres tipos de mensajes pertenecientes al paquete \texttt{sensor\_msgs}. Estos mensajes son:
 
 \begin{itemize}
 
-	\item Imagen a color. Información de color de la imagen capturada con un mensaje de tipo Image. La mayoría de cámaras ofrece además la imagen rectificada, sin distorsiones.
-	\item Imagen de profundidad. Información sobre la profundidad de la imagen capturada con un mensaje de tipo Image. Al igual que con la de color, también se ofrece la imagen rectificada.
-	\item Parámetros de la cámara. Información sobre las propiedades de la cámara con un mensaje de tipo CameraInfo. Contiene datos sobre las propiedades de la imagen (ancho y alto) y parámetros de calibración de la cámara.
+	\item Imagen a color. Información de color de la imagen capturada con un mensaje de tipo \texttt{Image}. La mayoría de cámaras ofrece además la imagen rectificada, sin distorsiones.
+	\item Imagen de profundidad. Información sobre la profundidad de la imagen capturada con un mensaje de tipo \texttt{Image}. Al igual que con la de color, también se ofrece la imagen rectificada.
+	\item Parámetros de la cámara. Información sobre las propiedades de la cámara con un mensaje de tipo \texttt{CameraInfo}. Contiene datos sobre las propiedades de la imagen (ancho y alto) y parámetros de calibración de la cámara.
 
 \end{itemize}
 
@@ -275,7 +275,7 @@ Debido a algunos problemas que se tuvieron durante la captura de los datos, este
 	\begin{center} 
 		\includegraphics[width=\textwidth]{cam_info-diag.png}
 	\end{center}
-	\caption{Diagrama del nodo \texttt{cam\_info}. Recibe la imagen de profundidad y publica la información de la cámara}
+	\caption{Diagrama del nodo \texttt{cam\_info}. Recibe la imagen de profundidad y publica la información de la cámara.}
 	\label{fig:cam_info}
 \end{figure}
 
@@ -287,13 +287,13 @@ Finalmente, una vez generado el mensaje con la información de los parámetros d
 	\begin{center} 
 		\includegraphics[width=\textwidth]{sync_info-diag.png}
 	\end{center}
-	\caption{Diagrama del nodo \texttt{sync\_info}. Recibe la imagen de profundidad y la información de la cámara y publica los mismo mensajes pero sincronizados}
+	\caption{Diagrama del nodo \texttt{sync\_info}. Recibe la imagen de profundidad y la información de la cámara y publica los mismo mensajes pero sincronizados.}
 	\label{fig:sync_info}
 \end{figure}
 
 \section{De imagen de profundidad a barrido láser} \label{depthimage_section}
 
-Una vez se tiene toda la información ofrecida por el robot y la cámara correctamente sincronizada y configurada, es momento de realizar el procedimiento principal de este proyecto: transformar la imagen de profundidad obtenida mediante la cámara RGB-D en un barrido láser equivalente, cogiendo la distancias más alejadas captadas en la imagen. De esta forma, si tenemos varios objetos delante de una pared, con el algoritmo diseñado no se tendrán en cuenta estos objetos y se seleccionarán siempre las distancias menos restrictivas para generar el láser. Es necesario generar un láser artificial porque los algoritmos que se utilizan para generar el mapa de ocupación utilizan este tipo de datos.\\
+Una vez obtenida toda la información ofrecida por el robot y la cámara correctamente sincronizada y configurada, es momento de realizar el procedimiento principal de este proyecto: transformar la imagen de profundidad obtenida mediante la cámara RGB-D en un barrido láser equivalente, cogiendo la distancias más alejadas captadas en la imagen. De esta forma, si tenemos varios objetos delante de una pared, con el algoritmo diseñado no se tendrán en cuenta estos objetos y se seleccionarán siempre las distancias menos restrictivas para generar el láser. Es necesario generar un láser artificial porque los algoritmos que se utilizan para generar el mapa de ocupación utilizan este tipo de datos.\\
 
 El algoritmo utilizado está basado en el paquete de ROS \texttt{depthimage\-\_to\_\-laserscan}. Este paquete se encarga de transformar una imagen de profundidad en un barrido láser a partir de los parámetros de la cámara y de una serie de parámetros de entrada configurables. Los parámetros se muestran en el cuadro \ref{tab:param_depthimage}.
 
@@ -308,7 +308,7 @@ El algoritmo utilizado está basado en el paquete de ROS \texttt{depthimage\-\_t
 	\texttt{range\_min} & 10 metros & Rango de distancia máxima. Valores medidos menores que este valor se tomarán como +Inf \\ \hline
 	\texttt{output\_frame\_id} & \texttt{laser} & Establece el id del eje de coordenadas (frame) de salida. Se indica el id del frame del láser \\ \hline
 \end{tabular}
-\caption{Formato del archivo CSV generado}
+\caption{Parámetros de lanzamiento del nodo \texttt{depthimage\_to\_laserscan}.}
 \label{tab:param_depthimage}
 \end{center}
 \end{table} 
@@ -331,7 +331,7 @@ Este nodo primeramente recibe la imagen de profundidad y la información de la c
 	\texttt{ranges} & Vector con las medidas tomadas en metros \\ \hline
 	\texttt{intensities} & Vector con las intensidades de las medidas. Se tomará como un array vacío porque no es necesario \\ \hline
 \end{tabular}
-\caption{Formato de un mensaje de tipo \texttt{LaserScan}}
+\caption{Formato de un mensaje de tipo \texttt{LaserScan}.}
 \label{tab:laserscan_msg}
 \end{center}
 \end{table} 
@@ -354,9 +354,9 @@ Al lanzar este nodo, es posible establecer multitud de parámetros que determina
 
 \end{itemize}
 
-Como se comenta en el listado de parámetros, tienen unos valores por defecto que se han ido modificando para obtener un mapa con más fiable. Esto se comentará más en profundidad en la sección de resultados.\\
+Como se comenta en el listado de parámetros, tienen unos valores por defecto que se han ido modificando para obtener un mapa más fiable. Esto se comentará más en profundidad en la sección de resultados.\\
 
-El nodo \texttt{slam\_gmapping} envía por el topic \texttt{/map} mensajes de tipo \texttt{nav\_msgs\-/OccupancyGrid} con información sobre el mapa de forma que, tras finalizar la reproducción del rosbag, el último mensaje enviado por este topic contendrá el mapa completo que se ha generado. Para guardarlo en un formato con el que poder trabajar, se utiliza el nodo \texttt{map\_saver} del paquete \texttt{map\_server}, diseñado por Brian Gerkey y Tony Pratkanis. Simplemente se lanza el nodo dándole como parámetro el nombre con el que se va a guardar el mapa. Finalmente se obtienen dos archivos: un \texttt{.yaml}, para la configuración, y otro en formato \texttt{.pgm} para la imagen.\\
+El nodo \texttt{slam\_gmapping} envía por el topic \texttt{/map} mensajes de tipo \texttt{nav\_msgs\-/OccupancyGrid} con información sobre el mapa de forma que, tras finalizar la reproducción del rosbag, el último mensaje enviado por este topic contendrá el mapa completo que se ha generado. Para guardarlo en un formato con el que poder trabajar, se utiliza el nodo \texttt{map\_saver} del paquete \texttt{map\_server} \footnote{\texttt{map\_server} es un paquete diseñado por Brian Gerkey y Tony Pratkanis que ofrece dos funcionalidades: el nodo \texttt{map\_server} permite leer un mapa desde un archivo para publicarlo en un topic y el nodo \texttt{map\_saver} permite, mediante un comando, obtener el mapa que se está publicando. En este trabajo se utilizará este último nodo. \cite{mapserver}}. Simplemente se lanza el nodo dándole como parámetro el nombre con el que se va a guardar el mapa. Finalmente se obtienen dos archivos: un \texttt{.yaml}, para la configuración, y otro en formato \texttt{.pgm} para la imagen.\\
 
 \section{Detección de objetos}
 
@@ -366,7 +366,7 @@ Paralelamente, se ha diseñado un sistema capaz de interpretar la imagen a color
 
 En muchas ocasiones, los paquetes de ROS que sirven para utilizar determinadas marcas de sensores RGBD proporcionan las imágenes en un formato comprimido para ahorrar potencia. Con el rosbag que se ha utilizado como fuente de datos ocurre lo mismo, por lo que es necesario un proceso de descompresión.\\
 
-Para este procedimiento, se ha utilizado un nodo llamado \texttt{republish} del paquete \texttt{image\_transport}. Este nodo se recibe un mensaje en formato \texttt{sensor\_msgs/\-Compressed\-Image} y lo convierte en un mensaje de tipo \texttt{sensor\_msgs/Image} para publicarlo.\\
+Para este procedimiento, se ha utilizado un nodo llamado \texttt{republish} del paquete \texttt{image\_transport}. Este nodo recibe un mensaje en formato \texttt{sensor\_msgs/\-Compressed\-Image} y lo convierte en un mensaje de tipo \texttt{sensor\_msgs/Image} para publicarlo.\\
 
 \subsection{Ejecución de YOLO}
 
@@ -375,12 +375,12 @@ Una vez la imagen está descomprimida, ya puede ser recibida por la red neuronal
 \begin{itemize}
 
 	\item \texttt{object\_detector}. Mensaje de tipo \texttt{std\_msgs/Int8} que indica el número de objetos detectados.
-	\item \texttt{bounding\_boxes}. Mensaje de tipo \texttt{darknet\_ros\_msgs/BoundingBoxes} que representa un array que proprociona información sobre la posición y el tamaño de los bounding boxes en píxeles.
-	\item \texttt{detection\_image}. Mensaje de tipo \texttt{sensor\_msgs/Image} que ofrece las bounding boxes detectadas sobre la imagen a color que ha sido procesada.
+	\item \texttt{bounding\_boxes}. Mensaje de tipo \texttt{darknet\_ros\_msgs/BoundingBoxes} que representa un array que proporciona información sobre la posición y el tamaño de los bounding boxes en píxeles.
+	\item \texttt{detection\_image}. Mensaje de tipo \texttt{sensor\_msgs/Image} que ofrece las \textit{bounding boxes} detectadas sobre la imagen a color que ha sido procesada.
 	
 \end{itemize}
 
-Las bounding boxes son unas ``cajas'' que señalizan al elemento detectado. Un mensaje de tipo \texttt{darknet\_ros\_msgs/BoundingBoxes} es un array de elementos con formato \texttt{darknet\_ros\_msgs/BoundingBox}.\\
+Las \textit{bounding boxes} son unas ``cajas'' que señalizan los límites del elemento detectado. Un mensaje de tipo \texttt{darknet\_ros\_msgs/BoundingBoxes} es un array de elementos con formato \texttt{darknet\_ros\_msgs/BoundingBox}.\\
 
 Además, este nodo ofrece una salida en la terminal indicando los frames por segundo (FPS) a los que se está ejecutando y un listado de los objetos encontrados junto con sus probabilidades, como se muestra en la figura \ref{fig:yolo_funcionando}. YOLO tiene un umbral de probabilidad establecido por defecto en $0.7$ para aceptar una detección como válida o no. \\
 
@@ -388,13 +388,13 @@ Además, este nodo ofrece una salida en la terminal indicando los frames por seg
 	\begin{center} 
 		\includegraphics[width=\textwidth]{yolo_funcionando.png}
 	\end{center}
-	\caption{Salida en la terminal del nodo \texttt{darknet\_ros}. En la parte izquierda se muestran las bounding boxes sobre la imagen a color. A la derecha, en la terminal, se muestran los FPS actuales y los objetos y sus probabilidades}
+	\caption{Ejecución del nodo \texttt{darknet\_ros}. En la parte izquierda se muestran las bounding boxes sobre la imagen a color. A la derecha, en la terminal, se muestran los FPS actuales y los objetos y sus probabilidades}
 	\label{fig:yolo_funcionando}
 \end{figure}
 
-\section{Procesamiento de los objetos detectados}
+\section{Procesamiento de los objetos detectados mediante archivos CSV}
 
-Como se ha comentado, a partir del nodo que implementa YOLO obtenemos un array de bounding boxes con información sobre la posición y el tamaño en píxeles. Para el desarrollo de este proyecto se ha visto conveniente procesar esa información para realizar un posterior estudio de los objetos que han sido detectados y analizar la fiabilidad de la red neuronal así como la calidad de los datos proporcionado por el rosbag.\\
+Como se ha comentado, el nodo que lanza YOLO publica un array de \textit{bounding boxes} con información sobre la posición y el tamaño en píxeles. Para el desarrollo de este proyecto se ha visto conveniente procesar esa información para realizar un posterior estudio de los objetos que han sido detectados y analizar la fiabilidad de la red neuronal así como la calidad de los datos proporcionado por el rosbag.\\
 
 Para este procesamiento se ha diseñado un nodo llamado \texttt{write\_objects} que se encarga de recibir los mensajes que se publican en \texttt{/darknet\_ros/bounding\_boxes} y en \texttt{/amcl\_pose} para generar un archivo CSV donde cada fila representa la información con el formato mostrado en el cuadro \ref{tab:formato}. Cada columna utilizará el delimitador de punto y coma (`` ; '').\\
 
@@ -406,12 +406,12 @@ Para este procesamiento se ha diseñado un nodo llamado \texttt{write\_objects} 
 	obj1:obj2:...:objN & prob1:prob2:...:probN & pX:pY:pZ & oW:oX:oY:oZ & (seg) \\ \hline
 
 \end{tabular}
-\caption{Formato del archivo CSV generado}
+\caption{Formato del archivo CSV generado.}
 \label{tab:formato}
 \end{center}
 \end{table} 
 
-Toda esta información es obtenida a partir del formato de los mensajes de las bounding boxes y de la pose. Para las bounding boxes es necesario acceder a cada una de ellas y obtener sus propiedades \texttt{Class} y \texttt{probability}. Para la pose es necesario acceder a su propiedades \texttt{pose.pose.position} y \texttt{pose.pose.orientation}. El formato del mensaje de una bounding box se representa en el cuadro \ref{tab:boundingbox_msg}.\\
+Toda esta información es obtenida a partir del formato de los mensajes de las \textit{bounding boxes} y de la \textit{pose} (posición y orientación, en formato de quaternio). Para las \textit{bounding boxes} es necesario acceder a cada una de ellas y obtener sus propiedades \texttt{Class} y \texttt{probability}. Para la \textit{pose} es necesario acceder a su propiedades \texttt{pose.pose.position} y \texttt{pose.pose.orientation}. El formato del mensaje de una \textit{bounding box} se representa en el cuadro \ref{tab:boundingbox_msg}.\\
 
 \begin{table}[H]
 \begin{center}
@@ -426,7 +426,7 @@ Toda esta información es obtenida a partir del formato de los mensajes de las b
 	\texttt{id} & Identificador único para cada bounding box \\ \hline
 	\texttt{Class} & Clase o etiqueta del elemento detectado \\ \hline
 \end{tabular}
-\caption{Formato de un mensaje de tipo \texttt{BoundingBox}}
+\caption{Formato de un mensaje de tipo \texttt{BoundingBox}.}
 \label{tab:boundingbox_msg}
 \end{center}
 \end{table} 
@@ -434,7 +434,7 @@ Toda esta información es obtenida a partir del formato de los mensajes de las b
 
 \section{Análisis de los objetos detectados}
 
-Una vez obtenido el registro de los objetos en formato CSV es posible procesar esta información para realizar un análisis de la red y del entorno. Para ello se utilizará el entorno de programación en Python de \textit{Google Colab}, junto con las librerías \textit{Pandas} y \textit{Matplotlib}.La información sobre las gráficas y los resultados obtenidos se exponen en el capítulo siguiente.\\
+Una vez obtenido el registro de los objetos en formato CSV es posible procesar esta información para realizar un análisis de la red y del entorno. Para ello se utilizará el entorno de programación en Python de \textit{Google Colab}, junto con las librerías \textit{Pandas} y \textit{Matplotlib}. La información sobre las gráficas y los resultados obtenidos se exponen en el capítulo siguiente.\\
 
 \chapter{Resultados obtenidos} \label{chapter.resultados}
 
@@ -450,11 +450,11 @@ En la figura \ref{fig:res_mapas} se muestra el resultado de generar el mapa a pa
     \includegraphics[width=0.4\textwidth]{mapa_laser.png}}
   \subfloat[Generado con sensor RGBD]{
     \includegraphics[width=0.4\textwidth]{mapa_corregido_bien.png}}
- \caption{Mapas generados con láser 2D (a) y con sensor RGBD (b). Se puede observan la diferencia de rectitud en las líneas exteriores (problema) así como lo poco ruidoso que resulta el interior (virtud)}
+ \caption{Mapas generados con láser 2D (a) y con sensor RGBD (b). Se puede observan la diferencia de rectitud en las líneas exteriores (problema) así como lo poco ruidoso que resulta el interior (virtud).}
  \label{fig:res_mapas}
 \end{figure}
 
-En el mapa generado con el láser se pueden ver los entrantes y salientes se forman debido a la presencia de mobiliario delante de las paredes que impide obtener una medida real de la estructura. Además, en zonas interiores existen muchos grupos pequeños de celdas ocupadas causadas por la presencia de patas de mesas, sillas y otros elementos de menor tamaño. Sin olvidar que la grabación cuenta con la presencia de personas que modifican su posición, complicando aún más la generación del mapa.\\
+En el mapa generado con el láser se pueden ver los entrantes y salientes que se forman debido a la presencia de mobiliario delante de las paredes que impide obtener una medida real de la estructura. Además, en zonas interiores existen muchos grupos pequeños de celdas ocupadas causadas por la presencia de patas de mesas, sillas y otros elementos de menor tamaño. Sin olvidar que la grabación cuenta con la presencia de personas que modifican su posición, complicando aún más la generación del mapa.\\
 
 Con el mapa obtenido gracias al procesamiento de la imagen de profundidad, se puede comprobar como los elementos situdos entre el sensor y las paredes no se tienen en cuenta, quedando el interior del mapa totalmente ``limpio''. Además, las zonas donde se sitúa el mobiliario quedan mucho más suavizadas, mostrándose únicamente la pared stuada tras el mismo. En la figura \ref{fig:comp} se muestran los dos mapas superpuestos para poder ver mejor la diferencia entre sendos mapas.\\
 
@@ -464,7 +464,7 @@ Pese a que mejora al láser en muchos aspectos, el mapa generado con la cámara 
 	\begin{center} 
 		\includegraphics[width=0.5\textwidth]{comp.png}
 	\end{center}
-	\caption{Superposición de los dos mapas. Los objetos no estructurales se han eliminado correctamente}
+	\caption{Superposición de los dos mapas. Los objetos no estructurales se han eliminado correctamente.}
 	\label{fig:comp}
 \end{figure}
 
@@ -482,7 +482,7 @@ En otras muchas ocasiones, como en las de las figuras \ref{fig:m3} e \ref{fig:m4
 	\begin{center} 
 		\includegraphics[width=\textwidth]{m1.png}
 	\end{center}
-	\caption{Muestra de medida 1: diferencia entre las medidas del láser real (blancas) y del láser artificial (rojas)}
+	\caption{Muestra de medida 1: diferencia entre las medidas del láser real (blancas) y del láser artificial (rojas).}
 	\label{fig:m1}
 \end{figure}
 
@@ -490,7 +490,7 @@ En otras muchas ocasiones, como en las de las figuras \ref{fig:m3} e \ref{fig:m4
 	\begin{center} 
 		\includegraphics[width=\textwidth]{m2.png}
 	\end{center}
-	\caption{Muestra de medida 2: diferencia entre las medidas del láser real (blancas) y del láser artificial (rojas)}
+	\caption{Muestra de medida 2: diferencia entre las medidas del láser real (blancas) y del láser artificial (rojas).}
 	\label{fig:m2}
 \end{figure}
 
@@ -498,7 +498,7 @@ En otras muchas ocasiones, como en las de las figuras \ref{fig:m3} e \ref{fig:m4
 	\begin{center} 
 		\includegraphics[width=\textwidth]{m3.png}
 	\end{center}
-	\caption{Muestra de medida 3: diferencia entre las medidas del láser real (blancas) y del láser artificial (rojas)}
+	\caption{Muestra de medida 3: diferencia entre las medidas del láser real (blancas) y del láser artificial (rojas).}
 	\label{fig:m3}
 \end{figure}
 
@@ -506,7 +506,7 @@ En otras muchas ocasiones, como en las de las figuras \ref{fig:m3} e \ref{fig:m4
 	\begin{center} 
 		\includegraphics[width=\textwidth]{m4.png}
 	\end{center}
-	\caption{Muestra de medida 4: diferencia entre las medidas del láser real (blancas) y del láser artificial (rojas)}
+	\caption{Muestra de medida 4: diferencia entre las medidas del láser real (blancas) y del láser artificial (rojas).}
 	\label{fig:m4}
 \end{figure}
 
@@ -524,7 +524,7 @@ Tras una primera ejecución del procedimiento diseñado, el resultado obtenido n
     \includegraphics[width=0.3\textwidth]{scan2.png}}
   \subfloat[$0.5; 0.2; 3.0$]{
     \includegraphics[width=0.3\textwidth]{scan3.png}}
- \caption{Resultados para diferentes parámetros de \texttt{linearUpdate}, \texttt{angularUpdate} y \texttt{temporalUpdate}, respectivamente}
+ \caption{Resultados para diferentes parámetros de \texttt{linearUpdate}, \texttt{angularUpdate} y \texttt{temporalUpdate}, respectivamente.}
  \label{fig:scans_params}
 \end{figure}
 
@@ -536,7 +536,7 @@ Otro parámetro que se ha cambiado para obtener mejores resultados es la distanc
     \includegraphics[width=0.4\textwidth]{scan1.png}}
   \subfloat[\texttt{range\_max} a 8 metros]{
     \includegraphics[width=0.4\textwidth]{scan4.png}}
- \caption{Resultados para distintos valores de distancia máxima. A mayor distancia máxima, mayor influencia de la información percibida por ventanas y puertas abiertas}
+ \caption{Resultados para distintos valores de distancia máxima. A mayor distancia máxima, mayor influencia de la información percibida por ventanas y puertas abiertas.}
  \label{fig:scans_range}
 \end{figure}
 
@@ -545,17 +545,17 @@ Otro parámetro que se ha cambiado para obtener mejores resultados es la distanc
 
 YOLO es una de las redes neuronales más rápidas en el ámbito de la detección y localización de objetos en una imagen. Sin embargo, esta velocidad tan característica le hace sacrificar algo de exactitud en sus medidas, convirtiéndola en una red no del todo fiable. Aún así, continúa siendo de las mejores en este aspecto.\\
 
-Con el nodo \texttt{write\_objects} obteníamos un archivo de texto con los datos en formato CSV, un formato que permite procesar los datos de manera sencilla. Este archivo contiene información sobre los objetos o clases detectadas, sus probabilidades, la pose del robot (posición y orientación) y el tiempo en el instante en que se detectaron dichos objetos. Para entender la trayectoria seguida por el robot, se propone la gráfica de la figura \ref{fig:graf_trayectoria}. Destacar que no comienza en el origen de coordenadas porque existre cierto desfase entre la ejecución de YOLO y los demás nodos, debido a la potencia necesaria para lanzarlo.\\
+Con el nodo \texttt{write\_objects} obteníamos un archivo de texto con los datos en formato CSV, un formato que permite procesar los datos de manera sencilla. Este archivo contiene información sobre los objetos o clases detectadas, sus probabilidades, la pose del robot (posición y orientación) y el tiempo en el instante en que se detectaron dichos objetos. Para entender la trayectoria seguida por el robot, se propone la gráfica de la figura \ref{fig:graf_trayectoria}. Destacar que no comienza en el origen de coordenadas porque existe cierto desfase entre la ejecución de YOLO y los demás nodos, debido a la potencia necesaria para lanzarlo.\\
 
 \begin{figure}[h]
 	\begin{center} 
 		\includegraphics[width=0.6\textwidth]{graf_trayectoria.png}
 	\end{center}
-	\caption{Trayectoria seguida por el robot. El punto rojo indica el inicio de la trayectoria. El punto verde indica el final}
+	\caption{Trayectoria seguida por el robot. El punto rojo indica el inicio de la trayectoria. El punto verde indica el final.}
 	\label{fig:graf_trayectoria}
 \end{figure}
 
-En la figura \ref{fig:graf_objetos} se muestra una gráfica de barras con el número de ocasiones que fueron detectadas cada una de las clases. Las clases `tvmonitor' (monitor de TV) y `chair' (silla) son las que más han sido detectadas, algo coherente con la distribución del laboratorio. La tercera clase más detectada ,`person' (persona), tampoco se escapa de la normalidad ya que durante la grabación había personas en el laboratorio. Las clases `mouse' (ratón) y `keyboard' (teclado), en principio, deberían haber sido tan frecuentes como las otras. Sin embargo, la cámara está prácticamente al mismo nivel que las mesas, lo que dificulta en gran medida el reconocimiento de estos objetos.\\
+En la figura \ref{fig:graf_objetos} se muestra una gráfica de barras con el número de ocasiones que fueron detectadas cada una de las clases. Las clases `tvmonitor' (monitor de TV) y `chair' (silla) son las que más han sido detectadas, algo coherente con la distribución del laboratorio. La tercera clase más detectada ,`person' (persona), tampoco se escapa de la normalidad ya que durante la grabación había personas en el laboratorio. Las clases `mouse' (ratón) y `keyboard' (teclado), en principio, deberían haber sido tan frecuentes como las otras. Sin embargo, la cámara está prácticamente al mismo nivel que las mesas, lo que dificulta el reconocimiento de estos objetos.\\
 
 De todos los objetos que se han detectado, hay tres que no parecen pertenecer al entorno habitual de un laboratorio. Es el caso de `oven' (horno), `refrigerator' (frigorífico) y `microwave' (microondas). Este último es coherente ya que en el laboratorio hay uno y las detecciones las hace correctamente. Los otros son casos especiales que se explicarán a continuación.\\
 
@@ -563,7 +563,7 @@ De todos los objetos que se han detectado, hay tres que no parecen pertenecer al
 	\begin{center} 
 		\includegraphics[width=0.7\textwidth]{graf_objetos.png}
 	\end{center}
-	\caption{Gráfica de objetos detectados. Muestra el número de veces que fue detectado cada uno de los objetos}
+	\caption{Gráfica de objetos detectados. Muestra el número de veces que fue detectado cada uno de los objetos.}
 	\label{fig:graf_objetos}
 \end{figure}
 
@@ -573,7 +573,7 @@ En este laboratorio no hay ningún horno, por lo que la detección de esta clase
 	\begin{center} 
 		\includegraphics[width=0.6\textwidth]{graf_oven.png}
 	\end{center}
-	\caption{Momentos en los que se ha detectado la clase `oven'. Los puntos azules representan la trayectoria del robot, los rojos las veces que se detectó la clase}
+	\caption{Momentos en los que se ha detectado la clase `oven'. Los puntos azules representan la trayectoria del robot, los rojos las veces que se detectó la clase.}
 	\label{fig:graf_oven}
 \end{figure}
 
@@ -581,7 +581,7 @@ En este laboratorio no hay ningún horno, por lo que la detección de esta clase
 	\begin{center} 
 		\includegraphics[width=0.8\textwidth]{oven.png}
 	\end{center}
-	\caption{Detección de la clase `oven' en la imagen}
+	\caption{Detección de la clase `oven' en la imagen.}
 	\label{fig:det_oven}
 \end{figure}
 
@@ -591,7 +591,7 @@ En cambio, en el laboratorio sí que hay un frigorífico. Concretamente, un frig
 	\begin{center} 
 		\includegraphics[width=0.6\textwidth]{graf_refrigerator.png}
 	\end{center}
-	\caption{Momentos en los que se ha detectado la clase `refrigerator'. Los puntos azules representan la trayectoria del robot, los rojos las veces que se detectó la clase}
+	\caption{Momentos en los que se ha detectado la clase `refrigerator'. Los puntos azules representan la trayectoria del robot, los rojos las veces que se detectó la clase.}
 	\label{fig:graf_refrigerator}
 \end{figure}
 
@@ -604,7 +604,7 @@ En cambio, en el laboratorio sí que hay un frigorífico. Concretamente, un frig
   \hspace{0.5cm}
   \subfloat[Detección correcta]{
     \includegraphics[width=0.6\textwidth]{refrigerator2.png}}
- \caption{Detecciones de la clase `refrigerator' en la imagen}
+ \caption{Detecciones de la clase `refrigerator' en la imagen.}
  \label{fig:det_refrigerator}
 \end{figure}
 
@@ -618,17 +618,17 @@ En este capítulo se pretende, a partir de los resultados obtenidos y de todo el
 
 Los láseres 2D son unos sensores que se caracterizan principalmente por su gran precisión y amplio campo de visión. Sin embargo, son elementos que encarecen en gran medida el presupuesto a dedicar para el diseño de un robot. Las cámaras RGBD, en cambio, son sensores muchos más asequibles, por lo que se deberían de tener en cuenta a la hora de generar \textit{floorplans} de la estructura del edificio o vivienda.\\
 
-Como se ha mostrado en el capítulo \ref{chapter.resultados}, el resultado obtenido queda lejos lo ideal. El mapa obtenido mejora al láser en cuanto a la eliminación de los elementos no estructurales pero perjudica seriamente la rectitud de las líneas, provocando que el mapa pierda fiabilidad. Esto es debido a que los sensores RGBD son mucho menos precisos a la hora de calcular distancias, de ahí su gran diferencia de precio. Además, el dataset utilizado para comprobar el funcionamiento (el laboratorio de automática) no es el más amigable para este procedimiento debido a la gran cantidad de elementos que perjudican la medición a través de la cámara. Aún así, el resultado deja entrever que, con una correcta configuración y unas mejores condiciones del entorno, sería posible obtener un correcto floorplan estructural.\\
+Como se ha mostrado en el capítulo \ref{chapter.resultados}, el resultado obtenido queda lejos de lo ideal. El mapa obtenido mejora al láser en cuanto a la eliminación de los elementos no estructurales pero perjudica seriamente la rectitud de las líneas, provocando que el mapa pierda fiabilidad. Esto es debido a que los sensores RGBD son mucho menos precisos a la hora de calcular distancias, de ahí su gran diferencia de precio. Además, el dataset utilizado para comprobar el funcionamiento (el laboratorio de automática) no es el más amigable para este procedimiento debido a la gran cantidad de elementos que perjudican la medición a través de la cámara. Aún así, el resultado deja entrever que, con una correcta configuración y unas mejores condiciones del entorno, sería posible obtener un correcto \textit{floorplan} estructural.\\
 
 Por tanto, las conclusiones extraídas del desarrollo de este proyecto son las siguientes.
 
 \begin{itemize}
 
-	\item Las cámaras RGBD pueden llegar a ser un sustituto válido y asequible a la hora de generar floorplans que representen exclusivamente la estructura del edificio, sin elementos cambiantes como personas, muebles, etc.
-	\item El entorno es el factor más determinante de cara a la efectividad del método. Un entorno con muchos elementos transparentes o con entrantes y salientes perjudican en gran medida los resultados obtenidos.
+	\item Las cámaras RGBD pueden llegar a ser un sustituto válido y asequible a la hora de generar \textit{floorplans} que representen exclusivamente la estructura del edificio, sin elementos cambiantes como personas, muebles, etc.
+	\item El entorno es el factor más determinante de cara a la efectividad del método. Un entorno con muchos elementos transparentes (como ventanas) o con entrantes y salientes perjudican en gran medida los resultados obtenidos.
 	\item La calibración de la cámara es muy importante si se quieren obtener resultados que puedan ser utilizados en la realidad.
-	\item La comunidad de ROS es una de las más activas que se pueden encontrar. Existen miles de usuarios que aportan paquetes con funciones que abarcan prácticamente todos los ámbitos de la robótica. Por lo tanto, antes de comenzar a desarrollar alguna función, mejor comprobar si alguien ya lo ha hecho, algo que, vista la inmensitud de su comunidad, será lo más probable. Además, ROS cuenta con su propio foro donde compartir problemas y sus soluciones, ayudando en gran medida a usuarios novatos.
-	\item La red neuronal YOLO, entrenada para la detección de objetos, pese a no ser del todo fiable, cumple su función. Sin embargo, muchos de los elementos del dataset no ha sido capaz de detectarlos, por lo que no hay que confiar completamente de sus mediciones.
+	\item La comunidad de ROS es una de las más activas que se pueden encontrar. Existen miles de usuarios que aportan paquetes con funciones que abarcan prácticamente todos los ámbitos de la robótica. Por lo tanto, antes de comenzar a desarrollar alguna función, mejor comprobar si alguien ya lo ha hecho, algo que, vista la inmensidad de su comunidad, será lo más probable. Además, ROS cuenta con su propio foro donde compartir problemas y sus soluciones, ayudando en gran medida a usuarios novatos.
+	\item La red neuronal YOLO, entrenada para la detección de objetos, pese a no ser del todo fiable, cumple su función. Sin embargo, muchos de los elementos del dataset no ha sido capaz de detectarlos, por lo que no hay que confiar completamente en sus mediciones.
 	\item El manejo de datos con \textit{Python} y \textit{Pandas}
  resulta realmente sencillo. Complementándolo con la librería \textit{Matplotlib} se convierte en una poderosa herramienta para el análisis y la representación de los datos.
  	\item \textit{Linux}, pese a resultar inicialmente más complicado de comprender que otros sistemas operativos como \textit{Windows} o \textit{MacOS}, tiene numerosas características que lo convierten en una herramienta muy potente para el desarrollo, como la instalación por paquetes o el debugging.
@@ -637,7 +637,7 @@ Por tanto, las conclusiones extraídas del desarrollo de este proyecto son las s
 
 \section{Propuestas y líneas futuras}
 
-Hay aspectos de este trabajo que, una vez analizado de principio a fin, pudieran haberse hecho de otra forma y así, quizá, haber obtenido mejor resultado.\\
+Hay aspectos de este trabajo que, una vez analizado de principio a fin, pudieran haberse hecho de otra forma y así, quizás, haber obtenido mejor resultado.\\
 
 El dataset de datos (rosbag del laboratorio) no es el idóneo para esta tarea. Debido a todos sus entrantes y salientes y a las ventanas en la pared divisoria entre las dos estancias, el resultado obtenido no es del todo correcto. Lo mejor hubiera sido grabar al robot en un ambiente de vivienda convencional, con habitaciones, baños y cocinas. Además, la posición y orientación de la cámara no es la idónea. Dado que los elementos se encuentran mayoritariamente en la parte inferior de las paredes, lo ideal sería situar la cámara en una posición más alta que la del dataset, con una orientación paralela al plano del suelo.\\
 
@@ -664,11 +664,11 @@ Para este proyecto se ha utilizado el filtro de sincronización o \textit{time s
 
 \subsection{\textit{fstream}}
 
-Es una librería de C++ que permite la escritura en archivos. Se ha utilizado en el nodo \texttt{write\_objects} para escribir la información recibida de la pose y de la detección de objetos.\\
+Es una librería de C++ que permite la escritura en archivos. Se ha utilizado en el nodo \texttt{write\_objects} para escribir la información recibida de la \textit{pose} y de la detección de objetos.\\
 
 \subsection{\textit{libfreenect}}
 
-\textit{libfreenect} es una librería que permite el acceso USB a la cámara Kinect de Microsoft. Es parte del proyecto \textit{OpenKinect}, una comunidad abierta que trabaja para implementar la posibilidad de uso de este dispositivo en todos los ordeanadores. Concretamente, se ha utilizado el paquete \texttt{freenect\_launch} que permite lanzar la cámara desde ROS.\\
+\textit{libfreenect} es una librería que permite el acceso USB a la cámara Kinect de Microsoft. Es parte del proyecto \textit{OpenKinect}, una comunidad abierta que trabaja para implementar la posibilidad de uso de este dispositivo en todos los ordenadores. Concretamente, se ha utilizado el paquete \texttt{freenect\_launch} que permite lanzar la cámara desde ROS.\\
 
 Este paquete sirvió para tener una primera toma de contacto con los sensores RGBD, las imágenes de profundidad y las nubes de puntos.\\
 
@@ -680,11 +680,11 @@ Se utiliza para visualizar los mensajes que llegan a los topics. Permite visuali
 
 \section{Google Colab}
 
-Colab, también conocido como ``Colaboratory'', es una herramienta creada por Google que permite a los usuarios programar y ejecutar código Python en el navegador, utilizando servicios alojados en la nube. Esta herramienta se ha utilizado para el análisis de los objetos detectados con la red neuronal. Las ventajas de utilizar esta plataforma son: no requiere configuración, da acceso gratuito a GPUs y permite compartir contenido fácilmente.\\
+\textit{Colab}, también conocido como \textit{Colaboratory}, es una herramienta creada por Google que permite a los usuarios programar y ejecutar código Python en el navegador, utilizando servicios alojados en la nube. Esta herramienta se ha utilizado para el análisis de los objetos detectados con la red neuronal. Las ventajas de utilizar esta plataforma son: no requiere configuración, da acceso gratuito a GPUs y permite compartir contenido fácilmente.\\
 
 \section{CUDA: Compute Unified Device Architecture} \label{apendA.cuda}
 
-CUDA es un conjunto de herramientas de desarrollo creadas por Nvidia que permiten a los programadores usar una variación del lenguaje de programación C (CUDA C) para coificar algoritmos GPU de Nvidia. Tiene como objetivo explitar las ventajas de las GPU frente a las CPU de propósito general utilizando el paralelismo que ofreccen sus múltiples núcleos, que permiten lanzar un altísimo número de procesos simultáneos \cite{cuda}.\\
+CUDA es un conjunto de herramientas de desarrollo creadas por Nvidia que permiten a los programadores usar una variación del lenguaje de programación C (CUDA C) para codificar algoritmos GPU de Nvidia. Tiene como objetivo explotar las ventajas de las GPU frente a las CPU de propósito general utilizando el paralelismo que ofrecen sus múltiples núcleos, que permiten lanzar un altísimo número de procesos simultáneos \cite{cuda}.\\
 
 Las principales ventajas de este sistema de computación son:
 
@@ -699,13 +699,13 @@ Las principales ventajas de este sistema de computación son:
 
 \section{LaTex y TexMaker}
 
-\LaTeX \, es un sistema de composición de textos, orientado a la creación de documentos escritos de alta calida tipográfica. Por sus característica, es ampliamente utilizado para la generación de documentos científicos. Este software se ha utilizado con la distro \textit{TexLive} y el software \textit{TexMaker} para la generación de este documento.\\
+\LaTeX \, es un sistema de composición de textos, orientado a la creación de documentos escritos de alta calida tipográfica. Por sus características, es ampliamente utilizado para la generación de documentos científicos. Este software se ha utilizado con la distro \textit{TexLive} y el software \textit{TexMaker} para la generación de este documento.\\
 
 \section{Draw.io}
 
-\textit{Draw.io} es un recurso web gratuito que sirve para realizar grafos. Todos los diagramas de este trabajo se han creado con esta herramienta. Se ha utilizado por su facilidad de uso y por la oportunidad de hacerlo online sin la obligación de instalar ningún software adicional.\\
+\textit{Draw.io} es un recurso web gratuito que sirve para realizar grafos. Todos los diagramas de este trabajo se han creado con esta herramienta. Se ha utilizado por su facilidad de uso y por la oportunidad de hacerlo online sin necesidad de instalar ningún software adicional.\\
 
-\chapter{Código de los nodos diseñados}
+\chapter{Código de los nodos diseñados expresamente para este proyecto}
 
 \section{Nodo \texttt{cam\_info}}
 

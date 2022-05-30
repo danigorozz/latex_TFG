@@ -3,11 +3,11 @@
 \defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {1.1}{\ignorespaces Porción del plano del metro de Madrid \cite {metro_madrid}\relax }}{2}{figure.caption.7}%
+\contentsline {figure}{\numberline {1.1}{\ignorespaces Detalle de la red de metro de la Comunidad de Madrid. \cite {metro_madrid}\relax }}{2}{figure.caption.7}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {1.2}{\ignorespaces Foto tomada del robot SHAKEY en 1968 \cite {shakey2}\relax }}{3}{figure.caption.8}%
+\contentsline {figure}{\numberline {1.2}{\ignorespaces Foto tomada del robot SHAKEY en 1968. \cite {shakey2}\relax }}{3}{figure.caption.8}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {1.3}{\ignorespaces Ejemplos de tipos de mapas\relax }}{4}{figure.caption.9}%
+\contentsline {figure}{\numberline {1.3}{\ignorespaces Ejemplos de tipos de mapas.\relax }}{4}{figure.caption.9}%
 \defcounter {refsection}{0}\relax 
 \contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Ejemplo de mapa métrico: mapa de ocupación}}}{4}{subfigure.3.1}%
 \defcounter {refsection}{0}\relax 
@@ -15,11 +15,11 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {figure}{\numberline {1.4}{\ignorespaces Mapa generado con el barrido de un láser. Las zonas enumeradas muestran que el mapa generado no representa fielmente la estructura del entorno debido a la presencia de elementos que pueden variar en su posición como un sofá, una silla, una cama, etc.\relax }}{5}{figure.caption.10}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {1.5}{\ignorespaces Comparación teórica del resultado de una medición de un láser 2D y un sensor RGBD sobre elementos presentes en la Escuela de Ingenierías Industriales\relax }}{6}{figure.caption.11}%
+\contentsline {figure}{\numberline {1.5}{\ignorespaces Comparación teórica del resultado de una medición de un láser 2D y un sensor RGBD sobre elementos presentes en la Escuela de Ingenierías Industriales.\relax }}{6}{figure.caption.11}%
 \defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {2.1}{\ignorespaces Mecanismos de comunicación en ROS. (a) Topics, (b) Servicios y (c) Acciones\relax }}{13}{figure.caption.12}%
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Mecanismos de comunicación en ROS. (a) Topics, (b) Servicios y (c) Acciones.\relax }}{13}{figure.caption.12}%
 \defcounter {refsection}{0}\relax 
 \contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Topics}}}{13}{subfigure.1.1}%
 \defcounter {refsection}{0}\relax 
@@ -27,49 +27,49 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Actions}}}{13}{subfigure.1.3}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {2.2}{\ignorespaces Ejemplo de mapa de ocupación en formato \texttt {.pgm}\relax }}{14}{figure.caption.13}%
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Ejemplo de mapa de ocupación en formato \texttt {.pgm}.\relax }}{14}{figure.caption.13}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {2.3}{\ignorespaces Fotografía del sensor Microsoft Kinect V1, lanzado como complemento de la videoconsola Xbox360 en 2010 \cite {kinectv1}\relax }}{15}{figure.caption.14}%
+\contentsline {figure}{\numberline {2.3}{\ignorespaces Fotografía del sensor Microsoft Kinect V1, lanzado como complemento de la videoconsola Xbox360 en 2010. \cite {kinectv1}\relax }}{15}{figure.caption.14}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {2.4}{\ignorespaces Ejemplo de imagen de profundidad \cite {depthimage}. Generalmente, los objetos más alejados se representan en tonos más claros, mientras que los tonos más oscuros representan las zonas más cercanas. Las zonas donde es un color negro puro son zonas de ``no información'' de las que el sensor no puede concretar ninguna distancia\relax }}{16}{figure.caption.15}%
+\contentsline {figure}{\numberline {2.4}{\ignorespaces Ejemplo de imagen de profundidad \cite {depthimage}. Generalmente, los objetos más alejados se representan en tonos más claros, mientras que los tonos más oscuros representan las zonas más cercanas. Las zonas donde es un color negro puro son zonas de ``no información'' de las que el sensor no puede concretar ninguna distancia.\relax }}{16}{figure.caption.15}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {2.5}{\ignorespaces Ejemplo de una nube de puntos coloreada representando a una estructura\relax }}{17}{figure.caption.16}%
+\contentsline {figure}{\numberline {2.5}{\ignorespaces Ejemplo de una nube de puntos coloreada representando a una estructura.\relax }}{17}{figure.caption.16}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {2.6}{\ignorespaces Comparación de YOLO con otros modelos mostrando el tiempo de inferencia (eje X) y la métrica COCO mAP-50 (eje Y). Se puede ver como YOLO tiene unos tiempos de inferencia muchos menores que la mayoria de algoritmos, mantieniendo una buena puntuación en la métrica\relax }}{17}{figure.caption.17}%
+\contentsline {figure}{\numberline {2.6}{\ignorespaces Comparación de YOLO con otros modelos mostrando el tiempo de inferencia (eje X) y la métrica COCO mAP-50 (eje Y). Se puede ver como YOLO tiene unos tiempos de inferencia muchos menores que la mayoria de algoritmos, mantieniendo una buena puntuación en la métrica.\relax }}{17}{figure.caption.17}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {2.7}{\ignorespaces Procedimiento llevado a cabo por YOLO. Divide la imaegn en una rejilla de $S \times S$ y predice las bounding boxes junto con sus probabilidades. Las bajas probabilidades se eliminan y, posteriormente las cajas duplicadas, obteniendo así la detección final\relax }}{18}{figure.caption.18}%
+\contentsline {figure}{\numberline {2.7}{\ignorespaces Procedimiento llevado a cabo por YOLO. Divide la imaegn en una rejilla de $S \times S$ y predice las bounding boxes junto con sus probabilidades. Las bajas probabilidades se eliminan y, posteriormente las cajas duplicadas, obteniendo así la detección final.\relax }}{18}{figure.caption.18}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {2.8}{\ignorespaces Capas de una red neuronal artifical. Capa de entrada (izquierda), capas ocultas (centro) y capa de salida (derecha) \cite {foto_nn}\relax }}{19}{figure.caption.19}%
-\defcounter {refsection}{0}\relax 
-\addvspace {10\p@ }
-\defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {3.1}{\ignorespaces Árbol de nodos y topics. Los nodos diseñados para este trabajo son de color azul. Los nodos de terceros cuyo código ha sido modificado son de color naranja. Los nodos descargados que no se han modificado son de color blanco\relax }}{22}{figure.caption.20}%
-\defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {3.2}{\ignorespaces Diagrama del nodo \texttt {cam\_info}. Recibe la imagen de profundidad y publica la información de la cámara\relax }}{24}{figure.caption.21}%
-\defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {3.3}{\ignorespaces Diagrama del nodo \texttt {sync\_info}. Recibe la imagen de profundidad y la información de la cámara y publica los mismo mensajes pero sincronizados\relax }}{24}{figure.caption.22}%
-\defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {3.4}{\ignorespaces Salida en la terminal del nodo \texttt {darknet\_ros}. En la parte izquierda se muestran las bounding boxes sobre la imagen a color. A la derecha, en la terminal, se muestran los FPS actuales y los objetos y sus probabilidades\relax }}{29}{figure.caption.25}%
+\contentsline {figure}{\numberline {2.8}{\ignorespaces Capas de una red neuronal artifical. Capa de entrada (izquierda), capas ocultas (centro) y capa de salida (derecha). \cite {foto_nn}\relax }}{19}{figure.caption.19}%
 \defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Mapas generados con láser 2D (a) y con sensor RGBD (b). Se puede observan la diferencia de rectitud en las líneas exteriores (problema) así como lo poco ruidoso que resulta el interior (virtud)\relax }}{32}{figure.caption.28}%
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Árbol de nodos y topics. Los nodos diseñados para este trabajo son de color azul. Los nodos de terceros cuyo código ha sido modificado son de color naranja. Los nodos descargados que no se han modificado son de color blanco.\relax }}{22}{figure.caption.20}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Diagrama del nodo \texttt {cam\_info}. Recibe la imagen de profundidad y publica la información de la cámara.\relax }}{24}{figure.caption.21}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Diagrama del nodo \texttt {sync\_info}. Recibe la imagen de profundidad y la información de la cámara y publica los mismo mensajes pero sincronizados.\relax }}{24}{figure.caption.22}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {3.4}{\ignorespaces Ejecución del nodo \texttt {darknet\_ros}. En la parte izquierda se muestran las bounding boxes sobre la imagen a color. A la derecha, en la terminal, se muestran los FPS actuales y los objetos y sus probabilidades\relax }}{29}{figure.caption.25}%
+\defcounter {refsection}{0}\relax 
+\addvspace {10\p@ }
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Mapas generados con láser 2D (a) y con sensor RGBD (b). Se puede observan la diferencia de rectitud en las líneas exteriores (problema) así como lo poco ruidoso que resulta el interior (virtud).\relax }}{32}{figure.caption.28}%
 \defcounter {refsection}{0}\relax 
 \contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Generado con láser 2D}}}{32}{subfigure.1.1}%
 \defcounter {refsection}{0}\relax 
 \contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Generado con sensor RGBD}}}{32}{subfigure.1.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {4.2}{\ignorespaces Superposición de los dos mapas. Los objetos no estructurales se han eliminado correctamente\relax }}{33}{figure.caption.29}%
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Superposición de los dos mapas. Los objetos no estructurales se han eliminado correctamente.\relax }}{33}{figure.caption.29}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {4.3}{\ignorespaces Muestra de medida 1: diferencia entre las medidas del láser real (blancas) y del láser artificial (rojas)\relax }}{34}{figure.caption.30}%
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Muestra de medida 1: diferencia entre las medidas del láser real (blancas) y del láser artificial (rojas).\relax }}{34}{figure.caption.30}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {4.4}{\ignorespaces Muestra de medida 2: diferencia entre las medidas del láser real (blancas) y del láser artificial (rojas)\relax }}{34}{figure.caption.31}%
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Muestra de medida 2: diferencia entre las medidas del láser real (blancas) y del láser artificial (rojas).\relax }}{34}{figure.caption.31}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {4.5}{\ignorespaces Muestra de medida 3: diferencia entre las medidas del láser real (blancas) y del láser artificial (rojas)\relax }}{35}{figure.caption.32}%
+\contentsline {figure}{\numberline {4.5}{\ignorespaces Muestra de medida 3: diferencia entre las medidas del láser real (blancas) y del láser artificial (rojas).\relax }}{35}{figure.caption.32}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {4.6}{\ignorespaces Muestra de medida 4: diferencia entre las medidas del láser real (blancas) y del láser artificial (rojas)\relax }}{35}{figure.caption.33}%
+\contentsline {figure}{\numberline {4.6}{\ignorespaces Muestra de medida 4: diferencia entre las medidas del láser real (blancas) y del láser artificial (rojas).\relax }}{35}{figure.caption.33}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {4.7}{\ignorespaces Resultados para diferentes parámetros de \texttt {linearUpdate}, \texttt {angularUpdate} y \texttt {temporalUpdate}, respectivamente\relax }}{36}{figure.caption.34}%
+\contentsline {figure}{\numberline {4.7}{\ignorespaces Resultados para diferentes parámetros de \texttt {linearUpdate}, \texttt {angularUpdate} y \texttt {temporalUpdate}, respectivamente.\relax }}{36}{figure.caption.34}%
 \defcounter {refsection}{0}\relax 
 \contentsline {subfigure}{\numberline {(a)}{\ignorespaces {$1.0; 0.5; 3.0$}}}{36}{subfigure.7.1}%
 \defcounter {refsection}{0}\relax 
@@ -77,29 +77,29 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subfigure}{\numberline {(c)}{\ignorespaces {$0.5; 0.2; 3.0$}}}{36}{subfigure.7.3}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {4.8}{\ignorespaces Resultados para distintos valores de distancia máxima. A mayor distancia máxima, mayor influencia de la información percibida por ventanas y puertas abiertas\relax }}{37}{figure.caption.35}%
+\contentsline {figure}{\numberline {4.8}{\ignorespaces Resultados para distintos valores de distancia máxima. A mayor distancia máxima, mayor influencia de la información percibida por ventanas y puertas abiertas.\relax }}{37}{figure.caption.35}%
 \defcounter {refsection}{0}\relax 
 \contentsline {subfigure}{\numberline {(a)}{\ignorespaces {\texttt {range\_max} a 7 metros}}}{37}{subfigure.8.1}%
 \defcounter {refsection}{0}\relax 
 \contentsline {subfigure}{\numberline {(b)}{\ignorespaces {\texttt {range\_max} a 8 metros}}}{37}{subfigure.8.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {4.9}{\ignorespaces Trayectoria seguida por el robot. El punto rojo indica el inicio de la trayectoria. El punto verde indica el final\relax }}{38}{figure.caption.36}%
+\contentsline {figure}{\numberline {4.9}{\ignorespaces Trayectoria seguida por el robot. El punto rojo indica el inicio de la trayectoria. El punto verde indica el final.\relax }}{38}{figure.caption.36}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {4.10}{\ignorespaces Gráfica de objetos detectados. Muestra el número de veces que fue detectado cada uno de los objetos\relax }}{38}{figure.caption.37}%
+\contentsline {figure}{\numberline {4.10}{\ignorespaces Gráfica de objetos detectados. Muestra el número de veces que fue detectado cada uno de los objetos.\relax }}{38}{figure.caption.37}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {4.11}{\ignorespaces Momentos en los que se ha detectado la clase `oven'. Los puntos azules representan la trayectoria del robot, los rojos las veces que se detectó la clase\relax }}{39}{figure.caption.38}%
+\contentsline {figure}{\numberline {4.11}{\ignorespaces Momentos en los que se ha detectado la clase `oven'. Los puntos azules representan la trayectoria del robot, los rojos las veces que se detectó la clase.\relax }}{39}{figure.caption.38}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {4.12}{\ignorespaces Detección de la clase `oven' en la imagen\relax }}{39}{figure.caption.39}%
+\contentsline {figure}{\numberline {4.12}{\ignorespaces Detección de la clase `oven' en la imagen.\relax }}{39}{figure.caption.39}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {4.13}{\ignorespaces Momentos en los que se ha detectado la clase `refrigerator'. Los puntos azules representan la trayectoria del robot, los rojos las veces que se detectó la clase\relax }}{40}{figure.caption.40}%
+\contentsline {figure}{\numberline {4.13}{\ignorespaces Momentos en los que se ha detectado la clase `refrigerator'. Los puntos azules representan la trayectoria del robot, los rojos las veces que se detectó la clase.\relax }}{40}{figure.caption.40}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {4.14}{\ignorespaces Detecciones de la clase `refrigerator' en la imagen\relax }}{41}{figure.caption.41}%
+\contentsline {figure}{\numberline {4.14}{\ignorespaces Detecciones de la clase `refrigerator' en la imagen.\relax }}{40}{figure.caption.41}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Detección errónea 1}}}{41}{subfigure.14.1}%
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Detección errónea 1}}}{40}{subfigure.14.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Detección errónea 2}}}{41}{subfigure.14.2}%
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Detección errónea 2}}}{40}{subfigure.14.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Detección correcta}}}{41}{subfigure.14.3}%
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Detección correcta}}}{40}{subfigure.14.3}%
 \defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }
 \defcounter {refsection}{0}\relax 

@@ -28,7 +28,7 @@
 \BOOKMARK [1][-]{section.3.5}{Detecci\363n de objetos}{chapter.3}% 28
 \BOOKMARK [2][-]{subsection.3.5.1}{Descompresi\363n de la imagen de color}{section.3.5}% 29
 \BOOKMARK [2][-]{subsection.3.5.2}{Ejecuci\363n de YOLO}{section.3.5}% 30
-\BOOKMARK [1][-]{section.3.6}{Procesamiento de los objetos detectados}{chapter.3}% 31
+\BOOKMARK [1][-]{section.3.6}{Procesamiento de los objetos detectados mediante archivos CSV}{chapter.3}% 31
 \BOOKMARK [1][-]{section.3.7}{An\341lisis de los objetos detectados}{chapter.3}% 32
 \BOOKMARK [0][-]{chapter.4}{Resultados obtenidos}{part.2}% 33
 \BOOKMARK [1][-]{section.4.1}{Mapa generado a partir de la imagen de profundidad}{chapter.4}% 34
@@ -50,7 +50,7 @@
 \BOOKMARK [1][-]{section.Alph1.4}{CUDA: Compute Unified Device Architecture}{appendix.Alph1}% 50
 \BOOKMARK [1][-]{section.Alph1.5}{LaTex y TexMaker}{appendix.Alph1}% 51
 \BOOKMARK [1][-]{section.Alph1.6}{Draw.io}{appendix.Alph1}% 52
-\BOOKMARK [0][-]{appendix.Alph2}{C\363digo de los nodos dise\361ados}{part.4}% 53
+\BOOKMARK [0][-]{appendix.Alph2}{C\363digo de los nodos dise\361ados expresamente para este proyecto}{part.4}% 53
 \BOOKMARK [1][-]{section.Alph2.1}{Nodo cam\137info}{appendix.Alph2}% 54
 \BOOKMARK [1][-]{section.Alph2.2}{Nodo sync\137info}{appendix.Alph2}% 55
 \BOOKMARK [1][-]{section.Alph2.3}{Nodo write\137objects}{appendix.Alph2}% 56

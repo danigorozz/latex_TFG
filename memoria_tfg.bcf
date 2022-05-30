@@ -2213,7 +2213,8 @@
     <bcf:citekey order="34">republish</bcf:citekey>
     <bcf:citekey order="35">darknet</bcf:citekey>
     <bcf:citekey order="36">enc</bcf:citekey>
-    <bcf:citekey order="37">cuda</bcf:citekey>
+    <bcf:citekey order="37">mapserver</bcf:citekey>
+    <bcf:citekey order="38">cuda</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="none">

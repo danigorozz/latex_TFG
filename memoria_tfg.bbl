@@ -664,6 +664,38 @@
       \verb http://docs.ros.org/en/jade/api/sensor_msgs/html/image__encodings_8h.html
       \endverb
     \endentry
+    \entry{mapserver}{online}{}
+      \name{author}{2}{}{%
+        {{hash=a8ad4a5f43253f69552460c946e34e49}{%
+           family={Gerkey},
+           familyi={G\bibinitperiod},
+           given={Brian},
+           giveni={B\bibinitperiod}}}%
+        {{hash=7c1396810b91bf781d566af79403b61e}{%
+           family={Pratkanis},
+           familyi={P\bibinitperiod},
+           given={Tony},
+           giveni={T\bibinitperiod}}}%
+      }
+      \strng{namehash}{4659dddbaccf44d0b8dfddffde82919a}
+      \strng{fullhash}{4659dddbaccf44d0b8dfddffde82919a}
+      \strng{bibnamehash}{4659dddbaccf44d0b8dfddffde82919a}
+      \strng{authorbibnamehash}{4659dddbaccf44d0b8dfddffde82919a}
+      \strng{authornamehash}{4659dddbaccf44d0b8dfddffde82919a}
+      \strng{authorfullhash}{4659dddbaccf44d0b8dfddffde82919a}
+      \field{sortinit}{3}
+      \field{sortinithash}{a37a8ef248a93c322189792c34fc68c9}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{addendum}{(acc: 29.05.2022)}
+      \field{title}{ROS WIKI: map server}
+      \verb{urlraw}
+      \verb http://wiki.ros.org/map_server
+      \endverb
+      \verb{url}
+      \verb http://wiki.ros.org/map_server
+      \endverb
+    \endentry
     \entry{cuda}{online}{}
       \name{author}{1}{}{%
         {{hash=9c677286866aad38f8e9b660f5411814}{%

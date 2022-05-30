@@ -1,8 +1,8 @@
 \part{Introducción}
-
+\pagenumbering{arabic}
 
 \chapter{Introducción y visión general}
-\pagenumbering{arabic}
+
 
 En este capítulo se hará una breve introducción para entender el contexto de este trabajo y el porqué de la necesidad del mismo. Se comentará la importancia de la localización para los seres humanos y se hará una introducción sobre los mapas utilizados por los robots para localizarse. Finalmente se expondrá la estructura del documento.\\
 
@@ -20,13 +20,13 @@ A lo largo de los años, los seres humanos hemos utilizado multitud de métodos 
 %	\label{fig:espato}
 %\end{figure}
 
-En la figura \ref{fig:metro} se muestra el plano de la red de metro de la Comunidad de Madrid. A primera vista, uno se pierde entre tanto entresijo de líneas de colores pero si se establece una estación de origen y otra de destino, este plano facilita, e incluso posibilita, concretar el camino a tomar. Además, en las estaciones suele haber una gran cantidad de señalizaciones que hacen aún más fácil la localización. Entonces, si los humanos, seres inteligentes con percepción visual y capacidad de razonamiento, necesitamos localizarnos para alcanzar un objetivo, ¿porqué no lo iban a necesitar los robots? \\
+En la figura \ref{fig:metro} se muestra una parte del plano de la red de metro de la Comunidad de Madrid. A primera vista, uno se pierde entre tanto entresijo de líneas de colores pero si se establece una estación de origen y otra de destino, este plano facilita, e incluso posibilita, concretar el camino a tomar. Además, en las estaciones suele haber una gran cantidad de señalizaciones que hacen aún más fácil la localización. Entonces, si los humanos, seres inteligentes con percepción visual y capacidad de razonamiento, necesitamos localizarnos para alcanzar un objetivo, ¿porqué no lo iban a necesitar los robots? \\
 
 \begin{figure}[h]
 	\begin{center} 
 	\includegraphics[width=0.4\textwidth]{plano_metro.png}
 	\end{center}
-	\caption{Porción del plano del metro de Madrid \cite{metro_madrid}}
+	\caption{Detalle de la red de metro de la Comunidad de Madrid. \cite{metro_madrid}}
 	\label{fig:metro}
 \end{figure}
 
@@ -46,12 +46,12 @@ La robótica móvil ha ido evolucionando a un ritmo vertiginoso desde que comenz
 	\begin{center} 
 	\includegraphics[width=0.8\textwidth]{shakey.jpg}
 	\end{center}
-	\caption{Foto tomada del robot SHAKEY en 1968 \cite{shakey2}}
+	\caption{Foto tomada del robot SHAKEY en 1968. \cite{shakey2}}
 	\label{fig:shakey}
 \end{figure}
 
 
-Un robot autónomo móvil (ARM) es un robot capaz de navegar a través de un entorno sin supervisión directa por parte de un operador humano ni la necesidad de disponer de un ruta fijada previamente. Para poder llevarlo a cabo, los robots disponen de multitud de sensores que les permiten percibir e interpretar el entorno, dotando al robot de la capacidad de navegar por el mismo evitando obstáculos, tanto fijos como móviles. Para poder realizar una navegación de alto nivel que les permita ir desde un punto origen a otro punto destino, los robots se sirven de mapas. Un mapa es una representación bidimensional del entorno. Existen dos tipos de mapas de aplicación a la robótica: los mapas métricos y los mapas topológicos. Los mapas métricos (figura \ref{fig:mapas}, izquierda) dividen el entorno en una rejilla donde cada celda representa una probabilidad de estar ocupada o de no estarlo. Si se discretiza esa probabilidad, el resultado es un mapa de ocupación, (también llamado \textit{floorplan} o ``plano de suelo'', en un ámbito menos técnico), si no, se obtiene un mapa probabilístico. El mapa métrico más simple es el formado por un conjunto de referencias visuales o \textit{landmarks} de posición conocida que ayudan al robot a estimar su posición. Los mapas topológicos (figura \ref{fig:mapas}, derecha) están basados en grafos y representan la conectividad entre cada uno de sus nodos. Existe una tercer tipo de mapa que es un híbrido entre los comentados y es el más utilizado para los robots: utilizan los grafos para la generación de trayectorias (navegación) y el mapa métrico para la localización.\\
+Un robot autónomo móvil (ARM) es un robot capaz de navegar a través de un entorno sin supervisión directa por parte de un operador humano ni la necesidad de disponer de un ruta fijada previamente. Para poder llevarlo a cabo, los robots disponen de multitud de sensores que les permiten percibir e interpretar el entorno, dotando al robot de la capacidad de navegar por el mismo evitando obstáculos, tanto fijos como móviles. Para poder realizar una navegación de alto nivel que les permita ir desde un punto origen a otro punto destino, los robots se sirven de mapas. Un mapa es una representación bidimensional del entorno. Existen dos tipos de mapas de aplicación a la robótica: los mapas métricos y los mapas topológicos. Los mapas métricos (figura \ref{fig:mapas}, izquierda) dividen el entorno en una rejilla donde cada celda representa una probabilidad de estar ocupada o de no estarlo. Si se discretiza esa probabilidad el resultado es un mapa de ocupación, (también llamado \textit{floorplan} o ``plano de suelo'', en un ámbito menos técnico), si no, se obtiene un mapa probabilístico. El mapa métrico más simple es el formado por un conjunto de referencias visuales o \textit{landmarks} de posición conocida que ayudan al robot a estimar su posición. Los mapas topológicos (figura \ref{fig:mapas}, derecha) están basados en grafos y representan la conectividad entre cada uno de sus nodos. Existe una tercer tipo de mapa que es un híbrido entre los comentados y es el más utilizado para los robots: utilizan los grafos para la generación de trayectorias (navegación) y el mapa métrico para la localización.\\
 
 \begin{figure}[H]
  \centering
@@ -60,7 +60,7 @@ Un robot autónomo móvil (ARM) es un robot capaz de navegar a través de un ent
   \hspace{2cm}
   \subfloat[Mapa topológico: líneas del metro de Málaga \cite{metro_malaga}]{
     \includegraphics[width=0.3\textwidth]{metro_malaga.png}}
- \caption{Ejemplos de tipos de mapas}
+ \caption{Ejemplos de tipos de mapas.}
  \label{fig:mapas}
 \end{figure}
 
@@ -78,13 +78,13 @@ En la figura \ref{fig:errores_laser} se muestra un ejemplo de un mapa generado d
 	\label{fig:errores_laser}
 \end{figure}
 
-Dado que estos métodos de generación de mapas de ocupación mediante láser 2D sufren frente a la variabilidad en la distribución, surge la idea de utilizar otros sensores que permitan discernir entre los distintos elementos que pudieran formar parte del entorno. Los sensores RGBD son cámaras que, además de proporcionar información sobre el color, ofrecen la distancia a la que se encuentra cada píxel captado en la imagen con respecto a la cámara. Por lo tanto, ofrecen información en 3D del dominio, lo que abre más posibilidades a la hora de percibir e interpretar la información captada mediante los sensores. En la figura \ref{fig:laser_vs_rgbd} se muestra un ejemplo de lo que se quiere conseguri aprovechando las ventajas de los sensores RGBD frente a los láseres 2D.\\
+Dado que estos métodos de generación de mapas de ocupación mediante láser 2D sufren frente a la variabilidad en la distribución, surge la idea de utilizar otros sensores que permitan discernir entre los distintos elementos que pudieran formar parte del entorno. Los sensores RGBD son cámaras que, además de proporcionar información sobre el color, ofrecen la distancia a la que se encuentra cada píxel captado en la imagen con respecto a la cámara. Por lo tanto, ofrecen información en 3D del dominio, lo que abre más posibilidades a la hora de percibir e interpretar la información captada mediante los sensores. En la figura \ref{fig:laser_vs_rgbd} se muestra un ejemplo de lo que se quiere conseguir aprovechando las ventajas de los sensores RGBD frente a los láseres 2D.\\
 
 \begin{figure}[H]
 	\begin{center} 
 	\includegraphics[width=\textwidth]{laser_vs_rgbd.png}
 	\end{center}
-	\caption{Comparación teórica del resultado de una medición de un láser 2D y un sensor RGBD sobre elementos presentes en la Escuela de Ingenierías Industriales}
+	\caption{Comparación teórica del resultado de una medición de un láser 2D y un sensor RGBD sobre elementos presentes en la Escuela de Ingenierías Industriales.}
 	\label{fig:laser_vs_rgbd}
 \end{figure}
 
@@ -93,7 +93,7 @@ En este proyecto se pretende analizar una posible solución al problema de fiabi
 \begin{itemize}
 
 	\item La más importante es la posibilidad de tener un mapa que permita al robot localizarse aún con los cambios que puedan surgir a lo largo del tiempo en los elementos que conforman el entorno. Así se evita tener que generar un nuevo mapa cada vez que surja algún cambio significativo.
-	\item En aplicaciones de realidad aumentada para el diseño de interiores esto permitiría obtener las dimensiones reales de la vivienda y así tener una idea en primera persona del cambio de mobiliario o de una nueva organización del mismo.
+	\item En aplicaciones de realidad aumentada para el diseño de interiores, este sistema permitiría obtener las dimensiones reales de la vivienda y así tener una idea en primera persona del cambio de mobiliario o de una nueva organización del mismo.
 	\item Normalmente existe una clara disparidad entre el plano de una vivienda o de un edificio diseñado por el arquitecto y el producto final. Con este mapa generado sería posible comparar y obtener un plano fiel a la realidad y así validar las dimensiones reales de la infraestructura.
 
 \end{itemize}
@@ -102,7 +102,7 @@ En este proyecto se pretende analizar una posible solución al problema de fiabi
 
 \section{Objetivo}
 
-Dado que los robots utilizan los mapas de ocupación o \textit{floorplans}para localizarse y navegar en un entorno, es necesario que estos sean lo más fiel posible a la estructura real del edificio o de la vivienda. Esto resulta imposible si durante la fase de obtención del mapa existen elementos que no pertenecen a la infraestructura, ya que provocan que el mapa resultante no sea fiel las dimensiones reales del entorno.\\
+Dado que los robots utilizan los mapas de ocupación o \textit{floorplans} para localizarse y navegar en un entorno, es necesario que éstos sean lo más fiel posible a la estructura real del edificio o de la vivienda. Esto resulta imposible si durante la fase de obtención del mapa existen elementos que no pertenecen a la infraestructura, ya que provocan que el mapa resultante no sea fiel a las dimensiones reales del entorno.\\
 
 Debido a la necesidad y utilidad de obtener mapas de ocupación sin elementos cambiantes, el objetivo de este trabajo es utilizar la información proporcionada por sensores RGBD para la generación de \textit{floorplans}, solucionando problemas de variabilidad en el entorno que perjudican seriamente la fiabilidad del mapeado mediante sensores láser.\\
 
@@ -114,7 +114,7 @@ Finalmente, se hará una comparativa de los resultados obtenidos únicamente con
 
 \section{Estructura del documento}
 
-Este documento está dividio en cuatro partes. En la primera parte se hará una introducción al contexto del proyecto y se explicará por qué se ha desarrollado.\\
+Este documento está dividido en cuatro partes. En la primera parte se hará una introducción al contexto del proyecto y se explicará por qué se ha desarrollado.\\
 
 La segunda parte consta de tres capítulos. En el primero de ellos se expondrán las herramientas utilizadas y se explicarán brevemente cómo se utilizan y porqué se han escogido. En un segundo capítulo, el más importante, se desarrollará el trabajo y se explicará cómo se ha llevado a cabo. En el tercer y último capítulo se expondrán los resultados y se compararán con los ideales, comentando sus diferencias y problemas encontrados.\\
 
