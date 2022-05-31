@@ -33,8 +33,8 @@
       \strng{authorbibnamehash}{3808e11c61724796f75b221aa39d0ed1}
       \strng{authornamehash}{3808e11c61724796f75b221aa39d0ed1}
       \strng{authorfullhash}{3808e11c61724796f75b221aa39d0ed1}
-      \field{sortinit}{6}
-      \field{sortinithash}{7851c86048328b027313775d8fbd2131}
+      \field{sortinit}{9}
+      \field{sortinithash}{54047ffb55bdefa0694bbd554c1b11a0}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{addendum}{(acc: 25.05.2022)}
@@ -60,8 +60,8 @@
       \strng{authorbibnamehash}{dd20b5fb6c11aa0b483e9cb71930efe3}
       \strng{authornamehash}{dd20b5fb6c11aa0b483e9cb71930efe3}
       \strng{authorfullhash}{dd20b5fb6c11aa0b483e9cb71930efe3}
-      \field{sortinit}{7}
-      \field{sortinithash}{f615fb9c6fba11c6f962fb3fd599810e}
+      \field{sortinit}{1}
+      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{addendum}{(acc: 25.05.2022)}
@@ -87,8 +87,8 @@
       \strng{authorbibnamehash}{9e1a2ed2c32ed38e6538b751157e6b43}
       \strng{authornamehash}{9e1a2ed2c32ed38e6538b751157e6b43}
       \strng{authorfullhash}{9e1a2ed2c32ed38e6538b751157e6b43}
-      \field{sortinit}{9}
-      \field{sortinithash}{54047ffb55bdefa0694bbd554c1b11a0}
+      \field{sortinit}{1}
+      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{addendum}{(acc: 25.05.2022)}
@@ -133,19 +133,52 @@
       \verb https://thenewstack.io/remembering-shakey-first-intelligent-robot/
       \endverb
     \endentry
+    \entry{thrun}{book}{}
+      \name{author}{3}{}{%
+        {{hash=5112ea130eadef0764fce0145b8b9f91}{%
+           family={Thrun},
+           familyi={T\bibinitperiod},
+           given={Sebastian},
+           giveni={S\bibinitperiod}}}%
+        {{hash=98f4ab1bc2ac191d8f8a0651315ce9c0}{%
+           family={Burgard},
+           familyi={B\bibinitperiod},
+           given={Wolfram},
+           giveni={W\bibinitperiod}}}%
+        {{hash=93b0c4a7857a82a8f94e256475887c74}{%
+           family={Fox},
+           familyi={F\bibinitperiod},
+           given={Dieter},
+           giveni={D\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {MIT Press}%
+      }
+      \strng{namehash}{cb3e97dbc1e8d4a631a5b656776c23d3}
+      \strng{fullhash}{cb3e97dbc1e8d4a631a5b656776c23d3}
+      \strng{bibnamehash}{cb3e97dbc1e8d4a631a5b656776c23d3}
+      \strng{authorbibnamehash}{cb3e97dbc1e8d4a631a5b656776c23d3}
+      \strng{authornamehash}{cb3e97dbc1e8d4a631a5b656776c23d3}
+      \strng{authorfullhash}{cb3e97dbc1e8d4a631a5b656776c23d3}
+      \field{sortinit}{1}
+      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Probabilistic Robotics}
+      \field{year}{2010}
+    \endentry
     \entry{metro_malaga}{misc}{}
       \name{author}{1}{}{%
-        {{hash=9c677286866aad38f8e9b660f5411814}{%
-           family={Wikipedia},
-           familyi={W\bibinitperiod}}}%
+        {{hash=043a87d3c77eef398c11f7ac3e13cbb9}{%
+           family={EMT},
+           familyi={E\bibinitperiod}}}%
       }
-      \strng{namehash}{9c677286866aad38f8e9b660f5411814}
-      \strng{fullhash}{9c677286866aad38f8e9b660f5411814}
-      \strng{bibnamehash}{9c677286866aad38f8e9b660f5411814}
-      \strng{authorbibnamehash}{9c677286866aad38f8e9b660f5411814}
-      \strng{authornamehash}{9c677286866aad38f8e9b660f5411814}
-      \strng{authorfullhash}{9c677286866aad38f8e9b660f5411814}
-      \field{extraname}{1}
+      \strng{namehash}{043a87d3c77eef398c11f7ac3e13cbb9}
+      \strng{fullhash}{043a87d3c77eef398c11f7ac3e13cbb9}
+      \strng{bibnamehash}{043a87d3c77eef398c11f7ac3e13cbb9}
+      \strng{authorbibnamehash}{043a87d3c77eef398c11f7ac3e13cbb9}
+      \strng{authornamehash}{043a87d3c77eef398c11f7ac3e13cbb9}
+      \strng{authorfullhash}{043a87d3c77eef398c11f7ac3e13cbb9}
       \field{sortinit}{1}
       \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
       \field{labelnamesource}{author}
@@ -153,10 +186,10 @@
       \field{addendum}{(acc: 25.05.2022)}
       \field{title}{Metro de Málaga}
       \verb{urlraw}
-      \verb https://es.wikipedia.org/wiki/Metro_de_M%C3%A1laga
+      \verb https://metromalaga.es/
       \endverb
       \verb{url}
-      \verb https://es.wikipedia.org/wiki/Metro_de_M%C3%A1laga
+      \verb https://metromalaga.es/
       \endverb
     \endentry
     \entry{stair}{online}{}
@@ -212,8 +245,8 @@
       \strng{authorbibnamehash}{a42decef415cb906e179b0ba30252598}
       \strng{authornamehash}{a42decef415cb906e179b0ba30252598}
       \strng{authorfullhash}{a42decef415cb906e179b0ba30252598}
-      \field{sortinit}{1}
-      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
+      \field{sortinit}{2}
+      \field{sortinithash}{ed39bb39cf854d5250e95b1c1f94f4ed}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{booktitle}{In AAAI 2007 Robotics Workshop}
@@ -232,9 +265,9 @@
       \strng{authorbibnamehash}{9c677286866aad38f8e9b660f5411814}
       \strng{authornamehash}{9c677286866aad38f8e9b660f5411814}
       \strng{authorfullhash}{9c677286866aad38f8e9b660f5411814}
-      \field{extraname}{2}
-      \field{sortinit}{1}
-      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
+      \field{extraname}{1}
+      \field{sortinit}{2}
+      \field{sortinithash}{ed39bb39cf854d5250e95b1c1f94f4ed}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{addendum}{(acc: 25.05.2022)}
@@ -260,8 +293,8 @@
       \strng{authorbibnamehash}{e1adbcbb92c622d0b3e619f9d0730abf}
       \strng{authornamehash}{e1adbcbb92c622d0b3e619f9d0730abf}
       \strng{authorfullhash}{e1adbcbb92c622d0b3e619f9d0730abf}
-      \field{sortinit}{1}
-      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
+      \field{sortinit}{2}
+      \field{sortinithash}{ed39bb39cf854d5250e95b1c1f94f4ed}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{addendum}{(acc: 25.05.2022)}
@@ -274,8 +307,8 @@
       \endverb
     \endentry
     \entry{roswiki}{online}{}
-      \field{sortinit}{1}
-      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
+      \field{sortinit}{2}
+      \field{sortinithash}{ed39bb39cf854d5250e95b1c1f94f4ed}
       \field{labeltitlesource}{title}
       \field{addendum}{(acc: 28.05.2022)}
       \field{title}{ROS WIKI}
@@ -310,8 +343,8 @@
       \strng{authorbibnamehash}{8d36340fd26b4bf172702ed9ddb168a1}
       \strng{authornamehash}{8d36340fd26b4bf172702ed9ddb168a1}
       \strng{authorfullhash}{8d36340fd26b4bf172702ed9ddb168a1}
-      \field{sortinit}{1}
-      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
+      \field{sortinit}{2}
+      \field{sortinithash}{ed39bb39cf854d5250e95b1c1f94f4ed}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{booktitle}{Proceedings 2007 IEEE International Conference on Robotics and Automation}
@@ -335,7 +368,7 @@
       \strng{authorbibnamehash}{9c677286866aad38f8e9b660f5411814}
       \strng{authornamehash}{9c677286866aad38f8e9b660f5411814}
       \strng{authorfullhash}{9c677286866aad38f8e9b660f5411814}
-      \field{extraname}{3}
+      \field{extraname}{2}
       \field{sortinit}{2}
       \field{sortinithash}{ed39bb39cf854d5250e95b1c1f94f4ed}
       \field{labelnamesource}{author}
@@ -363,6 +396,31 @@
       \verb{url}
       \verb https://answers.ros.org/question/212747/cvbridge-conversion-problem-asus-xtion-depth-image-to-opencv/
       \endverb
+    \endentry
+    \entry{pointcloud_paper}{article}{}
+      \name{author}{2}{}{%
+        {{hash=efa72a89c39f88310fbf5072cdca42e3}{%
+           family={Rusu},
+           familyi={R\bibinitperiod},
+           given={Radu\bibnamedelima Bogdan},
+           giveni={R\bibinitperiod\bibinitdelim B\bibinitperiod}}}%
+        {{hash=6e48c0bbf1da12af63cf1231c2d2ba32}{%
+           family={Cousins},
+           familyi={C\bibinitperiod},
+           given={Steve},
+           giveni={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{5678ccc2a6fe34d7c20fb50e90607b59}
+      \strng{fullhash}{5678ccc2a6fe34d7c20fb50e90607b59}
+      \strng{bibnamehash}{5678ccc2a6fe34d7c20fb50e90607b59}
+      \strng{authorbibnamehash}{5678ccc2a6fe34d7c20fb50e90607b59}
+      \strng{authornamehash}{5678ccc2a6fe34d7c20fb50e90607b59}
+      \strng{authorfullhash}{5678ccc2a6fe34d7c20fb50e90607b59}
+      \field{sortinit}{3}
+      \field{sortinithash}{a37a8ef248a93c322189792c34fc68c9}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{3D is here: Point Cloud Library (PCL)}
     \endentry
     \entry{yolo}{misc}{}
       \name{author}{4}{}{%
@@ -393,8 +451,8 @@
       \strng{authorbibnamehash}{e1203a0044715040adeb8c5079ee645a}
       \strng{authornamehash}{e1203a0044715040adeb8c5079ee645a}
       \strng{authorfullhash}{b5530443e433a4da53dbe3cf155225b4}
-      \field{sortinit}{2}
-      \field{sortinithash}{ed39bb39cf854d5250e95b1c1f94f4ed}
+      \field{sortinit}{3}
+      \field{sortinithash}{a37a8ef248a93c322189792c34fc68c9}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{You Only Look Once: Unified, Real-Time Object Detection}
@@ -404,8 +462,8 @@
       \endverb
     \endentry
     \entry{nn}{misc}{}
-      \field{sortinit}{2}
-      \field{sortinithash}{ed39bb39cf854d5250e95b1c1f94f4ed}
+      \field{sortinit}{3}
+      \field{sortinithash}{a37a8ef248a93c322189792c34fc68c9}
       \field{labeltitlesource}{title}
       \field{addendum}{(acc: 28.05.2022)}
       \field{journaltitle}{IBM}
@@ -431,9 +489,9 @@
       \strng{authorbibnamehash}{9c677286866aad38f8e9b660f5411814}
       \strng{authornamehash}{9c677286866aad38f8e9b660f5411814}
       \strng{authorfullhash}{9c677286866aad38f8e9b660f5411814}
-      \field{extraname}{4}
-      \field{sortinit}{2}
-      \field{sortinithash}{ed39bb39cf854d5250e95b1c1f94f4ed}
+      \field{extraname}{3}
+      \field{sortinit}{3}
+      \field{sortinithash}{a37a8ef248a93c322189792c34fc68c9}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{addendum}{(acc: 28.05.2022)}
@@ -459,9 +517,9 @@
       \strng{authorbibnamehash}{9c677286866aad38f8e9b660f5411814}
       \strng{authornamehash}{9c677286866aad38f8e9b660f5411814}
       \strng{authorfullhash}{9c677286866aad38f8e9b660f5411814}
-      \field{extraname}{5}
-      \field{sortinit}{2}
-      \field{sortinithash}{ed39bb39cf854d5250e95b1c1f94f4ed}
+      \field{extraname}{4}
+      \field{sortinit}{4}
+      \field{sortinithash}{e071e0bcb44634fab398d68ad04e69f4}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{addendum}{(acc: 28.05.2022)}
@@ -489,8 +547,8 @@
       \strng{authorbibnamehash}{812287b194eb129fa0c7cb2bd451c9c5}
       \strng{authornamehash}{812287b194eb129fa0c7cb2bd451c9c5}
       \strng{authorfullhash}{812287b194eb129fa0c7cb2bd451c9c5}
-      \field{sortinit}{2}
-      \field{sortinithash}{ed39bb39cf854d5250e95b1c1f94f4ed}
+      \field{sortinit}{4}
+      \field{sortinithash}{e071e0bcb44634fab398d68ad04e69f4}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{addendum}{(acc: 28.05.2022)}
@@ -505,9 +563,39 @@
       \verb https://keepcoding.io/blog/redes-neuronales-convolucionales/
       \endverb
     \endentry
+    \entry{foto_cnn}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=a38d4c4bb26c49766f9cdf7dac82d29f}{%
+           family={Ali},
+           familyi={A\bibinitperiod},
+           given={Amir},
+           giveni={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{a38d4c4bb26c49766f9cdf7dac82d29f}
+      \strng{fullhash}{a38d4c4bb26c49766f9cdf7dac82d29f}
+      \strng{bibnamehash}{a38d4c4bb26c49766f9cdf7dac82d29f}
+      \strng{authorbibnamehash}{a38d4c4bb26c49766f9cdf7dac82d29f}
+      \strng{authornamehash}{a38d4c4bb26c49766f9cdf7dac82d29f}
+      \strng{authorfullhash}{a38d4c4bb26c49766f9cdf7dac82d29f}
+      \field{sortinit}{4}
+      \field{sortinithash}{e071e0bcb44634fab398d68ad04e69f4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{addendum}{(acc: 31.05.2022)}
+      \field{journaltitle}{Medium}
+      \field{month}{5}
+      \field{title}{Convolutional Neural Network (CNN) with Practical Implementation}
+      \field{year}{2019}
+      \verb{urlraw}
+      \verb https://medium.com/machine-learning-researcher/convlutional-neural-network-cnn-2fc4faa7bb63
+      \endverb
+      \verb{url}
+      \verb https://medium.com/machine-learning-researcher/convlutional-neural-network-cnn-2fc4faa7bb63
+      \endverb
+    \endentry
     \entry{pandas}{online}{}
-      \field{sortinit}{3}
-      \field{sortinithash}{a37a8ef248a93c322189792c34fc68c9}
+      \field{sortinit}{4}
+      \field{sortinithash}{e071e0bcb44634fab398d68ad04e69f4}
       \field{labeltitlesource}{title}
       \field{addendum}{(acc: 28.05.2022)}
       \field{title}{Pandas}
@@ -519,8 +607,8 @@
       \endverb
     \endentry
     \entry{matplotlib}{online}{}
-      \field{sortinit}{3}
-      \field{sortinithash}{a37a8ef248a93c322189792c34fc68c9}
+      \field{sortinit}{4}
+      \field{sortinithash}{e071e0bcb44634fab398d68ad04e69f4}
       \field{labeltitlesource}{title}
       \field{addendum}{(acc: 28.05.2022)}
       \field{title}{Matplotlib}
@@ -545,8 +633,8 @@
       \strng{authorbibnamehash}{97db925153d58d6a997176246fa6d827}
       \strng{authornamehash}{97db925153d58d6a997176246fa6d827}
       \strng{authorfullhash}{97db925153d58d6a997176246fa6d827}
-      \field{sortinit}{3}
-      \field{sortinithash}{a37a8ef248a93c322189792c34fc68c9}
+      \field{sortinit}{4}
+      \field{sortinithash}{e071e0bcb44634fab398d68ad04e69f4}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{addendum}{(acc: 26.05.2022)}
@@ -572,8 +660,8 @@
       \strng{authorbibnamehash}{a8ad4a5f43253f69552460c946e34e49}
       \strng{authornamehash}{a8ad4a5f43253f69552460c946e34e49}
       \strng{authorfullhash}{a8ad4a5f43253f69552460c946e34e49}
-      \field{sortinit}{3}
-      \field{sortinithash}{a37a8ef248a93c322189792c34fc68c9}
+      \field{sortinit}{4}
+      \field{sortinithash}{e071e0bcb44634fab398d68ad04e69f4}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{addendum}{(acc: 26.05.2022)}
@@ -599,8 +687,8 @@
       \strng{authorbibnamehash}{b4f4d0b82b7f7686e3d9ee1d7f29e99e}
       \strng{authornamehash}{b4f4d0b82b7f7686e3d9ee1d7f29e99e}
       \strng{authorfullhash}{b4f4d0b82b7f7686e3d9ee1d7f29e99e}
-      \field{sortinit}{3}
-      \field{sortinithash}{a37a8ef248a93c322189792c34fc68c9}
+      \field{sortinit}{4}
+      \field{sortinithash}{e071e0bcb44634fab398d68ad04e69f4}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{addendum}{(acc: 26.05.2022)}
@@ -626,8 +714,8 @@
       \strng{authorbibnamehash}{53f42f424532d55e35ab63be96aba40f}
       \strng{authornamehash}{53f42f424532d55e35ab63be96aba40f}
       \strng{authorfullhash}{53f42f424532d55e35ab63be96aba40f}
-      \field{sortinit}{3}
-      \field{sortinithash}{a37a8ef248a93c322189792c34fc68c9}
+      \field{sortinit}{5}
+      \field{sortinithash}{5dd416adbafacc8226114bc0202d5fdd}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{addendum}{(acc: 26.05.2022)}
@@ -651,8 +739,8 @@
       \strng{authorbibnamehash}{05665b7826ff460887094429e8a32116}
       \strng{authornamehash}{05665b7826ff460887094429e8a32116}
       \strng{authorfullhash}{05665b7826ff460887094429e8a32116}
-      \field{sortinit}{3}
-      \field{sortinithash}{a37a8ef248a93c322189792c34fc68c9}
+      \field{sortinit}{5}
+      \field{sortinithash}{5dd416adbafacc8226114bc0202d5fdd}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{addendum}{(acc: 26.05.2022)}
@@ -683,8 +771,8 @@
       \strng{authorbibnamehash}{4659dddbaccf44d0b8dfddffde82919a}
       \strng{authornamehash}{4659dddbaccf44d0b8dfddffde82919a}
       \strng{authorfullhash}{4659dddbaccf44d0b8dfddffde82919a}
-      \field{sortinit}{3}
-      \field{sortinithash}{a37a8ef248a93c322189792c34fc68c9}
+      \field{sortinit}{5}
+      \field{sortinithash}{5dd416adbafacc8226114bc0202d5fdd}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{addendum}{(acc: 29.05.2022)}
@@ -708,9 +796,9 @@
       \strng{authorbibnamehash}{9c677286866aad38f8e9b660f5411814}
       \strng{authornamehash}{9c677286866aad38f8e9b660f5411814}
       \strng{authorfullhash}{9c677286866aad38f8e9b660f5411814}
-      \field{extraname}{6}
-      \field{sortinit}{3}
-      \field{sortinithash}{a37a8ef248a93c322189792c34fc68c9}
+      \field{extraname}{5}
+      \field{sortinit}{5}
+      \field{sortinithash}{5dd416adbafacc8226114bc0202d5fdd}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{addendum}{(acc: 26.05.2022)}

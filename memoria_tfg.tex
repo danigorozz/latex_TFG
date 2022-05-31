@@ -20,6 +20,8 @@ citestyle=numeric
 
 \usepackage{array}
 
+\newcommand{\comment}[1]{}
+
 \begin{document}
 
 
@@ -32,13 +34,20 @@ citestyle=numeric
 \pagenumbering{Roman}
 \setcounter{page}{5} % Habrá que modificarlo cuando se añadan el resto de páginas
 
-En la actualidad, los robots móviles utilizan mapas para localizarse. Estos mapas son generados a partir de los barridos de un láser, que detecta los objetos y sus distancias, obteniendo zonas ocupadas y desocupadas. Sin embargo, existen elementos en el entorno que no pertenecen a la estructura del mismo y pueden variar su posición de un día para otro, invalidando el mapa generado. El objetivo de este trabajo es aprovechar la información de profundidad proporcionada por sensores RGBD para generar un mapa donde únicamente se representen los elementos estructurales. Para ello se han procesado los datos de profundidad y se han guardado los elementos que estén más alejados, eliminando los objetos que se encuentren frente a una pared. Paralelamente, se ha utilizado la imagen de color de la cámara para realizar un proceso de detección de objetos mediante una red neuronal convolucional ya entrenada, para realizar un posterior análisis de fiabilidad de la red. Los resultados obtenidos son algo difusos y no permiten la aplicación de esta metodología al mundo real. Sin embargo se atisba que, puliendo algunos aspectos hallados durante el transcurso del trabajo, se puede conseguir un buen producto final.\\
+En la actualidad, los robots móviles utilizan mapas para localizarse. Estos mapas son generados a partir de los barridos de un láser, que detecta los objetos y sus distancias, obteniendo zonas ocupadas y desocupadas. Sin embargo, existen elementos en el entorno que no pertenecen a la estructura del mismo y pueden variar su posición de un día para otro, invalidando el mapa generado. El objetivo de este trabajo es aprovechar la información de profundidad proporcionada por sensores RGBD para generar un mapa donde únicamente se representen los elementos estructurales. Para ello se han procesado los datos de profundidad y se han guardado los elementos que estén más alejados, eliminando los objetos que se encuentren frente a una pared. Paralelamente, se ha utilizado la imagen de color de la cámara para realizar un proceso de detección de objetos mediante una red neuronal convolucional ya entrenada. Los datos obtenidos tras la detección han sido procesados para así analizar los resultados de la red y su fiabilidad.\\
 
+El mapa resultante del procesamiento de la información de profundidad ha conseguido eliminar los objetos frente a las paredes, cumpliendo con el objetivo propuesto en este trabajo. El mapa permitiría al robot localizarse incluso si los objetos presentes durante el proceso de generación del mapa hubieran cambiado de posición. El análisis de los objetos detectados permite establecer que la red neuronal, pese a que realiza algunas detecciones erróneas, es realmente fiable.\\
 
 
 
 \chapter*{Abstract}
 \addcontentsline{toc}{chapter}{Abstract}
+
+Nowadays, mobile robots use maps to locate themselves. These maps are generated from a laser scanning, which detects objects and their distances, getting occupied and unoccupied zones. However, there are elements that do not belong to the environment structure and they can vary their position, invalidating the generated map. The aim of this work is to take advantage of the depth information provided by RGBD sensors to generate a map containing only the structural elements. To achieve it, the depth data has been processed and the furthest elements have been saved, avoiding objects facing the walls. In parallel, the colour data of the camera have been used to object detection using a trained convolutional neural network. The data obtained after detection has been processed in order to analyse the results of the network and its reliability.\\
+
+The map resulting from the processing of the depth information has managed to eliminate the objects in front of the walls, fulfilling the objective proposed in this work. The map would allow the robot to locate itself even if the objects present during the map generation process had changed position. The analysis of the detected objects allows us to establish that the neural network, despite making some erroneous detections, is really reliable.
+
+
 
 \chapter*{Agradecimientos}
 \addcontentsline{toc}{chapter}{Agradecimientos}
@@ -69,6 +78,8 @@ A todos ellos, muchas gracias.\\
 
 \chapter{Herramientas utilizadas}
 
+En este capítulo se describen brevemente las herramientas que se han utilizado de realización de este trabajo. Se hará una introducción a ROS y sus mecanismos para la comunicación. Se explicarán los conceptos de ``sensor RGBD'', ``mapa de ocupación'' y ``nube de puntos''. Seguidamente se introducirá el concepto de red neuronal convolucional y de ``YOLO'', la red que se ha utilizado en este proyecto. Por último, se expondrán muy brevemenete las herramientas de Python utilizadas para el análisis de los datos.\\
+
 \section{Robotic Operating System}
 
 Robot Operating System (ROS) es un framework para el desarrollo de software de robots. Se desarrolló originariamente en 2007 por el Laboratorio de Inteligencia Artificial de Stanford para dar soporte a su proyecto STAIR2\footnote{STAIR (Stanford Artificial Intelligence Robot) es un proyecto llevado a cabo por la Universidad de Stanford para desarrollar robots capaces de navegar en entornos indoor e interactuar con objetos y personas mediante inteligencia artificial. Para su versión 2.0 desarrollaron el framework de ROS. \cite{stair}} \cite{stair_paper}. Es software libre bajo términos de licencia BSD\footnote{La licencia BSD es la licencia de software libre otorgada principalmente para los sistemas BSD (Berkeley Software Distribution). Es una licencia permisiva que permite la redistribución libre. \cite{licencia}} que, pese a no ser un sistema operativo, provee los servicios estándar de éstos entre los que se incluyen la abstracción del hardware, el control de dispositivos de bajo nivel, la implementación de funcionalidad de uso común, el paso de mensajes entre procesos y el mantenimiento de paquetes. Está basado en una arquitectura de grafos donde el procesamiento toma lugar en los nodos que pueden recibir, mandar y multiplexar mensajes de sensores, control, estados, planificaciones y actuadores, entre otros.\\
@@ -78,15 +89,13 @@ Robot Operating System (ROS) es un framework para el desarrollo de software de r
 
 La unidad básica de una comunicación en ROS es el \textit{nodo}. Un nodo es un programa diseñado en Python o C++ que se comunica con otros nodos principalmente mediante \textit{topics}. Cuando varios nodos se complementan para cumplir una determinada función, se suelen agrupar en paquetes. Un paquete contiene, entre otras cosas, el nodo o los nodos que lo conforman, las dependencias necesarias para la ejecución de alguno de sus nodos, información acerca del propio paquete, etc. ROS tiene sus propios paquetes incluidos de forma estándar con la instalación pero además se pueden instalar paquetes de terceros, desarrollados por otros usuarios.\\
 
-Existe un nodo especial, llamado nodo \textit{master}, que se encarga de registrar las direcciones de cada nodo y qué y dónde publica o se suscribe. Además, se encarga de alojar el servidor de parámetros, accesibles y modificables en cualquier momento. Es necesario lanzar este nodo previamente al lanzamiento de cualquier otro. \\
+Existe un nodo especial, llamado nodo \textit{master}, que se encarga de registrar las direcciones de cada nodo y qué y en qué topic publica o se suscribe. Además, se encarga de alojar el servidor de parámetros, accesibles y modificables en cualquier momento. Es necesario lanzar este nodo previamente al lanzamiento de cualquier otro. \\
 
 Los topics son el método más común de comunicación entre nodos. Está basado en el modelo de publicador/suscriptor. Los nodos pueden publicar (\textit{Publisher}) o recibir (\textit{Subscriber}) mensajes de un único tipo, establecidos por el nodo publicador. En un mismo topic pueden publicar y suscribirse tantos nodos se necesiten\footnote{Realmente, ROS especifica que no existe límite de nodos suscritos a un mismo topic. Sin embargo, se ha demostrado que a partir de 10 nodos, la fiabilidad se ve reducida y la latencia aumentada de forma significativa, pudiendo incluso ocasionar que algunos mensajes no sean recibidos por algunos suscriptores. \cite{issue}}. \\
 
 Otro método de comunicación son los servicios o \textit{services}. Están basados en un modelo de llamada/respuesta. Mientras que los topics permiten a los nodos obtener continuas actualizaciones de datos, los servicios solo ofrecen respuesta tras ser llamados. Permiten la inclusión de parámetros tanto en la solicitud como en la respuesta al servicio. Este método es bloqueante, es decir, el nodo solicitante queda bloqueado al momento de enviar la solicitud hasta que reciba una respuesta, por lo que están pensados para ser utilizados en tareas que no ocupen mucho tiempo.\\
 
-El otro método de comunicación que existe en ROS son las acciones o \textit{actions}, pensadas para tareas que necesiten una gran cantidad de tiempo para poder ser realizadas. Las acciones funcionan con un modelo cliente/servidor. A diferencia que los servicios, las acciones no son bloqueantes y permiten ser canceladas mientras se están ejecutando.\\
-
-Como se ha comentado, el método más usual de comunicación es a través de topics, donde los nodos envían y reciben información continuamente, sin peticiones ni esperas. Los servicios y acciones se utilizan en función de los requerimientos del software a desarrollar.\\
+El otro método de comunicación que existe en ROS son las acciones o \textit{actions}, pensadas para tareas que necesiten una gran cantidad de tiempo para poder ser realizadas. Las acciones funcionan con un modelo cliente/servidor pero, a diferencia de los servicios, no son bloqueantes y permiten ser canceladas mientras se están ejecutando.\\
 
 \begin{figure}[H]
  \centering
@@ -97,7 +106,7 @@ Como se ha comentado, el método más usual de comunicación es a través de top
     \includegraphics[width=0.5\textwidth]{exp_services.png}}
   \subfloat[Actions]{
     \includegraphics[width=0.5\textwidth]{exp_actions.png}}
- \caption{Mecanismos de comunicación en ROS. (a) Topics, (b) Servicios y (c) Acciones.}
+ \caption{Mecanismos de comunicación en ROS. (a) Topics, (b) Servicios y (c) Acciones. \cite{roswiki}}
  \label{fig:comm}
 \end{figure}
 
@@ -113,7 +122,7 @@ Pero la que es quizás la mayor ventaja de ROS frente a otros frameworks y softw
 
 \section{Mapas de ocupación}
 
-Un mapa o rejilla de ocupación es una representación bidimensional del entorno que se almacena en el robot para realizar tareas de navegación. Está formado por celdas que discretizan el entorno y determinan si una porción del espacio está ocupado o no. Generalmente, las celdas ocupadas se representan con el color negro, y las celdas libres con el blanco.\\
+Un mapa o rejilla de ocupación es una representación bidimensional del entorno que se almacena en el robot para realizar tareas de navegación. Está formado por celdas que discretizan el entorno y determinan si una porción del espacio está ocupado o no. Generalmente, las celdas ocupadas se representan con el color negro, las celdas libres en color blanco y en gris se representa el espacio no explorado aún por el robot.\\
 
 Para generar estos mapas, se utiliza la información obtenida de los diferentes sensores que conforman el robot, como pueden ser infrarrojos, cámaras RGBD, sónares o, los más utilizados, láseres 2D. Independientemente de la fiabilidad del sensor, no es posible establecer con certeza si una celda está ocupada o no. En la generación de estos mapas, típicamente se establecen tres suposiciones: una celda puede estar libre u ocupada, cada celda es independiente a las demás y el entorno es estático. Para estimar las distribuciones de probabilidad de cada celda se utiliza generalmente un Filtro de Ocupación Bayesiano (BOF) \cite{occupancy_grid}.\\
 
@@ -155,7 +164,7 @@ El valor de distancia para cada píxel establece un nivel de gris. Generalmente,
 
 \section{Nubes de puntos}
 
-Una nube de puntos o \textit{pointcloud} es un conjunto de vértices en un sistema de coordenadas tridimensional. Estos vértices se identifican habitualmente como coordenadas X, Y y Z y son representaciones de la superficie externa de un objeto. Se crean a partir de escáneres láser tridimensionales o imágenes de profundidad.\\
+Una nube de puntos o \textit{pointcloud} es un conjunto de vértices en un sistema de coordenadas tridimensional. Estos vértices se identifican habitualmente como coordenadas X, Y y Z y son representaciones de la superficie externa de un objeto. Dada la imagen de profundidad y la configuración intrínseca de la cámara, se puede obtener esta representación tridimensional. También se puede generar una nube de puntos a partir de láseres 3D, sensores con mayor precisión pero mucho menos económicos.\\
 
 Las nubes de puntos tienen infinidad de aplicaciones como la elaboración de modelos 3D en CAD de piezas fabricadas, la inspección de calidad en metrología y muchas otras en el ámbito de la visualización, animación, texturización y aplicaciones de personalización masiva.\\
 
@@ -163,7 +172,7 @@ Las nubes de puntos tienen infinidad de aplicaciones como la elaboración de mod
 	\begin{center} 
 		\includegraphics[width=0.7\textwidth]{pointcloud-img.png}
 	\end{center}
-	\caption{Ejemplo de una nube de puntos coloreada representando a una estructura.}
+	\caption{Ejemplo de una nube de puntos. \cite{pointcloud_paper}}
 	\label{fig:pc}
 \end{figure}
 
@@ -175,7 +184,7 @@ You only look once (YOLO) es un sistema en tiempo real de detección de objetos 
 	\begin{center} 
 		\includegraphics[width=0.8\textwidth]{grafica_rendimiento_yolov3.png}
 	\end{center}
-	\caption{Comparación de YOLO con otros modelos mostrando el tiempo de inferencia (eje X) y la métrica COCO mAP-50 (eje Y). Se puede ver como YOLO tiene unos tiempos de inferencia muchos menores que la mayoria de algoritmos, mantieniendo una buena puntuación en la métrica.}
+	\caption{Comparación de YOLO con otros modelos mostrando el tiempo de inferencia (eje X) y la métrica COCO mAP-50 (eje Y) \cite{yolo}. Se puede ver como YOLO tiene unos tiempos de inferencia muchos menores que la mayoría de algoritmos, manteniendo buena puntuación en la métrica.}
 	\label{fig:rend}
 \end{figure}
 
@@ -185,7 +194,7 @@ El procedimiento llevado a cabo por YOLO es sencillo. Primero divide la imagen e
 	\begin{center} 
 		\includegraphics[width=0.8\textwidth]{yolo_proced.png}
 	\end{center}
-	\caption{Procedimiento llevado a cabo por YOLO. Divide la imaegn en una rejilla de $S \times S$ y predice las bounding boxes junto con sus probabilidades. Las bajas probabilidades se eliminan y, posteriormente las cajas duplicadas, obteniendo así la detección final.}
+	\caption{Procedimiento llevado a cabo por YOLO \cite{yolo}. Divide la imaegn en una rejilla de $S \times S$ y predice las bounding boxes junto con sus probabilidades. Las bajas probabilidades se eliminan y, posteriormente las cajas duplicadas, obteniendo así la detección final.}
 	\label{fig:proced}
 \end{figure}
 
@@ -193,7 +202,7 @@ YOLO es fácilmente implementable en ROS gracias al paquete darknet\_ros, que pe
 
 \subsection{Redes neuronales convolucionales}
 
-Una red neuronal o NN (del inglés, \textit{Neural Network}) es un modelo simplificado que emula el modo en que el cerebro humano procesa la información, simultaneando multitud de unidades de procesamiento interconectadas, emulando una versión artificial de las neuronas. Las neuronas se organizan en capas. En una red neuronal hay tres tipos de capas: la capa de entrada, unas o varias capas ocultas y la capa de salida. Las neuronas se conectan con las neuronas de la siguiente capa mediante ponderaciones, propagando los datos de entrada a la salida. La red aprende examinando los registros individuales, generando una predicción para cada registro y, en caso de haber realizado una predicción incorrecta, corrigiendo las ponderaciones. Este procedimiento, conocido como entrenamiento, se repite hasta alcanzar criterios de finalización.  Una vez la red ha sido entrenada, puede aplicarse en casos en los que no conoce el resultado para obtener, en función del tipo y de la cantidad de entrenamiento, unos resultados satisfactorios o erróneos. \cite{nn}\\
+Una red neuronal artificial o ANN (del inglés, \textit{Artificial Neural Network}) es un modelo simplificado que emula el modo en que el cerebro humano procesa la información, simultaneando multitud de unidades de procesamiento interconectadas, emulando una versión artificial de las neuronas. Las neuronas se organizan en capas. En una red neuronal hay tres tipos de capas: la capa de entrada, unas o varias capas ocultas y la capa de salida. Las neuronas se conectan con las neuronas de la siguiente capa mediante ponderaciones, propagando los datos de entrada a la salida. La red aprende examinando los registros individuales, generando una predicción para cada registro y, en caso de haber realizado una predicción incorrecta, corrigiendo las ponderaciones. Este procedimiento, conocido como entrenamiento, se repite hasta alcanzar criterios de finalización.  Una vez la red ha sido entrenada, puede aplicarse en casos en los que no conoce el resultado para obtener, en función del tipo y de la cantidad de entrenamiento, unos resultados satisfactorios o erróneos. \cite{nn}\\
 
 \begin{figure}[h]
 	\begin{center} 
@@ -204,6 +213,14 @@ Una red neuronal o NN (del inglés, \textit{Neural Network}) es un modelo simpli
 \end{figure}
 
 Una red neuronal convolucional o CNN (del inglés, \textit{Convolutional Neural Network}) son un tipo de NN donde las neuronas corresponden a campos receptivos de una manera muy similar a las neuronas de la corteza visual primaria de un cerebro humano. Es una variación del perceptrón multicapa\footnote{El perceptrón multicapa es una red neuronal artificial formada por múltiples capas, de tal forma que tienen capacidad para resolver problemas que nos son linealmente separables. \cite{perceptron}}, muy efectiva para tareas de visión artificial. Las capas ocultas de una CNN están especializadas en determinadas funciones de forma que las primeras capas pueden detectar líneas o curvas y se van especializando hasta llegar a capas más profundas que reconocen formas complejas como rostros o siluetas. \cite{cnn} \\
+
+\begin{figure}[h]
+	\begin{center} 
+		\includegraphics[width=0.9\textwidth]{cnn.png}
+	\end{center}
+	\caption{Capas de una red neuronal convolucional (CNN). \textit{Convolution}, para la operación de convolución; \textit{Pooling} o \textit{Downsampling}, para la operación de submuestreo;  \textit{Flattening}, para la  transformación de arrays 2D a vectores lineales y \textit{Full Connection}, una red neuronal artificial basada en perceptrón multicapa. \cite{foto_cnn}}
+	\label{fig:cnn}
+\end{figure}
 
 \section{Pandas y Matplotlib}
 
@@ -217,15 +234,15 @@ Estas herramientas, en combinación con la librería \textit{Numpy} (diseñada p
 
 \chapter{Diseño e implementación}
 
-Para implementar el sistema que nos permita obtener estos mapas de ocupación a partir de la imagen de profundidad generada por una cámara RGBD, se utilizarán una serie de nodos de ROS. Algunos de estos paquetes y nodos son proporcionados por la comunidad de usuarios de ROS. Otros son diseñados expresamente para este proyecto.\\
+Para implementar el sistema que nos permita obtener estos mapas de ocupación a partir de la imagen de profundidad generada por una cámara RGBD, se utilizarán una serie de nodos de ROS. Algunos de estos paquetes y nodos son proporcionados por la comunidad de usuarios de ROS. Otros son diseñados e implementados expresamente para este proyecto.\\
 
 Primeramente se realizará una visión general de todo el conjunto de nodos y paquetes. Se explicará el camino que llevará la información y las formas que tienen los nodos de comunicarse.\\
 
-Sobre los paquetes de terceros, se hará una breve explicación sobre la función que tienen de fábrica y la funcionalidad que se le han dado en este trabajo, así como el modo de comunicación con todo el árbol de nodos.\\
+Con respecto a los paquetes de terceros, se hará una breve explicación sobre su función y la funcionalidad que se le han dado en este trabajo, así como el modo de comunicación con todo el grafo de nodos.\\
 
 \section{Vista general del sistema}
 
-Como se ha comentado, el objetivo es transformar la imagen de profundidad que se obtiene de un sensor RGBD en un láser artificial para generar un mapa de ocupación. En otro proceso, simultáneamente o de forma asíncrona, se generará un archivo de texto o CVS con los elementos detectado por YOLO de la imagen de color para tener un registro y poder analizarlo. En la figura \ref{fig:esq_general} se muestra el árbol de nodos y topics de todo el sistema. Los nodos que han sido diseñados para este proyecto se muestran en color azul. Los nodos que han sido obtenidos de otras fuentes pero han necesitado de alguna modificación en su código se muestran en color naranja. Los nodos que no se han modificado se muestran en blanco. Los topics se representan con una caja de color blanco.\\
+Como se ha comentado, el objetivo es transformar la imagen de profundidad que se obtiene de un sensor RGBD en un láser artificial para generar un mapa de ocupación. En otro proceso se generará un archivo de texto o CVS con los elementos detectado por YOLO de la imagen de color para tener un registro y poder analizarlo. En la figura \ref{fig:esq_general} se muestra el grafo de nodos y topics de todo el sistema. Los nodos que han sido diseñados para este proyecto se muestran en color azul. Los nodos que han sido obtenidos de otras fuentes pero han necesitado de alguna modificación en su código se muestran en color naranja. Los nodos que no se han modificado se muestran en blanco. Los topics se representan con una caja de color blanco.\\
 
 \begin{figure}[h]
 	\begin{center} 
@@ -241,11 +258,12 @@ A continuación se enumeran todos los nodos que se van a utilizar en este proyec
 
 	\item El nodo \texttt{cam\_info} es un nodo diseñado expresamente para este trabajo. Se encarga de recibir la cabecera de la imagen de profundidad para generar un mensaje con información de la cámara y publicarlo.
 	\item El nodo \texttt{sync\_info} es otro de los que han sido diseñados para el proyecto. Su función es sincronizar los mensajes de la imagen de profundidad y de la información de la cámara.
+	\item El nodo \texttt{write\_objects} es un nodo diseñado para este proyecto con el fin de procesar los objetos detectados y escribirlos en un archivo de texto para su posterior análisis.
 	\item \texttt{depthimage\_to\_laserscan} es un nodo de un paquete homónimo diseñado por Chad Rocke \cite{di2ls} que se encarga, principalmente, de transformar una imagen de profundidad en un barrido láser en función de unos parámetros. Para implementar el nodo en este trabajo modificaremos algunos fragmentos de su código.
 	\item El nodo \texttt{slam\_gmapping} es un nodo del paquete \texttt{gmapping} diseñado por Brian Gerkey \cite{gmapping}. Su función es la de obtener la localización del robot generando el mapa de ocupación.
 	\item \texttt{republish} es un nodo que pertenece al paquete \texttt{image\_transport} diseñado por Patrick Mihelich \cite{republish}. Se encarga de descomprimir las imágenes de entrada y publicarlas en formato descomprimido.
 	\item El nodo \texttt{darknet\_ros} es un nodo de un paquete con el mismo nombre diseñado por Marko Bjelonic \cite{darknet}. Implementa YOLO en ROS.
-	\item El nodo \texttt{write\_objects} es un nodo diseñado para este proyecto con el fin de procesar los objetos detectados y escribirlos en un archivo de texto para su posterior análisis.
+	
 	
 
 \end{itemize}
@@ -438,7 +456,17 @@ Una vez obtenido el registro de los objetos en formato CSV es posible procesar e
 
 \chapter{Resultados obtenidos} \label{chapter.resultados}
 
-En este capítulo se mostrarán los resultados que se han obtenido tras implementar el sistema. Primeramente se expondrá el mapa generado con la imagen de profundidad y los mapas obtenidos utilizando diferentes parámetros. Luego se hará una comparativa con el resultado obtenido a partir del láser 2D incorporado en el robot. En una segunda parte se mostrarán algunas gráficas realizadas con el registro de objetos detectados y se expondrán los posibles errores de la red neuronal en el proceso de la detección.\\
+En este capítulo se mostrarán los resultados que se han obtenido tras implementar el sistema. Primeramente se hará una comparativa con el resultado obtenido a partir del láser 2D y se expondrán los mapas generados utilizando diferentes parámetros. En una segunda parte se mostrarán algunas gráficas realizadas con el registro de objetos detectados y se expondrán los posibles errores de la red neuronal en el proceso de la detección.\\
+
+Los datos con los que se ha trabajado proceden de la navegación de un robot móvil dotado de cámaras RGBD y láser 2D en un laboratorio de investigación de la Escuela Técnico Superior de Ingeniería Informática. El robot mencionado es el robot \textit{Giraff}. Entre otros elementos, este robot está dotado de dos cámaras RGBD modelo \textit{ORBBEC Astra} y un escáner láser \textit{Hokuyo URG-04LX-UG01}. De las dos cámaras disponibles, se utilizará aquella situada a menor altura (figura \ref{fig:giraff}). \\
+
+\begin{figure}[h]
+	\begin{center} 
+		\includegraphics[width=0.5\textwidth]{giraff.png}
+	\end{center}
+	\caption{Robot Giraff y sus componentes.}
+	\label{fig:giraff}
+\end{figure}
 
 \section{Mapa generado a partir de la imagen de profundidad}
 
@@ -456,7 +484,7 @@ En la figura \ref{fig:res_mapas} se muestra el resultado de generar el mapa a pa
 
 En el mapa generado con el láser se pueden ver los entrantes y salientes que se forman debido a la presencia de mobiliario delante de las paredes que impide obtener una medida real de la estructura. Además, en zonas interiores existen muchos grupos pequeños de celdas ocupadas causadas por la presencia de patas de mesas, sillas y otros elementos de menor tamaño. Sin olvidar que la grabación cuenta con la presencia de personas que modifican su posición, complicando aún más la generación del mapa.\\
 
-Con el mapa obtenido gracias al procesamiento de la imagen de profundidad, se puede comprobar como los elementos situdos entre el sensor y las paredes no se tienen en cuenta, quedando el interior del mapa totalmente ``limpio''. Además, las zonas donde se sitúa el mobiliario quedan mucho más suavizadas, mostrándose únicamente la pared stuada tras el mismo. En la figura \ref{fig:comp} se muestran los dos mapas superpuestos para poder ver mejor la diferencia entre sendos mapas.\\
+Con el mapa obtenido gracias al procesamiento de la imagen de profundidad, se puede comprobar cómo los elementos situdos entre el sensor y las paredes no se tienen en cuenta, quedando el interior del mapa totalmente ``limpio''. Además, las zonas donde se sitúa el mobiliario quedan mucho más suavizadas, mostrándose únicamente la pared situada tras el mismo. En la figura \ref{fig:comp} se muestran los dos mapas superpuestos para poder ver mejor la diferencia entre sendos mapas.\\
 
 Pese a que mejora al láser en muchos aspectos, el mapa generado con la cámara tiene numerosos problemas. Como se puede observar, las paredes no son totalmente rectas sino que tienen curvatura, lo que provoca que las esquinas no formen 90º. Incluso hay paredes, como la que está situada más a la izquierda, que parecen desviarse con respecto al mapa global.\\
 
@@ -545,7 +573,7 @@ Otro parámetro que se ha cambiado para obtener mejores resultados es la distanc
 
 YOLO es una de las redes neuronales más rápidas en el ámbito de la detección y localización de objetos en una imagen. Sin embargo, esta velocidad tan característica le hace sacrificar algo de exactitud en sus medidas, convirtiéndola en una red no del todo fiable. Aún así, continúa siendo de las mejores en este aspecto.\\
 
-Con el nodo \texttt{write\_objects} obteníamos un archivo de texto con los datos en formato CSV, un formato que permite procesar los datos de manera sencilla. Este archivo contiene información sobre los objetos o clases detectadas, sus probabilidades, la pose del robot (posición y orientación) y el tiempo en el instante en que se detectaron dichos objetos. Para entender la trayectoria seguida por el robot, se propone la gráfica de la figura \ref{fig:graf_trayectoria}. Destacar que no comienza en el origen de coordenadas porque existe cierto desfase entre la ejecución de YOLO y los demás nodos, debido a la potencia necesaria para lanzarlo.\\
+El nodo \texttt{write\_objects} genera un archivo de texto con los datos en formato CSV, un formato que permite procesar los datos de manera sencilla. Este archivo contiene información sobre los objetos o clases detectadas, sus probabilidades, la pose del robot (posición y orientación) y el tiempo en el instante en que se detectaron dichos objetos. Para entender la trayectoria seguida por el robot, se propone la gráfica de la figura \ref{fig:graf_trayectoria}. Destacar que no comienza en el origen de coordenadas porque existe cierto desfase entre la ejecución de YOLO y los demás nodos, debido a la potencia necesaria para lanzarlo.\\
 
 \begin{figure}[h]
 	\begin{center} 
@@ -591,7 +619,7 @@ En cambio, en el laboratorio sí que hay un frigorífico. Concretamente, un frig
 	\begin{center} 
 		\includegraphics[width=0.6\textwidth]{graf_refrigerator.png}
 	\end{center}
-	\caption{Momentos en los que se ha detectado la clase `refrigerator'. Los puntos azules representan la trayectoria del robot, los rojos las veces que se detectó la clase.}
+	\caption{Momentos en los que se ha detectado la clase `refrigerator'. Los puntos azules representan la trayectoria del robot, los rojos las veces que se detectó la clase de forma incorrecta y los verdes las veces que los detectó correctamente.}
 	\label{fig:graf_refrigerator}
 \end{figure}
 
@@ -705,6 +733,8 @@ Las principales ventajas de este sistema de computación son:
 
 \textit{Draw.io} es un recurso web gratuito que sirve para realizar grafos. Todos los diagramas de este trabajo se han creado con esta herramienta. Se ha utilizado por su facilidad de uso y por la oportunidad de hacerlo online sin necesidad de instalar ningún software adicional.\\
 
+\comment{
+
 \chapter{Código de los nodos diseñados expresamente para este proyecto}
 
 \section{Nodo \texttt{cam\_info}}
@@ -755,7 +785,7 @@ Las principales ventajas de este sistema de computación son:
 \vspace{0.2cm}
 \lstinputlisting[language=C++, caption=Código del archivo \texttt{main\_write\_objects.hpp}]{codes/main_write_objects.cpp}
 \vspace{0.4cm}
-
+}
 \printbibliography
 
 
