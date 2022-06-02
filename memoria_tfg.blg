@@ -1,23 +1,25 @@
 [0] Config.pm:304> INFO - This is Biber 2.14 (beta)
 [0] Config.pm:307> INFO - Logfile is 'memoria_tfg.blg'
-[61] biber:322> INFO - === mar may 31, 2022, 18:09:32
-[72] Biber.pm:415> INFO - Reading 'memoria_tfg.bcf'
-[126] Biber.pm:943> INFO - Found 30 citekeys in bib section 0
-[137] Biber.pm:4256> INFO - Processing section 0
-[138] Utils.pm:75> INFO - Globbing data source 'bibliografia.bib'
-[138] Utils.pm:91> INFO - Globbed data source 'bibliografia.bib' to bibliografia.bib
-[146] Biber.pm:4455> INFO - Looking for bibtex format file 'bibliografia.bib' for section 0
-[147] bibtex.pm:1653> INFO - LaTeX decoding ...
-[166] bibtex.pm:1471> INFO - Found BibTeX data source 'bibliografia.bib'
-[183] Utils.pm:293> WARN - month field 'nov' in entry 'vikingos' is not an integer - this will probably not sort properly.
-[188] Utils.pm:293> WARN - month field 'Apr' in entry 'shakey1' is not an integer - this will probably not sort properly.
-[191] Utils.pm:293> WARN - month field 'Dec' in entry 'shakey2' is not an integer - this will probably not sort properly.
-[225] Utils.pm:293> WARN - month field 'Aug' in entry 'nn' is not an integer - this will probably not sort properly.
-[232] Utils.pm:293> WARN - month field 'Jan' in entry 'cnn' is not an integer - this will probably not sort properly.
-[235] Utils.pm:293> WARN - month field 'May' in entry 'foto_cnn' is not an integer - this will probably not sort properly.
-[273] UCollate.pm:68> INFO - Overriding locale 'es-ES' defaults 'variable = shifted' with 'variable = non-ignorable'
-[273] UCollate.pm:68> INFO - Overriding locale 'es-ES' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[273] Biber.pm:4084> INFO - Sorting list 'none/global//global/global' of type 'entry' with template 'none' and locale 'es-ES'
-[289] bbl.pm:652> INFO - Writing 'memoria_tfg.bbl' with encoding 'UTF-8'
-[298] bbl.pm:755> INFO - Output to memoria_tfg.bbl
-[298] Biber.pm:128> INFO - WARNINGS: 6
+[60] biber:322> INFO - === jue jun  2, 2022, 18:47:31
+[71] Biber.pm:415> INFO - Reading 'memoria_tfg.bcf'
+[125] Biber.pm:943> INFO - Found 39 citekeys in bib section 0
+[135] Biber.pm:4256> INFO - Processing section 0
+[136] Utils.pm:75> INFO - Globbing data source 'bibliografia.bib'
+[136] Utils.pm:91> INFO - Globbed data source 'bibliografia.bib' to bibliografia.bib
+[143] Biber.pm:4455> INFO - Looking for bibtex format file 'bibliografia.bib' for section 0
+[145] bibtex.pm:1653> INFO - LaTeX decoding ...
+[169] bibtex.pm:1471> INFO - Found BibTeX data source 'bibliografia.bib'
+[171] Utils.pm:293> WARN - Duplicate entry key: 'calibracion1' in file 'bibliografia.bib', skipping ...
+[187] Utils.pm:293> WARN - month field 'nov' in entry 'vikingos' is not an integer - this will probably not sort properly.
+[192] Utils.pm:293> WARN - month field 'Apr' in entry 'shakey1' is not an integer - this will probably not sort properly.
+[194] Utils.pm:293> WARN - month field 'Dec' in entry 'shakey2' is not an integer - this will probably not sort properly.
+[226] Utils.pm:293> WARN - month field 'Aug' in entry 'nn' is not an integer - this will probably not sort properly.
+[234] Utils.pm:293> WARN - month field 'Jan' in entry 'cnn' is not an integer - this will probably not sort properly.
+[236] Utils.pm:293> WARN - month field 'May' in entry 'foto_cnn' is not an integer - this will probably not sort properly.
+[293] Utils.pm:293> WARN - BibTeX subsystem: warning: comma(s) at end of name (removing)
+[318] UCollate.pm:68> INFO - Overriding locale 'es-ES' defaults 'variable = shifted' with 'variable = non-ignorable'
+[318] UCollate.pm:68> INFO - Overriding locale 'es-ES' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[318] Biber.pm:4084> INFO - Sorting list 'none/global//global/global' of type 'entry' with template 'none' and locale 'es-ES'
+[337] bbl.pm:652> INFO - Writing 'memoria_tfg.bbl' with encoding 'UTF-8'
+[350] bbl.pm:755> INFO - Output to memoria_tfg.bbl
+[351] Biber.pm:128> INFO - WARNINGS: 8

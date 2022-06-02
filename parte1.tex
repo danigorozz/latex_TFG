@@ -1,16 +1,16 @@
 \part{Introducción}
 \pagenumbering{arabic}
 
-\chapter{Introducción y visión general}
+\chapter{Introducción y Visión General}
 
 
 En este capítulo se hará una breve introducción para entender el contexto de este trabajo y el porqué de la necesidad del mismo. Se comentará la importancia de la localización para los seres humanos y se hará una introducción sobre los mapas utilizados por los robots para localizarse. Finalmente se expondrá la estructura del documento.\\
 
-\section{La localización como una necesidad}
+\section{La Localización como una Necesidad}
 
 Que levante la mano quien no se ha perdido alguna vez por los despachos de alguna de las facultades, sobre todo en esos ambientes prácticamente idénticos entre sí. Todo ser humano alguna vez se ha parado en seco, ha mirado a un lado y a otro con cara de desaprobación y se ha preguntado: \textit{¿dónde estoy?} Estas situaciones, a veces incómodas, se deben esencialmente a que todo ser vivo con capacidad para desplazarse por un entorno necesita localizarse y orientarse si quiere alcanzar un objetivo, más aún si dicho entorno es totalmente desconocido.\\
 
-A lo largo de los años, los seres humanos hemos utilizado multitud de métodos para la orientación, incluso en las situaciones más desfavorables. Un estudio para la revista \textit{The Royal Society} de la Universidad de Rennes sostiene que los vikingos usaban una variedad de calcita para calcular dónde se encontraba el sol utilizando la polarización de la luz dispersada por las nubes. Esta piedra solar se llama ``Espato de Islandia'' y les permitía orientarse incluso en fechas donde el sol parecía no querer mostrarse, algo que sucede muy frecuentemente en los mares nórdicos \cite{vikingos}. Hoy en día, con el uso de la tecnología GPS y de aplicaciones que la implementan como Google Maps, hemos cambiado esa piedra solar por un dispositivo electrónico que, no solo nos localiza y orienta en prácticamente cualquier situación, sino que lo hace con un error casi despreciable. Pese al avance de las tecnología de localización como GPS, existen ciertas situaciones en las que es complicado aprovecharse de ellas, como por ejemplo en los entornos indoor. En estos caso, los satélites no son capaces de comunicarse con nuestros dispositivos, por lo que necesitamos otro mecanismo para localizarnos.\\
+A lo largo de los años, los seres humanos hemos utilizado multitud de métodos para la orientación, incluso en las situaciones más desfavorables. Un estudio para la revista \textit{The Royal Society} de la Universidad de Rennes sostiene que los vikingos usaban una variedad de calcita para calcular dónde se encontraba el sol utilizando la polarización de la luz dispersada por las nubes. Esta piedra solar se llama ``Espato de Islandia'' y les permitía orientarse incluso en fechas donde el sol parecía no querer mostrarse, algo que sucede muy frecuentemente en los mares nórdicos \cite{vikingos}. Hoy en día, con el uso de la tecnología GPS y de aplicaciones que la implementan como Google Maps, hemos cambiado esa piedra solar por un dispositivo electrónico que, no solo nos localiza y orienta en prácticamente cualquier situación, sino que lo hace con un error casi despreciable. Pese al avance de las tecnologías de localización como GPS, existen ciertas situaciones en las que es complicado aprovecharse de ellas, por ejemplo en los entornos indoor. En estos caso, los satélites no son capaces de comunicarse con nuestros dispositivos, por lo que necesitamos otro mecanismo para localizarnos.\\
 
 %\begin{figure}[H]
 %	\begin{center} 
@@ -24,7 +24,7 @@ En la figura \ref{fig:metro} se muestra una parte del plano de la red de metro d
 
 \begin{figure}[h]
 	\begin{center} 
-	\includegraphics[width=0.4\textwidth]{plano_metro.png}
+	\includegraphics[width=0.6\textwidth]{plano_metro.png}
 	\end{center}
 	\caption{Detalle de la red de metro de la Comunidad de Madrid. \cite{metro_madrid}}
 	\label{fig:metro}
@@ -44,22 +44,22 @@ La robótica móvil ha ido evolucionando a un ritmo vertiginoso desde que comenz
 
 \begin{figure}[h]
 	\begin{center} 
-	\includegraphics[width=0.8\textwidth]{shakey.jpg}
+	\includegraphics[width=0.5\textwidth]{shakey.jpg}
 	\end{center}
-	\caption{Foto tomada del robot SHAKEY en 1968. \cite{shakey2}}
+	\caption{Fotografía del robot SHAKEY tomada en 1968. \cite{shakey2}}
 	\label{fig:shakey}
 \end{figure}
 
 
-Un robot autónomo móvil (ARM) es un robot capaz de navegar a través de un entorno sin supervisión directa por parte de un operador humano ni la necesidad de disponer de un ruta fijada previamente. Para poder llevarlo a cabo, los robots disponen de multitud de sensores que les permiten percibir e interpretar el entorno, dotando al robot de la capacidad de navegar por el mismo evitando obstáculos, tanto fijos como móviles. Para poder realizar una navegación de alto nivel que les permita ir desde un punto origen a otro punto destino, los robots se sirven de mapas. Un mapa es una representación bidimensional del entorno. De forma general, podemos distinguir dos tipos de mapas de aplicación a la robótica: los mapas métricos y los mapas topológicos. Los mapas métricos (figura \ref{fig:mapas}, izquierda) dividen el entorno en una rejilla donde cada celda representa una probabilidad de estar ocupada o de no estarlo. Si se discretiza esa probabilidad el resultado es un mapa de ocupación, (también llamado \textit{floorplan} o ``plano de suelo'', en un ámbito menos técnico), si no, se obtiene un mapa probabilístico. El mapa métrico más simple es el formado por un conjunto de referencias visuales o \textit{landmarks} de posición conocida que ayudan al robot a estimar su posición. Los mapas topológicos (figura \ref{fig:mapas}, derecha) están basados en grafos y representan la conectividad entre cada uno de sus nodos. Existe una tercer tipo de mapa que es un híbrido entre los comentados y es el más utilizado para los robots: utilizan los grafos para la generación de trayectorias (navegación) y el mapa métrico para la localización.\\
+Un robot autónomo móvil (ARM) es un robot capaz de navegar a través de un entorno sin supervisión directa por parte de un operador humano ni la necesidad de disponer de un ruta fijada previamente. Para poder llevarlo a cabo, los robots disponen de multitud de sensores que les permiten percibir e interpretar el entorno, dotando al robot de la capacidad de navegar por el mismo evitando obstáculos, tanto fijos como móviles. Para poder realizar una navegación de alto nivel que les permita ir desde un punto origen a otro punto destino, los robots se sirven de mapas. Un mapa es una representación bidimensional del entorno. De forma general, podemos distinguir dos tipos de mapas de aplicación a la robótica: los mapas métricos y los mapas topológicos. Los mapas métricos (figura \ref{fig:mapas}, izquierda) dividen el entorno en una rejilla donde cada celda representa una probabilidad de estar ocupada o de no estarlo. Si se discretiza esa probabilidad, el resultado es un mapa de ocupación, (también llamado \textit{floorplan} o ``plano de suelo'', en un ámbito menos técnico), si no, se obtiene un mapa probabilístico. El mapa métrico más simple es el formado por un conjunto de referencias visuales o \textit{landmarks} de posición conocida que ayudan al robot a estimar su posición. Los mapas topológicos (figura \ref{fig:mapas}, derecha) están basados en grafos y representan la conectividad entre cada uno de sus nodos. Existe un tercer tipo de mapa que es un híbrido entre los dos tipos comentados y es el más utilizado para los robots: utilizan los grafos para la generación de trayectorias (navegación) y el mapa métrico para la localización.\\
 
-\begin{figure}[H]
+\begin{figure}[h]
  \centering
   \subfloat[Ejemplo de mapa métrico: mapa de ocupación \cite{thrun}]{
-    \includegraphics[width=0.35\textwidth]{mapa_ocupacion.png}}
+    \includegraphics[width=0.4\textwidth]{mapa_ocupacion.png}}
   \hspace{2cm}
   \subfloat[Mapa topológico: líneas del metro de Málaga \cite{metro_malaga}]{
-    \includegraphics[width=0.3\textwidth]{metro_malaga.png}}
+    \includegraphics[width=0.4\textwidth]{metro_malaga.png}}
  \caption{Ejemplos de tipos de mapas.}
  \label{fig:mapas}
 \end{figure}
@@ -72,7 +72,7 @@ La inclusión de estos elementos no estructurales en el mapa de ocupación puede
 	\begin{center} 
 	\includegraphics[width=\textwidth]{laser_vs_rgbd.png}
 	\end{center}
-	\caption{Comparación teórica del resultado de una medición de un láser 2D y un sensor RGBD sobre elementos presentes en la Escuela de Ingenierías Industriales.}
+	\caption{Comparación del resultado teórico de una medición de un láser 2D y un sensor RGBD sobre elementos presentes en la Escuela de Ingenierías Industriales.}
 	\label{fig:laser_vs_rgbd}
 \end{figure}
 
@@ -112,7 +112,7 @@ Paralelamente, se utilizará un modelo entrenado de inteligencia artifical, YOLO
 
 Finalmente, se hará una comparativa de los resultados obtenidos únicamente con el LIDAR con los obtenidos mediante el procesamiento de la información de la cámara. Además se hará un estudio de los objetos detectados durante el mapeado y de la fiabilidad del modelo de detección. \\
 
-\section{Estructura del documento}
+\section{Estructura del Documento}
 
 Este documento está dividido en cuatro partes. En la primera parte se hará una introducción al contexto del proyecto y se explicará por qué se ha desarrollado.\\
 
@@ -120,7 +120,7 @@ La segunda parte consta de tres capítulos. En el primero de ellos se expondrán
 
 En la tercera parte se mostrarán las conclusiones obtenidas tras la consecución del proyecto y se comentarán algunas posibles líneas de trabajo abiertas de cara al futuro, así como posibles mejorías que se pudieran implementar. \\
 
-En una cuarta y última parte se sitúan los apéndices del proyecto. En el primero se explica el software que se ha utilizado de apoyo pero que no se ha mencionado en los capítulos anteriores. En el segundo apéndice se expone el código de los nodos que han sido diseñados expresamente para este trabajo.\\
+En una cuarta y última parte se sitúan los apéndices del proyecto. En el primero y único se explica el software que se ha utilizado de apoyo pero que no se ha mencionado en los capítulos anteriores.\\
 
 
 
