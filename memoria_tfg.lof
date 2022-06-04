@@ -47,7 +47,7 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {figure}{\numberline {3.1}{\ignorespaces Árbol de nodos y topics. Los nodos diseñados para este trabajo son de color azul. Los nodos de terceros cuyo código ha sido modificado son de color naranja. Los nodos descargados que no se han modificado son de color blanco.\relax }}{22}{figure.caption.21}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {3.2}{\ignorespaces Diagrama del nodo \texttt {cam\_info}. Recibe la imagen de profundidad y publica la información de la cámara.\relax }}{24}{figure.caption.22}%
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Diagrama del nodo \texttt {cam\_info}. Recibe la imagen de profundidad y publica la información de la cámara.\relax }}{23}{figure.caption.22}%
 \defcounter {refsection}{0}\relax 
 \contentsline {figure}{\numberline {3.3}{\ignorespaces Diagrama del nodo \texttt {sync\_info}. Recibe la imagen de profundidad y la información de la cámara y publica los mismo mensajes pero sincronizados.\relax }}{24}{figure.caption.23}%
 \defcounter {refsection}{0}\relax 

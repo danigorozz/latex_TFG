@@ -24,42 +24,40 @@ citestyle=numeric
 
 \usepackage{eurosym}
 
-
-
 \usepackage{colortbl}
 \definecolor{LightCyan}{rgb}{0.88,1,1}
 \newcolumntype{a}{>{\columncolor{LightCyan}}l}
 
 \begin{document}
 
+\renewcommand{\listfigurename}{Lista de Figuras}
+\renewcommand{\listtablename}{Lista de Tablas}
+\renewcommand{\contentsname}{Índice de Contenidos}
+\renewcommand{\tablename}{Tabla} 
+
 
 \pagestyle{fancy}
 
-\maketitle
 
 \chapter*{Resumen}
 \addcontentsline{toc}{chapter}{Resumen}
 \pagenumbering{Roman}
 \setcounter{page}{5} % Habrá que modificarlo cuando se añadan el resto de páginas
 
-En la actualidad, los robots móviles utilizan mapas para localizarse. Estos mapas son generados a partir de los barridos de un láser, que detecta los objetos y sus distancias, obteniendo zonas ocupadas y desocupadas. Sin embargo, existen elementos en el entorno que no pertenecen a la estructura del mismo y pueden variar su posición de un día para otro, invalidando el mapa generado. El objetivo de este trabajo es aprovechar la información de profundidad proporcionada por sensores RGBD para generar un mapa donde únicamente se representen los elementos estructurales. Para ello se han procesado los datos de profundidad y se han guardado los elementos que estén más alejados, eliminando los objetos que se encuentren frente a una pared. Paralelamente, se ha utilizado la imagen de color de la cámara para realizar un proceso de detección de objetos mediante una red neuronal convolucional ya entrenada. Los datos obtenidos tras la detección han sido procesados para así analizar los resultados de la red y su fiabilidad.\\
+En la actualidad, los robots móviles utilizan mapas de ocupación para localizarse y poder navegar de forma autónoma. Estos mapas son, generalmente, generados a partir de barridos de un láser 2D que detecta los obstáculos presentes en el entorno y sus distancias al robot, permitiendo de esta manera caracterizar áreas del entorno de trabajo como ocupadas o libres. Una de las principales limitaciones de este procedimiento es la imposibilidad de distinguir un objeto estático, como el caso de una pared, de uno móvil, como el caso de una silla o un sofá, siendo ambos incluidos indistintamente en el mapa de ocupación. Cuando los objetos móviles del entorno cambian su posición, el resultado es que el mapa de ocupación originalmente creado deja de ser representativo y, por tanto, pierde su utilidad para el robot, siendo necesario regenerar dicho mapa para representar la configuración actual del entorno. El objetivo de este trabajo es aprovechar la información contenida en una secuencia de imágenes y sus correspondientes datos de profundidad proporcionados por una cámara RGBD, para generar un mapa de ocupación donde únicamente se representen los elementos estructurales del entorno. Asumiendo que dicha cámara observa en cada momento parte de las paredes que componen el entorno de trabajo, junto con una serie de objetos móviles, en este trabajo se propone un procesado de los datos de profundidad que permite eliminar los objetos que se encuentren entre la pared y el robot, no siendo estos incluidos en el mapa de ocupación. Paralelamente, se ha utilizado la imagen de color de la misma cámara para realizar un proceso de detección de objetos mediante una red neuronal convolucional ya entrenada. Los datos obtenidos tras la detección han sido procesados para así analizar los resultados de la red y su fiabilidad, permitiendo comprobar que objetos han sido descartados en el mapa de ocupación final. Los resultados obtenidos con datos reales provenientes de un robot móvil dotado con una cámara RGBD, validan la propuesta de este trabajo, verificando que el mapa de ocupación resultante solo contiene los elementos estructurales del entorno. 
 
-El mapa resultante del procesamiento de la información de profundidad ha conseguido eliminar los objetos frente a las paredes, cumpliendo con el objetivo propuesto en este trabajo. El mapa permitiría al robot localizarse incluso si los objetos presentes durante el proceso de generación del mapa hubieran cambiado de posición. El análisis de los objetos detectados permite establecer que la red neuronal, pese a que realiza algunas detecciones erróneas, es realmente fiable.\\
+\vspace{2.5cm}
 
-\vspace{3cm}
-
-\textbf{Palabras clave:} robótica móvil, localización, floorplan, mapa de ocupación, sensor RGBD, imagen de profundidad, detección de objetos.
+\textbf{Palabras clave:} robótica móvil, localización, mapa de ocupación, cámara RGBD, imagen de profundidad, detección de objetos.
 
 \chapter*{Abstract}
 \addcontentsline{toc}{chapter}{Abstract}
 
-Nowadays, mobile robots use maps to locate themselves. These maps are generated from a laser scanning, which detects objects and their distances, getting occupied and unoccupied zones. However, there are elements that do not belong to the environment structure and they can vary their position, invalidating the generated map. The aim of this work is to take advantage of the depth information provided by RGBD sensors to generate a map containing only the structural elements. To achieve it, the depth data has been processed and the furthest elements have been saved, avoiding objects facing the walls. In parallel, the colour data of the camera have been used to object detection using a trained convolutional neural network. The data obtained after detection has been processed in order to analyse the results of the network and its reliability.\\
-
-The map resulting from the processing of the depth information has managed to eliminate the objects in front of the walls, fulfilling the objective proposed in this work. The map would allow the robot to locate itself even if the objects present during the map generation process had changed position. The analysis of the detected objects allows us to establish that the neural network, despite making some erroneous detections, is really reliable.
+Currently, mobile robots use occupancy grid maps to locate themselves and navigate autonomously. These maps are generally generated from 2D laser scans that detect the obstacles present in the environment and their distances from the robot, thus making it possible to characterise areas of the working environment as occupied or free. One of the main limitations of this procedure is the impossibility of distinguishing a static object, such as a wall, from a moving object, such as a chair or a sofa, both of which are included indistinctly in the occupancy grid map. When the mobile objects in the environment change their position, the result is that the occupancy grid map originally created is no longer representative and, therefore, loses its usefulness for the robot, being necessary to regenerate the occupancy grid map to represent the current configuration of the environment. The aim of this work is to take advantage of the information contained in a sequence of images and their corresponding depth data provided by an RGBD camera, to generate an occupancy grid map where only the structural elements of the environment are represented. Assuming that the camera observes part of the walls that make up the working environment at any given moment, together with a series of moving objects, this work proposes a depth data processing that allows for the elimination of objects that are between the wall and the robot, which are not included in the occupancy grid map. At the same time, the colour image of the same camera has been used to carry out an object detection process using a convolutional neural network already trained. The data obtained after the detection has been processed in order to analyse the results of the network and its reliability, allowing to check which objects have been discarded in the final occupancy grid map. The results obtained with real data from a mobile robot equipped with an RGBD camera validate the proposal of this work, verifying that the resulting occupancy grid map only contains the structural elements of the environment. 
 
 \vspace{3cm}
 
-\textbf{Keywords:} mobile robotic, localization, floorplan, occupancy grid map, RGBD sensor, depth image, object detection.
+\textbf{Keywords:} mobile robotic, localization, occupancy grid map, RGBD camera, depth image, object detection.
 
 \chapter*{Agradecimientos}
 \addcontentsline{toc}{chapter}{Agradecimientos}
@@ -77,11 +75,11 @@ A todos ellos, muchas gracias.\\
 \tableofcontents
 
 \cleardoublepage
-\addcontentsline{toc}{chapter}{Lista de figuras} % para que aparezca en el indice de contenidos
+\addcontentsline{toc}{chapter}{Lista de Figuras} % para que aparezca en el indice de contenidos
 \listoffigures % indice de figuras
 
 \cleardoublepage
-\addcontentsline{toc}{chapter}{Lista de tablas} % para que aparezca en el indice de contenidos
+\addcontentsline{toc}{chapter}{Lista de Tablas} % para que aparezca en el indice de contenidos
 \listoftables % indice de tablas
 
 \input{parte1.tex}
@@ -157,7 +155,7 @@ Las cámaras RGBD son sensores visuales que, además de ofrecer información de 
 	\label{fig:kinect}
 \end{figure}
 
-La cámara Microsoft Kinect V1 cuenta con un emisor infrarrojos capaz de proyectar patrones de luz infrarroja para después recibirlos por la cámara de profundidad y analizar las distorsiones sufridas en el patrón emitido debido a la colisión con los elementos del entorno. Con esta información es el propio sensor es capaz de construir un mapa 3D o nube de puntos del entorno que está capturando.\\
+La cámara Microsoft Kinect V1 cuenta con un emisor infrarrojos capaz de proyectar patrones de luz infrarroja para después recibirlos por la cámara de profundidad y analizar las distorsiones sufridas en el patrón emitido debido a la colisión con los elementos del entorno. Con esta información el propio sensor es capaz de construir un mapa 3D o nube de puntos del entorno que está capturando.\\
 
 
 \subsection{Imagen de Profundidad}
@@ -286,9 +284,7 @@ Como se ha comentado, el objetivo es transformar la imagen de profundidad que se
 
 La mejor manera de comprobar el correcto funcionamiento de todo el conjunto de nodos sería hacerlo directamente sobre el robot, con información real de sensores y del entorno. Sin embargo, debido a la dificultad que supondría utilizar este sistema sobre el robot, se decidió utilizar la herramienta que ROS pone a disposición precisamente para lidiar con este inconveniente: los rosbags.\\
 
-Para este proyecto se va a utilizar un rosbag generado por uno de los robots \textit{Giraff} del laboratorio de Automática de la Escuela Técnica Superior de Informática. Esta grabación recoge la información de la pose del robot (posición X e Y y el ángulo de orientación), los datos recogidos por una cámara RGBD (color y profundidad), el barrido de un láser y otra información que típicamente se utiliza en los robots, como el árbol de transformadas.\\
-
-Sin embargo, pese a que este rosbag ha sido el utilizado para comprobar el funcionamiento del algoritmo diseñado, ha sido necesario hacer algunas modificaciones para que se pueda procesar la información correctamente.\\
+Para este proyecto se va a utilizar un rosbag generado por uno de los robots \textit{Giraff} del laboratorio de Automática de la Escuela Técnica Superior de Informática. Esta grabación recoge la información de la pose del robot (posición X e Y y el ángulo de orientación), los datos recogidos por una cámara RGBD (color y profundidad), el barrido de un láser y otra información que típicamente se utiliza en los robots. Sin embargo, pese a que este rosbag ha sido el utilizado para comprobar el funcionamiento del algoritmo diseñado, ha sido necesario hacer algunas modificaciones para que se pueda procesar la información correctamente.\\
 
 Normalmente, cuando se utiliza una cámara RGBD en ROS, el paquete encargado de controlar la cámara envía tres tipos de mensajes pertenecientes al paquete \texttt{sensor\_msgs}. Estos mensajes son:
 
@@ -300,11 +296,11 @@ Normalmente, cuando se utiliza una cámara RGBD en ROS, el paquete encargado de 
 
 \end{itemize}
 
-Debido a algunos problemas que se tuvieron durante la captura de los datos, este último topic no se ofrece en el rosbag, por lo que es necesario generarlo externamente. Para ello, se ha diseñado un nodo llamado \texttt{cam\_info} que se encarga de generar este mensaje que más tarde será utilizado por otros nodos.\\
+Debido a las condiciones del \textit{rosbag} utilizado, este último mensaje no se ofrece, por lo que es necesario generarlo externamente. Para ello, se ha diseñado un nodo llamado \texttt{cam\_info} que se encarga de generar este mensaje.\\
 
 \begin{figure}[h]
 	\begin{center} 
-		\includegraphics[width=\textwidth]{cam_info-diag.png}
+		\includegraphics[width=0.9\textwidth]{cam_info-diag.png}
 	\end{center}
 	\caption{Diagrama del nodo \texttt{cam\_info}. Recibe la imagen de profundidad y publica la información de la cámara.}
 	\label{fig:cam_info}
@@ -329,7 +325,7 @@ Una vez obtenida toda la información ofrecida por el robot y la cámara correct
 
 \newpage
 
-El algoritmo utilizado está basado en el paquete de ROS \texttt{depthimage\-\_to\_\-laserscan}. Este paquete se encarga de transformar una imagen de profundidad en un barrido láser a partir de los parámetros de la cámara y de una serie de parámetros de entrada configurables. Los parámetros se muestran en el cuadro \ref{tab:param_depthimage}.
+El algoritmo utilizado está basado en el paquete de ROS \texttt{depthimage\-\_to\_\-laserscan}. Este paquete se encarga de transformar una imagen de profundidad en un barrido láser a partir de los parámetros de la cámara y de una serie de parámetros de entrada configurables. Los parámetros se muestran en la tabla \ref{tab:param_depthimage}.
 
 \begin{table}[H]
 \begin{center}
@@ -348,7 +344,7 @@ El algoritmo utilizado está basado en el paquete de ROS \texttt{depthimage\-\_t
 \end{center}
 \end{table} 
 
-Este nodo primeramente recibe la imagen de profundidad y la información de la cámara. Se recuerda que estos mensajes los debe recibir a la vez y por eso requería de la sincronización. Una vez recibidos estos mensajes, evalúa la codificación de la imagen. Si la codificación es correcta (admite codificación 16UC1 o 32FC1)\footnote{El paquete \texttt{sensor\_msgs} prove de multitud de codificaciones para las imaǵenes. Este es un parámetro de la imagen y viene dado por una cadena de caracteres \cite{enc}. El paquete \texttt{depthimage\_to\_laserscan} solo admite las dos codificaciones comentadas.}, procede a convertir la imagen de profundidad a un mensaje de tipo LaserScan. El formato de un mensaje de tipo \texttt{LaserScan} se expone en el cuadro \ref{tab:laserscan_msg}.\\
+Este nodo primeramente recibe la imagen de profundidad y la información de la cámara. Se recuerda que estos mensajes los debe recibir a la vez y por eso requería de la sincronización. Una vez recibidos estos mensajes, evalúa la codificación de la imagen. Si la codificación es correcta (admite codificación 16UC1 o 32FC1)\footnote{El paquete \texttt{sensor\_msgs} prove de multitud de codificaciones para las imaǵenes. Este es un parámetro de la imagen y viene dado por una cadena de caracteres \cite{enc}. El paquete \texttt{depthimage\_to\_laserscan} solo admite las dos codificaciones comentadas.}, procede a convertir la imagen de profundidad a un mensaje de tipo LaserScan. El formato de un mensaje de tipo \texttt{LaserScan} se expone en la tabla \ref{tab:laserscan_msg}.\\
 
 \begin{table}[h]
 \begin{center}
@@ -432,7 +428,7 @@ Además, este nodo ofrece una salida en la terminal indicando los frames por seg
 
 Como se ha comentado, el nodo que lanza YOLO publica un array de \textit{bounding boxes} con información sobre la posición y el tamaño en píxeles. Para el desarrollo de este proyecto se ha visto conveniente procesar esa información para realizar un posterior estudio de los objetos que han sido detectados y analizar la fiabilidad de la red neuronal así como la calidad de los datos proporcionado por el rosbag.\\
 
-Para este procesamiento se ha diseñado un nodo llamado \texttt{write\_objects} que se encarga de recibir los mensajes que se publican en \texttt{/darknet\_ros/bounding\_boxes} y en \texttt{/amcl\_pose} para generar un archivo CSV donde cada fila representa la información con el formato mostrado en el cuadro \ref{tab:formato}. Cada columna utilizará el delimitador de punto y coma (`` ; '').\\
+Para este procesamiento se ha diseñado un nodo llamado \texttt{write\_objects} que se encarga de recibir los mensajes que se publican en \texttt{/darknet\_ros/bounding\_boxes} y en \texttt{/amcl\_pose} para generar un archivo CSV donde cada fila representa la información con el formato mostrado en la tabla \ref{tab:formato}. Cada columna utilizará el delimitador de punto y coma (`` ; '').\\
 
 \begin{table}[H]
 \begin{center}
@@ -448,19 +444,19 @@ Para este procesamiento se ha diseñado un nodo llamado \texttt{write\_objects} 
 \end{center}
 \end{table} 
 
-Toda esta información es obtenida a partir del formato de los mensajes de las \textit{bounding boxes} y de la \textit{pose} (posición y orientación, en formato de quaternio). Para las \textit{bounding boxes} es necesario acceder a cada una de ellas y obtener sus propiedades \texttt{Class} y \texttt{probability}. Para la \textit{pose} es necesario acceder a su propiedades \texttt{pose.pose.position} y \texttt{pose.pose.orientation}. El formato del mensaje de una \textit{bounding box} se representa en el cuadro \ref{tab:boundingbox_msg}.\\
+Toda esta información es obtenida a partir del formato de los mensajes de las \textit{bounding boxes} y de la \textit{pose} (posición y orientación, en formato de quaternio). Para las \textit{bounding boxes} es necesario acceder a cada una de ellas y obtener sus propiedades \texttt{Class} y \texttt{probability}. Para la \textit{pose} es necesario acceder a su propiedades \texttt{pose.pose.position} y \texttt{pose.pose.orientation}. El formato del mensaje de una \textit{bounding box} se representa en la tabla \ref{tab:boundingbox_msg}.\\
 
-\begin{table}
+\begin{table}[h]
 \begin{center}
-\begin{tabular}{| w{c}{4cm} | m{8cm} |}
+\begin{tabular}{| w{c}{4cm} | m{9cm} |}
 	\hline
 	\rowcolor{LightCyan}
 	Parámetro & Descripción \\ \hline
 	\texttt{probability} & Probabilidad de que el elemento detectado sea realmente de la clase que se le atribuye \\ \hline
-	\texttt{xmin} & Coordenada X mínima de la bounding box en píxeles \\ \hline
-	\texttt{ymin} & Coordenada Y mínima de la bounding box en píxeles \\ \hline
-	\texttt{xmax} & Coordenada X máxima de la bounding box en píxeles \\ \hline
-	\texttt{ymax} & Coordenada Y máxima de la bounding box en píxeles \\ \hline
+	\texttt{xmin} & Coordenada X mínima de la caja en píxeles \\ \hline
+	\texttt{ymin} & Coordenada Y mínima de la caja en píxeles \\ \hline
+	\texttt{xmax} & Coordenada X máxima de la caja en píxeles \\ \hline
+	\texttt{ymax} & Coordenada Y máxima de la caja en píxeles \\ \hline
 	\texttt{id} & Identificador único para cada bounding box \\ \hline
 	\texttt{Class} & Clase o etiqueta del elemento detectado \\ \hline
 \end{tabular}
@@ -518,7 +514,7 @@ Pese a que mejora al láser en muchos aspectos, el mapa generado con la cámara 
 
 Estas curvaturas obtenidas en la medición puede ser causada por la calibración intrínseca de la cámara. Es posible que algunos parámetros de la cámara no estén correctamente determinados o incluso que la transformada entre la base del robot y la cámara no esté correctamente establecida. Por la curvatura en las esquinas se intuye que la causa más probable sea una mala calibración de los parámetros de distorsión de la cámara. Este resultado ya se podía percibir observando el láser generado a partir del sensor RGBD en comparación con el del láser 2D durante el proceso de construcción del mapa.\\
 
-Según las características ofrecidas por los datasheets del láser y de la cámara utilizada, mostradas en el cuadro \ref{tab:comparacion}, esta tiene una mejor precisión, algo incoherente con el resultado obtenido. Sin embargo, diversos estudios realizados  \cite{calibracion1} \cite{calibracion2} \cite{calibracion3} demuestran que los datos ofrecidos por algunos fabricantes son muy optimistas y no reflejan la realidad del sensor en determinadas situaciones. Además, destacan que el proceso de calibración de la cámara es esencial para obtener medidas fiables, ya que las estimaciones se ven afectadas por distorsiones no corregidas por sus parámetros de fábrica, como representa la figura \ref{fig:comp_camara}. En este proyecto se trabaja con datos reales de una cámara que no dispone de este procedimiento, por lo que los resultados se ven inevitablemente afectados por estas distorsiones.\\
+Según las características ofrecidas por los datasheets del láser y de la cámara utilizada, mostradas en la tabla \ref{tab:comparacion}, esta tiene una mejor precisión, algo incoherente con el resultado obtenido. Sin embargo, diversos estudios realizados  \cite{calibracion1} \cite{calibracion2} \cite{calibracion3} demuestran que los datos ofrecidos por algunos fabricantes son muy optimistas y no reflejan la realidad del sensor en determinadas situaciones. Además, destacan que el proceso de calibración de la cámara es esencial para obtener medidas fiables, ya que las estimaciones se ven afectadas por distorsiones no corregidas por sus parámetros de fábrica, como representa la figura \ref{fig:comp_camara}. En este proyecto se trabaja con datos reales de una cámara que no dispone de este procedimiento, por lo que los resultados se ven inevitablemente afectados por estas distorsiones.\\
 
 \begin{table}[H]
 \begin{center}
@@ -693,26 +689,31 @@ Los láseres 2D son unos sensores que se caracterizan principalmente por su gran
 
 Como se ha mostrado en el capítulo \ref{chapter.resultados}, el resultado obtenido es ciertamente satisfactorio. El mapa obtenido con la cámara consigue eliminar los elementos no estructurales generando un \textit{floorplan} acorde a la estructura fija del entorno. Sin embargo, tiene algunos problemas, principalmente influenciados por una mala calibración intrínseca de la cámara, perjudicando la rectitud de las líneas. Estos problemas también se deben a que los sensores RGBD son mucho menos precisos que los láseres y empeoran aún más cuando aumentan las distancias. Además, el entorno guardado en el dataset utilizado para comprobar el funcionamiento (el laboratorio) no es el más amigable para este procedimiento debido a la gran cantidad de elementos que perjudican la medición a través de la cámara. El resultado deja entrever que, con una correcta configuración de los parámetros de la cámara y unas mejores condiciones del entorno, sería posible obtener un  \textit{floorplan} fiel a la estructura fija del entorno.\\
 
-Por tanto, las conclusiones extraídas del desarrollo de este proyecto son las siguientes.
+Las conclusiones extraídas del resultado obtenido tras la implementación de este proyecto son las siguientes:
 
 \begin{itemize}
 	\item Un láser 2D no permite obtener un \textit{floorplan} estructural del entorno inmune a elementos que pueden variar su posición. Los sensores RGBD son una solución frente a este problema, permitiendo generar mapas sin elementos cambiantes como personas, muebles, etc.
 	\item Las cámaras RGBD son mucho menos precisas que los láseres 2D, de ahí su gran diferencia de precio en el mercado. Sin embargo, permiten obtener información 3D del entorno, algo que los láseres no pueden conseguir y puede resultar muy útil en determinadas situaciones.
 	\item El entorno es uno de los factores más determinantes de cara a la efectividad del método. Un entorno con muchos elementos transparentes (como ventanas) o con entrantes y salientes perjudican en gran medida los resultados obtenidos.
 	\item Una mala calibración de la cámara contribuye muy negativamente a la hora de obtener resultados fieles a la realidad debido a las distorsiones que se generan en sus mediciones. Un correcto proceso de calibración del sensor generaría mejores resultados.
-	\item La comunidad de ROS es una de las más activas que se pueden encontrar. Existen miles de usuarios que aportan paquetes con funciones que abarcan prácticamente todos los ámbitos de la robótica. Por lo tanto, antes de comenzar a desarrollar alguna función, mejor comprobar si alguien ya lo ha hecho, algo que, vista la inmensidad de su comunidad, será lo más probable. Además, ROS cuenta con su propio foro donde compartir problemas y sus soluciones, ayudando en gran medida a usuarios novatos.
 	\item La red neuronal YOLO, entrenada para la detección de objetos, cumple su función. Sin embargo, muchos de los elementos del dataset no ha sido capaz de detectarlos e incluso ha detectado objetos erróneamente por lo que no hay que confiar completamente en sus mediciones. 
+	
+\end{itemize}
+
+Además, el desarrollo de este proyecto ha requerido experimentar con herramientas con las que yo, autor de este trabajo, tenía poca o nula experiencia. Personalmente me he visto sorprendido con los siguientes hechos:
+
+\begin{itemize}
+	\item La comunidad de ROS es una de las más activas que se pueden encontrar. Existen miles de usuarios que aportan paquetes con funciones que abarcan prácticamente todos los ámbitos de la robótica. Por lo tanto, antes de comenzar a desarrollar alguna función, mejor comprobar si alguien ya lo ha hecho, algo que, vista la inmensidad de su comunidad, será lo más probable. Además, ROS cuenta con su propio foro donde compartir problemas y sus soluciones, ayudando en gran medida a usuarios novatos.
 	\item El manejo de datos con \textit{Python} y \textit{Pandas}
  resulta realmente sencillo. Complementándolo con la librería \textit{Matplotlib} se convierte en una poderosa herramienta para el análisis y la representación de los datos.
  	\item \textit{Linux}, pese a resultar inicialmente más complicado de comprender que otros sistemas operativos como \textit{Windows} o \textit{MacOS}, tiene numerosas características que lo convierten en una herramienta muy potente para el desarrollo, como la instalación por paquetes o el debugging.
-
 \end{itemize}
 
 \section{Propuestas y Líneas Futuras}
 
 Hay aspectos de este trabajo que, una vez analizado de principio a fin, pudieran haberse hecho de otra forma y así, quizás, haber obtenido mejor resultado.\\
 
-El dataset de datos (rosbag del laboratorio) no es el idóneo para esta tarea. Debido a todos sus entrantes y salientes y a las ventanas en la pared divisoria entre las dos estancias, el resultado obtenido no es del todo correcto. Lo mejor hubiera sido grabar al robot en un ambiente de vivienda convencional, con habitaciones, baños y cocinas. Además, la posición y orientación de la cámara no es la idónea. Dado que los elementos se encuentran mayoritariamente en la parte inferior de las paredes, lo ideal sería situar la cámara en una posición más alta que la del dataset, con una orientación paralela al plano del suelo.\\
+El dataset (\textit{rosbag} del laboratorio) no es el idóneo para esta tarea. Debido a todos sus entrantes y salientes y a las ventanas en la pared divisoria entre las dos estancias, el resultado obtenido no es del todo correcto. Lo mejor hubiera sido grabar al robot en un ambiente de vivienda convencional, con habitaciones, baños y cocinas. Además, la posición y orientación de la cámara no es la idónea. Dado que los elementos se encuentran mayoritariamente en la parte inferior de las paredes, lo ideal sería situar la cámara en una posición más alta que la del dataset, con una orientación paralela al plano del suelo.\\
 
 YOLO utiliza una serie de pesos para detectar los objetos. Una interesante línea futura para este proyecto sería investigar los distintos datasets de pesos disponibles para YOLO y cuáles convendría utilizar en un entorno de laboratorio de ingenierías como con el que se ha trabajado.\\
 

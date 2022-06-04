@@ -7,9 +7,9 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{Agradecimientos}{IX}{chapter*.3}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{Lista de figuras}{XIII}{chapter*.4}%
+\contentsline {chapter}{Lista de Figuras}{XIII}{chapter*.4}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{Lista de tablas}{XVII}{chapter*.5}%
+\contentsline {chapter}{Lista de Tablas}{XVII}{chapter*.5}%
 \defcounter {refsection}{0}\relax 
 \contentsline {part}{I\hspace {1em}Introducción}{XIX}{part.1}%
 \defcounter {refsection}{0}\relax 
@@ -63,7 +63,7 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {3.6}Procesamiento de los Objetos Detectados mediante Archivos CSV}{29}{section.3.6}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.7}Análisis de los Objetos Detectados}{29}{section.3.7}%
+\contentsline {section}{\numberline {3.7}Análisis de los Objetos Detectados}{30}{section.3.7}%
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {4}Resultados Obtenidos}{31}{chapter.4}%
 \defcounter {refsection}{0}\relax 
